@@ -2,20 +2,8 @@
 
 A chatbot that will allow users to gather information or get help when a harming situation is or is not happening.
 
-## Installation
+## Run The Program
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `chatbot` to your list of dependencies in `mix.exs`:
+To run the program it has to be given the token of the bot to be used:
 
-```elixir
-def deps do
-  [
-    {:chatbot, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/chatbot>.
-
+**COMMAND**: `TELEGRAM_BOT_SECRET= {BOT_TOKEN} mix run --no-halt`

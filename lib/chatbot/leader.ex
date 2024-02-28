@@ -70,13 +70,13 @@ defmodule Chatbot.Leader do
         {update["update_id"], wd}
       end
     )
-    # Returns the las update seen
+    # Returns the last update seen and the updated workers list
     %{last_seen: max_update_id, workers_data: updated_workers_data}
   end
 
   # Handles regular message updates
   defp handle_one_update(%{"message" => msg, "update_id" => _}, _, workers_data) do
-    stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> "#{user_id}" == "#{msg["chat"]["id"]}" end)
+    stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == msg["chat"]["id"] end)
     # If there is already a process handling the conversation
     if stored_worker != nil do
       GenServer.cast(stored_worker[:pid], :answer)

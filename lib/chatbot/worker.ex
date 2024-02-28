@@ -26,9 +26,9 @@ defmodule Chatbot.Worker do
     {:reply, user, state}
   end
 
-  def handle_cast({:answer, user}, _) do
+  def handle_cast(:answer, state) do
     Logger.info("Cast")
-    state = %{user: user, status: nil}
+    state = %{user: state.user, status: nil}
     {:noreply, state}
   end
 end

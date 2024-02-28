@@ -3,7 +3,7 @@ defmodule Chatbot.Leader do
   require Logger
 
   @moduledoc """
-  Chatbot.Leader is responsible of managing all the workers of the app.
+  Chatbot.Leader is responsible for managing all the workers of the app.
 
   It can ask for a new worker to be activated or use already activated ones.
 
@@ -79,7 +79,7 @@ defmodule Chatbot.Leader do
     stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> "#{user_id}" == "#{msg["chat"]["id"]}" end)
     # If there is already a process handling the conversation
     if stored_worker != nil do
-      GenServer.cast(stored_worker[:pid], {:answer, msg["chat"]["id"] })
+      GenServer.cast(stored_worker[:pid], :answer)
       workers_data
     else
       worker_pid = :poolboy.checkout(:worker)

@@ -2,6 +2,14 @@ defmodule Chatbot.Worker do
   use GenServer
   require Logger
 
+  @moduledoc """
+  Chatbot.Worker is responsible for interacting with the user,
+  it should also manage the state of the conversation.
+
+  Multiple Chatbot.Workers are initialized during the app execution, in fact, there should
+  be as many Chatbot.Workers as Users using the app concurrently in a given moment.
+  """
+
   def start_link(_) do
     GenServer.start_link(__MODULE__, nil)
   end

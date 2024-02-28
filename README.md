@@ -1,6 +1,6 @@
 # Chatbot
 
-A chatbot that will allow users to gather information or get help when a harming situation is or is not happening.
+A chatbot that will allow users to gather information or get help when facing a potentially harmful situation.
 
 ## Run The Program
 

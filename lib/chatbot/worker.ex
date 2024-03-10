@@ -1,6 +1,8 @@
 defmodule Chatbot.Worker do
   use GenServer
   require Logger
+  import ChatBot.Gettext
+  alias Chatbot.TelegramWrapper, as: TelegramWrapper
 
   @moduledoc """
   Chatbot.Worker is responsible for interacting with the user,
@@ -8,8 +10,9 @@ defmodule Chatbot.Worker do
 
   Multiple Chatbot.Workers are initialized during the app execution, in fact, there should
   be as many Chatbot.Workers as Users using the app concurrently in a given moment.
+  alias Chatbot.TelegramWrapper
   """
-alias Chatbot.TelegramWrapper
+
 
   def start_link(_) do
     GenServer.start_link(__MODULE__, nil)
@@ -49,15 +52,20 @@ alias Chatbot.TelegramWrapper
 
   @impl GenServer
   def terminate(_, state) do
-    GenServer.cast(state.leader, {:worker_dead, self()})
+    GenServer.cast(state.leader, {:worker_dead, self(), gettext("error_message")})
     :ok
   end
 
   # Handles an update when it has a callback query
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
-    TelegramWrapper.send_message(state.key, query["from"]["id"], "Language has been set.")
-    %{state | lang: query["data"]}
+    if state.lang == nil do
+      Gettext.put_locale(query["data"])
+      TelegramWrapper.send_message(state.key, query["from"]["id"], gettext("Language has been set."))
+      %{state | lang: query["data"]}
+    else
+      state
+    end
   end
 
   # Handles an update when it does just contain a message

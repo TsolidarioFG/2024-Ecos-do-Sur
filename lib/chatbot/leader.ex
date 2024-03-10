@@ -1,6 +1,7 @@
 defmodule Chatbot.Leader do
   use GenServer
   require Logger
+  alias Chatbot.TelegramWrapper, as: TelegramWrapper
 
   @moduledoc """
   Chatbot.Leader is responsible for managing all the workers of the app.
@@ -11,6 +12,7 @@ defmodule Chatbot.Leader do
   """
 alias Chatbot.TelegramWrapper
 
+  @spec start_link(any()) :: :ignore | {:error, any()} | {:ok, pid()}
   def start_link(opts) do
     GenServer.start(__MODULE__, opts, name: __MODULE__)
   end
@@ -51,19 +53,20 @@ alias Chatbot.TelegramWrapper
 
   # When a worker dies, the leader must be notified to delete it from workers_data
   @impl GenServer
-  def handle_cast({:worker_dead, pid}, state) do
+  def handle_cast({:worker_dead, pid, message}, state) do
     worker = Enum.find(state.workers_data, fn %{pid: worker} -> worker == pid end)
     new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == pid end)
-    TelegramWrapper.send_message(state.bot_key, worker.user_id, "Something wrong happened. The conversation will reiniciate.")
+    TelegramWrapper.send_message(state.bot_key, worker.user_id, message)
     new_state = %{state | workers_data: new_workers_data}
     {:noreply, new_state}
   end
 
-
+  # There are no new updates to be processed
   defp do_handle_get_updates({:ok, []}, state) do
     state
   end
 
+  # There are updates to handle
   defp do_handle_get_updates({:ok, updates}, state) do
     %{last_seen: last_seen, workers_data: updated_workers_data} = do_handle_multiple_updates(updates, state.last_seen, state.bot_key, state.workers_data)
     # Update the last_seen and the workers_data state

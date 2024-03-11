@@ -10,7 +10,6 @@ defmodule Chatbot.Leader do
 
   It's the one who distributes the messages that the app receives.
   """
-alias Chatbot.TelegramWrapper
 
   @spec start_link(any()) :: :ignore | {:error, any()} | {:ok, pid()}
   def start_link(opts) do

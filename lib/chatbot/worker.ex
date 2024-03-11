@@ -53,7 +53,6 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def terminate(_, state) do
     GenServer.cast(state.leader, {:worker_dead, self(), gettext("error_message")})
-    :ok
   end
 
   # Handles an update when it has a callback query

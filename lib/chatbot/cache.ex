@@ -59,7 +59,7 @@ defmodule Chatbot.Cache do
   @impl true
   def handle_info(:cleanup, table) do
     current_time = System.system_time(:millisecond)
-    :ets.select_delete(table, [{{:"$1", {:"$2", :"$3"}}, [{:<, :"$3", @ttl + current_time}], [true]}])
+    :ets.select_delete(table, [{{:"$1", {:"$2", :"$3"}}, [], [{:<, {:+, {:const, @ttl}, :"$3"}, current_time}]}])
     schedule_ttl_cleanup()
     {:noreply, table}
   end

@@ -52,12 +52,21 @@ defmodule Chatbot.Leader do
 
   # When a worker dies, the leader must be notified to delete it from workers_data
   @impl GenServer
-  def handle_cast({:worker_dead, pid, message}, state) do
+  def handle_cast({:worker_dead, pid, user_id, message}, state) do
     worker = Enum.find(state.workers_data, fn %{pid: worker} -> worker == pid end)
-    new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == pid end)
-    TelegramWrapper.send_message(state.bot_key, worker.user_id, message)
-    new_state = %{state | workers_data: new_workers_data}
-    {:noreply, new_state}
+
+    if worker != nil do
+      new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == pid end)
+      if message != nil do
+        TelegramWrapper.send_message(state.bot_key, user_id, message)
+      end
+      {:noreply, %{state | workers_data: new_workers_data}}
+    else
+      if message != nil do
+        TelegramWrapper.send_message(state.bot_key, user_id, message)
+      end
+      {:noreply, state}
+    end
   end
 
   # There are no new updates to be processed
@@ -103,15 +112,25 @@ defmodule Chatbot.Leader do
   end
 
   defp do_handle_one_update(%{"callback_query" => query, "update_id" => _} = update, key, workers_data) do
-    stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == query["from"]["id"] end)
+
+    stored_worker = if workers_data != [] do
+
+                      Enum.find(workers_data, fn %{user_id: user_id} -> user_id == query["from"]["id"] end)
+                    else
+                      nil
+                    end
     # If there is already a process handling the conversation
     if stored_worker != nil do
       GenServer.cast(stored_worker[:pid], {:answer, update})
       workers_data
     else
       worker_pid = :poolboy.checkout(:worker)
-      reply = GenServer.call(worker_pid, {:answer, key, query["from"]["id"] })
-      [%{pid: worker_pid, user_id: reply} | workers_data]
+      case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query }) do
+        :worker_dead ->
+          workers_data
+        user_id ->
+          [%{pid: worker_pid, user_id: user_id} | workers_data]
+      end
     end
   end
 

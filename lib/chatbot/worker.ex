@@ -37,12 +37,13 @@ defmodule Chatbot.Worker do
   # The worker is called by the leader cause a new message was received
   @impl GenServer
   def handle_call({:answer, key, user}, {leader_pid, _}, _) do
-    case Cache.get(user) do
-      :not_found -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?"))
-      value ->
+    find_conversation_and_start(user,
+      fn -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?")) end,
+      fn value ->
         new_state = reset_timer(do_ask_for_permission_late(value))
         {:reply, user, new_state}
-    end
+      end
+    )
   end
 
   # The worker is called by the leader cause a new query was received
@@ -50,9 +51,11 @@ defmodule Chatbot.Worker do
   def handle_call({:answer, key, user, query}, {leader_pid, _}, _) do
     Logger.info("Call")
     TelegramWrapper.answer_callback_query(key, query["id"])
-    case Cache.get(user) do
-      :not_found -> do_ask_for_language_preferences(leader_pid, key, user, gettext("La conversación anterior ya ha sido borrada"))
-      value ->
+    find_conversation_and_start(user,
+      fn ->
+        do_ask_for_language_preferences(leader_pid, key, user, gettext("La conversación anterior ya ha sido borrada"))
+      end,
+      fn value ->
         case query["data"] do
           "yes" ->
             TelegramWrapper.send_message(key, user, gettext("Describe what happened"))
@@ -65,7 +68,8 @@ defmodule Chatbot.Worker do
             GenServer.cast(:Cache, {:delete, user})
             {:stop, :normal, :worker_dead, value}
         end
-    end
+      end
+    )
   end
 
   @impl GenServer
@@ -89,12 +93,12 @@ defmodule Chatbot.Worker do
   end
 
   @impl GenServer
-  def terminate(:timeout, state) do
+  def terminate(:timeout, %{leader: leader, user: user} = state) do
     stop_timeout_timer(state)
-    case Cache.get(state.user) do
+    case Cache.get(user) do
       :not_found ->
-        GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("Due to inactivity the conversation will be ended")})
-      _ ->   GenServer.cast(state.leader, {:worker_dead, self(), state.user, nil})
+        GenServer.cast(leader, {:worker_dead, self(), user, gettext("Due to inactivity the conversation will be ended")})
+      _ ->   GenServer.cast(leader, {:worker_dead, self(), user, nil})
     end
   end
 
@@ -181,25 +185,34 @@ defmodule Chatbot.Worker do
     %{state | resolved: true}
   end
 
+  # Decides which function to run from the result of Cache.get
+  defp find_conversation_and_start(user, not_found_function, found_function) do
+    case Cache.get(user) do
+      :not_found -> not_found_function.()
+      value -> found_function.(value)
+    end
+  end
+
 
   # A new timer is created, cancelling the previous one, if it exists.
   # This function is involved in the user inactivity use case.
-  defp reset_timer(state) do
-    case state[:timer_ref] do
-      nil -> :ok
-      ref -> :timer.cancel(ref)
-    end
+  defp reset_timer(%{timer_ref: timer_ref} = state) do
+    cancel_existing_timer(timer_ref)
     {_,timer_ref} = :timer.send_interval(@timeout_interval, self(), :timeout)
     %{state | timer_ref: timer_ref}
   end
 
   # If there exists a scheduled timer, this function will cancel it.
-  defp stop_timeout_timer(state) do
-    case state[:timer_ref] do
+  defp stop_timeout_timer(%{timer_ref: timer_ref} = state) do
+    cancel_existing_timer(timer_ref)
+    %{state | timer_ref: nil}
+  end
+
+  defp cancel_existing_timer(ref) do
+    case ref do
       nil -> :ok
       ref -> :timer.cancel(ref)
     end
-    %{state | timer_ref: nil}
   end
 
 end

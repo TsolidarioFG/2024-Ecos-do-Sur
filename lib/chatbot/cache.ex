@@ -17,6 +17,17 @@ defmodule Chatbot.Cache do
     GenServer.start_link(__MODULE__, nil, name: :Cache)
   end
 
+  @doc """
+  Retrieves the value associated with a key. If the key didn't exist or the entry is passed
+  the ttl :not_found would be returned.
+  """
+  def get(key) do
+    case :ets.lookup(:conversation_cache, key) do
+      [{_, {value, date}}] -> if date + @ttl >  System.system_time(:millisecond) do value else :not_found end
+      [] -> :not_found
+    end
+  end
+
   @impl true
   def init(_) do
       Logger.info("Cache Initialized")
@@ -44,18 +55,6 @@ defmodule Chatbot.Cache do
   def handle_cast({:delete, key}, table) do
     :ets.delete(table, key)
     {:noreply, table}
-  end
-
-  #
-  @doc """
-  Retrieves the value associated with a key. If the key didn't exist or the entry is passed
-  the ttl :not_found would be returned.
-  """
-  def get(key) do
-    case :ets.lookup(:conversation_cache, key) do
-      [{_, {value, date}}] -> if date + @ttl >  System.system_time(:millisecond) do value else :not_found end
-      [] -> :not_found
-    end
   end
 
   # Handles a :cleanup message eliminating items that are passed the ttl from the table

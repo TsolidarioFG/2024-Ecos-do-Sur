@@ -101,18 +101,15 @@ defmodule Chatbot.Leader do
     %{last_seen: max_update_id, workers_data: updated_workers_data}
   end
 
-  # Handles regular message updates
+  # Handles regular message updates when workers_data is empty
+  defp do_handle_one_update(%{"message" => msg, "update_id" => _} = update, key, [] = workers_data) do
+    do_resolve_update(nil, update, key, workers_data)
+  end
+
+  # Handles regular message updates when workers_data is not empty
   defp do_handle_one_update(%{"message" => msg, "update_id" => _} = update, key, workers_data) do
     stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == msg["chat"]["id"] end)
-    # If there is already a process handling the conversation
-    if stored_worker != nil do
-      GenServer.cast(stored_worker[:pid], {:answer, update})
-      workers_data
-    else
-      worker_pid = :poolboy.checkout(:worker)
-      reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"] })
-      [%{pid: worker_pid, user_id: reply} | workers_data]
-    end
+    do_resolve_update(stored_worker, update, key, workers_data)
   end
 
   # Handles an update that contains a callback query when workers_data is empty
@@ -124,6 +121,13 @@ defmodule Chatbot.Leader do
   defp do_handle_one_update(%{"callback_query" => query, "update_id" => _} = update, key, workers_data) do
     stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == query["from"]["id"] end)
     do_resolve_update(stored_worker, update, key, workers_data)
+  end
+
+  # Resolves one update
+  defp do_resolve_update(nil, %{"message" => msg, "update_id" => _}, key, workers_data) do
+    worker_pid = :poolboy.checkout(:worker)
+    reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"] })
+    [%{pid: worker_pid, user_id: reply} | workers_data]
   end
 
   defp do_resolve_update(nil, %{"callback_query" => query, "update_id" => _}, key, workers_data) do
@@ -140,8 +144,6 @@ defmodule Chatbot.Leader do
     GenServer.cast(worker[:pid], {:answer, update})
     workers_data
   end
-
-
 
   # Schedules the next check for updates after a certain delay
   defp next_loop do

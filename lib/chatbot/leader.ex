@@ -116,32 +116,29 @@ defmodule Chatbot.Leader do
   end
 
   # Handles an update that contains a callback query when workers_data is empty
-  defp do_handle_one_update(%{"callback_query" => query, "update_id" => _}, key, [] = workers_data)  do
-    worker_pid = :poolboy.checkout(:worker)
-    case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query }) do
-      :worker_dead ->
-        workers_data
-      user_id ->
-        [%{pid: worker_pid, user_id: user_id} | workers_data]
-    end
+  defp do_handle_one_update(%{"callback_query" => _, "update_id" => _} = update, key, [] = workers_data)  do
+    do_resolve_update(nil, update, key, workers_data)
   end
 
   # Handles an update that contains a callback query when workers_data is not empty
   defp do_handle_one_update(%{"callback_query" => query, "update_id" => _} = update, key, workers_data) do
     stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == query["from"]["id"] end)
-    # If there is already a process handling the conversation
-    if stored_worker != nil do
-      GenServer.cast(stored_worker[:pid], {:answer, update})
-      workers_data
-    else
-      worker_pid = :poolboy.checkout(:worker)
+    do_resolve_update(stored_worker, update, key, workers_data)
+  end
+
+  defp do_resolve_update(nil, %{"callback_query" => query, "update_id" => _}, key, workers_data) do
+    worker_pid = :poolboy.checkout(:worker)
       case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query }) do
         :worker_dead ->
           workers_data
         user_id ->
           [%{pid: worker_pid, user_id: user_id} | workers_data]
       end
-    end
+  end
+
+  defp do_resolve_update(worker, update, _, workers_data) do
+    GenServer.cast(worker[:pid], {:answer, update})
+    workers_data
   end
 
 

@@ -46,11 +46,14 @@ defmodule Chatbot.Cache do
     {:noreply, table}
   end
 
-  # Retrieves the value associated with a key. If the key didn't exist or the entry is passed
-  # the ttl :not_found would be returned.
+  #
+  @doc """
+  Retrieves the value associated with a key. If the key didn't exist or the entry is passed
+  the ttl :not_found would be returned.
+  """
   def get(key) do
     case :ets.lookup(:conversation_cache, key) do
-      [{_, {value, date}}] -> if date < @ttl + System.system_time(:millisecond) do value else :not_found end
+      [{_, {value, date}}] -> if date + @ttl >  System.system_time(:millisecond) do value else :not_found end
       [] -> :not_found
     end
   end

@@ -50,23 +50,27 @@ defmodule Chatbot.Leader do
     {:noreply, state}
   end
 
-  # When a worker dies, the leader must be notified to delete it from workers_data
+  # When a worker dies, the leader must be notified to delete it from workers_data. No message to the user.
+  @impl GenServer
+  def handle_cast({:worker_dead, pid, _user_id, nil}, state) do
+    worker = Enum.find(state.workers_data, fn %{pid: worker} -> worker == pid end)
+    do_handle_worker_dead(worker, state)
+  end
+
+  # When a worker dies, the leader must be notified to delete it from workers_data. Message to the user.
   @impl GenServer
   def handle_cast({:worker_dead, pid, user_id, message}, state) do
     worker = Enum.find(state.workers_data, fn %{pid: worker} -> worker == pid end)
+    TelegramWrapper.send_message(state.bot_key, user_id, message)
+    do_handle_worker_dead(worker, state)
+  end
 
-    if worker != nil do
-      new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == pid end)
-      if message != nil do
-        TelegramWrapper.send_message(state.bot_key, user_id, message)
-      end
-      {:noreply, %{state | workers_data: new_workers_data}}
-    else
-      if message != nil do
-        TelegramWrapper.send_message(state.bot_key, user_id, message)
-      end
-      {:noreply, state}
-    end
+  defp do_handle_worker_dead(nil, state), do: {:noreply, state}
+
+  defp do_handle_worker_dead(worker, state) do
+    new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == worker.pid end)
+    {:noreply, %{state | workers_data: new_workers_data}}
+
   end
 
   # There are no new updates to be processed

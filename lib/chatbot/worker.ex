@@ -102,35 +102,39 @@ defmodule Chatbot.Worker do
     end
   end
 
+  # Handles an update when it has a callback query and the conversation is resolved already
+  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{resolved: true} = state) do
+    TelegramWrapper.answer_callback_query(state.key, query["id"])
+    case query["data"] do
+      "yes" ->
+        TelegramWrapper.send_message(state.key, state.user, gettext("Describe what happened"))
+        GenServer.cast(:Cache, {:delete, state.user})
+        {:stop, :normal, state}
+      "no" ->
+        TelegramWrapper.send_message(
+                state.key,
+                state.user,
+                gettext("thank you"))
+        GenServer.cast(:Cache, {:delete, state.user})
+        {:stop, :normal, state}
+      _ -> {:noreply, state}
+    end
+ end
+
+ # Handles an update when it has a callback query, the conversation was not resolved and also the language was not set
+  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{lang: nil} = state) do
+    TelegramWrapper.answer_callback_query(state.key, query["id"])
+    Gettext.put_locale(query["data"])
+    TelegramWrapper.send_message(state.key, state.user, gettext("Language has been set."))
+    final_state = do_ask_for_permission(%{state | lang: query["data"]})
+    GenServer.cast(:Cache, {:update, {state.user,  final_state}})
+    {:noreply,  final_state}
+  end
+
   # Handles an update when it has a callback query
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
-    if state.resolved do # If the conversation was already resolved
-      case query["data"] do
-        "yes" ->
-          TelegramWrapper.send_message(state.key, state.user, gettext("Describe what happened"))
-          GenServer.cast(:Cache, {:delete, state.user})
-          {:stop, :normal, state}
-        "no" ->
-          TelegramWrapper.send_message(
-                  state.key,
-                  state.user,
-                  gettext("thank you"))
-          GenServer.cast(:Cache, {:delete, state.user})
-          {:stop, :normal, state}
-        _ -> {:noreply, state}
-      end
-    else # If the conversation is still being solved
-      if state.lang == nil do
-        Gettext.put_locale(query["data"])
-        TelegramWrapper.send_message(state.key, state.user, gettext("Language has been set."))
-        final_state = do_ask_for_permission(%{state | lang: query["data"]})
-        GenServer.cast(:Cache, {:update, {state.user,  final_state}})
-        {:noreply,  final_state}
-      else
-        {:noreply, state}
-      end
-    end
+    {:noreply, state}
   end
 
   # Handles an update when it does just contain a message
@@ -138,7 +142,6 @@ defmodule Chatbot.Worker do
   defp do_handle_update(%{"message" => msg, "update_id" => _}, state) do
     {:noreply, state}
   end
-
 
   defp do_ask_for_language_preferences(leader_pid, key, user, message) do
     keyboard = [
@@ -193,7 +196,6 @@ defmodule Chatbot.Worker do
     end
   end
 
-
   # A new timer is created, cancelling the previous one, if it exists.
   # This function is involved in the user inactivity use case.
   defp reset_timer(%{timer_ref: timer_ref} = state) do
@@ -208,11 +210,7 @@ defmodule Chatbot.Worker do
     %{state | timer_ref: nil}
   end
 
-  defp cancel_existing_timer(ref) do
-    case ref do
-      nil -> :ok
-      ref -> :timer.cancel(ref)
-    end
-  end
+  defp cancel_existing_timer(nil), do: :ok
+  defp cancel_existing_timer(ref), do: :timer.cancel(ref)
 
 end

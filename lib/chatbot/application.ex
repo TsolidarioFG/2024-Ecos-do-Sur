@@ -12,7 +12,9 @@ defmodule Chatbot.Application do
       # {Chatbot.Worker, arg}
       {Chatbot.Leader, bot_key: System.get_env("TELEGRAM_BOT_SECRET")},
       Chatbot.Cache,
-      :poolboy.child_spec(:worker, poolboy_configuration())
+      Chatbot.Persistence,
+      :poolboy.child_spec(:worker, poolboy_worker_configuration()),
+      :poolboy.child_spec(:collector, poolboy_collector_configuration())
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
@@ -21,10 +23,19 @@ defmodule Chatbot.Application do
     Supervisor.start_link(children, opts)
   end
 
-  defp poolboy_configuration do
+  defp poolboy_worker_configuration do
     [
       name: {:local, :worker},
       worker_module: Chatbot.Worker,
+      size: 5,
+      max_overflow: 2
+    ]
+  end
+
+  defp poolboy_collector_configuration do
+    [
+      name: {:local, :collector},
+      worker_module: Chatbot.InformationCollector,
       size: 5,
       max_overflow: 2
     ]

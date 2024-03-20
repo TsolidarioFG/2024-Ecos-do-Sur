@@ -36,9 +36,9 @@ defmodule Chatbot.Worker do
 
   # The worker is called by the leader cause a new message was received
   @impl GenServer
-  def handle_call({:answer, key, user}, {leader_pid, _}, _) do
+  def handle_call({:answer, key, user}, {leader_pid, _}, state) do
     find_conversation_and_start(user,
-      fn -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?")) end,
+      fn -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?"), state) end,
       fn value ->
         new_state = reset_timer(do_ask_for_permission_late(value))
         {:reply, user, new_state}
@@ -48,18 +48,18 @@ defmodule Chatbot.Worker do
 
   # The worker is called by the leader cause a new query was received
   @impl GenServer
-  def handle_call({:answer, key, user, query}, {leader_pid, _}, _) do
+  def handle_call({:answer, key, user, query}, {leader_pid, _}, state) do
     Logger.info("Call")
     TelegramWrapper.answer_callback_query(key, query["id"])
     find_conversation_and_start(user,
       fn ->
-        do_ask_for_language_preferences(leader_pid, key, user, gettext("La conversación anterior ya ha sido borrada"))
+        do_ask_for_language_preferences(leader_pid, key, user, gettext("La conversación anterior ya ha sido borrada"), state)
       end,
       fn value ->
         case query["data"] do
           "yes" ->
-            TelegramWrapper.send_message(key, user, gettext("Describe what happened"))
-            {:reply, user, value}
+            delegate(value)
+            {:stop, :silence, :worker_dead, value}
           "no" ->
             TelegramWrapper.send_message(
                     key,
@@ -102,14 +102,18 @@ defmodule Chatbot.Worker do
     end
   end
 
+  @impl GenServer
+  def terminate(:silence, state) do
+    stop_timeout_timer(state)
+  end
+
   # Handles an update when it has a callback query and the conversation is resolved already
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{resolved: true} = state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "yes" ->
-        TelegramWrapper.send_message(state.key, state.user, gettext("Describe what happened"))
-        GenServer.cast(:Cache, {:delete, state.user})
-        {:stop, :normal, state}
+        delegate(state)
+        {:stop, :silence, state}
       "no" ->
         TelegramWrapper.send_message(
                 state.key,
@@ -139,11 +143,11 @@ defmodule Chatbot.Worker do
 
   # Handles an update when it does just contain a message
   # For now, it raises an error killing the process
-  defp do_handle_update(%{"message" => msg, "update_id" => _}, state) do
+  defp do_handle_update(%{"message" => _, "update_id" => _}, state) do
     {:noreply, state}
   end
 
-  defp do_ask_for_language_preferences(leader_pid, key, user, message) do
+  defp do_ask_for_language_preferences(leader_pid, key, user, message, state) do
     keyboard = [
       [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}],
       [%{text: "🇫🇷", callback_data: "fr"}]
@@ -154,7 +158,7 @@ defmodule Chatbot.Worker do
       user,
       key
     )
-    state =reset_timer(%{leader: leader_pid, key: key, user: user, lang: nil, resolved: false, timer_ref: nil})
+    state =reset_timer(%{state | leader: leader_pid, key: key, user: user})
     {:reply, user, state}
   end
 
@@ -194,6 +198,13 @@ defmodule Chatbot.Worker do
       :not_found -> not_found_function.()
       value -> found_function.(value)
     end
+  end
+
+  defp delegate(state) do
+    information_collector_pid = :poolboy.checkout(:collector)
+    GenServer.call(information_collector_pid, {:initialize, state})
+    GenServer.cast(state.leader, {:worker_substitute, self(), information_collector_pid, state.user})
+    GenServer.cast(:Cache, {:delete, state.user})
   end
 
   # A new timer is created, cancelling the previous one, if it exists.

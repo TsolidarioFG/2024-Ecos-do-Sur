@@ -50,14 +50,27 @@ defmodule Chatbot.Leader do
     {:noreply, state}
   end
 
-  # When a worker dies, the leader must be notified to delete it from workers_data
+  # When a worker dies, the leader must be notified to delete it from workers_data. No message to the user.
   @impl GenServer
-  def handle_cast({:worker_dead, pid, message}, state) do
+  def handle_cast({:worker_dead, pid, _user_id, nil}, state) do
     worker = Enum.find(state.workers_data, fn %{pid: worker} -> worker == pid end)
-    new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == pid end)
-    TelegramWrapper.send_message(state.bot_key, worker.user_id, message)
-    new_state = %{state | workers_data: new_workers_data}
-    {:noreply, new_state}
+    do_handle_worker_dead(worker, state)
+  end
+
+  # When a worker dies, the leader must be notified to delete it from workers_data. Message to the user.
+  @impl GenServer
+  def handle_cast({:worker_dead, pid, user_id, message}, state) do
+    worker = Enum.find(state.workers_data, fn %{pid: worker} -> worker == pid end)
+    TelegramWrapper.send_message(state.bot_key, user_id, message)
+    do_handle_worker_dead(worker, state)
+  end
+
+  defp do_handle_worker_dead(nil, state), do: {:noreply, state}
+
+  defp do_handle_worker_dead(worker, state) do
+    new_workers_data = Enum.reject(state.workers_data, fn %{pid: worker_pid, user_id: _} -> worker_pid == worker.pid end)
+    {:noreply, %{state | workers_data: new_workers_data}}
+
   end
 
   # There are no new updates to be processed
@@ -88,31 +101,48 @@ defmodule Chatbot.Leader do
     %{last_seen: max_update_id, workers_data: updated_workers_data}
   end
 
-  # Handles regular message updates
-  defp do_handle_one_update(%{"message" => msg, "update_id" => _} = update, key, workers_data) do
-    stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == msg["chat"]["id"] end)
-    # If there is already a process handling the conversation
-    if stored_worker != nil do
-      GenServer.cast(stored_worker[:pid], {:answer, update})
-      workers_data
-    else
-      worker_pid = :poolboy.checkout(:worker)
-      reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"] })
-      [%{pid: worker_pid, user_id: reply} | workers_data]
-    end
+  # Handles regular message updates when workers_data is empty
+  defp do_handle_one_update(%{"message" => msg, "update_id" => _} = update, key, [] = workers_data) do
+    do_resolve_update(nil, update, key, workers_data)
   end
 
+  # Handles regular message updates when workers_data is not empty
+  defp do_handle_one_update(%{"message" => msg, "update_id" => _} = update, key, workers_data) do
+    stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == msg["chat"]["id"] end)
+    do_resolve_update(stored_worker, update, key, workers_data)
+  end
+
+  # Handles an update that contains a callback query when workers_data is empty
+  defp do_handle_one_update(%{"callback_query" => _, "update_id" => _} = update, key, [] = workers_data)  do
+    do_resolve_update(nil, update, key, workers_data)
+  end
+
+  # Handles an update that contains a callback query when workers_data is not empty
   defp do_handle_one_update(%{"callback_query" => query, "update_id" => _} = update, key, workers_data) do
     stored_worker = Enum.find(workers_data, fn %{user_id: user_id} -> user_id == query["from"]["id"] end)
-    # If there is already a process handling the conversation
-    if stored_worker != nil do
-      GenServer.cast(stored_worker[:pid], {:answer, update})
-      workers_data
-    else
-      worker_pid = :poolboy.checkout(:worker)
-      reply = GenServer.call(worker_pid, {:answer, key, query["from"]["id"] })
-      [%{pid: worker_pid, user_id: reply} | workers_data]
-    end
+    do_resolve_update(stored_worker, update, key, workers_data)
+  end
+
+  # Resolves one update
+  defp do_resolve_update(nil, %{"message" => msg, "update_id" => _}, key, workers_data) do
+    worker_pid = :poolboy.checkout(:worker)
+    reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"] })
+    [%{pid: worker_pid, user_id: reply} | workers_data]
+  end
+
+  defp do_resolve_update(nil, %{"callback_query" => query, "update_id" => _}, key, workers_data) do
+    worker_pid = :poolboy.checkout(:worker)
+      case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query }) do
+        :worker_dead ->
+          workers_data
+        user_id ->
+          [%{pid: worker_pid, user_id: user_id} | workers_data]
+      end
+  end
+
+  defp do_resolve_update(worker, update, _, workers_data) do
+    GenServer.cast(worker[:pid], {:answer, update})
+    workers_data
   end
 
   # Schedules the next check for updates after a certain delay

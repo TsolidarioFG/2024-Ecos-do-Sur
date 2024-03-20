@@ -11,6 +11,7 @@ defmodule Chatbot.Application do
       # Starts a worker by calling: Chatbot.Worker.start_link(arg)
       # {Chatbot.Worker, arg}
       {Chatbot.Leader, bot_key: System.get_env("TELEGRAM_BOT_SECRET")},
+      Chatbot.Cache,
       :poolboy.child_spec(:worker, poolboy_configuration())
     ]
 

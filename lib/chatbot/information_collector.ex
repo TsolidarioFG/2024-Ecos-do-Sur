@@ -32,12 +32,14 @@ defmodule Chatbot.InformationCollector do
   def terminate(:normal, state) do
     stop_timeout_timer(state)
     GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("Bye")})
+    :poolboy.checkin(:collector, self())
   end
 
   @impl GenServer
   def terminate(:timeout, state) do
     stop_timeout_timer(state)
-    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("Due to inactivity the conversation will be ended")})
+    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("Due to inactivity the conversation will be ended. It wont be saved.")})
+    :poolboy.checkin(:collector, self())
   end
 
   @impl true
@@ -55,7 +57,7 @@ defmodule Chatbot.InformationCollector do
   @impl true
   def handle_cast({:answer, %{"message" => msg, "update_id" => _}}, %{data: %{description: nil}} = state) do
     TelegramWrapper.send_message(state.key, state.user, gettext("Where did it happen?"))
-    {:noreply, %{state | data: %{description: msg["text"], location: nil, gender: nil}}}
+    {:noreply, reset_timer(%{state | data: %{description: msg["text"], location: nil, gender: nil}})}
   end
 
   @impl true
@@ -66,11 +68,11 @@ defmodule Chatbot.InformationCollector do
     ]
     TelegramWrapper.send_menu(
       keyboard,
-      "Select your gender",
+      gettext("Please, select your gender:"),
       state.user,
       state.key
     )
-    {:noreply, %{state | data: %{description: state.data.description, location: msg["text"], gender: nil}}}
+    {:noreply, reset_timer(%{state | data: %{description: state.data.description, location: msg["text"], gender: nil}})}
   end
 
   @impl true
@@ -79,16 +81,16 @@ defmodule Chatbot.InformationCollector do
     if query["data"] in ["male", "female", "other"] do
       new_state =  %{state | data: %{description: state.data.description, location: state.data.location, gender: query["data"]}}
       save_data(new_state)
-      {:stop, :normal, new_state}
+      {:stop, :normal, reset_timer(new_state)}
     else
-      {:noreply, state}
+      {:noreply, reset_timer(state)}
     end
   end
 
   defp save_data(state) do
     case GenServer.call(:Persistence, {:store, Chatbot.DbDataScheme.new(state.data.location, state.data.description, state.data.gender)}) do
-      :not_created -> TelegramWrapper.send_message(state.key, state.user, "Due to a server problem this information couln't be saved.")
-      _ -> TelegramWrapper.send_message(state.key, state.user, "This information has been saved successfully")
+      :not_created -> TelegramWrapper.send_message(state.key, state.user, gettext("Due to a server problem this information couldn't be saved."))
+      _ -> TelegramWrapper.send_message(state.key, state.user, gettext("This information has been saved successfully"))
     end
   end
 

@@ -11,51 +11,51 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
-#: lib/chatbot/worker.ex:124
+#: lib/chatbot/worker.ex:136
 #, elixir-autogen, elixir-format
 msgid "Language has been set."
 msgstr "La langue a été définie."
 
-#: lib/chatbot/worker.ex:159
-#: lib/chatbot/worker.ex:175
+#: lib/chatbot/worker.ex:172
+#: lib/chatbot/worker.ex:188
 #, elixir-autogen, elixir-format
 msgid "NO"
 msgstr "NON"
 
-#: lib/chatbot/worker.ex:159
-#: lib/chatbot/worker.ex:175
+#: lib/chatbot/worker.ex:172
+#: lib/chatbot/worker.ex:188
 #, elixir-autogen, elixir-format
 msgid "YES"
 msgstr "OUI"
 
-#: lib/chatbot/worker.ex:83
+#: lib/chatbot/worker.ex:85
 #, elixir-autogen, elixir-format
 msgid "error_message"
 msgstr "Quelque chose de mal s'est produit. La conversation va reprendre."
 
-#: lib/chatbot/worker.ex:163
+#: lib/chatbot/worker.ex:176
 #, elixir-autogen, elixir-format
 msgid "Are we allowed to save this conversation?"
 msgstr "Souhaitez-vous ajouter plus d'informations et nous autoriser à enregistrer cette conversation ?\n\nVous pouvez répondre à ces questions pendant 48 heures maximum."
 
-#: lib/chatbot/worker.ex:64
-#: lib/chatbot/worker.ex:116
+#: lib/chatbot/worker.ex:67
+#: lib/chatbot/worker.ex:125
 #, elixir-autogen, elixir-format
 msgid "thank you"
 msgstr "Merci d'utiliser notre système, nous espérons que vous pourrez trouver de l'aide grâce à notre suggestion.\n\nLa conversation va être supprimée maintenant."
 
-#: lib/chatbot/worker.ex:58
-#: lib/chatbot/worker.ex:109
+#: lib/chatbot/information_collector.ex:53
 #, elixir-autogen, elixir-format
 msgid "Describe what happened"
 msgstr "Veuillez décrire ce qui s'est passé dans un seul message."
 
-#: lib/chatbot/worker.ex:90
+#: lib/chatbot/information_collector.ex:34
+#: lib/chatbot/worker.ex:93
 #, elixir-autogen, elixir-format
 msgid "Bye"
 msgstr "Au revoir : )"
 
-#: lib/chatbot/worker.ex:98
+#: lib/chatbot/worker.ex:102
 #, elixir-autogen, elixir-format
 msgid "Due to inactivity the conversation will be ended"
 msgstr "En raison de l'inactivité, la conversation sera terminée."
@@ -65,12 +65,37 @@ msgstr "En raison de l'inactivité, la conversation sera terminée."
 msgid "En qué idioma quieres que te responda?"
 msgstr "Bonjour !\n\nDans quelle langue voulez-vous que je réponde ?"
 
-#: lib/chatbot/worker.ex:54
+#: lib/chatbot/worker.ex:56
 #, elixir-autogen, elixir-format
 msgid "La conversación anterior ya ha sido borrada"
 msgstr "La conversation précédente a déjà expiré. Commençons un nouveau !\n\nDans quelle langue voulez-vous que je réponde?"
 
-#: lib/chatbot/worker.ex:179
+#: lib/chatbot/worker.ex:192
 #, elixir-autogen, elixir-format
 msgid "We have a conversation not closed yet. Do you want to add more information about it?"
 msgstr "Nous avons une conversation pas encore terminée. Souhaitez-vous ajouter plus d'informations à ce sujet?"
+
+#: lib/chatbot/information_collector.ex:92
+#, elixir-autogen, elixir-format
+msgid "Due to a server problem this information couldn't be saved."
+msgstr "En raison d'un problème de serveur, ces informations n'ont pas pu être enregistrées."
+
+#: lib/chatbot/information_collector.ex:41
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Due to inactivity the conversation will be ended. It wont be saved."
+msgstr "En raison de l'inactivité, la conversation sera terminée.\n\n Les informations que vous avez déjà envoyées ne seront pas enregistrées."
+
+#: lib/chatbot/information_collector.ex:71
+#, elixir-autogen, elixir-format
+msgid "Please, select your gender:"
+msgstr "S'il vous plait selectionnez votre genre:"
+
+#: lib/chatbot/information_collector.ex:93
+#, elixir-autogen, elixir-format
+msgid "This information has been saved successfully"
+msgstr "Ces informations ont été enregistrées avec succès"
+
+#: lib/chatbot/information_collector.ex:59
+#, elixir-autogen, elixir-format
+msgid "Where did it happen?"
+msgstr "Où est-ce arrivé?"

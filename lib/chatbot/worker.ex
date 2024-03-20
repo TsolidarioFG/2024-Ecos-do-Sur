@@ -83,6 +83,7 @@ defmodule Chatbot.Worker do
   def terminate(:shutdown, state) do
     stop_timeout_timer(state)
     GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("error_message")})
+    :poolboy.checkin(:worker, self())
   end
 
   # Terminates the process when no error occured
@@ -90,6 +91,7 @@ defmodule Chatbot.Worker do
   def terminate(:normal, state) do
     stop_timeout_timer(state)
     GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("Bye")})
+    :poolboy.checkin(:worker, self())
   end
 
   @impl GenServer
@@ -100,11 +102,13 @@ defmodule Chatbot.Worker do
         GenServer.cast(leader, {:worker_dead, self(), user, gettext("Due to inactivity the conversation will be ended")})
       _ ->   GenServer.cast(leader, {:worker_dead, self(), user, nil})
     end
+    :poolboy.checkin(:worker, self())
   end
 
   @impl GenServer
   def terminate(:silence, state) do
     stop_timeout_timer(state)
+    :poolboy.checkin(:worker, self())
   end
 
   # Handles an update when it has a callback query and the conversation is resolved already

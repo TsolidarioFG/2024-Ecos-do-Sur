@@ -50,6 +50,14 @@ defmodule Chatbot.Leader do
     {:noreply, state}
   end
 
+  @impl GenServer
+  def handle_cast({:worker_substitute, worker_pid, new_pid, user_id}, state) do
+    substitute = %{pid: new_pid, user_id: user_id}
+    new_workers_data = Enum.reject(state.workers_data, &(&1.pid == worker_pid))
+    GenServer.cast(new_pid, :stablished)
+    {:noreply, %{state | workers_data: [substitute | new_workers_data]}}
+  end
+
   # When a worker dies, the leader must be notified to delete it from workers_data. No message to the user.
   @impl GenServer
   def handle_cast({:worker_dead, pid, _user_id, nil}, state) do
@@ -102,7 +110,7 @@ defmodule Chatbot.Leader do
   end
 
   # Handles regular message updates when workers_data is empty
-  defp do_handle_one_update(%{"message" => msg, "update_id" => _} = update, key, [] = workers_data) do
+  defp do_handle_one_update(%{"message" => _, "update_id" => _} = update, key, [] = workers_data) do
     do_resolve_update(nil, update, key, workers_data)
   end
 

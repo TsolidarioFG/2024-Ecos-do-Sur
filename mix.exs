@@ -25,7 +25,9 @@ defmodule Chatbot.MixProject do
       {:telegram, git: "https://github.com/visciang/telegram.git", tag: "1.2.1"},
       {:poolboy, "~> 1.5.2"},
       {:credo, "~> 1.7.5"},
-      {:gettext, "~> 0.24.0"}
+      {:gettext, "~> 0.24.0"},
+      {:httpoison, "~> 2.2.1"},
+      {:poison, "~> 5.0.0"}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]

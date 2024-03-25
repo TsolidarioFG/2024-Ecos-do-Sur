@@ -1,0 +1,37 @@
+@startuml Container
+!include <C4/C4_Container>
+
+Person(aliasUser, "User", "Chats with the bot. Has a problem our doubt that needs to be solved.")
+System_Ext(Telegram, "Telegram", "Acts as a comunication system between the user and the ChatBot.")
+System_Boundary(boundary, "ChatBot") {
+    Container(Leader, "Leader", "GenServer", "Requests updates from telegram and delegates them to the Workers or the InformationCollectors.")
+    Container(workers, "Workers Module", "Poolboy", "Contains multiple Workers. Each worker handles a single user's conversation.\n\n They are in charge of discussing the issue with the user and finding a solution.")
+    Container(informationCollectors, "InformationCollectors Module", "Poolboy", "Contains multiple InformationCollectors. Each of them handles a single user's conversation.\n\n They are in charge of collecting information to be stored.")
+    ContainerDb(couchDb, "Database", "CouchDB")
+    
+    
+}
+
+Rel(aliasUser, Telegram, "Sends a message to ChatBot")
+Rel(Telegram, aliasUser, "Forwards ChatBot's response")
+Rel(Leader, workers, "Sends an update")
+Rel(workers, informationCollectors, "Delegates a user")
+Rel(Leader, informationCollectors, "Sends an update")
+
+Rel(Leader, Telegram, "Asks for new messages")
+Rel(Telegram, Leader, "Sends new messages to ChatBot")
+
+Rel(informationCollectors, couchDb, "writes")
+
+Rel(workers, Telegram, "Answers a message")
+Rel(informationCollectors, Telegram, "Answers a message")
+
+
+
+
+
+
+
+
+
+@enduml

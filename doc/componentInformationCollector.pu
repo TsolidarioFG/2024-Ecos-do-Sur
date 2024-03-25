@@ -1,0 +1,29 @@
+@startuml ComponentInformationCollector
+!include <C4/C4_Component>
+Container(Leader, "Leader", "GenServer", "Requests updates from telegram and delegates them to the Workers or the InformationCollectors.")
+Container(workers, "Workers Module", "Poolboy", "Contains multiple Workers. Each worker handles a single user's conversation.\n\n They are in charge of discussing the issue with the user and finding a solution.")
+System_Boundary(boundary, "InformationCollectors Module") {
+    System_Boundary(informationCollectors, "InformationCollectors Pool") {
+    Component(informationCollector1, "informationCollector 1", "GenServer", "Handles a single user's conversation.\n\n Is in charge of collecting information to be stored.")
+    Component(informationCollector2, "informationCollector 2", "GenServer", "Handles a single user's conversation.\n\n Is in charge of collecting information to be stored.")
+    Component(informationCollectorN, "informationCollector N", "GenServer", "Handles a single user's conversation.\n\n Is in charge of collecting information to be stored.")
+    }
+    Component(persistence, "Persistence", "GenServer, HTTPoison", "Stores information in a CouchDB instance using HTTP.")
+    
+}
+ContainerDb(couchDb, "Database", "CouchDB")
+
+
+
+Rel(Leader, informationCollector1, "Sends a message.")
+Rel(Leader, informationCollector2, "Sends a message.")
+Rel(Leader, informationCollectorN, "Sends a message.")
+
+Rel(informationCollector1, persistence, "Asks for information to be stored")
+Rel(informationCollector2, persistence, "Asks for information to be stored")
+Rel(informationCollectorN, persistence, "Asks for information to be stored")
+
+Rel(workers, informationCollectors, "Delegates a User")
+Rel(persistence, couchDb, "writes")
+
+@enduml

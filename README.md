@@ -16,3 +16,23 @@ To run the program it has to be given the token of the bot to be used:
     - Password &rarr; "admin"
   
   When deploying the bot this credentials must be customized in `persistence.ex`.
+
+## Architecture
+
+### Context Diagram:
+
+![](doc/Context.png)
+
+### Container Diagram:
+
+![](doc/Container.png)
+
+### Component Diagram:
+
+#### Workers Module
+
+![](doc/ComponentWorker.png)
+
+#### InformationCollectors Module
+
+![](doc/ComponentInformationCollector.png)

@@ -1,0 +1,17 @@
+@startuml Context
+!include <C4/C4_Container>
+
+
+Person(aliasUser, "User", "Chats with the bot. Has a problem our doubt that needs to be solved.")
+System_Ext(Telegram, "Telegram", "Acts as a comunication system between the user and the ChatBot.")
+System(Chatbot, "ChatBot", "This is our system.")
+
+Rel(aliasUser, Telegram, "Sends a message to ChatBot")
+
+Rel(Chatbot, Telegram, "Asks for new updates")
+Rel(Telegram, Chatbot, "Replies with new updates")
+Rel(Telegram, aliasUser, "Forwards ChatBot's response")
+Rel(Chatbot, Telegram, "Answers a message")
+
+
+@enduml

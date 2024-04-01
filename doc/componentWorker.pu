@@ -19,6 +19,6 @@ Rel(worker1, cache, "Asks for a state to be stored")
 Rel(worker2, cache, "Asks for a state to be stored")
 Rel(workerN, cache, "Asks for a state to be stored")
 
-Rel(workers, informationCollectors, "Delegates a User")
+Rel(workers, informationCollectors, "Delegates")
 
 @enduml

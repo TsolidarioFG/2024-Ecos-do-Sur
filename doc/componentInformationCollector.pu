@@ -11,7 +11,7 @@ System_Boundary(boundary, "InformationCollectors Module") {
     Component(persistence, "Persistence", "GenServer, HTTPoison", "Stores information in a CouchDB instance using HTTP.")
     
 }
-ContainerDb(couchDb, "Database", "CouchDB")
+ContainerDb(couchDb, "Database", "CouchDB", "Write-only database for future data exploitation by other systems.")
 
 
 
@@ -23,7 +23,7 @@ Rel(informationCollector1, persistence, "Asks for information to be stored")
 Rel(informationCollector2, persistence, "Asks for information to be stored")
 Rel(informationCollectorN, persistence, "Asks for information to be stored")
 
-Rel(workers, informationCollectors, "Delegates a User")
+Rel(workers, informationCollectors, "Delegates")
 Rel(persistence, couchDb, "writes")
 
 @enduml

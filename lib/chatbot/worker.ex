@@ -4,7 +4,7 @@ defmodule Chatbot.Worker do
   import ChatBot.Gettext
   alias Chatbot.Cache, as: Cache
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
-  alias Chatbot.StateManager, as: StateManager
+  alias Chatbot.Manager, as: Manager
 
   @moduledoc """
   Chatbot.Worker is responsible for interacting with the user,
@@ -25,7 +25,7 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def init(_) do
     Logger.info("Worker Initialized")
-    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: :start, stop_pause: false}
+    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false}
     {:ok, state}
   end
 
@@ -116,8 +116,8 @@ defmodule Chatbot.Worker do
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{lang: nil} = state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     Gettext.put_locale(query["data"])
-    new_graph_state = StateManager.resolve(state.graph_state, state.user, state.key, nil, nil)
-    {:noreply,  %{state | graph_state: new_graph_state, lang: query["data"] }}
+    new_graph_state = Manager.resolve(state.graph_state, state.user, state.key, nil, query["message"]["message_id"])
+    {:noreply,  %{state | graph_state: new_graph_state, lang: query["data"]}}
   end
 
   # Called when the conversation is paused and a callback query is received
@@ -125,17 +125,17 @@ defmodule Chatbot.Worker do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "YES" ->
-        new_state = StateManager.resolve(:start, state.user, state.key, query["data"], query["message"]["message_id"] )
-        {:noreply, %{state | graph_state: new_state, stop_pause: false}}
+        new_graph_state = Manager.resolve({{:start, :initial}, [], nil}, state.user, state.key, query["data"], query["message"]["message_id"])
+        {:noreply, %{state | graph_state: new_graph_state, stop_pause: false}}
       "NO" ->
-        new_state = StateManager.resolve(state.graph_state, state.user, state.key, "CONTINUE", query["message"]["message_id"] )
+        new_state = Manager.resolve(state.graph_state, state.user, state.key, "CONTINUE", query["message"]["message_id"])
         {:noreply, %{state | graph_state: new_state, stop_pause: false}}
       _ -> {:noreply, state}
     end
   end
 
   # Handles an update when it has a callback query and the conversation is solved already
-  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{graph_state: :solved} = state) do
+  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{graph_state: {:solved, _, _}} = state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "yes" ->
@@ -155,8 +155,9 @@ defmodule Chatbot.Worker do
   # Handles an update when it has a callback query. Resolves the graph state.
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
-    new_graph_state = StateManager.resolve(state.graph_state, state.user, state.key, query["data"],query["message"]["message_id"] )
-    if new_graph_state == :solved do
+    new_graph_state = Manager.resolve(state.graph_state, state.user, state.key, query["data"],query["message"]["message_id"] )
+    {st, _, _} = new_graph_state
+    if st == :solved do
       do_ask_for_permission(state)
     end
     {:noreply,  %{state | graph_state: new_graph_state}}
@@ -200,7 +201,7 @@ defmodule Chatbot.Worker do
       state.user,
       state.key
     )
-    new_state =%{state | graph_state: :solved}
+    new_state =%{state | graph_state: {:solved, nil, nil}}
     GenServer.cast(:Cache, {:put_new, {state.user, new_state}})
     new_state
   end
@@ -216,7 +217,7 @@ defmodule Chatbot.Worker do
       state.user,
       state.key
     )
-    %{state | graph_state: :solved}
+    %{state | graph_state: {:solved, nil, nil}}
   end
 
   # Decides which function to run from the result of Cache.get

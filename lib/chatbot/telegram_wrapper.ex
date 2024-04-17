@@ -10,7 +10,7 @@ defmodule Chatbot.TelegramWrapper do
   # Updates a message with new text and keyboard markup
   def update_menu(keyboard, text, chat_id, message_id, key) do
     keyboard_markup = %{inline_keyboard: keyboard}
-    Telegram.Api.request(key, "editMessageText", chat_id: chat_id, message_id: message_id, text: text, reply_markup: {:json, keyboard_markup})
+    Telegram.Api.request(key, "editMessageText", chat_id: chat_id, message_id: message_id, text: text, reply_markup: {:json, keyboard_markup}, parse_mode: "markdown")
   end
 
   # Sends a new message with keyboard markup

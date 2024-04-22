@@ -16,6 +16,6 @@ defmodule Chatbot.TelegramWrapper do
   # Sends a new message with keyboard markup
   def send_menu(keyboard, message, chat_id, key) do
     keyboard_markup = %{inline_keyboard: keyboard}
-    Telegram.Api.request(key, "sendMessage", chat_id: chat_id, text: message, reply_markup: {:json, keyboard_markup})
+    Telegram.Api.request(key, "sendMessage", chat_id: chat_id, text: message, reply_markup: {:json, keyboard_markup}, parse_mode: "markdown")
   end
 end

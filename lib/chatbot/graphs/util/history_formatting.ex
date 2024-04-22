@@ -18,6 +18,10 @@ defmodule Chatbot.HistoryFormatting do
       {:U2_1, :initial} -> "Lugar definido"
       {:U2_3, :initial} -> "Con el personal del establecimiento"
       {:U2_4, :initial} -> "Con otra persona."
+      {:start, :leisure} -> "Ocio"
+      {:EN, :leisure} -> "Niegan Entrada"
+      {:EN_1, :leisure} -> "Con hoja de reclamaciones"
+      {:EN_2, :leisure} -> "Necesito ayuda para rellenarla"
     end
   end
 end

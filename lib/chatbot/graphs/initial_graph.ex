@@ -82,7 +82,8 @@ defmodule Chatbot.InitialGraph do
 
   def resolve({:U2_resolve, history, _}, user, key, "HOME", message_id), do: resolve({:U2_4, history, "HOME"}, user, key, nil, message_id)
   def resolve({:U2_resolve, history, _}, user, key, "STREET", message_id), do: resolve({:U2_4, history, "STREET"}, user, key, nil, message_id)
-  def resolve({:U2_resolve, history, _}, user, key, response, message_id), do: resolve({:U2_1, history, response}, user, key, nil, message_id)
+  def resolve({:U2_resolve, history, _}, user, key, response, message_id) when response in ["OCIO", "LEISURE", "COMMERCE", "WORK", "GOVERN", "HOSPITAL", "TRANSPORT", "SCHOOL"], do:
+    resolve({:U2_1, history, response}, user, key, nil, message_id)
 
   def resolve({:U2_1, history, memory}, user, key, _, message_id) do
     keyboard = [[%{text: "PERSONAL", callback_data: "STAFF"}], [%{text: "OTRA PERSONA", callback_data: "OTHER"}], [%{text: "ATRÁS", callback_data: "BACK"}]]
@@ -244,4 +245,5 @@ defmodule Chatbot.InitialGraph do
     )
     {:solved, nil, nil}
   end
+  def resolve({state, history, memory}, _, _, _, _), do:  {{state, :initial}, history, memory}
 end

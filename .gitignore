@@ -3,3 +3,4 @@ _build
 deps
 mix.lock
 .vscode
+erl_crash.dump

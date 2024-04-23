@@ -22,6 +22,7 @@ defmodule Chatbot.HistoryFormatting do
       {:EN, :leisure} -> "Niegan Entrada"
       {:EN_1, :leisure} -> "Con hoja de reclamaciones"
       {:EN_2, :leisure} -> "Necesito ayuda para rellenarla"
+      _ -> "Not Implemented Yet"
     end
   end
 end

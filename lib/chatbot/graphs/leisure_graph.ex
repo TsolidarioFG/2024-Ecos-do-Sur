@@ -68,80 +68,39 @@ defmodule Chatbot.LeisureGraph do
   ##################################
   # S1-Q2 -
   def resolve({:S1, history, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("LEISURE_S1"),
-      user,
-      message_id,
-      key
-    )
+    TelegramWrapper.update_menu(gettext("LEISURE_S1"), user, message_id, key)
     resolve({:EN, history, nil}, user, key, nil, message_id)
   end
 
   # S2 ----
   def resolve({:S2, history, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("LEISURE_S2"),
-      user,
-      message_id,
-      key
-    )
+    TelegramWrapper.update_menu(gettext("LEISURE_S2"), user, message_id, key)
     resolve({:S6, history, nil}, user, key, nil, message_id)
   end
   # S3 ----
   def resolve({:S3, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("LEISURE_S3"),
-      user,
-      message_id,
-      key
-    )
+    TelegramWrapper.update_menu(gettext("LEISURE_S3"), user, message_id, key)
     {:solved, nil, nil}
   end
   # S4-Q4 -
   def resolve({:S4, history, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("LEISURE_S4"),
-      user,
-      message_id,
-      key
-    )
+    TelegramWrapper.update_menu(gettext("LEISURE_S4"), user, message_id, key)
     resolve({:EN_2, history, nil}, user, key, nil, message_id)
 
   end
   # S5 ----
   def resolve({:S5, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("LEISURE_S5"),
-      user,
-      message_id,
-      key
-    )
+    TelegramWrapper.update_menu(gettext("LEISURE_S5"), user, message_id, key)
     resolve({:S6, nil, nil}, user, key, nil, message_id)
   end
   # S6 ----
   def resolve({:S6, _, _}, user, key, _, _) do
-    TelegramWrapper.send_menu(
-      [],
-      gettext("LEISURE_S6"),
-      user,
-      key
-    )
+    TelegramWrapper.send_message(key, user, gettext("LEISURE_S6"))
     {:solved, nil, nil}
   end
 
   def resolve({:S7, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("LEISURE_S7"),
-      user,
-      message_id,
-      key
-    )
+    TelegramWrapper.update_menu(gettext("LEISURE_S7"), user, message_id, key)
     {:solved, nil, nil}
   end
 end

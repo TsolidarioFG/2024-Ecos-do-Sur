@@ -1,6 +1,7 @@
 defmodule Chatbot.HospitalGraph do
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
   alias Chatbot.HistoryFormatting
+  alias Chatbot.CommonFunctions
   import ChatBot.Gettext
 
   @doc """
@@ -58,18 +59,14 @@ defmodule Chatbot.HospitalGraph do
     resolve({:U2, history, nil}, user, key, nil, message_id)
   end
   # S3 ----
-  def resolve({:S3, history, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(gettext("HOSPITAL_S3"), user, message_id, key)
-    resolve({:S4, history, nil}, user, key, nil, message_id)
-  end
+  def resolve({:S3, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("HOSPITAL_S3"), :S4, __MODULE__, user, message_id, key)
   # S4 ----
   def resolve({:S4, _, _}, user, key, _, _) do
     TelegramWrapper.send_message(key, user, gettext("HOSPITAL_S4"))
     {:solved, nil, nil}
   end
   # S4-1 -
-  def resolve({:S4_1, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(gettext("HOSPITAL_S4"), user, message_id, key)
-    {:solved, nil, nil}
-  end
+  def resolve({:S4_1, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOSPITAL_S4"), user, message_id, key)
+  # IGNORE
+  def resolve({state, history, memory}, _, _, _, _), do:  {{state, :hospital}, history, memory}
 end

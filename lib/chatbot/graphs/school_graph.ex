@@ -1,6 +1,7 @@
 defmodule Chatbot.SchoolGraph do
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
   alias Chatbot.HistoryFormatting
+  alias Chatbot.CommonFunctions
   import ChatBot.Gettext
 
   @doc """
@@ -126,56 +127,44 @@ defmodule Chatbot.SchoolGraph do
   # SOLUTIONS
   ##################################
   # S1 ----
-  def resolve({:S1, _, _}, user, key, _, message_id), do: do_finalize_complex(gettext("SCHOOL_S1"), user, message_id, key)
+  def resolve({:S1, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("SCHOOL_S1"), :S5, __MODULE__, user, message_id, key)
   # S2 ----
-  def resolve({:S2, _, _}, user, key, _, message_id), do: do_finalize_complex(gettext("SCHOOL_S2"), user, message_id, key)
+  def resolve({:S2, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("SCHOOL_S2"), :S5, __MODULE__, user, message_id, key)
   # S3 ----
-  def resolve({:S3, _, _}, user, key, _, message_id), do: do_finalize_complex(gettext("SCHOOL_S3"), user, message_id, key)
+  def resolve({:S3, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("SCHOOL_S3"), :S5, __MODULE__, user, message_id, key)
   # S4 ----
-  def resolve({:S4, _, _}, user, key, _, message_id), do: do_finalize_complex(gettext("SCHOOL_S4"), user, message_id, key)
+  def resolve({:S4, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("SCHOOL_S4"), :S5, __MODULE__, user, message_id, key)
   # S5 ----
   def resolve({:S5, _, _}, user, key, _, _) do
     TelegramWrapper.send_message(key, user, gettext("SCHOOL_S5"))
     {:solved, nil, nil}
   end
   # S6 ----
-  def resolve({:S6, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S6"), user, message_id, key)
+  def resolve({:S6, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S6"), user, message_id, key)
   # S7 ----
-  def resolve({:S7, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S7"), user, message_id, key)
+  def resolve({:S7, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S7"), user, message_id, key)
   # S8 ----
-  def resolve({:S8, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S8"), user, message_id, key)
+  def resolve({:S8, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S8"), user, message_id, key)
   # S9 ----
-  def resolve({:S9, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S9"), user, message_id, key)
+  def resolve({:S9, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S9"), user, message_id, key)
   # S10 ----
-  def resolve({:S10, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S10"), user, message_id, key)
+  def resolve({:S10, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S10"), user, message_id, key)
   # S11 ----
-  def resolve({:S11, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S11"), user, message_id, key)
+  def resolve({:S11, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S11"), user, message_id, key)
   # S12 ----
-  def resolve({:S12, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S12"), user, message_id, key)
+  def resolve({:S12, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S12"), user, message_id, key)
   # S13 ----
-  def resolve({:S13, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S13"), user, message_id, key)
+  def resolve({:S13, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S13"), user, message_id, key)
   # S14 ----
-  def resolve({:S14, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S14"), user, message_id, key)
+  def resolve({:S14, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S14"), user, message_id, key)
   # S15 ----
-  def resolve({:S15, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S15"), user, message_id, key)
+  def resolve({:S15, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S15"), user, message_id, key)
   # S16 ----
-  def resolve({:S16, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S16"), user, message_id, key)
+  def resolve({:S16, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S16"), user, message_id, key)
   # S17 ----
-  def resolve({:S17, _, _}, user, key, _, message_id), do:  do_finalize_simple(gettext("SCHOOL_S17"), user, message_id, key)
+  def resolve({:S17, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S17"), user, message_id, key)
   # S18 ----
-  def resolve({:S18, _, _}, user, key, _, message_id), do: do_finalize_simple(gettext("SCHOOL_S18"), user, message_id, key)
-
-  ##################################
-  # PRIVATE FUNCTIONS
-  ##################################
-
-  defp do_finalize_simple(text, user, message_id, key) do
-    TelegramWrapper.update_menu(text, user, message_id, key)
-    {:solved, nil, nil}
-  end
-
-  defp do_finalize_complex(text, user, message_id, key) do
-    TelegramWrapper.update_menu(text, user, message_id, key)
-    resolve({:S5, nil, nil}, user, key, nil, message_id)
-  end
+  def resolve({:S18, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_simple(gettext("SCHOOL_S18"), user, message_id, key)
+  # IGNORE
+  def resolve({state, history, memory}, _, _, _, _), do:  {{state, :school}, history, memory}
 end

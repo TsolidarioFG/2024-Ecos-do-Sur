@@ -1,6 +1,7 @@
 defmodule Chatbot.LeisureGraph do
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
   alias Chatbot.HistoryFormatting
+  alias Chatbot.CommonFunctions
   import ChatBot.Gettext
 
   @doc """
@@ -73,34 +74,23 @@ defmodule Chatbot.LeisureGraph do
   end
 
   # S2 ----
-  def resolve({:S2, history, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(gettext("LEISURE_S2"), user, message_id, key)
-    resolve({:S6, history, nil}, user, key, nil, message_id)
-  end
+  def resolve({:S2, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("LEISURE_S2"), :S6, __MODULE__, user, message_id, key)
   # S3 ----
-  def resolve({:S3, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(gettext("LEISURE_S3"), user, message_id, key)
-    {:solved, nil, nil}
-  end
+  def resolve({:S3, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("LEISURE_S3"), user, message_id, key)
   # S4-Q4 -
   def resolve({:S4, history, _}, user, key, _, message_id) do
     TelegramWrapper.update_menu(gettext("LEISURE_S4"), user, message_id, key)
     resolve({:EN_2, history, nil}, user, key, nil, message_id)
-
   end
   # S5 ----
-  def resolve({:S5, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(gettext("LEISURE_S5"), user, message_id, key)
-    resolve({:S6, nil, nil}, user, key, nil, message_id)
-  end
+  def resolve({:S5, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("LEISURE_S5"), :S6, __MODULE__, user, message_id, key)
   # S6 ----
   def resolve({:S6, _, _}, user, key, _, _) do
     TelegramWrapper.send_message(key, user, gettext("LEISURE_S6"))
     {:solved, nil, nil}
   end
-
-  def resolve({:S7, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(gettext("LEISURE_S7"), user, message_id, key)
-    {:solved, nil, nil}
-  end
+  # S7 ----
+  def resolve({:S7, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("LEISURE_S7"), user, message_id, key)
+  # IGNORE
+  def resolve({state, history, memory}, _, _, _, _), do:  {{state, :leisure}, history, memory}
 end

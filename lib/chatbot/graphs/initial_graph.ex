@@ -2,6 +2,7 @@ defmodule Chatbot.InitialGraph do
   alias Chatbot.Manager
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
   alias Chatbot.HistoryFormatting
+  alias Chatbot.CommonFunctions
   alias Manager
   require Logger
   import ChatBot.Gettext
@@ -185,65 +186,14 @@ defmodule Chatbot.InitialGraph do
   ####################################################################
   ########################### SOLUTIONS ##############################
   ####################################################################
-
-  ##################################
-  # S1
-  ##################################
-
-  def resolve({:S1, _, _}, user, key, _, message_id) do
-        TelegramWrapper.update_menu(
-          [],
-          gettext("INITIAL_S1"),
-          user,
-          message_id,
-          key
-        )
-        {:solved, nil, nil}
-  end
-
-  ##################################
-  # S2
-  ##################################
-
-  def resolve({:S2, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("INITIAL_S2"),
-      user,
-      message_id,
-      key
-    )
-    {:solved, nil, nil}
-  end
-
-  ##################################
-  # S3
-  ##################################
-
-  def resolve({:S3, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("INITIAL_S3"),
-      user,
-      message_id,
-      key
-    )
-    {:solved, nil, nil}
-  end
-
-  ##################################
-  # S4
-  ##################################
-
-  def resolve({:S4, _, _}, user, key, _, message_id) do
-    TelegramWrapper.update_menu(
-      [],
-      gettext("INITIAL_S4"),
-      user,
-      message_id,
-      key
-    )
-    {:solved, nil, nil}
-  end
+  # S1 ----
+  def resolve({:S1, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S1"), user, message_id, key)
+  # S2 ----
+  def resolve({:S2, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S2"), user, message_id, key)
+  # S3 ----
+  def resolve({:S3, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S3"), user, message_id, key)
+  # S4 ----
+  def resolve({:S4, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S4"), user, message_id, key)
+  # IGNORE
   def resolve({state, history, memory}, _, _, _, _), do:  {{state, :initial}, history, memory}
 end

@@ -28,6 +28,6 @@ defmodule Chatbot.CommerceGraph do
   ##################################
   # S1 ----
   def resolve({:S1, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("COMMERCE_S1"), user, message_id, key)
-  # S1 ----
+  # S2 ----
   def resolve({:S2, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("COMMERCE_S2"), user, message_id, key)
 end

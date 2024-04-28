@@ -4,6 +4,7 @@ defmodule Chatbot.Manager do
   alias Chatbot.SchoolGraph
   alias Chatbot.HospitalGraph
   alias Chatbot.TransportGraph
+  alias Chatbot.WorkGraph
   alias Chatbot.InitialGraph
 
   @moduledoc """
@@ -17,4 +18,5 @@ defmodule Chatbot.Manager do
   def resolve({{state, :hospital}, history, memory}, user, key, response, message_id), do: HospitalGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :transport}, history, memory}, user, key, response, message_id), do: TransportGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :commerce}, history, memory}, user, key, response, message_id), do: CommerceGraph.resolve({state, history, memory}, user, key, response, message_id)
+  def resolve({{state, :work}, history, memory}, user, key, response, message_id), do: WorkGraph.resolve({state, history, memory}, user, key, response, message_id)
 end

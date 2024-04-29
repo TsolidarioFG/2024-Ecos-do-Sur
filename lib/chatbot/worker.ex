@@ -164,7 +164,7 @@ defmodule Chatbot.Worker do
   end
 
   # The bot receives a text message so it asks whether to restart or continue the conversation
-  defp do_handle_update(%{"message" => _, "update_id" => _}, state) do
+  defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved do
     keyboard = [[%{text: "SI", callback_data: "YES"}, %{text: "NO", callback_data: "NO"}]]
         TelegramWrapper.send_menu(
           keyboard,
@@ -174,6 +174,9 @@ defmodule Chatbot.Worker do
         )
     {:noreply, %{state | stop_pause: true}}
   end
+
+  # Ignore any unexpected messages that are not part of the conversation.
+  defp do_handle_update(%{"message" => _, "update_id" => _}, state), do: {:noreply, state}
 
   defp do_ask_for_language_preferences(leader_pid, key, user, message, state) do
     keyboard = [

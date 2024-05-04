@@ -121,7 +121,7 @@ defmodule Chatbot.InitialGraph do
   # Work:
   def resolve({:U2_final_resolve, history, "WORK"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work}, history, nil}, user, key, nil, message_id)
   # Home:
-  def resolve({:U2_final_resolve, history, "HOME"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
+  def resolve({:U2_final_resolve, history, "HOME"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :home}, history, nil}, user, key, nil, message_id)
   # Street:
   def resolve({:U2_final_resolve, history, "STREET"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
   # Leisure:

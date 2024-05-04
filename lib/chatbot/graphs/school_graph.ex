@@ -21,7 +21,7 @@ defmodule Chatbot.SchoolGraph do
     {{:start_final_resolve, :school}, history, nil}
   end
 
-  def resolve({:start_final_resolve, history, _}, user, key, "TEACHER", message_id), do: resolve({:TE, history, nil}, user, key, nil, message_id)
+  def resolve({:start_final_resolve, history, _}, user, key, "TEACHER", message_id), do: resolve({:TE_Q7, history, nil}, user, key, nil, message_id)
   def resolve({:start_final_resolve, history, _}, user, key, "CONTENT", message_id), do: resolve({:S9, history, nil}, user, key, nil, message_id)
   def resolve({:start_final_resolve, history, _}, user, key, "ACTIVITIES", message_id), do: resolve({:AC, history, nil}, user, key, nil, message_id)
   def resolve({:start_final_resolve, history, _}, user, key, "OTHER", message_id), do: resolve({:S10, history, nil}, user, key, nil, message_id)
@@ -29,6 +29,16 @@ defmodule Chatbot.SchoolGraph do
   ##################################
   # TEACHER U1
   ##################################
+  # 7 -----
+  def resolve({:TE_Q7, history, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("PARENT"), callback_data: "PARENT"}, %{text: gettext("STUDENT"), callback_data: "STUDENT"}]]
+    new_history = [{:TE_Q7, :school} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q7"), new_history), user, message_id, key)
+    {{:TE_Q7_resolve, :school}, new_history, nil}
+  end
+
+  def resolve({:TE_Q7_resolve, history, _}, user, key, "PARENT", message_id), do: resolve({:S19, history, nil}, user, key, nil, message_id)
+  def resolve({:TE_Q7_resolve, history, _}, user, key, "STUDENT", message_id), do: resolve({:TE, history, nil}, user, key, nil, message_id)
   # 2 -----
   def resolve({:TE, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("TEACHER"), callback_data: "TEACHER"}, %{text: gettext("FAMILY"), callback_data: "FAMILY"}],
@@ -165,6 +175,8 @@ defmodule Chatbot.SchoolGraph do
   def resolve({:S17, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("SCHOOL_S17"), user, message_id, key)
   # S18 ----
   def resolve({:S18, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_simple(gettext("SCHOOL_S18"), user, message_id, key)
+  # S18 ----
+  def resolve({:S19, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_simple(gettext("SCHOOL_S19"), user, message_id, key)
   # IGNORE
   def resolve({state, history, memory}, _, _, _, _), do:  {{state, :school}, history, memory}
 end

@@ -15,9 +15,9 @@ defmodule Chatbot.HomeGraph do
   # 1 -----
   def resolve({:start, _, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("TENANT"), callback_data: "TENANT"}, %{text: gettext("WANT TO RENT"), callback_data: "RENT"}]]
-    history = [{:start, :home_per}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_PER_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :home_per}, history, nil}
+    history = [{:start, :home}]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q1"), history), user, message_id, key)
+    {{:start_final_resolve, :home}, history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "RENT", message_id), do: resolve({:Q3, history, "RENT"}, user, key, nil, message_id)
@@ -25,9 +25,9 @@ defmodule Chatbot.HomeGraph do
   # 2 -----
   def resolve({:Q2, _, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("LANDLORD"), callback_data: "LANDLORD"}, %{text: gettext("WORKER"), callback_data: "WORKER"}]]
-    history = [{:Q2, :home_per}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_PER_Q2"), history), user, message_id, key)
-    {{:Q2_resolve, :home_per}, history, nil}
+    history = [{:Q2, :home}]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q2"), history), user, message_id, key)
+    {{:Q2_resolve, :home}, history, nil}
   end
 
   def resolve({:Q2_resolve, history, _}, user, key, answer, message_id), do: resolve({:Q3, history, answer}, user, key, nil, message_id)
@@ -50,25 +50,25 @@ defmodule Chatbot.HomeGraph do
   # SOLUTIONS
   ##################################
   # S1 ----
-  def resolve({:S1, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_PER_S1"), user, message_id, key)
+  def resolve({:S1, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_S1"), user, message_id, key)
   # S2 ----
-  def resolve({:S2, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_PER_S2"), user, message_id, key)
+  def resolve({:S2, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_S2"), user, message_id, key)
   # S3 ----
-  def resolve({:S3, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_PER_S3"), user, message_id, key)
+  def resolve({:S3, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_S3"), user, message_id, key)
   # S4 ----
-  def resolve({:S4, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_PER_S4"), user, message_id, key)
+  def resolve({:S4, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_S4"), user, message_id, key)
   # S5 ----
-  def resolve({:S5, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_PER_S5"), user, message_id, key)
+  def resolve({:S5, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_S5"), user, message_id, key)
   # S6 ----
-  def resolve({:S6, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_PER_S6"), user, message_id, key)
+  def resolve({:S6, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("HOME_S6"), user, message_id, key)
 
   ##################################
   # PRIVATE FUNCTIONS
   ##################################
   defp do_common_q3(history, keyboard, memory, user, key, message_id) do
-    new_history = [{:Q3, :home_per} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_PER_Q3"), history), user, message_id, key)
-    {{:Q3_resolve, :home_per}, new_history, memory}
+    new_history = [{:Q3, :home} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q3"), history), user, message_id, key)
+    {{:Q3_resolve, :home}, new_history, memory}
   end
 
 end

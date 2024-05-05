@@ -1,4 +1,5 @@
 defmodule Chatbot.Manager do
+  alias Chatbot.PersonWorkGraph
   alias Chatbot.PersonSchoolGraph
   alias Chatbot.HomeGraph
   alias Chatbot.CommerceGraph
@@ -23,4 +24,5 @@ defmodule Chatbot.Manager do
   def resolve({{state, :work}, history, memory}, user, key, response, message_id), do: WorkGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :home}, history, memory}, user, key, response, message_id), do: HomeGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :school_per}, history, memory}, user, key, response, message_id), do: PersonSchoolGraph.resolve({state, history, memory}, user, key, response, message_id)
+  def resolve({{state, :work_per}, history, memory}, user, key, response, message_id), do: PersonWorkGraph.resolve({state, history, memory}, user, key, response, message_id)
 end

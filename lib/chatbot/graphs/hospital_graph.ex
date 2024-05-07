@@ -13,11 +13,12 @@ defmodule Chatbot.HospitalGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("SERVICE DENIAL"), callback_data: "DENIAL"}]]
-    history = [{:start, :hospital}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOSPITAL_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :hospital}, history, nil}
+  def resolve({:start, history, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("SERVICE DENIAL"), callback_data: "DENIAL"}],
+    [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :hospital} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOSPITAL_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :hospital}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "DENIAL", message_id), do: resolve({:U1, history, nil}, user, key, nil, message_id)

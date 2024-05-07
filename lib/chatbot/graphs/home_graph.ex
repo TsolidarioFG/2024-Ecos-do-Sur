@@ -13,11 +13,12 @@ defmodule Chatbot.HomeGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("TENANT"), callback_data: "TENANT"}, %{text: gettext("WANT TO RENT"), callback_data: "RENT"}]]
-    history = [{:start, :home}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :home}, history, nil}
+  def resolve({:start, history, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("TENANT"), callback_data: "TENANT"}, %{text: gettext("WANT TO RENT"), callback_data: "RENT"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :home} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :home}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "RENT", message_id), do: resolve({:Q3, history, "RENT"}, user, key, nil, message_id)

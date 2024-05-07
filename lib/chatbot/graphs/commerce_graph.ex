@@ -13,11 +13,12 @@ defmodule Chatbot.CommerceGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("DENIAL"), callback_data: "DENIAL"}, %{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}]]
-    history = [{:start, :commerce}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("COMMERCE_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :commerce}, history, nil}
+  def resolve({:start, history, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("DENIAL"), callback_data: "DENIAL"}, %{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :commerce} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("COMMERCE_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :commerce}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "DENIAL", message_id), do: resolve({:S1, history, nil}, user, key, nil, message_id)

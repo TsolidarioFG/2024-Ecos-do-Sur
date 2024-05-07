@@ -13,12 +13,13 @@ defmodule Chatbot.SchoolGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
+  def resolve({:start, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("TEACHER"), callback_data: "TEACHER"}, %{text: gettext("CONTENT"), callback_data: "CONTENT"}],
-                [%{text: gettext("ACTIVITIES"), callback_data: "ACTIVITIES"}, %{text: gettext("OTHER"), callback_data: "OTHER"}]]
-    history = [{:start, :school}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :school}, history, nil}
+                [%{text: gettext("ACTIVITIES"), callback_data: "ACTIVITIES"}, %{text: gettext("OTHER"), callback_data: "OTHER"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :school} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :school}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "TEACHER", message_id), do: resolve({:TE_Q7, history, nil}, user, key, nil, message_id)

@@ -14,12 +14,13 @@ defmodule Chatbot.TransportGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
+  def resolve({:start, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("PUBLIC"), callback_data: "PUBLIC"}, %{text: gettext("PRIVATE"), callback_data: "PRIVATE"}],
-                [%{text: gettext("AMBULANCE"), callback_data: "AMBULANCE"}, %{text: gettext("SCHOOL BUS"), callback_data: "SCHOOL_BUS"}]]
-    history = [{:start, :transport}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("TRANSPORT_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :transport}, history, nil}
+                [%{text: gettext("AMBULANCE"), callback_data: "AMBULANCE"}, %{text: gettext("SCHOOL BUS"), callback_data: "SCHOOL_BUS"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :transport} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("TRANSPORT_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :transport}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, answer, message_id), do: resolve({:U1, history, answer}, user, key, nil, message_id)

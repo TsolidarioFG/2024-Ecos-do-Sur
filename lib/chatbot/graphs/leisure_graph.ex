@@ -13,11 +13,12 @@ defmodule Chatbot.LeisureGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("ENTRANCE DENIAL"), callback_data: "ENTRANCE"}, %{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}]]
-    history = [{:start, :leisure}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :leisure}, history, nil}
+  def resolve({:start, history, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("ENTRANCE DENIAL"), callback_data: "ENTRANCE"}, %{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :leisure} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :leisure}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "ENTRANCE", message_id), do: resolve({:S1, history, nil}, user, key, nil, message_id)

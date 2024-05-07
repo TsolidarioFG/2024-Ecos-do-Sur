@@ -51,7 +51,7 @@ defmodule Chatbot.InitialGraph do
 
   def resolve({:U1_1_new, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
-    new_history = [{:U1_new, :initial} | history]
+    new_history = [{:U1_1_new, :initial} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q3"), new_history), user, message_id, key)
     {{:U1_1_new_resolve, :initial}, new_history, nil}
   end
@@ -61,7 +61,7 @@ defmodule Chatbot.InitialGraph do
 
   def resolve({:U1_2_new, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
-    new_history = [{:U1_new, :initial} | history]
+    new_history = [{:U1_2_new, :initial} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q3"), new_history), user, message_id, key)
     {{:U1_2_new_resolve, :initial}, new_history, nil}
   end
@@ -71,7 +71,7 @@ defmodule Chatbot.InitialGraph do
 
   def resolve({:U1_3, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
-    new_history = [{:U1_new, :initial} | history]
+    new_history = [{:U1_3_new, :initial} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q3"), new_history), user, message_id, key)
     {{:U1_3_resolve, :initial}, new_history, nil}
   end
@@ -83,9 +83,9 @@ defmodule Chatbot.InitialGraph do
   # U2
   ##################################
   def resolve({:U2, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("LEISURE"), callback_data: "LEISURE"}, %{text: gettext("COMMERCE"), callback_data: "COMMERCE"}, %{text: gettext("WORK"), callback_data: "WORK"}, %{text: gettext("INSTITUTION"), callback_data: "GOVERN"}],
+    keyboard = [[%{text: gettext("LEISURE"), callback_data: "LEISURE"}, %{text: gettext("COMMERCE"), callback_data: "COMMERCE"}],
     [%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}, %{text: gettext("TRANSPORT"), callback_data: "TRANSPORT"}, %{text: gettext("SCHOOL"), callback_data: "SCHOOL"}],
-    [%{text: gettext("HOME"), callback_data: "HOME"}, %{text: gettext("STREET"), callback_data: "STREET"}],
+    [%{text: gettext("HOME"), callback_data: "HOME"}, %{text: gettext("STREET"), callback_data: "STREET"}, %{text: gettext("WORK"), callback_data: "WORK"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:U2, :initial} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q5"), new_history), user, message_id, key)
@@ -132,8 +132,6 @@ defmodule Chatbot.InitialGraph do
   def resolve({:U2_final_resolve, history, "HOSPITAL"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :hospital}, history, nil}, user, key, nil, message_id)
   # Transport:
   def resolve({:U2_final_resolve, history, "TRANSPORT"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :transport}, history, nil}, user, key, nil, message_id)
-  # Leisure:
-  def resolve({:U2_final_resolve, history, "GOVERN"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :government}, history, nil}, user, key, nil, message_id)
   # Person:
   def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, "WORKPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work_per}, history, nil}, user, key, nil, message_id)

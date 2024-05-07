@@ -13,11 +13,12 @@ defmodule Chatbot.WorkGraph do
   # START
   ##################################
   # 1 -----
-  def resolve({:start, _, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("EMPLOYEE"), callback_data: "EMPLOYEE"}, %{text: gettext("JOB CANDIDATE"), callback_data: "CANDIDATE"}]]
-    history = [{:start, :work}]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q1"), history), user, message_id, key)
-    {{:start_final_resolve, :work}, history, nil}
+  def resolve({:start, history, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("EMPLOYEE"), callback_data: "EMPLOYEE"}, %{text: gettext("JOB CANDIDATE"), callback_data: "CANDIDATE"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
+    new_history = [{:start, :work} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q1"), new_history), user, message_id, key)
+    {{:start_final_resolve, :work}, new_history, nil}
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "EMPLOYEE", message_id), do: resolve({:EM, history, nil}, user, key, nil, message_id)

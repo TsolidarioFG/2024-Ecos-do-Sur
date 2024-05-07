@@ -4,6 +4,7 @@ defmodule Chatbot.Worker do
   import ChatBot.Gettext
   alias Chatbot.Cache, as: Cache
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
+  alias Chatbot.Manager, as: Manager
 
   @moduledoc """
   Chatbot.Worker is responsible for interacting with the user,
@@ -24,7 +25,7 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def init(_) do
     Logger.info("Worker Initialized")
-    state = %{leader: nil, key: nil, user: nil, lang: nil, resolved: false, timer_ref: nil}
+    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false}
     {:ok, state}
   end
 
@@ -111,8 +112,30 @@ defmodule Chatbot.Worker do
     :poolboy.checkin(:worker, self())
   end
 
-  # Handles an update when it has a callback query and the conversation is resolved already
-  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{resolved: true} = state) do
+  # Handles an update when it has a callback query, the conversation was not resolved and also the language was not set.
+  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{lang: nil} = state) do
+    TelegramWrapper.answer_callback_query(state.key, query["id"])
+    Gettext.put_locale(query["data"])
+    new_graph_state = Manager.resolve(state.graph_state, state.user, state.key, nil, query["message"]["message_id"])
+    {:noreply,  %{state | graph_state: new_graph_state, lang: query["data"]}}
+  end
+
+  # Called when the conversation is paused and a callback query is received
+  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{stop_pause: true} = state) do
+    TelegramWrapper.answer_callback_query(state.key, query["id"])
+    case query["data"] do
+      "YES" ->
+        new_graph_state = Manager.resolve({{:start, :initial}, [], nil}, state.user, state.key, query["data"], query["message"]["message_id"])
+        {:noreply, %{state | graph_state: new_graph_state, stop_pause: false}}
+      "NO" ->
+        new_state = Manager.resolve(state.graph_state, state.user, state.key, "CONTINUE", query["message"]["message_id"])
+        {:noreply, %{state | graph_state: new_state, stop_pause: false}}
+      _ -> {:noreply, state}
+    end
+  end
+
+  # Handles an update when it has a callback query and the conversation is solved already
+  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{graph_state: {:solved, _, _}} = state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "yes" ->
@@ -127,29 +150,33 @@ defmodule Chatbot.Worker do
         {:stop, :normal, state}
       _ -> {:noreply, state}
     end
- end
-
- # Handles an update when it has a callback query, the conversation was not resolved and also the language was not set
-  defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{lang: nil} = state) do
-    TelegramWrapper.answer_callback_query(state.key, query["id"])
-    Gettext.put_locale(query["data"])
-    TelegramWrapper.send_message(state.key, state.user, gettext("Language has been set."))
-    final_state = do_ask_for_permission(%{state | lang: query["data"]})
-    GenServer.cast(:Cache, {:update, {state.user,  final_state}})
-    {:noreply,  final_state}
   end
 
-  # Handles an update when it has a callback query
+  # Handles an update when it has a callback query. Resolves the graph state.
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
-    {:noreply, state}
+    new_graph_state = Manager.resolve(state.graph_state, state.user, state.key, query["data"],query["message"]["message_id"] )
+    {st, _, _} = new_graph_state
+    if st == :solved do
+      do_ask_for_permission(state)
+    end
+    {:noreply,  %{state | graph_state: new_graph_state}}
   end
 
-  # Handles an update when it does just contain a message
-  # For now, it raises an error killing the process
-  defp do_handle_update(%{"message" => _, "update_id" => _}, state) do
-    {:noreply, state}
+  # The bot receives a text message so it asks whether to restart or continue the conversation
+  defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved do
+    keyboard = [[%{text: "SI", callback_data: "YES"}, %{text: "NO", callback_data: "NO"}]]
+        TelegramWrapper.send_menu(
+          keyboard,
+          "Quieres reiniciar la conversación?",
+          state.user,
+          state.key
+        )
+    {:noreply, %{state | stop_pause: true}}
   end
+
+  # Ignore any unexpected messages that are not part of the conversation.
+  defp do_handle_update(%{"message" => _, "update_id" => _}, state), do: {:noreply, state}
 
   defp do_ask_for_language_preferences(leader_pid, key, user, message, state) do
     keyboard = [
@@ -177,7 +204,7 @@ defmodule Chatbot.Worker do
       state.user,
       state.key
     )
-    new_state =%{state | resolved: true}
+    new_state =%{state | graph_state: {:solved, nil, nil}}
     GenServer.cast(:Cache, {:put_new, {state.user, new_state}})
     new_state
   end
@@ -193,7 +220,7 @@ defmodule Chatbot.Worker do
       state.user,
       state.key
     )
-    %{state | resolved: true}
+    %{state | graph_state: {:solved, nil, nil}}
   end
 
   # Decides which function to run from the result of Cache.get

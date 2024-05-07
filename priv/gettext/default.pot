@@ -11,35 +11,53 @@
 msgid ""
 msgstr ""
 
-#: lib/chatbot/worker.ex:136
-#, elixir-autogen, elixir-format
-msgid "Language has been set."
-msgstr ""
-
-#: lib/chatbot/worker.ex:172
-#: lib/chatbot/worker.ex:188
+#: lib/chatbot/graphs/hospital_graph.ex:39
+#: lib/chatbot/graphs/initial_graph.ex:54
+#: lib/chatbot/graphs/initial_graph.ex:61
+#: lib/chatbot/graphs/initial_graph.ex:100
+#: lib/chatbot/graphs/initial_graph.ex:110
+#: lib/chatbot/graphs/leisure_graph.ex:31
+#: lib/chatbot/graphs/leisure_graph.ex:41
+#: lib/chatbot/graphs/leisure_graph.ex:51
+#: lib/chatbot/graphs/leisure_graph.ex:58
+#: lib/chatbot/graphs/school_graph.ex:35
+#: lib/chatbot/graphs/school_graph.ex:47
+#: lib/chatbot/graphs/school_graph.ex:59
+#: lib/chatbot/worker.ex:196
+#: lib/chatbot/worker.ex:212
 #, elixir-autogen, elixir-format
 msgid "NO"
 msgstr ""
 
-#: lib/chatbot/worker.ex:172
-#: lib/chatbot/worker.ex:188
+#: lib/chatbot/graphs/hospital_graph.ex:39
+#: lib/chatbot/graphs/initial_graph.ex:54
+#: lib/chatbot/graphs/initial_graph.ex:61
+#: lib/chatbot/graphs/initial_graph.ex:100
+#: lib/chatbot/graphs/initial_graph.ex:110
+#: lib/chatbot/graphs/leisure_graph.ex:31
+#: lib/chatbot/graphs/leisure_graph.ex:41
+#: lib/chatbot/graphs/leisure_graph.ex:51
+#: lib/chatbot/graphs/leisure_graph.ex:58
+#: lib/chatbot/graphs/school_graph.ex:47
+#: lib/chatbot/graphs/school_graph.ex:59
+#: lib/chatbot/worker.ex:196
+#: lib/chatbot/worker.ex:212
 #, elixir-autogen, elixir-format
 msgid "YES"
 msgstr ""
 
-#: lib/chatbot/worker.ex:85
+#: lib/chatbot/worker.ex:86
 #, elixir-autogen, elixir-format
 msgid "error_message"
 msgstr ""
 
-#: lib/chatbot/worker.ex:176
+#: lib/chatbot/worker.ex:200
 #, elixir-autogen, elixir-format
 msgid "Are we allowed to save this conversation?"
 msgstr ""
 
-#: lib/chatbot/worker.ex:67
-#: lib/chatbot/worker.ex:125
+#: lib/chatbot/worker.ex:68
+#: lib/chatbot/worker.ex:148
 #, elixir-autogen, elixir-format
 msgid "thank you"
 msgstr ""
@@ -50,27 +68,27 @@ msgid "Describe what happened"
 msgstr ""
 
 #: lib/chatbot/information_collector.ex:34
-#: lib/chatbot/worker.ex:93
+#: lib/chatbot/worker.ex:94
 #, elixir-autogen, elixir-format
 msgid "Bye"
 msgstr ""
 
-#: lib/chatbot/worker.ex:102
+#: lib/chatbot/worker.ex:103
 #, elixir-autogen, elixir-format
 msgid "Due to inactivity the conversation will be ended"
 msgstr ""
 
-#: lib/chatbot/worker.ex:41
+#: lib/chatbot/worker.ex:42
 #, elixir-autogen, elixir-format
 msgid "En qué idioma quieres que te responda?"
 msgstr ""
 
-#: lib/chatbot/worker.ex:56
+#: lib/chatbot/worker.ex:57
 #, elixir-autogen, elixir-format
 msgid "La conversación anterior ya ha sido borrada"
 msgstr ""
 
-#: lib/chatbot/worker.ex:192
+#: lib/chatbot/worker.ex:216
 #, elixir-autogen, elixir-format
 msgid "We have a conversation not closed yet. Do you want to add more information about it?"
 msgstr ""
@@ -98,4 +116,561 @@ msgstr ""
 #: lib/chatbot/information_collector.ex:59
 #, elixir-autogen, elixir-format
 msgid "Where did it happen?"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:29
+#: lib/chatbot/graphs/hospital_graph.ex:39
+#: lib/chatbot/graphs/initial_graph.ex:44
+#: lib/chatbot/graphs/initial_graph.ex:54
+#: lib/chatbot/graphs/initial_graph.ex:61
+#: lib/chatbot/graphs/initial_graph.ex:78
+#: lib/chatbot/graphs/initial_graph.ex:90
+#: lib/chatbot/graphs/initial_graph.ex:100
+#: lib/chatbot/graphs/initial_graph.ex:110
+#: lib/chatbot/graphs/leisure_graph.ex:31
+#: lib/chatbot/graphs/leisure_graph.ex:41
+#: lib/chatbot/graphs/leisure_graph.ex:51
+#: lib/chatbot/graphs/leisure_graph.ex:58
+#: lib/chatbot/graphs/transport_graph.ex:28
+#, elixir-autogen, elixir-format
+msgid "BACK"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:75
+#, elixir-autogen, elixir-format
+msgid "COMMERCE"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:17
+#, elixir-autogen, elixir-format
+msgid "ENTRANCE DENIAL"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:77
+#, elixir-autogen, elixir-format
+msgid "HOME"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:29
+#: lib/chatbot/graphs/initial_graph.ex:76
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "INFORMATION"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:24
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:46
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:56
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q3"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:63
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q4"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:80
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q5"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:92
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q6"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:102
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q7"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:112
+#, elixir-autogen, elixir-format
+msgid "INITIAL_Q8"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:190
+#, elixir-autogen, elixir-format
+msgid "INITIAL_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:192
+#, elixir-autogen, elixir-format
+msgid "INITIAL_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:194
+#, elixir-autogen, elixir-format
+msgid "INITIAL_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:196
+#, elixir-autogen, elixir-format
+msgid "INITIAL_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:75
+#, elixir-autogen, elixir-format
+msgid "INSTITUTION"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:75
+#, elixir-autogen, elixir-format
+msgid "LEISURE"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "LEISURE_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:33
+#, elixir-autogen, elixir-format
+msgid "LEISURE_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:43
+#, elixir-autogen, elixir-format
+msgid "LEISURE_Q3"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:53
+#: lib/chatbot/graphs/leisure_graph.ex:60
+#, elixir-autogen, elixir-format
+msgid "LEISURE_Q4"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:72
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:77
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:79
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:82
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:86
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S5"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:89
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S6"
+msgstr ""
+
+#: lib/chatbot/graphs/leisure_graph.ex:93
+#, elixir-autogen, elixir-format
+msgid "LEISURE_S7"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:44
+#, elixir-autogen, elixir-format
+msgid "ME"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:44
+#: lib/chatbot/graphs/school_graph.ex:18
+#, elixir-autogen, elixir-format
+msgid "OTHER"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:90
+#, elixir-autogen, elixir-format
+msgid "OTHER PERSON"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:90
+#, elixir-autogen, elixir-format
+msgid "PERSONAL"
+msgstr ""
+
+#: lib/chatbot/graphs/commerce_graph.ex:17
+#: lib/chatbot/graphs/leisure_graph.ex:17
+#: lib/chatbot/graphs/transport_graph.ex:28
+#, elixir-autogen, elixir-format
+msgid "PRICE MANIPULATION"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:76
+#, elixir-autogen, elixir-format
+msgid "SCHOOL"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:77
+#, elixir-autogen, elixir-format
+msgid "STREET"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:76
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "URGENT"
+msgstr ""
+
+#: lib/chatbot/graphs/initial_graph.ex:75
+#, elixir-autogen, elixir-format
+msgid "WORK"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:18
+#, elixir-autogen, elixir-format
+msgid "ACTIVITIES"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:74
+#, elixir-autogen, elixir-format
+msgid "AMPA"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:35
+#, elixir-autogen, elixir-format
+msgid "BOTH"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:74
+#, elixir-autogen, elixir-format
+msgid "CANTEEN"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:29
+#, elixir-autogen, elixir-format
+msgid "CLINIC"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:17
+#, elixir-autogen, elixir-format
+msgid "CONTENT"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:95
+#: lib/chatbot/graphs/school_graph.ex:103
+#, elixir-autogen, elixir-format
+msgid "DENIAL OF SERVICE"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:102
+#, elixir-autogen, elixir-format
+msgid "DIET"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:73
+#, elixir-autogen, elixir-format
+msgid "EXTRACURRICULAR"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:34
+#, elixir-autogen, elixir-format
+msgid "FAMILY"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:31
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:41
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_Q3"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:53
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:58
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:62
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:69
+#, elixir-autogen, elixir-format
+msgid "HOSPITAL_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:117
+#, elixir-autogen, elixir-format
+msgid "MEDICAL NEED"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:94
+#: lib/chatbot/graphs/school_graph.ex:102
+#, elixir-autogen, elixir-format
+msgid "PRICE MODIFICATION"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:117
+#, elixir-autogen, elixir-format
+msgid "RELIGION OR PHILOSOPHY"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:37
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:49
+#: lib/chatbot/graphs/school_graph.ex:61
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_Q3"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:76
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_Q4"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:89
+#: lib/chatbot/graphs/school_graph.ex:97
+#: lib/chatbot/graphs/school_graph.ex:105
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_Q5"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:119
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_Q6"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:130
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:151
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S10"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:153
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S11"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:155
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S12"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:157
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S13"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:159
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S14"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:161
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S15"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:163
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S16"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:165
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S17"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:167
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S18"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:132
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:134
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:136
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:139
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S5"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:143
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S6"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:145
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S7"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:147
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S8"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:149
+#, elixir-autogen, elixir-format
+msgid "SCHOOL_S9"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:73
+#, elixir-autogen, elixir-format
+msgid "SECRETARY"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:17
+#, elixir-autogen, elixir-format
+msgid "SERVICE DENIAL"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:17
+#: lib/chatbot/graphs/school_graph.ex:34
+#, elixir-autogen, elixir-format
+msgid "TEACHER"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:87
+#, elixir-autogen, elixir-format
+msgid "TUITION"
+msgstr ""
+
+#: lib/chatbot/graphs/school_graph.ex:87
+#: lib/chatbot/graphs/school_graph.ex:94
+#, elixir-autogen, elixir-format
+msgid "UNEQUAL TREATMENT"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "AMBULANCE"
+msgstr ""
+
+#: lib/chatbot/graphs/commerce_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "COMMERCE_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/commerce_graph.ex:30
+#, elixir-autogen, elixir-format
+msgid "COMMERCE_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/commerce_graph.ex:32
+#, elixir-autogen, elixir-format
+msgid "COMMERCE_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/commerce_graph.ex:17
+#: lib/chatbot/graphs/transport_graph.ex:28
+#, elixir-autogen, elixir-format
+msgid "DENIAL"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:18
+#, elixir-autogen, elixir-format
+msgid "PRIVATE"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:18
+#, elixir-autogen, elixir-format
+msgid "PUBLIC"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "SCHOOL BUS"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:21
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:30
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:46
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:48
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:52
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:54
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_S5"
+msgstr ""
+
+#: lib/chatbot/graphs/transport_graph.ex:56
+#, elixir-autogen, elixir-format
+msgid "TRANSPORT_S6"
 msgstr ""

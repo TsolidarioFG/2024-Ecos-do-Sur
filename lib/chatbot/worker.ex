@@ -59,15 +59,11 @@ defmodule Chatbot.Worker do
       fn value ->
         case query["data"] do
           "yes" ->
-            delegate(value)
+            do_delegate(value, :with_information)
             {:stop, :silence, :worker_dead, value}
           "no" ->
-            TelegramWrapper.send_message(
-                    key,
-                    user,
-                    gettext("thank you"))
-            GenServer.cast(:Cache, {:delete, user})
-            {:stop, :normal, :worker_dead, value}
+            do_delegate(value, :without_information)
+            {:stop, :silence, :worker_dead, value}
         end
       end
     )
@@ -139,15 +135,11 @@ defmodule Chatbot.Worker do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "yes" ->
-        delegate(state)
+        do_delegate(state, :with_information)
         {:stop, :silence, state}
       "no" ->
-        TelegramWrapper.send_message(
-                state.key,
-                state.user,
-                gettext("thank you"))
-        GenServer.cast(:Cache, {:delete, state.user})
-        {:stop, :normal, state}
+        do_delegate(state, :without_information)
+        {:stop, :silence, state}
       _ -> {:noreply, state}
     end
   end
@@ -231,10 +223,17 @@ defmodule Chatbot.Worker do
     end
   end
 
-  defp delegate(state) do
+  defp do_delegate(state, :with_information) do
     information_collector_pid = :poolboy.checkout(:collector)
     GenServer.call(information_collector_pid, {:initialize, state})
     GenServer.cast(state.leader, {:worker_substitute, self(), information_collector_pid, state.user})
+    GenServer.cast(:Cache, {:delete, state.user})
+  end
+
+  defp do_delegate(state, :without_information) do
+    information_collector_pid = :poolboy.checkout(:collector)
+    GenServer.call(information_collector_pid, {:initialize, state})
+    GenServer.cast(state.leader, {:worker_substitute_skip, self(), information_collector_pid, state.user})
     GenServer.cast(:Cache, {:delete, state.user})
   end
 

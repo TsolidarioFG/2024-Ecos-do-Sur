@@ -32,7 +32,8 @@ defmodule Chatbot.SchoolGraph do
   ##################################
   # 7 -----
   def resolve({:TE_Q7, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("PARENT"), callback_data: "PARENT"}, %{text: gettext("STUDENT"), callback_data: "STUDENT"}]]
+    keyboard = [[%{text: gettext("PARENT"), callback_data: "PARENT"}, %{text: gettext("STUDENT"), callback_data: "STUDENT"}],
+    [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:TE_Q7, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q7"), new_history), user, message_id, key)
     {{:TE_Q7_resolve, :school}, new_history, nil}
@@ -43,7 +44,8 @@ defmodule Chatbot.SchoolGraph do
   # 2 -----
   def resolve({:TE, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("TEACHER"), callback_data: "TEACHER"}, %{text: gettext("FAMILY"), callback_data: "FAMILY"}],
-                [%{text: gettext("BOTH"), callback_data: "BOTH"}, %{text: gettext("NO"), callback_data: "NO"}]]
+                [%{text: gettext("BOTH"), callback_data: "BOTH"}, %{text: gettext("NO"), callback_data: "NO"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:TE, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q2"), new_history), user, message_id, key)
     {{:TE_resolve, :school}, new_history, nil}
@@ -55,7 +57,8 @@ defmodule Chatbot.SchoolGraph do
   def resolve({:TE_resolve, history, _}, user, key, "NO", message_id), do: resolve({:S8, history, nil}, user, key, nil, message_id)
   # 3 ----- Family / Teacher
   def resolve({:TE_1, history, memory}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:TE_1, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q3"), new_history), user, message_id, key)
     {{:TE_1_resolve, :school}, new_history, memory}
@@ -67,7 +70,8 @@ defmodule Chatbot.SchoolGraph do
   def resolve({:TE_1_resolve, history, "TEACHER"}, user, key, "NO", message_id), do: resolve({:S4, history, nil}, user, key, nil, message_id)
   # 3 ----- Both
   def resolve({:BO, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:BO, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q3"), new_history), user, message_id, key)
     {{:BO_resolve, :school}, new_history, nil}
@@ -82,26 +86,27 @@ defmodule Chatbot.SchoolGraph do
   # 4 -----
   def resolve({:AC, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("SECRETARY"), callback_data: "SECRETARY"}, %{text: gettext("EXTRACURRICULAR"), callback_data: "EXTRACURRICULAR"}],
-                [%{text: gettext("CANTEEN"), callback_data: "CANTEEN"}, %{text: gettext("AMPA"), callback_data: "AMPA"}]]
+                [%{text: gettext("CANTEEN"), callback_data: "CANTEEN"}, %{text: gettext("AMPA"), callback_data: "AMPA"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:AC, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q4"), new_history), user, message_id, key)
     {{:AC_resolve, :school}, new_history, nil}
   end
 
-  def resolve({:AC_resolve, history, _}, user, key, "SECRETARY", message_id), do: resolve({:AC_final, history, "SEC"}, user, key, nil, message_id)
-  def resolve({:AC_resolve, history, _}, user, key, "EXTRACURRICULAR", message_id), do: resolve({:AC_final, history, "EX"}, user, key, nil, message_id)
-  def resolve({:AC_resolve, history, _}, user, key, "CANTEEN", message_id), do: resolve({:AC_final, history, "CA"}, user, key, nil, message_id)
-  def resolve({:AC_resolve, history, _}, user, key, "AMPA", message_id), do: resolve({:AC_final, history, nil}, user, key, nil, message_id)
+  def resolve({:AC_resolve, history, _}, user, key, "SECRETARY", message_id), do: resolve({:AC_SEC, history, "SEC"}, user, key, nil, message_id)
+  def resolve({:AC_resolve, history, _}, user, key, "EXTRACURRICULAR", message_id), do: resolve({:AC_EX, history, "EX"}, user, key, nil, message_id)
+  def resolve({:AC_resolve, history, _}, user, key, "CANTEEN", message_id), do: resolve({:AC_CA, history, "CA"}, user, key, nil, message_id)
+  def resolve({:AC_resolve, history, _}, user, key, "AMPA", message_id), do: resolve({:S18, history, nil }, user, key, nil, message_id)
   # 5 -----
   # U2 --
-  def resolve({:AC_final, history, "SEC"}, user, key, _, message_id) do
+  def resolve({:AC_SEC, history, "SEC"}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("UNEQUAL TREATMENT"), callback_data: "UNEQUAL"}, %{text: gettext("TUITION"), callback_data: "TUITION"}]]
     new_history = [{:AC_SEC, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q5"), new_history), user, message_id, key)
     {{:AC_final_resolve, :school}, new_history, "SEC"}
   end
   # U3 --
-  def resolve({:AC_final, history, "EX"}, user, key, _, message_id) do
+  def resolve({:AC_EX, history, "EX"}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("UNEQUAL TREATMENT"), callback_data: "UNEQUAL"}, %{text: gettext("PRICE MODIFICATION"), callback_data: "PRICE"}],
                 [%{text: gettext("DENIAL OF SERVICE"), callback_data: "DENIAL"}]]
     new_history = [{:AC_EX, :school} | history]
@@ -109,10 +114,10 @@ defmodule Chatbot.SchoolGraph do
     {{:AC_final_resolve, :school}, new_history, "EX"}
   end
   # U4 --
-  def resolve({:AC_final, history, "CA"}, user, key, _, message_id) do
+  def resolve({:AC_CA, history, "CA"}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("DIET"), callback_data: "DIET"}, %{text: gettext("PRICE MODIFICATION"), callback_data: "PRICE"}],
                 [%{text: gettext("DENIAL OF SERVICE"), callback_data: "DENIAL"}]]
-    new_history = [{:AC_EX, :school} | history]
+    new_history = [{:AC_CA, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q5"), new_history), user, message_id, key)
     {{:AC_final_resolve, :school}, new_history, "CA"}
   end

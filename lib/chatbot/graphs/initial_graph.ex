@@ -62,7 +62,7 @@ defmodule Chatbot.InitialGraph do
   def resolve({:U1_2_new, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:U1_2_new, :initial} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q3"), new_history), user, message_id, key)
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q7"), new_history), user, message_id, key)
     {{:U1_2_new_resolve, :initial}, new_history, nil}
   end
 

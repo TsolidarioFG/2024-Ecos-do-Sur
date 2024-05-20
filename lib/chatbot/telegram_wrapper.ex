@@ -1,6 +1,6 @@
 defmodule Chatbot.TelegramWrapper do
   def send_message(key, chat_id, text) do
-      Telegram.Api.request(key, "sendMessage", chat_id: chat_id, text: text)
+      Telegram.Api.request(key, "sendMessage", chat_id: chat_id, text: text, parse_mode: "markdown")
   end
 
   def answer_callback_query(key, query_id) do

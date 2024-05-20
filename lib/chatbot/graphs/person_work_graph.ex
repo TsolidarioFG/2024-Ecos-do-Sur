@@ -14,7 +14,7 @@ defmodule Chatbot.PersonWorkGraph do
   ##################################
   # 1 -----
   def resolve({:start, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("BAD BEHAVIOR"), callback_data: "BEHAVIOR"}, %{text: gettext("THEFT"), callback_data: "THEFT"}],
+    keyboard = [[%{text: gettext("BAD BEHAVIOR"), callback_data: "BEHAVIOR"}], [%{text: gettext("THEFT"), callback_data: "THEFT"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:start, :work_per} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_PER_Q1"), new_history), user, message_id, key)

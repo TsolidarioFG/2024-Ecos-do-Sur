@@ -142,13 +142,13 @@ defmodule Chatbot.Leader do
   # Resolves one update
   defp do_resolve_update(nil, %{"message" => msg, "update_id" => _}, key, workers_data) do
     worker_pid = :poolboy.checkout(:worker)
-    reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"] })
+    reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"], msg["from"]["language_code"]})
     [%{pid: worker_pid, user_id: reply} | workers_data]
   end
 
   defp do_resolve_update(nil, %{"callback_query" => query, "update_id" => _}, key, workers_data) do
     worker_pid = :poolboy.checkout(:worker)
-      case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query }) do
+      case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query, query["from"]["language_code"]}) do
         :worker_dead ->
           workers_data
         user_id ->

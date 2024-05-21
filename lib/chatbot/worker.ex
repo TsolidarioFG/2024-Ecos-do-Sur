@@ -37,7 +37,8 @@ defmodule Chatbot.Worker do
 
   # The worker is called by the leader cause a new message was received
   @impl GenServer
-  def handle_call({:answer, key, user}, {leader_pid, _}, state) do
+  def handle_call({:answer, key, user, lang}, {leader_pid, _}, state) do
+    Gettext.put_locale(lang)
     find_conversation_and_start(user,
       fn -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?"), state) end,
       fn value ->
@@ -49,8 +50,9 @@ defmodule Chatbot.Worker do
 
   # The worker is called by the leader cause a new query was received
   @impl GenServer
-  def handle_call({:answer, key, user, query}, {leader_pid, _}, state) do
+  def handle_call({:answer, key, user, query, lang}, {leader_pid, _}, state) do
     Logger.info("Call")
+    Gettext.put_locale(lang)
     TelegramWrapper.answer_callback_query(key, query["id"])
     find_conversation_and_start(user,
       fn ->

@@ -14,7 +14,7 @@ defmodule Chatbot.HospitalGraph do
   ##################################
   # 1 -----
   def resolve({:start, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("SERVICE DENIAL"), callback_data: "DENIAL"}],
+    keyboard = [[%{text: gettext("HOSPITAL SERVICE DENIAL"), callback_data: "DENIAL"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:start, :hospital} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOSPITAL_Q1"), new_history), user, message_id, key)
@@ -27,7 +27,7 @@ defmodule Chatbot.HospitalGraph do
   ##################################
   # 2 -----
   def resolve({:U1, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}, %{text: gettext("CLINIC"), callback_data: "CLINIC"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
+    keyboard = [[%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}], [%{text: gettext("CLINIC"), callback_data: "CLINIC"}], [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:U1, :hospital} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOSPITAL_Q2"), new_history), user, message_id, key)
     {{:U1_resolve, :hospital}, new_history, nil}
@@ -60,7 +60,10 @@ defmodule Chatbot.HospitalGraph do
     resolve({:U2, history, nil}, user, key, nil, message_id)
   end
   # S3 ----
-  def resolve({:S3, _, _}, user, key, _, message_id), do: CommonFunctions.do_finalize_complex(gettext("HOSPITAL_S3"), :S4, __MODULE__, user, message_id, key)
+  def resolve({:S3, _, _}, user, key, _, message_id) do
+
+    CommonFunctions.do_finalize_complex(gettext("HOSPITAL_S3"), gettext("HOSPITAL_S3_1"), :S4, __MODULE__, user, message_id, key)
+  end
   # S4 ----
   def resolve({:S4, _, _}, user, key, _, _) do
     TelegramWrapper.send_message(key, user, gettext("HOSPITAL_S4"))

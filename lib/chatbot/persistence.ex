@@ -40,12 +40,9 @@ defmodule Chatbot.Persistence do
 
   # Function that may handle more requests in the future (:put, :get, ...)
   # Wrapper function to choose appropriate action based on environment
-  defp choose_action(http_client, method, url, body) do
+  defp choose_action(http_client, :post, url, body) do
     headers = ["Authorization": "Basic " <> Base.encode64("#{@user}:#{@password}")]
-    case method do
-      :post ->
-          http_client.post(url, body, headers ++ ["Content-Type": "application/json"])
-    end
+    http_client.post(url, body, headers ++ ["Content-Type": "application/json"])
   end
 
   # Main function to call based on environment

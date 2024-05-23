@@ -285,48 +285,68 @@ msgstr ""
 #: lib/chatbot/graphs/leisure_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q1"
-msgstr ""
+msgstr "¿Qué está sucediendo?"
 
 #: lib/chatbot/graphs/leisure_graph.ex:34
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q2"
-msgstr ""
+msgstr "¿Te han entregado la hoja de reclamaciones?"
 
 #: lib/chatbot/graphs/leisure_graph.ex:44
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q3"
-msgstr ""
+msgstr "¿Necesitas ayuda para cubrirla?"
 
 #: lib/chatbot/graphs/leisure_graph.ex:54
 #: lib/chatbot/graphs/leisure_graph.ex:61
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q4"
-msgstr ""
+msgstr "¿Quieres más información?"
 
 #: lib/chatbot/graphs/leisure_graph.ex:73
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S1"
-msgstr ""
+msgstr "Si sospechas que no te dejan entrar en un establecimiento como un local de ocio, bar o restaurante, por motivos racistas, xenófobos de religión, intenta hablar con el personal del local para *resolver la situación de manera coordial*.\n\n"
+"Explica claramente tus preocupaciones, así como tus derechos: *en España, la discriminación está prohibida por ley*.\n\n"
+"Si, después de esto, te siguen impidiendo la entrada, es clave que solicites el *LIBRO DE RECLAMACIONES* a la persona que esté en el local (portero, camarero, etc.), aunque no hayas llegado a entrar ni ser cliente. Es tu derecho. Además, *las normas de admisión deben estar visibles a la entrada del local y no pueden ser ejercidas de manera arbitraria o discriminatoria*.\n\n"
+"*La hoja de reclamaciones constituye una prueba en el caso de llegar a reclamar mediante arbitraje de consumo o demanda judicial*, por eso es muy importante que lo solicites, cuanto antes de forma educada y respetuosa.\n\n"
+"Si sientes que has sido discriminado/a y, necesitas más información, puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507, al correo: consejo-sei@igualdad.gob.es o dejar tu queja en el siguiente [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do)."
 
 #: lib/chatbot/graphs/leisure_graph.ex:78
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S2"
-msgstr ""
+msgstr "*Si crees que te han subido el precio de un producto en un bar, restaurante, o local de ocio, te aconsejamos que sigas estos consejos.*\n\n"
+"En primer lugar, trata de mantener la calma y evaluar la situación de manera objetiva. A veces, puede haber malentendidos o razones legítimas para diferencias en precios, por ello, es fundamental que *verifiques si el precio del producto o/y de la entrada, si es un local de ocio, es el anunciado*.\n\n"
+"Si hay diferencias, podrías señalarlo y preguntar sobre la razón de esta discrepancia a la persona que te ha atendido.\n\n"
+"Si crees que *estás siendo discriminado*, intenta conservar la evidencia: solicita recibos, capturas de pantalla de precios anunciados, o notas sobre la interacción que tuviste con el personal del establecimiento.\n\n"
+" Si no estás satisfecho con la respuesta o explicación que recibes del personal, podrías considerar *hablar con el gerente o dueño del establecimiento*. Explica tu preocupación de manera clara y respetuosa. No obstante, si crees que tus derechos están siendo violados, podrías soliciar *la hoja de reclamaciones.*\n\n"
+"Si sientes que has sido discriminado/a y, necesitas más información, puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507, al correo: consejo-sei@igualdad.gob.es o dejar tu queja en el siguiente [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do)."
 
 #: lib/chatbot/graphs/leisure_graph.ex:80
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S3"
-msgstr ""
+msgstr "Si se niegan a dártelo, *llama a la Policía Local (092)* que será la encargada de tramitar la denuncia por la negativa a entregarlo o no disponer de este."
 
 #: lib/chatbot/graphs/leisure_graph.ex:83
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S4"
-msgstr ""
+msgstr "Todos los establecimientos abiertos al público deben disponer de *hojas de reclamación compuestas de tres copias* (una para ellos, otra para ti y otra para la administración).\n\n"
+"No la tienes por qué rellenar en ese momento, te la puedes llevar y hacerlo con calma.\n\n"
+"*Los campos que hay que rellenar* para que la hoja de reclamaciones esté completa son:\n\n"
+"*1. Tus datos.* Nombre, apellidos, DNI, domicilio y teléfono de contacto.\n\n"
+"*2. Los datos de la empresa o profesional a quien se reclama.* Nombre comercial, denominación social, domicilio y teléfono. Lo ideal es que esta parte la tengan rellenada antes de darte la hoja de reclamaciones.\n\n"
+"*3. La descripción completa del hecho, incluyendo fecha y lugar.* Es importante explicar de manera concisa qué sucedió y escribir en mayúsculas. Puedes añadir un escrito aparte si no tienes suficiente espacio. Explica por qué consideras que hubo discriminación y cuál fue el motivo.\n\n"
+"*4. Lo que se solicita:* compensación, disculpa, etc.\n\n"
+"*5. Si lo ves necesario, adjunta otros documentos.* Si has sacado fotos, estas servirán de base a la reclamación. Puedes imprimirlas e incluírlas cuando la presentes.\n\n"
+"*6. Lleva la hoja a la Oficina de Consumo.* Desde aquí puedes encontrar la Oficina municipal de información al consumidor más cercana."
 
 #: lib/chatbot/graphs/leisure_graph.ex:87
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S5"
-msgstr ""
+msgstr "*¿Sabías qué?*\n\n"
+"*El derecho de admisión*, que es el derecho que tienen los propietarios de establecimientos para decidir quién puede entrar y quién no, *no puede ser aplicado de manera arbitraria ni discriminatoria*.\n\n"
+"Los carteles que indican \"Reservado el Derecho de Admisión\" no justifican políticas de admisión que discriminan a las personas por su raza, color de piel, religión, género u otras características protegidas por la ley. La discriminación en el acceso a establecimientos públicos está prohibida en muchos países y puede acarrear consecuencias legales para los propietarios que la practiquen.\n\n"
+"Es importante que los establecimientos respeten los derechos de todas las personas y no incurran en prácticas discriminatorias."
 
 #: lib/chatbot/graphs/leisure_graph.ex:90
 #, elixir-autogen, elixir-format

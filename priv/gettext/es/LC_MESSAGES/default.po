@@ -25,9 +25,9 @@ msgstr ""
 #: lib/chatbot/graphs/school_graph.ex:60
 #: lib/chatbot/graphs/school_graph.ex:73
 #: lib/chatbot/information_collector.ex:76
-#: lib/chatbot/information_collector.ex:245
-#: lib/chatbot/worker.ex:191
-#: lib/chatbot/worker.ex:207
+#: lib/chatbot/information_collector.ex:247
+#: lib/chatbot/worker.ex:193
+#: lib/chatbot/worker.ex:209
 #, elixir-autogen, elixir-format
 msgid "NO"
 msgstr "NO"
@@ -45,50 +45,50 @@ msgstr "NO"
 #: lib/chatbot/graphs/school_graph.ex:60
 #: lib/chatbot/graphs/school_graph.ex:73
 #: lib/chatbot/information_collector.ex:76
-#: lib/chatbot/information_collector.ex:245
-#: lib/chatbot/worker.ex:191
-#: lib/chatbot/worker.ex:207
+#: lib/chatbot/information_collector.ex:247
+#: lib/chatbot/worker.ex:193
+#: lib/chatbot/worker.ex:209
 #, elixir-autogen, elixir-format
 msgid "YES"
 msgstr "SÍ"
 
-#: lib/chatbot/worker.ex:82
+#: lib/chatbot/worker.ex:84
 #, elixir-autogen, elixir-format
 msgid "error_message"
 msgstr "Un error ha tenido lugar, la conversación se reiniciará."
 
-#: lib/chatbot/worker.ex:195
+#: lib/chatbot/worker.ex:197
 #, elixir-autogen, elixir-format
 msgid "Are we allowed to save this conversation?"
 msgstr "Podemos guardar esta conversación? Puedes responder a este mensaje hasta dentro de 48 horas."
 
 #: lib/chatbot/information_collector.ex:43
-#: lib/chatbot/worker.ex:90
+#: lib/chatbot/worker.ex:92
 #, elixir-autogen, elixir-format
 msgid "Bye"
 msgstr "Hasta pronto! : )"
 
-#: lib/chatbot/worker.ex:99
+#: lib/chatbot/worker.ex:101
 #, elixir-autogen, elixir-format
 msgid "Due to inactivity the conversation will be ended"
 msgstr "La conversación va a terminar por inactividad."
 
-#: lib/chatbot/worker.ex:42
+#: lib/chatbot/worker.ex:43
 #, elixir-autogen, elixir-format
 msgid "En qué idioma quieres que te responda?"
 msgstr "En qué idioma quieres que te responda?"
 
-#: lib/chatbot/worker.ex:57
+#: lib/chatbot/worker.ex:59
 #, elixir-autogen, elixir-format
 msgid "La conversación anterior ya ha sido borrada"
 msgstr "La conversacion previa ya ha expirado. Empecemos una nueva!\n\nEn qué idioma quieres que te responda?"
 
-#: lib/chatbot/worker.ex:211
+#: lib/chatbot/worker.ex:213
 #, elixir-autogen, elixir-format
 msgid "We have a conversation not closed yet. Do you want to add more information about it?"
 msgstr "Hay una conversación que aún no se ha cerrado. Quieres añadir más información sobre lo sucedido?"
 
-#: lib/chatbot/information_collector.ex:325
+#: lib/chatbot/information_collector.ex:327
 #, elixir-autogen, elixir-format
 msgid "Due to a server problem this information couldn't be saved."
 msgstr "Debido a un error en nuestro sistema la información no se ha podido guardar."
@@ -98,12 +98,12 @@ msgstr "Debido a un error en nuestro sistema la información no se ha podido gua
 msgid "Due to inactivity the conversation will be ended. It wont be saved."
 msgstr "La conversación va a terminar por inactividad.\n\n La información que has aportado no se va a guardar."
 
-#: lib/chatbot/information_collector.ex:196
+#: lib/chatbot/information_collector.ex:198
 #, elixir-autogen, elixir-format
 msgid "Please, select your gender:"
 msgstr "Por favor, selecciona tu género:"
 
-#: lib/chatbot/information_collector.ex:332
+#: lib/chatbot/information_collector.ex:334
 #, elixir-autogen, elixir-format
 msgid "This information has been saved successfully"
 msgstr "La información ha sido guardada correctamente!"
@@ -136,6 +136,11 @@ msgstr "La información ha sido guardada correctamente!"
 #: lib/chatbot/graphs/transport_graph.ex:20
 #: lib/chatbot/graphs/transport_graph.ex:29
 #: lib/chatbot/graphs/work_graph.ex:18
+#: lib/chatbot/graphs/work_graph.ex:33
+#: lib/chatbot/graphs/work_graph.ex:43
+#: lib/chatbot/graphs/work_graph.ex:58
+#: lib/chatbot/graphs/work_graph.ex:62
+#: lib/chatbot/graphs/work_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "BACK"
 msgstr ""
@@ -969,7 +974,7 @@ msgstr ""
 msgid "ADULT"
 msgstr ""
 
-#: lib/chatbot/information_collector.ex:140
+#: lib/chatbot/information_collector.ex:142
 #, elixir-autogen, elixir-format
 msgid "Any suggestions or comments that you would like to write?"
 msgstr ""
@@ -982,7 +987,7 @@ msgstr "Mal Comportamiento"
 #: lib/chatbot/graphs/work_graph.ex:32
 #, elixir-autogen, elixir-format
 msgid "BOSS"
-msgstr ""
+msgstr "Jefe / Jefa"
 
 #: lib/chatbot/graphs/person_school_graph.ex:27
 #, elixir-autogen, elixir-format
@@ -994,19 +999,19 @@ msgstr ""
 msgid "Birth Location? (COUNTRY)"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:58
 #: lib/chatbot/graphs/work_graph.ex:61
+#: lib/chatbot/graphs/work_graph.ex:65
 #, elixir-autogen, elixir-format
 msgid "DISTINCTIVE TREATMENT"
-msgstr ""
+msgstr "Trato Distintivo"
 
-#: lib/chatbot/information_collector.ex:229
+#: lib/chatbot/information_collector.ex:231
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Describe what happened in detail."
 msgstr "Por favor, describe que ha pasado en un único mensaje."
 
 #: lib/chatbot/information_collector.ex:81
-#: lib/chatbot/information_collector.ex:250
+#: lib/chatbot/information_collector.ex:252
 #, elixir-autogen, elixir-format
 msgid "Do you want to add a review?"
 msgstr ""
@@ -1014,17 +1019,17 @@ msgstr ""
 #: lib/chatbot/graphs/work_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "EMPLOYEE"
-msgstr ""
+msgstr "Trabajo en la Empresa"
 
 #: lib/chatbot/graphs/home_graph.ex:37
 #, elixir-autogen, elixir-format
 msgid "EVICTION"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:61
+#: lib/chatbot/graphs/work_graph.ex:65
 #, elixir-autogen, elixir-format
 msgid "EXPLOITATION"
-msgstr ""
+msgstr "Explotación"
 
 #: lib/chatbot/graphs/home_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
@@ -1071,7 +1076,7 @@ msgstr ""
 msgid "HOME_S6"
 msgstr ""
 
-#: lib/chatbot/information_collector.ex:179
+#: lib/chatbot/information_collector.ex:181
 #, elixir-autogen, elixir-format
 msgid "How old are you?"
 msgstr ""
@@ -1138,7 +1143,7 @@ msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
 "Puedes presentar tu denuncia en la policía o en las Fiscalías especializadas en delitos de odio y discriminación que hay que cada provincia de España.\n\n"
 "¿Quieres información sobre los *recursos de denuncia y asistencia a víctimas* que hay en tu zona?"
 
-#: lib/chatbot/information_collector.ex:300
+#: lib/chatbot/information_collector.ex:302
 #, elixir-autogen, elixir-format
 msgid "In which CA did it happen?"
 msgstr ""
@@ -1146,27 +1151,27 @@ msgstr ""
 #: lib/chatbot/graphs/work_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "JOB CANDIDATE"
-msgstr ""
+msgstr "Quiero trabajar en la Empresa"
 
 #: lib/chatbot/graphs/home_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "LANDLORD"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:41
+#: lib/chatbot/graphs/work_graph.ex:42
 #, elixir-autogen, elixir-format
 msgid "MARGINALIZATION"
-msgstr ""
+msgstr "Trato hostil, discriminación y marginación no constante (discriminación)"
 
 #: lib/chatbot/graphs/school_graph.ex:35
 #, elixir-autogen, elixir-format
 msgid "PARENT"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:55
+#: lib/chatbot/graphs/work_graph.ex:57
 #, elixir-autogen, elixir-format
 msgid "REJECTION"
-msgstr ""
+msgstr "Discriminación en la selección de personal"
 
 #: lib/chatbot/graphs/home_graph.ex:41
 #, elixir-autogen, elixir-format
@@ -1230,10 +1235,10 @@ msgstr ""
 msgid "STUDENT"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:41
+#: lib/chatbot/graphs/work_graph.ex:42
 #, elixir-autogen, elixir-format
 msgid "TASK DISTRIBUTION"
-msgstr ""
+msgstr "Trato injusto, hostil y/o marginación reiterado constante (acoso)"
 
 #: lib/chatbot/graphs/home_graph.ex:17
 #, elixir-autogen, elixir-format
@@ -1245,18 +1250,13 @@ msgstr ""
 msgid "THEFT"
 msgstr "Robo o ataque contra la propiedad"
 
-#: lib/chatbot/graphs/work_graph.ex:55
-#, elixir-autogen, elixir-format
-msgid "UNFAIR OFFER"
-msgstr ""
-
 #: lib/chatbot/graphs/person_school_graph.ex:27
 #: lib/chatbot/graphs/person_school_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "VIOLENCE"
 msgstr ""
 
-#: lib/chatbot/information_collector.ex:120
+#: lib/chatbot/information_collector.ex:122
 #, elixir-autogen, elixir-format
 msgid "Value the bot with the following stars:"
 msgstr ""
@@ -1270,7 +1270,7 @@ msgstr ""
 #: lib/chatbot/graphs/work_graph.ex:32
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORKER"
-msgstr ""
+msgstr "Otro Trabajador/a"
 
 #: lib/chatbot/graphs/person_work_graph.ex:20
 #, elixir-autogen, elixir-format
@@ -1332,44 +1332,109 @@ msgstr "*Si estás en tu puesto de trabajo y un cliente u otra persona sin relac
 #: lib/chatbot/graphs/work_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q1"
-msgstr ""
+msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/work_graph.ex:34
+#: lib/chatbot/graphs/work_graph.ex:35
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q2"
-msgstr ""
+msgstr "Con quién es el problema?"
 
-#: lib/chatbot/graphs/work_graph.ex:87
+#: lib/chatbot/graphs/work_graph.ex:93
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q3"
-msgstr ""
+msgstr "Cuál es el problema?"
 
-#: lib/chatbot/graphs/work_graph.ex:43
+#: lib/chatbot/graphs/work_graph.ex:45
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q4"
-msgstr ""
-
-#: lib/chatbot/graphs/work_graph.ex:72
-#, elixir-autogen, elixir-format, fuzzy
-msgid "WORK_S1"
-msgstr ""
-
-#: lib/chatbot/graphs/work_graph.ex:74
-#, elixir-autogen, elixir-format, fuzzy
-msgid "WORK_S2"
-msgstr ""
-
-#: lib/chatbot/graphs/work_graph.ex:76
-#, elixir-autogen, elixir-format, fuzzy
-msgid "WORK_S3"
-msgstr ""
+msgstr "En qué se basa el trato distintivo que identificas?"
 
 #: lib/chatbot/graphs/work_graph.ex:78
 #, elixir-autogen, elixir-format, fuzzy
-msgid "WORK_S4"
-msgstr ""
+msgid "WORK_S1"
+msgstr "Situaciones como estas, cuando se producen en el desarrollo de un trabajo de forma reiterada o continuada, *pueden considerarse explotación laboral*.\n\n"
+"Obligación de trabajar más horas de las acordadas sin recibir una contrapartida por ellas, o sin horario concreto.\n\n"
+"Obligación de realizar tareas penosas o excesivas.\n"
+"Salario mucho menor de lo acordado o de lo legal por la labor.\n\n"
+"Debes saber que la explotación laboral *es ilegal en España*, y que tienes derecho a denunciarla y recibir protección. Hay organismos que pueden ayudarte gratuitamente con todo el proceso.\n\n"
+"Si crees que tus superiores te están explotando *por causa de tu país de origen, étnico o tu religión, el acto es todavía más grave* por ser discriminatorio.\n\n"
+"Si denuncias, es posible que la empresa o persona que te explota sea sancionada y que tú puedas recibir una compensación por el daño sufrido. Además, *ayudarás a evitar que les suceda lo mismo a otras personas como tú*.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer? Primero, prepara las pruebas.*\n\n"
+"1. Trata de guardar cualquier prueba que pueda indicar la situación de explotación, por ejemplo: partes médicos, registros horarios, fotos, mails o cualquier documento que demuestre tu permanencia en el puesto o la labor que desarrollas. También nóminas, extractos bancarios de salarios, etc.\n\n"
+"2. Tienes derecho a registrar evidencias de tu situación, por ejemplo grabando audio y vídeo siempre que tú seas parte de la escena grabada. Puedes, por ejemplo, realizar fotografías en tu puesto de trabajo, en las que quedará constancia de la fecha y la hora. Si decides hacerlo, asegúrate de no comprometer tu seguridad: procura que no te vean.\n\n"
+"3. No manipules ni edites las imágenes o audios que tomes.\n\n"
+"4. Trata de recordar y registrar cualquier situación en la que sea evidente que la explotación que sufres tiene un componente discriminatorio: pueden ser expresiones verbales, escritas, comentarios sobre tu origen, religión, etc. Apunta el lugar, la fecha y los detalles.\n\n"
+"5. Si hay alguien que pueda atestiguar tu situación, por ejemplo miembros del equipo de trabajo que hayan presenciado tratos discriminatorios o de explotación, recaba sus datos por si es necesario contar con su testimonio más adelante.\n\n"
+"----------------------------------------\n"
+"*¿Cómo denunciar?*\n"
+"Hay diferentes vías para denunciar una explotación laboral, por lo que *siempre te recomendamos que comiences por localizar una organización en tu zona que te pueda asesorar* sobre cuál es la mejor opción en tu caso concreto.\n\n"
+"-Los canales para denunciar internamente un caso de explotación laboral pueden ser contraproducentes. Solamente te lo aconsejamos si en tu empresa hay delegados sindicales. En ese caso, contacta a la persona representante de los trabajadores y explica tu situación.\n\n"
+"-Cualquier persona que tenga conocimiento de alguna situación de explotación laboral puede informar sobre ello en la Inspección de Trabajo de la Seguridad Social. Es un organismo público que se encarga de controlar el cumplimiento de las normativas relativas al empleo.\n\n"
+"-Este organismo dispone de un [buzón online](https://oeitss.mites.gob.es/buzonitss) en el que se pueden comunicar las situaciones de explotación de forma anónima.\n\n"
+"-Otra vía es la denuncia en la Inspección de la Seguridad Social, que abre un proceso de control a la empresa. Para hacerla tendrás que aportar tus datos personales. Tu identidad será protegida durante la investigación, pero podrás recibir información sobre cómo marcha el proceso. [Aquí tienes más información sobre los mecanismos de denuncia](https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/empresas/empleados/seguridad-social/inspeccion.html#-ce27cd07198c).\n"
+"-También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
+"Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide. Aquí puedes encontrar los recursos disponibles cerca de ti para ayudarte antes, durante y después de todo el proceso."
 
 #: lib/chatbot/graphs/work_graph.ex:80
+#, elixir-autogen, elixir-format, fuzzy
+msgid "WORK_S2"
+msgstr "Si en tu lugar de trabajo cualquier persona del equipo, *con intención de dañarte y de forma reiterada y constante*, realiza algunos de los siguientes actos contra ti:\n\n"
+"- Te encargan las tareas más difíciles o que nadie quiere hacer.\n\n"
+"- Se te aísla de los demás, te apartan de los demás y te excluyen de los espacios colectivos (grupos de whatsapp del trabajo, reuniones...)\n\n"
+"- No se te permite el uso de los espacios y recursos comunes: lugares de descanso, cocina, etc.\n\n"
+"- Recibes un trato hostil e intimidante de forma constante: rumores, insultos, menosprecios, exageración de los errores, bromas inapropiadas... .\n\n"
+"- Escuchas comentarios despectivos recurrentes sobre tu lugar de origen, etnia, creencias religiosas, identidad cultural... ."
+"- Te impiden sistemáticamente acceder a los derechos que otras personas de la plantilla sí disfrutan: teletrabajo, conciliación, etc.\n\n"
+"Puedes estar sufiendo un caso de *mobbing laboral*. Si además se produce por motivos racistas, xenófobos o islamófobos es todavía más grave, ya que se trataría de acoso *discriminatorio*. Estos comportamientos son ilegales en España. Ante una situación así, *tienes derecho a denunciar y recibir apoyo y protección*.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer?*\n\n"
+"Si estás sufriendo acoso por causas discriminatorias en tu lugar de trabajo, es importante que actúes cuanto antes.\n\n"
+"1. Deja constancia escrita de lo que está sucediendo: por ejemplo, un mail a la Dirección o a Recursos Humanos, por ejemplo. Aunque no te den soluciones, puede servir como prueba si más adelante decides denunciar. Si trabajas en una empresa que tiene delegados sindicales, contacta a la persona representante de los trabajadores y explíca tu situación.\n\n"
+"2. Trata de conservar cualquier prueba que pueda indicar la situación de acoso, por ejemplo: partes médicos, fotos de tu lugar de trabajo, mails en los que hayas expresado quejas internas o cualquier evidencia de que has mantenido conversaciones sobre el tema con tus superiores.\n\n"
+"3. Tienes derecho a registrar evidencias de tu situación, por ejemplo grabando audio y vídeo siempre que tú seas parte de la escena grabada. Conversaciones, reuniones, llamadas, videoconferencias, etc. Si decides hacerlo, asegúrate de no comprometer tu seguridad: procura que no te vean hacerlo. No edites las imágenes o audios que tomes.\n\n"
+"4. Trata de recordar y apuntar cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas, comentarios sobre tu origen, aspecto físico, costumbres culturales. Apunta el lugar, la fecha y los detalles.\n\n"
+"5. Si hay alguien que pueda atestiguar tu situación, por ejemplo miembros del equipo de trabajo que hayan presenciado actos de acoso o comentarios discriminatorios, recaba sus datos por si es necesario contar con su testimonio más adelante.\n\n"
+
+
+#: lib/chatbot/graphs/work_graph.ex:82
+#, elixir-autogen, elixir-format, fuzzy
+msgid "WORK_S3"
+msgstr "Si en algún momento, desarrollando tu puesto de trabajo, otras personas del equipo te han sometido a *tratos diferenciados y hostiles por causa de tu país de origen, etnia o religión*, como por ejemplo:\n\n"
+"- Comentarios e insultos racistas, xenófobos, islamófobos.\n\n"
+"- Prohibición de la expresión de tus símbolos culturales y religiosos: por ejemplo, llevar hijab.\n\n"
+"- Impedimentos al uso de instalaciones colectivas por motivos discriminatorios: por ejemplo, quejas por calentar comida “exótica” en el microondas.\n\n"
+"- Diferentes condiciones de trabajo: horarios, salario, ascensos, despidos... .\n\n"
+"- Acusaciones de delitos que no has cometido, basadas en tu origen, etnia o religión: robos de productos o dinero, etc.\n\n"
+"Estás siendo víctima de actos discriminatorios. Se trata de comportamientos que *no están permitidos en España y que deben denunciarse*. Así, además de hacer valer tus derechos, estarás *ayudando a evitar que otras personas como tú pasen por lo mismo*.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer?*\n\n"
+"1. Trata de conservar cualquier prueba que pueda indicar la situación de discriminación: fotos, mails, grabaciones de comentarios... .\n\n"
+"2. Tienes derecho a registrar evidencias de tu situación, por ejemplo grabando audio y vídeo siempre que tú seas parte de la escena grabada. Conversaciones, reuniones, llamadas, etc. Si decides hacerlo, asegúrate de no comprometer tu seguridad: procura que no te vean. No edites las imágenes o audios que tomes.\n\n"
+"3. Trata de recordar y apuntar cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas; comentarios sobre tu origen, aspecto físico o costumbres culturales. Apunta el lugar, la fecha y los detalles: quién, qué, cómo.\n\n"
+"4. Si hay algún testigo del trato discriminatorio, por ejemplo miembros del equipo de trabajo, recaba sus datos por si es necesario contar con su testimonio más adelante.\n\n"
+"5. Si no están directamente implicados en el caso, informa a tus superiores o a Recursos Humanos de la situación discriminatoria, mejor por escrito. Aunque no te den soluciones, puede servir como prueba si más adelante decides denunciar. Si trabajas en una empresa que tiene delegados sindicales, contacta a la persona representante de los trabajadores y explícale tu situación. La empresa está obligada a tomar acciones.\n\n"
+"----------------------------------------\n"
+"*¿Cómo denunciar?*\n"
+"En cualquier caso, te recomendamos que *siempre acudas a los organismos especializados en luchar contra la discriminación*. Se trata de instituciones públicas o privadas que pondrán a tu disposición personal especializado para asesorarte y acompañarte, tanto si decides denunciar como si no.\n\n"
+"- Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)): llamada gratuita en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm)).\n\n"
+"- Asociaciones expertas: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
+"- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado."
+
+#: lib/chatbot/graphs/work_graph.ex:84
+#, elixir-autogen, elixir-format, fuzzy
+msgid "WORK_S4"
+msgstr "*Creo que estoy siendo víctima de trabajo forzado*\n\n"
+"Si estás realizando un trabajo o servicios contra tu voluntad y bajo la amenaza de un castigo, estás sufriendo una situación de trabajo forzado, esclavitud o prácticas similares.\n\n"
+"Es probable, además, que te hayan engañado sobre las tareas que ibas a realizar o las condiciones del empleo.\n\n"
+"Este tipo de abuso se puede producir en cualquier sector: empleo doméstico, agricultura, hostelería, etc.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer?*\n\n"
+"Si te encuentras en una situación así, debes saber que *el trabajo forzado es un delito y que tienes derecho a denunciar y recibir protección*. Si denuncias, es posible que la empresa o persona que te explota sea sancionada y que tú puedas recibir una compensación por el daño sufrido. Además, ayudarás a evitar que les suceda lo mismo a otras personas.\n\n"
+"Lo primero: es muy importante que te pongas a salvo. Si te encuentras en peligro ahora mismo (enlaza con initial, riesgo)\n\n"
+"Si no te encuentras en riesgo inminente y estás pensando en denunciar la situación de trabajo forzado, acude lo antes posible a la oficina de una organización de tu zona que ofrezca asesoría legal en temas laborales o de discriminación. Te ayudarán a decidir la mejor forma para denunciar según tu caso concreto."
+
+#: lib/chatbot/graphs/work_graph.ex:86
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S5"
 msgstr ""
@@ -1392,3 +1457,21 @@ msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL SERVICE DENIAL"
 msgstr " Niegan Atención Médica"
+
+#: lib/chatbot/graphs/work_graph.ex:61
+#: lib/chatbot/graphs/work_graph.ex:65
+#, elixir-autogen, elixir-format
+msgid "FORCED WORK"
+msgstr "Trabajo Forzado"
+
+#: lib/chatbot/graphs/work_graph.ex:80
+#, elixir-autogen, elixir-format, fuzzy
+msgid "WORK_S2_1"
+msgstr "----------------------------------------\n"
+"*¿Cómo denunciar?*\n"
+"Hay diferentes vías para denunciar el acoso discriminatorio, por lo que *siempre te recomendamos que comiences por localizar una organización en tu zona que te pueda asesorar* sobre cuál es la mejor opción en tu caso concreto (enlaza recursos regionales).\n\n"
+"1. Si las denuncias internas no han funcionado, o si no confías en ellas, puedes denunciar ante la Inspección de Trabajo. Es un organismo público que se encarga de controlar el cumplimiento de las normativas relativas al empleo. Este organismo dispone de un [buzón online](https://oeitss.mites.gob.es/buzonitss) en el que se pueden comunicar las situaciones de acoso de forma anónima.\n\n"
+"2. Otra vía es la denuncia propiamente dicha en la Inspección de la Seguridad Social, que abre un proceso de control a la empresa. Para hacerla tendrás que aportar tus datos personales. Tu identidad estará protegida durante la investigación, pero podrás recibir información sobre cómo va el proceso. [Aquí](https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/empresas/empleados/seguridad-social/inspeccion.html#-ce27cd07198c) tienes más información sobre los mecanismos de denuncia.\n\n"
+"3. Las situaciones de acosos en las que hay indicios de discriminación xenófoba, racista o islamófoba pueden notificarse al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): llamada gratuita en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.html)).\n\n"
+"4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
+"Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."

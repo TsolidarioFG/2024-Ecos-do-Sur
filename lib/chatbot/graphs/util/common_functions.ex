@@ -5,6 +5,12 @@ defmodule Chatbot.CommonFunctions do
     {:solved, nil, nil}
   end
 
+  def do_finalize_simple(text1, text2, user, message_id, key) do
+    TelegramWrapper.update_menu(text1, user, message_id, key)
+    TelegramWrapper.send_message(key, user, text2)
+    {:solved, nil, nil}
+  end
+
   def do_finalize_complex(text1, text2, dest, mod, user, message_id, key) do
     TelegramWrapper.update_menu(text1, user, message_id, key)
     TelegramWrapper.send_message(key, user, text2)

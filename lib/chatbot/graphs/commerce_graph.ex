@@ -14,7 +14,7 @@ defmodule Chatbot.CommerceGraph do
   ##################################
   # 1 -----
   def resolve({:start, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("DENIAL"), callback_data: "DENIAL"}, %{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}],
+    keyboard = [[%{text: gettext("COMMERCE PROBLEMS"), callback_data: "DENIAL"}], [%{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}],
                 [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:start, :commerce} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("COMMERCE_Q1"), new_history), user, message_id, key)

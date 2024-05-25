@@ -112,7 +112,6 @@ msgstr "La información ha sido guardada correctamente!"
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:30
-#: lib/chatbot/graphs/hospital_graph.ex:40
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:63
@@ -386,7 +385,7 @@ msgstr ""
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "PRICE MANIPULATION"
-msgstr ""
+msgstr "Alteración del precio"
 
 #: lib/chatbot/graphs/initial_graph.ex:87
 #, elixir-autogen, elixir-format
@@ -474,12 +473,12 @@ msgstr "Cuál es el problema?"
 msgid "HOSPITAL_Q2"
 msgstr "En qué tipo de centro sanitario te encuentras?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:42
+#: lib/chatbot/graphs/hospital_graph.ex:41
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q3"
 msgstr "Quieres más información sobre tus derechos sanitarios?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:66
+#: lib/chatbot/graphs/hospital_graph.ex:65
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere decir que en *los hospitales tienen la obligación de atenderte* ante una urgencia médica tengas la nacionalidad, el permiso de residencia o no. Por tanto, si te niegan la atención médica en el servicio de urgencias del hospital *llama al 112* y explícales lo que te está pasando.\n\n"
@@ -496,7 +495,7 @@ msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere dec
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:71
+#: lib/chatbot/graphs/hospital_graph.ex:70
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia médica. Por favor, *acude al servicio de urgencias del hospital* para que puedan atenderte. "
@@ -510,16 +509,15 @@ msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia m
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:76
+#: lib/chatbot/graphs/hospital_graph.ex:75
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr "La normativa ([RDL 7/2018](https://www.boe.es/buscar/doc.php?id=BOE-A-2018-10752)) reconoce el *derecho a la atención sanitaria a las personas «no registradas ni autorizadas como residentes en España»* (es decir, a las personas «sin permiso de residencia»).\n\n"
 "Sin embargo, *la administración considera a cualquier persona en «situación de estancia temporal» durante sus primeros 90 días en España*. En esos casos, la ley exige un seguro médico que cubra la asistencia sanitaria o se deberán abonar los costes del servicio.\n\n"
 "⚠️ATENCIÓN⚠️: si has entrado de forma irregular en España, o tu visado ha expirado y era inferior a 90 días, no pasas por la situación de estancia temporal, tu caso es *«sin permiso de residencia»*.\n\n"
 
-
-#: lib/chatbot/graphs/hospital_graph.ex:80
-#: lib/chatbot/graphs/hospital_graph.ex:84
+#: lib/chatbot/graphs/hospital_graph.ex:79
+#: lib/chatbot/graphs/hospital_graph.ex:83
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr "Muy bien, recuerda que *puedes volver a preguntarme cuando lo necesites*.\n\n"
@@ -857,13 +855,12 @@ msgstr "En una tienda o comercio puedes experimentar diferentes situaciones de d
 "----------------------------------------\n"
 "La hoja de reclamaciones no la tienes por qué rellenar en el momento, te la puedes llevar y hacerlo con calma.\n\n"
 "Los campos que hay que rellenar para que la hoja de reclamaciones esté completa son:\n\n"
-"1. *Los datos de la persona reclamante*. Nombre, apellidos, DNI, domicilio y teléfono de contacto.\n\n"
+"1. *Tus datos.* Nombre, apellidos, DNI, domicilio y teléfono de contacto.\n\n"
 "2. *Los datos de la empresa o profesional a quien se reclama*. Nombre comercial, denominación social, domicilio, NIF y teléfono de la empresa.\n\n"
 "3. *La descripción completa del hecho, incluyendo fecha y lugar*. Es importante explicar de manera concisa qué sucedió y escribir en mayúsculas.\n\n"
 "4. *Lo que se solicita*: compensación, disculpa, etc.\n\n"
 "5. *Documentos adjuntos*. Si tienes fotos, estas servirán de base a la reclamación.\n\n"
 "6. Lleva la hoja a la *oficina de Consumo* más cercana. Lo primero que debes hacer con la hoja de reclamaciones es dársela al reclamado y esperar su respuesta durante diez días.\n\n"
-"Después de eso, si no tienes respuesta, tienes que presentarla de manera presencial o telemática en la OMIC correspondiente o en la Dirección General de Consumo de tu Comunidad.\n\n"
 "----------------------------------------\n"
 "Si quieres realizar otro tipo de acción contra la discriminación sufrida, puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es o en el [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "Recuerda que siempre puedes contar con las ONG y organizaciones de la zona que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión... Acude para exponer el caso y pedir acompañamiento."
@@ -891,7 +888,6 @@ msgstr "En primer lugar, trata de mantener la calma y evaluar la situación de m
 "Puedes llevar este material a una ONGs especializada como Ecos do Sur.\n\n"
 "También puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica. [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es. Recuerda que siempre puedes contar con las ONG y organizaciones de la zona que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza o religión... Acude para exponer el caso y pedir acompañamiento."
 
-#: lib/chatbot/graphs/commerce_graph.ex:17
 #: lib/chatbot/graphs/home_graph.ex:39
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
@@ -1422,20 +1418,6 @@ msgstr "*Creo que estoy siendo víctima de trabajo forzado*\n\n"
 msgid "WORK_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:76
-#, elixir-autogen, elixir-format, fuzzy
-msgid "HOSPITAL_S3_1"
-msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
-"Esto puede ocurrir por motivos de discriminación, porque haya una baja en el sistema, por cambio de Comunidad Autónoma, o puede ser que no te estén descontando costes de medicamentos.\n\n"
-"Sea cual sea el problema en estos casos:\n\n"
-"1. *Pedir reunirte con el Director del Centro de Salud* para que te explique las causas de la denegación de tus derechos, pedir que te dé copia escrita de las normas que están usando y te informe de cómo reclamar.\n\n"
-"2. *Acudir al Servicio de Atención al Paciente* para lo mismo del punto 1.\n\n"
-"3. *Graba siempre todas las conversaciones* que puedas para poder demostrar en el caso de que los motivos sean por racismo, islamofobia, xenofobia u otras formas de odio.\n\n"
-"4. *Detalla tu caso* y redacta un texto explicándolo, añade todas las pruebas que puedas.\n\n"
-"5. *Reclamar por escrito*. Deben registrarlo y darte una copia sellada con un número de registro (lleva una copia del escrito que hicieste en el punto 4). Esto *les obliga a contestar por escrito* y argumentar los motivos de su decisión. *Es un trámite necesario si se acude a la vía judicial*.\n\n"
-"6. *Denuncia en los juzgados*. [Consulta aquí los juzgados de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es). En este caso, recomendamos *visitar una ONG de derechos humanos o asesorarse en el* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): "
-"para casos de urgencia en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
-
 #: lib/chatbot/graphs/hospital_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL SERVICE DENIAL"
@@ -1459,17 +1441,17 @@ msgstr "----------------------------------------\n"
 "4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "ALTA"
 msgstr "Estoy dado/a de alta"
 
-#: lib/chatbot/graphs/hospital_graph.ex:52
+#: lib/chatbot/graphs/hospital_graph.ex:51
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q4"
 msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:87
+#: lib/chatbot/graphs/hospital_graph.ex:86
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S5"
 msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 días)\n\n"
@@ -1483,7 +1465,7 @@ msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 d
 "4. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos.\n\n"
 "Si un día necesitas atención en un Centro sanitario diferente al tuyo habitual (como las urgencias de un hospital), deberás aportar ese código para demostrar que tienes derecho a la atención y evitar que te pasen los costes. También ayuda a solucionar problemas en el caso de que escriban mal tu nombre.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:91
+#: lib/chatbot/graphs/hospital_graph.ex:90
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S6"
 msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
@@ -1493,7 +1475,7 @@ msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
 "4. *El alta en el Sistema Sanitario debe incluir la prestación farmacéutica*, de modo que sólo tendrás que aportar el 40% del precio de los medicamentos."
 "5. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos."
 
-#: lib/chatbot/graphs/hospital_graph.ex:95
+#: lib/chatbot/graphs/hospital_graph.ex:94
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S7"
 msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
@@ -1507,12 +1489,17 @@ msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
 "6. *Denuncia en los juzgados*. [Consulta aquí los juzgados de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es). En este caso, recomendamos *visitar una ONG de derechos humanos o asesorarse en el* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): "
 "para casos de urgencia en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "NO RESIDENCE"
 msgstr "Sin permiso de Residencia"
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "TEMPORAL"
 msgstr "Estancia temporal (< 90 días)"
+
+#: lib/chatbot/graphs/commerce_graph.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "COMMERCE PROBLEMS"
+msgstr "Diferentes problemas en la atención"

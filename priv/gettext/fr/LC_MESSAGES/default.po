@@ -112,7 +112,6 @@ msgstr "Ces informations ont été enregistrées avec succès"
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:30
-#: lib/chatbot/graphs/hospital_graph.ex:40
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:63
@@ -395,28 +394,28 @@ msgstr ""
 msgid "HOSPITAL_Q2"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:42
+#: lib/chatbot/graphs/hospital_graph.ex:41
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q3"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:66
+#: lib/chatbot/graphs/hospital_graph.ex:65
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:71
+#: lib/chatbot/graphs/hospital_graph.ex:70
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:76
+#: lib/chatbot/graphs/hospital_graph.ex:75
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:80
-#: lib/chatbot/graphs/hospital_graph.ex:84
+#: lib/chatbot/graphs/hospital_graph.ex:79
+#: lib/chatbot/graphs/hospital_graph.ex:83
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr ""
@@ -602,7 +601,6 @@ msgstr ""
 msgid "COMMERCE_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/commerce_graph.ex:17
 #: lib/chatbot/graphs/home_graph.ex:39
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
@@ -975,11 +973,6 @@ msgstr ""
 msgid "WORK_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:76
-#, elixir-autogen, elixir-format, fuzzy
-msgid "HOSPITAL_S3_1"
-msgstr ""
-
 #: lib/chatbot/graphs/hospital_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL SERVICE DENIAL"
@@ -996,37 +989,42 @@ msgstr ""
 msgid "WORK_S2_1"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "ALTA"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:52
+#: lib/chatbot/graphs/hospital_graph.ex:51
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q4"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:87
+#: lib/chatbot/graphs/hospital_graph.ex:86
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:91
+#: lib/chatbot/graphs/hospital_graph.ex:90
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S6"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:95
+#: lib/chatbot/graphs/hospital_graph.ex:94
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S7"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "NO RESIDENCE"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "TEMPORAL"
+msgstr ""
+
+#: lib/chatbot/graphs/commerce_graph.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "COMMERCE PROBLEMS"
 msgstr ""

@@ -1,4 +1,6 @@
 defmodule Chatbot.HistoryFormatting do
+
+  def buildMessage(message, nil), do: "*" <> message <> "*"
   def buildMessage(message, history) do
     string_list =
     Enum.map(history, fn state -> "✅ " <> state_to_string(state) end)

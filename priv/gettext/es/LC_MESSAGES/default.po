@@ -479,7 +479,7 @@ msgstr "En qué tipo de centro sanitario te encuentras?"
 msgid "HOSPITAL_Q3"
 msgstr "Quieres más información sobre tus derechos sanitarios?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:54
+#: lib/chatbot/graphs/hospital_graph.ex:66
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere decir que en *los hospitales tienen la obligación de atenderte* ante una urgencia médica tengas la nacionalidad, el permiso de residencia o no. Por tanto, si te niegan la atención médica en el servicio de urgencias del hospital *llama al 112* y explícales lo que te está pasando.\n\n"
@@ -496,7 +496,7 @@ msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere dec
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:59
+#: lib/chatbot/graphs/hospital_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia médica. Por favor, *acude al servicio de urgencias del hospital* para que puedan atenderte. "
@@ -510,36 +510,20 @@ msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia m
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:76
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr "La normativa ([RDL 7/2018](https://www.boe.es/buscar/doc.php?id=BOE-A-2018-10752)) reconoce el *derecho a la atención sanitaria a las personas «no registradas ni autorizadas como residentes en España»* (es decir, a las personas «sin permiso de residencia»).\n\n"
 "Sin embargo, *la administración considera a cualquier persona en «situación de estancia temporal» durante sus primeros 90 días en España*. En esos casos, la ley exige un seguro médico que cubra la asistencia sanitaria o se deberán abonar los costes del servicio.\n\n"
 "⚠️ATENCIÓN⚠️: si has entrado de forma irregular en España, o tu visado ha expirado y era inferior a 90 días, no pasas por la situación de estancia temporal, tu caso es *«sin permiso de residencia»*.\n\n"
-"----------------------------------------\n"
-"*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 días)\n\n"
-"1. *Pregunta en tu Centro de Salud* si en tu Comunidad Autónoma hay normas y cómo debes hacer para acceder a la atención sanitaria. *Graba la conversación* para tener pruebas en el caso de que te nieguen acceder o no te quieran informar.\n\n"
-"2. *Consigue un informe social de necesidad*. Pide cita con la persona de Trabajo Social del Centro de Salud, de los Servicios Sociales del Ayuntamiento o de una ONG de derechos humanos (puedes consultar recursos concretos en tu zona en este listado).\n\n"
-"3. *Acude al Centro de Salud con:*\n"
-"   - *Documento de identificación* (pasaporte o, si careces de él, la cédula de inscripción de indocumentados)\n\n"
-"   - *Prueba de residencia*: empadronamiento u otro documento (documentos oficiales, carta de viaje del consulado, documentos expedidos por ONG…). Recuerda que para el cálculo de los 90 días *cuenta todo el tiempo que puedas demostrar que has vivido en España aunque sea en otras localidades*.\n\n"
-"   - *Informe social favorable emitido por los Servicios Sociales*.\n\n"
-"   - Te recomendamos llevar también la *ley RDL 7/2018*.[ En este enlace te puedes descargar la ley](https://www.boe.es/boe/dias/2018/07/30/pdfs/BOE-A-2018-10752.pdf).\n\n"
-"4. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos.\n\n"
-"Si un día necesitas atención en un Centro sanitario diferente al tuyo habitual (como las urgencias de un hospital), deberás aportar ese código para demostrar que tienes derecho a la atención y evitar que te pasen los costes. También ayuda a solucionar problemas en el caso de que escriban mal tu nombre.\n\n"
-"----------------------------------------\n"
-"*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
-"1. *Los pasos a seguir de cada Comunidad pueden ser diferentes*, y tal vez pueden exigirte diferentes papeles para demostrar tu situación pero, en todo caso, deben seguir la ley estatal. El Ministerio ha emitido un [Documento de Recomendaciones](https://www.sanidad.gob.es/va/profesionales/prestacionesSanitarias/CarteraDeServicios/ContenidoCS/docs/Recomen_proc_personas_extranjeras.pdf) que no es obligatoriao, pero lo normal es que los métodos de las diferentes Comunidades se acerquen a este texto. *Infórmate en tu Centro de Salud*.\n\n"
-"2. Puedes solicitar apoyo a *Médicos del Mundo* (teléfono 91 543 60 33, email ayuda@medicosdelmundo.org).\n\n"
-"3. *Busca documentos que prueben que llevas más de 90 días viviendo en España* (incluye todas las localidades), puede ser el padrón o otros documentos oficiales.\n\n"
-"4. *El alta en el Sistema Sanitario debe incluir la prestación farmacéutica*, de modo que sólo tendrás que aportar el 40% del precio de los medicamentos."
-"5. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos."
 
-#: lib/chatbot/graphs/hospital_graph.ex:69
-#: lib/chatbot/graphs/hospital_graph.ex:73
+
+#: lib/chatbot/graphs/hospital_graph.ex:80
+#: lib/chatbot/graphs/hospital_graph.ex:84
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
-msgstr ""
+msgstr "Muy bien, recuerda que *puedes volver a preguntarme cuando lo necesites*.\n\n"
+"Si necesitas asistencia o *asesoría presencial sobre racismo, islamofobia, xenofobia* u otro caso de odio, puedes consultar aquí la *lista de recursos de tu Comunidad Autónoma*."
 
 #: lib/chatbot/graphs/school_graph.ex:133
 #, elixir-autogen, elixir-format
@@ -1014,7 +998,7 @@ msgstr "Por favor, describe que ha pasado en un único mensaje."
 #: lib/chatbot/information_collector.ex:252
 #, elixir-autogen, elixir-format
 msgid "Do you want to add a review?"
-msgstr ""
+msgstr "Quieres añadir una reseña?"
 
 #: lib/chatbot/graphs/work_graph.ex:17
 #, elixir-autogen, elixir-format
@@ -1396,7 +1380,6 @@ msgstr "Si en tu lugar de trabajo cualquier persona del equipo, *con intención 
 "4. Trata de recordar y apuntar cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas, comentarios sobre tu origen, aspecto físico, costumbres culturales. Apunta el lugar, la fecha y los detalles.\n\n"
 "5. Si hay alguien que pueda atestiguar tu situación, por ejemplo miembros del equipo de trabajo que hayan presenciado actos de acoso o comentarios discriminatorios, recaba sus datos por si es necesario contar con su testimonio más adelante.\n\n"
 
-
 #: lib/chatbot/graphs/work_graph.ex:82
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S3"
@@ -1439,7 +1422,7 @@ msgstr "*Creo que estoy siendo víctima de trabajo forzado*\n\n"
 msgid "WORK_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:76
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3_1"
 msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
@@ -1475,3 +1458,61 @@ msgstr "----------------------------------------\n"
 "3. Las situaciones de acosos en las que hay indicios de discriminación xenófoba, racista o islamófoba pueden notificarse al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): llamada gratuita en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.html)).\n\n"
 "4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."
+
+#: lib/chatbot/graphs/hospital_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "ALTA"
+msgstr "Estoy dado/a de alta"
+
+#: lib/chatbot/graphs/hospital_graph.ex:52
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_Q4"
+msgstr "Cuál es tu situación?"
+
+#: lib/chatbot/graphs/hospital_graph.ex:87
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_S5"
+msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 días)\n\n"
+"1. *Pregunta en tu Centro de Salud* si en tu Comunidad Autónoma hay normas y cómo debes hacer para acceder a la atención sanitaria. *Graba la conversación* para tener pruebas en el caso de que te nieguen acceder o no te quieran informar.\n\n"
+"2. *Consigue un informe social de necesidad*. Pide cita con la persona de Trabajo Social del Centro de Salud, de los Servicios Sociales del Ayuntamiento o de una ONG de derechos humanos (puedes consultar recursos concretos en tu zona en este listado).\n\n"
+"3. *Acude al Centro de Salud con:*\n"
+"   - *Documento de identificación* (pasaporte o, si careces de él, la cédula de inscripción de indocumentados)\n\n"
+"   - *Prueba de residencia*: empadronamiento u otro documento (documentos oficiales, carta de viaje del consulado, documentos expedidos por ONG…). Recuerda que para el cálculo de los 90 días *cuenta todo el tiempo que puedas demostrar que has vivido en España aunque sea en otras localidades*.\n\n"
+"   - *Informe social favorable emitido por los Servicios Sociales*.\n\n"
+"   - Te recomendamos llevar también la *ley RDL 7/2018*.[ En este enlace te puedes descargar la ley](https://www.boe.es/boe/dias/2018/07/30/pdfs/BOE-A-2018-10752.pdf).\n\n"
+"4. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos.\n\n"
+"Si un día necesitas atención en un Centro sanitario diferente al tuyo habitual (como las urgencias de un hospital), deberás aportar ese código para demostrar que tienes derecho a la atención y evitar que te pasen los costes. También ayuda a solucionar problemas en el caso de que escriban mal tu nombre.\n\n"
+
+#: lib/chatbot/graphs/hospital_graph.ex:91
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_S6"
+msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
+"1. *Los pasos a seguir de cada Comunidad pueden ser diferentes*, y tal vez pueden exigirte diferentes papeles para demostrar tu situación pero, en todo caso, deben seguir la ley estatal. El Ministerio ha emitido un [Documento de Recomendaciones](https://www.sanidad.gob.es/va/profesionales/prestacionesSanitarias/CarteraDeServicios/ContenidoCS/docs/Recomen_proc_personas_extranjeras.pdf) que no es obligatoriao, pero lo normal es que los métodos de las diferentes Comunidades se acerquen a este texto. *Infórmate en tu Centro de Salud*.\n\n"
+"2. Puedes solicitar apoyo a *Médicos del Mundo* (teléfono 91 543 60 33, email ayuda@medicosdelmundo.org).\n\n"
+"3. *Busca documentos que prueben que llevas más de 90 días viviendo en España* (incluye todas las localidades), puede ser el padrón o otros documentos oficiales.\n\n"
+"4. *El alta en el Sistema Sanitario debe incluir la prestación farmacéutica*, de modo que sólo tendrás que aportar el 40% del precio de los medicamentos."
+"5. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos."
+
+#: lib/chatbot/graphs/hospital_graph.ex:95
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_S7"
+msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
+"Esto puede ocurrir por motivos de discriminación, porque haya una baja en el sistema, por cambio de Comunidad Autónoma, o puede ser que no te estén descontando costes de medicamentos.\n\n"
+"Sea cual sea el problema en estos casos:\n\n"
+"1. *Pedir reunirte con el Director del Centro de Salud* para que te explique las causas de la denegación de tus derechos, pedir que te dé copia escrita de las normas que están usando y te informe de cómo reclamar.\n\n"
+"2. *Acudir al Servicio de Atención al Paciente* para lo mismo del punto 1.\n\n"
+"3. *Graba siempre todas las conversaciones* que puedas para poder demostrar en el caso de que los motivos sean por racismo, islamofobia, xenofobia u otras formas de odio.\n\n"
+"4. *Detalla tu caso* y redacta un texto explicándolo, añade todas las pruebas que puedas.\n\n"
+"5. *Reclamar por escrito*. Deben registrarlo y darte una copia sellada con un número de registro (lleva una copia del escrito que hicieste en el punto 4). Esto *les obliga a contestar por escrito* y argumentar los motivos de su decisión. *Es un trámite necesario si se acude a la vía judicial*.\n\n"
+"6. *Denuncia en los juzgados*. [Consulta aquí los juzgados de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es). En este caso, recomendamos *visitar una ONG de derechos humanos o asesorarse en el* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): "
+"para casos de urgencia en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
+
+#: lib/chatbot/graphs/hospital_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "NO RESIDENCE"
+msgstr "Sin permiso de Residencia"
+
+#: lib/chatbot/graphs/hospital_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "TEMPORAL"
+msgstr "Estancia temporal (< 90 días)"

@@ -400,23 +400,23 @@ msgstr ""
 msgid "HOSPITAL_Q3"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:54
+#: lib/chatbot/graphs/hospital_graph.ex:66
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:59
+#: lib/chatbot/graphs/hospital_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:76
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:69
-#: lib/chatbot/graphs/hospital_graph.ex:73
+#: lib/chatbot/graphs/hospital_graph.ex:80
+#: lib/chatbot/graphs/hospital_graph.ex:84
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr ""
@@ -975,7 +975,7 @@ msgstr ""
 msgid "WORK_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:76
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3_1"
 msgstr ""
@@ -994,4 +994,39 @@ msgstr ""
 #: lib/chatbot/graphs/work_graph.ex:80
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S2_1"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "ALTA"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:52
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_Q4"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:87
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_S5"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:91
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_S6"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:95
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_S7"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "NO RESIDENCE"
+msgstr ""
+
+#: lib/chatbot/graphs/hospital_graph.ex:50
+#, elixir-autogen, elixir-format
+msgid "TEMPORAL"
 msgstr ""

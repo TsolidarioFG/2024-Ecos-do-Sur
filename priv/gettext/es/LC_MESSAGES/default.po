@@ -105,6 +105,8 @@ msgid "This information has been saved successfully"
 msgstr "La información ha sido guardada correctamente!"
 
 #: lib/chatbot/graphs/commerce_graph.ex:18
+#: lib/chatbot/graphs/faq_graph.ex:18
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:30
@@ -136,7 +138,7 @@ msgstr "La información ha sido guardada correctamente!"
 #: lib/chatbot/graphs/work_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "BACK"
-msgstr ""
+msgstr "ATRÁS"
 
 #: lib/chatbot/graphs/initial_graph.ex:66
 #, elixir-autogen, elixir-format
@@ -195,7 +197,7 @@ msgstr "¿El problema es con personal del centro/servicio o con otra persona?"
 msgid "INITIAL_Q7"
 msgstr "¿Esa persona te ha agredido física o verbalmente, o ha atacado tus propiedades o pertenencias?"
 
-#: lib/chatbot/graphs/initial_graph.ex:144
+#: lib/chatbot/graphs/initial_graph.ex:124
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S1"
 msgstr "*Si tú te encuentras en riesgo:* \n\n"
@@ -218,12 +220,12 @@ msgstr "*Si tú te encuentras en riesgo:* \n\n"
 "Aguarda con ella a que lleguen las autoridades y explícales lo ocurrido de la forma más pormenorizada posible. Si te parece que la amenaza estaba relacionada con motivos de odio racista, xenófobo o islamófobo, es muy importante que lo comuniques en este momento.\n\n"
 "Ofrece a la víctima tu contacto por si necesita volver a hablar contigo más adelante."
 
-#: lib/chatbot/graphs/initial_graph.ex:146
+#: lib/chatbot/graphs/initial_graph.ex:126
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:148
+#: lib/chatbot/graphs/initial_graph.ex:128
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S3"
 msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
@@ -254,7 +256,7 @@ msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
 "Puedes presentar tu denuncia en la policía o en las Fiscalías especializadas en delitos de odio y discriminación que hay que cada provincia de España.\n\n"
 "¿Quieres información sobre los *recursos de denuncia y asistencia a víctimas* que hay en tu zona?"
 
-#: lib/chatbot/graphs/initial_graph.ex:150
+#: lib/chatbot/graphs/initial_graph.ex:130
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S4"
 msgstr "*Si tú has sido agredido/a verbal o físicamente por una autoridad y te encuentras en riesgo:*\n\n"
@@ -1433,3 +1435,139 @@ msgstr "Estancia temporal (< 90 días)"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE PROBLEMS"
 msgstr "Diferentes problemas en la atención"
+
+#: lib/chatbot/graphs/faq_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:24
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE"
+msgstr "Preguntas frecuentes de Sanidad"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:38
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S1"
+msgstr "*Los derechos básicos:*\n\n"
+"- Derecho a la información sanitaria y asistencial.\n\n"
+"- Derecho de acceso a la historia clínica.\n\n"
+"- Derecho a decidir sobre su salud.\n\n"
+"- Derecho a la intimidad y privacidad.\n\n"
+"- Derecho a que se respete su voluntad.\n\n"
+"- Derecho a reclamar.\n\n"
+"*Los derechos sanitarios en España son universales:* todas las personas tenemos derecho a que nos asistan en caso de necesidades de salud.\n\n"
+"Sin embargo, para las personas que *no tienen la nacionalidad española*, existen casos en los que *es necesario solicitar este derecho* a través de trámites. "
+"La documentación y la forma de solicitar cambia según tu caso. *Es importante que consultes tu caso con atención*. Las diferencias dependen de:\n\n"
+"[Si llevo menos de 90 días en España](https://yosisanidaduniversal.net/conseguir-asistencia/si-llevo-menos-de-90-dias-en-espana)\n\n"
+"[Si llevo más de 90 días en España](https://yosisanidaduniversal.net/conseguir-asistencia/si-llevo-mas-de-90-dias-residiendo-en-espana)\n\n"
+"[Si soy menor de edad o estoy embarazada](https://yosisanidaduniversal.net/conseguir-asistencia/si-estoy-embarazada)\n\n"
+"[Si soy solicitante de asilo](https://yosisanidaduniversal.net/conseguir-asistencia/si-soy-solicitante-de-asilo)\n\n"
+"[Si tengo permiso por familiar comunitario](https://yosisanidaduniversal.net/conseguir-asistencia/si-tengo-permiso-por-familiar-de-comunitario)\n\n"
+"[Si soy comunitario (caso especial personas de Rumanía)](https://yosisanidaduniversal.net/conseguir-asistencia/si-soy-comunitario-la-exclusion-de-los-rumanos)\n\n"
+"[Si tengo permiso por razones humanitarias de sanidad](https://yosisanidaduniversal.net/conseguir-asistencia/si-tengo-permiso-por-razones-humanitarias-de-enfermedad)\n\n"
+"[Si he emigrado fuera de España](https://mareagranate.org/2015/04/guia-sanitaria-para-personas-emigrantes-2/)"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:40
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S2"
+msgstr "Puedes reclamar *cualquier mala atención* en el servicio de Atención al Paciente.\n\n"
+"Los *casos en los que el personal te haya discriminado, no te haya atendido bien o te hayan negado el servicio adecuado por motivos de tu raza, religión, orientación sexual, nacionalidad, etc...,* "
+"también puedes reclamarlos en la oficina de Atención al Paciente.\n\n"
+"*Es importante que tengas pruebas o que dejes muy claro que el problema que has tenido es motivado por el racismo, la xenofobia, el odio religioso, etc.*\n\n"
+"Si es un trato continuado, piensa en grabar las conversaciones con el personal que suele discriminarte y así tener pruebas de ese racismo, xenofobia, odio religioso, etc.\n\n"
+"No te olvides de consultar tu caso con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/). Puedes ver los mejores *recursos anti racismo y discriminación en tu Comunidad Autónoma en esta lista*.\n\n"
+"También puedes reclamar a través del [Defensor del Pueblo](https://www.defensordelpueblo.es/).\n\n"
+"Los *casos más graves que causen problemas de salud o incluso mortalidad*, debes denunciarlos en los juzgados. [Consulta aquí los de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es)."
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:43
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S3"
+msgstr "*Atención al Paciente es un servicio gratuito* que hay en los centros de salud y en los hospitales para atender a las personas que son pacientes.\n\n"
+"*Pregunta en la recepción dónde está la oficina de Atención al Paciente.* Una persona te atenderá y es quien debe darte el papel para las quejas y reclamaciones.\n\n"
+"A continuación, tienes una foto de ejemplo (Comunidad de Madrid) de esta hoja y las instrucciones para cubrirla.\n\n"
+"Estos son los *datos mínimos* que deben ponerse en la hoja:\n\n"
+"- Nombre y apellidos del usuario o paciente\n\n"
+"- Domicilio (dirección)\n\n"
+"- Número de Tarjeta SIP – Tarjeta Sanitaria Individual o código CIPA\n\n"
+"- Información de contacto – Teléfono, e-mail, etc.\n\n"
+"- Razones del reclamo - cuál es tu caso y tu problema. Si es por discriminación u odio racial, religioso o similar, tienes que dejar esta causa muy clara explicando si te han insultado o dicho algo contra tu raza, religión, orientación sexual, etc. Subraya los puntos más importantes de tu explicación del caso.\n\n"
+"- Nombre del hospital o centro sanitario de la reclamación\n\n"
+"- Fecha, lugar y firma\n\n"
+"- Otros detalles y documentación necesaria que sirva para facilitar la gestión del asunto. Por ejemplo: diagnóstico, pruebas médicas, etc. que ayuden a entender tu caso.\n\n"
+"*Debes quedarte con una copia* de la hoja que esté sellada por la persona que la recibe."
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:49
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S4"
+msgstr "*Mantén la calma.* Existen formas de evitar que llegue una factura y también de reclamar si llega para no tener que pagarla.\n\n"
+"En los mostradores de los hospitales se dan de alta por defecto como “paciente privado”, y *se espera que la persona luego reclame esa factura que le va a llegar*. Lo normal es que no informen de otras alternativas, aunque es posible que te digan que te van a cobrar.\n\n"
+"*Si desde el mostrador se pide que se firme un compromiso de pago*, puedes intentar negarte o firmar como “no conforme”, para contar así con un documento para la futura reclamación por la factura que llegará.\n\n"
+"Para consultar los modelos de reclamación de facturas según diferentes situaciones de exclusión, puedes consultar el apartado *“1. Tus derechos como paciente”* Ahí tienes información para que te den de alta en el servicio sanitario universal y evitar que te cobren la asistencia sanitaria."
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:51
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S5"
+msgstr "[Información sobre trámites para solicitar la asistencia sanitaria en cada Comunidad Autónoma](https://yosisanidaduniversal.net/procedimientos-comunidades-autonomas)\n\n"
+"[Los derechos del paciente en detalle](https://www.ocu.org/salud/derechos-paciente/informe/derechos-paciente)\n\n"
+"----------------------------------------\n"
+"*ONG de ayuda sanitaria en toda España:*\n\n"
+"Médicos del Mundo España. Conde de Vilches, 15, 28028, Madrid\n\n"
+"Teléfono 91 543 60 33\n\n"
+"email: ayuda@medicosdelmundo.org\n\n"
+"----------------------------------------\n"
+"Reclamaciones judiciales: [listado de fiscalías por localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&tipo=FIS&lang=es_es)"
+
+#: lib/chatbot/graphs/faq_graph.ex:17
+#, elixir-autogen, elixir-format
+msgid "HEALTHCARE"
+msgstr "Sanidad"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:43
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_S3_1"
+msgstr "Cada *Comunidad Autónoma* de España tiene su propia hoja de reclamación en sanidad. Consulta la que te interese para más información sobre salud y trámites en tu región:\n\n"
+"- *Andalucía –* [Consejería de Salud y Familia](https://www.juntadeandalucia.es/servicios/sede/tramites/procedimientos/detalle/2634.html)\n\n"
+"- *Aragón –* [Consejería de Sanidad, Bienestar Social y Familia](http://www.aragon.es/Temas/Salud)\n\n"
+"- *Asturias –* [Consejería de Sanidad. AsturSalud](https://www.astursalud.es/astursalud)\n\n"
+"- *Illes Balears –* [Consejería de Salud, Familia y Bienestar Social](https://www.caib.es/webgoib/es/salut)\n\n"
+"- *Canarias –* [Consejería de Sanidad](https://www.gobiernodecanarias.org/sanidad/sgt/oddus/formularios/)\n\n"
+"- *Cantabria –* [Consejería de Sanidad y Servicios Sociales](https://saludcantabria.es/)\n\n"
+"- *Castilla-La Mancha –* [Consejería de Sanidad](https://www.castillalamancha.es/gobierno/sanidad)\n\n"
+"- *Castilla y León –* [Consejería de Sanidad](https://www.saludcastillayleon.es/ciudadanos/es/serviciosonline/reclamaciones-sugerencias)\n\n"
+"- *Cataluña –* [Consejería de Salud](http://salutweb.gencat.cat/)\n\n"
+"- *Ceuta –* [Consejería de Sanidad y Consumo](https://www.ceuta.es/ceuta/por-servicios/sanidad-y-consumo)\n\n"
+"- *Extremadura –* [Consejería de Salud y Política Social](https://www.juntaex.es/temas/salud)\n\n"
+"- *Galicia –* [Consejería de Sanidad](https://www.sergas.gal/A-nosa-organizacion/Consultas-reclamacions-suxestions)\n\n"
+"- *Madrid –* [Consejería de Sanidad](https://www.comunidad.madrid/servicios/salud/reclamaciones-sugerencias-agradecimientos-asistencia-sanitaria)\n\n"
+"- *Melilla –* [Consejería de Bienestar Social y Sanidad](https://www.areasaludmelilla.es/)\n\n"
+"- *Murcia –* [Consejería de Sanidad y Política Social](http://www.murciasalud.es/)\n\n"
+"- *Navarra –* [Consejería de Salud](https://www.navarra.es/home_es/Temas/Portal+de+la+Salud/Ciudadania/)\n\n"
+"- *País Vasco –* [Consejería de Sanidad y Consumo](https://www.euskadi.eus/gobierno-vasco/departamento-salud/)\n\n"
+"- *La Rioja –* [Consejería de Salud y Servicios Sociales](http://www.riojasalud.es/)\n\n"
+"- *Valencia –* [Consejería de Sanidad](http://www.san.gva.es/)"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q1"
+msgstr "Tus derechos como paciente"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q2"
+msgstr "Qué reclamar y dónde"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:19
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q3"
+msgstr "Cómo poner una reclamación"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:20
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q4"
+msgstr "Qué hago si me llega una factura"
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:21
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q5"
+msgstr "Más recursos de ayuda"

@@ -30,7 +30,7 @@ defmodule Chatbot.InitialGraph do
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "U1", message_id), do: resolve({:U1_new, history, nil}, user, key, nil, message_id)
-  def resolve({:start_final_resolve, history, _}, user, key, "I1", message_id), do: resolve({:I1, history, nil}, user, key, nil, message_id)
+  def resolve({:start_final_resolve, history, _}, user, key, "I1", message_id), do: Manager.resolve({{:start, :faq}, history, nil}, user, key, nil, message_id)
 
   ####################################################################
   ############################ URGENT ################################
@@ -116,26 +116,6 @@ defmodule Chatbot.InitialGraph do
   def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, "WORKPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
-
-  ####################################################################
-  ########################## INFORMATION #############################
-  ####################################################################
-
-  ##################################
-  # I1
-  ##################################
-
-  def resolve({:I1, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: "Escuela", callback_data: "I8"}, %{text: "Casa", callback_data: "I9"}]]
-    TelegramWrapper.update_menu(
-      keyboard,
-      "Dónde ocurre el problema?",
-      user,
-      message_id,
-      key
-    )
-    {:I1_resolve, history, nil}
-  end
 
   ####################################################################
   ########################### SOLUTIONS ##############################

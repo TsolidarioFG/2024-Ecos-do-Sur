@@ -22,4 +22,8 @@ defmodule Chatbot.TelegramWrapper do
     keyboard_markup = %{inline_keyboard: keyboard}
     Telegram.Api.request(key, "sendMessage", chat_id: chat_id, text: message, reply_markup: {:json, keyboard_markup}, parse_mode: "markdown")
   end
+
+  def send_image(image_path, chat_id, key) do
+    Telegram.Api.request(key, "sendPhoto", chat_id: chat_id, photo: {:file, image_path})
+  end
 end

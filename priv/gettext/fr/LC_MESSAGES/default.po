@@ -105,6 +105,8 @@ msgid "This information has been saved successfully"
 msgstr "Ces informations ont été enregistrées avec succès"
 
 #: lib/chatbot/graphs/commerce_graph.ex:18
+#: lib/chatbot/graphs/faq_graph.ex:18
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:18
 #: lib/chatbot/graphs/hospital_graph.ex:30
@@ -194,22 +196,22 @@ msgstr ""
 msgid "INITIAL_Q7"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:144
+#: lib/chatbot/graphs/initial_graph.ex:124
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:146
+#: lib/chatbot/graphs/initial_graph.ex:126
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:148
+#: lib/chatbot/graphs/initial_graph.ex:128
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:150
+#: lib/chatbot/graphs/initial_graph.ex:130
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S4"
 msgstr ""
@@ -1009,4 +1011,74 @@ msgstr ""
 #: lib/chatbot/graphs/commerce_graph.ex:17
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE PROBLEMS"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "FAQ"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:24
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:38
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:40
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:43
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:49
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:51
+#, elixir-autogen, elixir-format
+msgid "FAQ_HEALTHCARE_S5"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:17
+#, elixir-autogen, elixir-format
+msgid "HEALTHCARE"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:43
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_S3_1"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:19
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q3"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:20
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q4"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_healthcare_graph.ex:21
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_HEALTHCARE_Q5"
 msgstr ""

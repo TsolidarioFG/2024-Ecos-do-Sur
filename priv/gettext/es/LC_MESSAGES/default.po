@@ -11,7 +11,8 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:40
+#: lib/chatbot/graphs/hospital_graph.ex:41
+#: lib/chatbot/graphs/hospital_graph.ex:64
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:91
@@ -30,7 +31,8 @@ msgstr ""
 msgid "NO"
 msgstr "NO"
 
-#: lib/chatbot/graphs/hospital_graph.ex:40
+#: lib/chatbot/graphs/hospital_graph.ex:41
+#: lib/chatbot/graphs/hospital_graph.ex:64
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:91
@@ -108,8 +110,8 @@ msgstr "La información ha sido guardada correctamente!"
 #: lib/chatbot/graphs/faq_graph.ex:18
 #: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
-#: lib/chatbot/graphs/hospital_graph.ex:18
-#: lib/chatbot/graphs/hospital_graph.ex:30
+#: lib/chatbot/graphs/hospital_graph.ex:19
+#: lib/chatbot/graphs/hospital_graph.ex:31
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:69
@@ -155,7 +157,7 @@ msgstr ""
 msgid "HOME"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:30
+#: lib/chatbot/graphs/hospital_graph.ex:31
 #: lib/chatbot/graphs/initial_graph.ex:67
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL"
@@ -426,7 +428,7 @@ msgstr ""
 msgid "CANTEEN"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:30
+#: lib/chatbot/graphs/hospital_graph.ex:31
 #, elixir-autogen, elixir-format
 msgid "CLINIC"
 msgstr "Centro de Salud"
@@ -457,22 +459,22 @@ msgstr ""
 msgid "FAMILY"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:20
+#: lib/chatbot/graphs/hospital_graph.ex:21
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q1"
 msgstr "Cuál es el problema?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:32
+#: lib/chatbot/graphs/hospital_graph.ex:33
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q2"
 msgstr "En qué tipo de centro sanitario te encuentras?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:41
+#: lib/chatbot/graphs/hospital_graph.ex:42
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q3"
 msgstr "Quieres más información sobre tus derechos sanitarios?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:78
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere decir que en *los hospitales tienen la obligación de atenderte* ante una urgencia médica tengas la nacionalidad, el permiso de residencia o no. Por tanto, si te niegan la atención médica en el servicio de urgencias del hospital *llama al 112* y explícales lo que te está pasando.\n\n"
@@ -489,7 +491,7 @@ msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere dec
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:70
+#: lib/chatbot/graphs/hospital_graph.ex:83
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia médica. Por favor, *acude al servicio de urgencias del hospital* para que puedan atenderte. "
@@ -503,15 +505,15 @@ msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia m
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:75
+#: lib/chatbot/graphs/hospital_graph.ex:88
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr "La normativa ([RDL 7/2018](https://www.boe.es/buscar/doc.php?id=BOE-A-2018-10752)) reconoce el *derecho a la atención sanitaria a las personas «no registradas ni autorizadas como residentes en España»* (es decir, a las personas «sin permiso de residencia»).\n\n"
 "Sin embargo, *la administración considera a cualquier persona en «situación de estancia temporal» durante sus primeros 90 días en España*. En esos casos, la ley exige un seguro médico que cubra la asistencia sanitaria o se deberán abonar los costes del servicio.\n\n"
 "⚠️ATENCIÓN⚠️: si has entrado de forma irregular en España, o tu visado ha expirado y era inferior a 90 días, no pasas por la situación de estancia temporal, tu caso es *«sin permiso de residencia»*.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:79
-#: lib/chatbot/graphs/hospital_graph.ex:83
+#: lib/chatbot/graphs/hospital_graph.ex:92
+#: lib/chatbot/graphs/hospital_graph.ex:96
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr "Muy bien, recuerda que *puedes volver a preguntarme cuando lo necesites*.\n\n"
@@ -1350,7 +1352,7 @@ msgstr "*Creo que estoy siendo víctima de trabajo forzado*\n\n"
 msgid "WORK_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:17
+#: lib/chatbot/graphs/hospital_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL SERVICE DENIAL"
 msgstr " Niegan Atención Médica"
@@ -1373,17 +1375,17 @@ msgstr "----------------------------------------\n"
 "4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."
 
-#: lib/chatbot/graphs/hospital_graph.ex:49
+#: lib/chatbot/graphs/hospital_graph.ex:50
 #, elixir-autogen, elixir-format
 msgid "ALTA"
 msgstr "Estoy dado/a de alta"
 
-#: lib/chatbot/graphs/hospital_graph.ex:51
+#: lib/chatbot/graphs/hospital_graph.ex:52
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q4"
 msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:86
+#: lib/chatbot/graphs/hospital_graph.ex:99
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S5"
 msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 días)\n\n"
@@ -1397,7 +1399,7 @@ msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 d
 "4. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos.\n\n"
 "Si un día necesitas atención en un Centro sanitario diferente al tuyo habitual (como las urgencias de un hospital), deberás aportar ese código para demostrar que tienes derecho a la atención y evitar que te pasen los costes. También ayuda a solucionar problemas en el caso de que escriban mal tu nombre.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:90
+#: lib/chatbot/graphs/hospital_graph.ex:103
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S6"
 msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
@@ -1407,7 +1409,7 @@ msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
 "4. *El alta en el Sistema Sanitario debe incluir la prestación farmacéutica*, de modo que sólo tendrás que aportar el 40% del precio de los medicamentos."
 "5. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos."
 
-#: lib/chatbot/graphs/hospital_graph.ex:94
+#: lib/chatbot/graphs/hospital_graph.ex:107
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S7"
 msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
@@ -1421,12 +1423,12 @@ msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
 "6. *Denuncia en los juzgados*. [Consulta aquí los juzgados de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es). En este caso, recomendamos *visitar una ONG de derechos humanos o asesorarse en el* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): "
 "para casos de urgencia en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/hospital_graph.ex:49
+#: lib/chatbot/graphs/hospital_graph.ex:50
 #, elixir-autogen, elixir-format
 msgid "NO RESIDENCE"
 msgstr "Sin permiso de Residencia"
 
-#: lib/chatbot/graphs/hospital_graph.ex:49
+#: lib/chatbot/graphs/hospital_graph.ex:50
 #, elixir-autogen, elixir-format
 msgid "TEMPORAL"
 msgstr "Estancia temporal (< 90 días)"
@@ -1571,3 +1573,8 @@ msgstr "Qué hago si me llega una factura"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_Q5"
 msgstr "Más recursos de ayuda"
+
+#: lib/chatbot/graphs/hospital_graph.ex:65
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOSPITAL_Q5"
+msgstr "Quieres información sobre como poner una hoja de reclamaciones?"

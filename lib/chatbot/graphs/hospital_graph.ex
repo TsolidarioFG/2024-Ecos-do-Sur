@@ -2,6 +2,7 @@ defmodule Chatbot.HospitalGraph do
   alias Chatbot.TelegramWrapper, as: TelegramWrapper
   alias Chatbot.HistoryFormatting
   alias Chatbot.CommonFunctions
+  alias Chatbot.Manager
   import ChatBot.Gettext
 
   @doc """
@@ -42,6 +43,12 @@ defmodule Chatbot.HospitalGraph do
     {{:EN_resolve, :hospital}, nil, nil}
   end
 
+  def resolve({:U2_1, _, _}, user, key, _, message_id) do
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOSPITAL_Q3"), nil), user, message_id, key)
+    {{:EN_resolve, :hospital}, nil, nil}
+  end
+
   def resolve({:EN_resolve, history, _}, user, key, "YES", message_id), do: resolve({:S3, history, nil}, user, key, nil, message_id)
   def resolve({:EN_resolve, history, _}, user, key, "NO", message_id), do: resolve({:S4_1, history, nil}, user, key, nil, message_id)
   # 4 -----
@@ -56,6 +63,18 @@ defmodule Chatbot.HospitalGraph do
   def resolve({:U3_resolve, history, _}, user, key, "NO RESIDENCE", message_id), do: resolve({:S6, history, nil}, user, key, nil, message_id)
   def resolve({:U3_resolve, history, _}, user, key, "ALTA", message_id), do: resolve({:S7, history, nil}, user, key, nil, message_id)
 
+  ##################################
+  # FAQ LINKING
+  ##################################
+  def resolve({:L1, _, _}, user, key, _, _) do
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}], [%{text: gettext("NO"), callback_data: "NO"}]]
+    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOSPITAL_Q5"), nil), user, key)
+    {{:L1_resolve, :hospital}, nil, nil}
+  end
+
+  def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:S3, :faq_healthcare}, history, nil}, user, key, nil, message_id)
+  def resolve({:L1_resolve, history, _}, user, key, "NO", message_id), do: resolve({:U2_1, history, nil}, user, key, nil, message_id)
+
 
   ##################################
   # SOLUTIONS
@@ -63,7 +82,7 @@ defmodule Chatbot.HospitalGraph do
   # S1-Q3 -
   def resolve({:S1, history, _}, user, key, _, message_id) do
     TelegramWrapper.update_menu(gettext("HOSPITAL_S1"), user, message_id, key)
-    resolve({:U2, history, nil}, user, key, nil, message_id)
+    resolve({:L1, history, nil}, user, key, nil, message_id)
   end
   # S2-Q3 -
   def resolve({:S2, history, _}, user, key, _, message_id) do

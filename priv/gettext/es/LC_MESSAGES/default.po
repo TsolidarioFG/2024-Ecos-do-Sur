@@ -11,6 +11,7 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: lib/chatbot/graphs/home_graph.ex:51
 #: lib/chatbot/graphs/hospital_graph.ex:41
 #: lib/chatbot/graphs/hospital_graph.ex:47
 #: lib/chatbot/graphs/hospital_graph.ex:70
@@ -32,6 +33,7 @@ msgstr ""
 msgid "NO"
 msgstr "NO"
 
+#: lib/chatbot/graphs/home_graph.ex:51
 #: lib/chatbot/graphs/hospital_graph.ex:41
 #: lib/chatbot/graphs/hospital_graph.ex:47
 #: lib/chatbot/graphs/hospital_graph.ex:70
@@ -1002,7 +1004,7 @@ msgstr "Trabajo en la Empresa"
 #: lib/chatbot/graphs/home_graph.ex:38
 #, elixir-autogen, elixir-format
 msgid "EVICTION"
-msgstr ""
+msgstr "Desahucio"
 
 #: lib/chatbot/graphs/work_graph.ex:65
 #, elixir-autogen, elixir-format
@@ -1012,19 +1014,19 @@ msgstr "Explotación"
 #: lib/chatbot/graphs/home_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q1"
-msgstr ""
+msgstr "Cuás el tu situación?"
 
 #: lib/chatbot/graphs/home_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q2"
-msgstr ""
+msgstr "Con quién es el problema?"
 
-#: lib/chatbot/graphs/home_graph.ex:66
+#: lib/chatbot/graphs/home_graph.ex:78
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q3"
-msgstr ""
+msgstr "Cuál es el problema?"
 
-#: lib/chatbot/graphs/home_graph.ex:51
+#: lib/chatbot/graphs/home_graph.ex:63
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S1"
 msgstr "Las rentas del alquiler pueden subir *una vez cada año, y la cantidad depende de lo que se haya establecido en el contrato*. Normalmente, se trata de un porcentaje que corresponde con el incremento del IPC.\n\n"
@@ -1043,8 +1045,7 @@ msgstr "Las rentas del alquiler pueden subir *una vez cada año, y la cantidad d
 "- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
 "- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-
-#: lib/chatbot/graphs/home_graph.ex:53
+#: lib/chatbot/graphs/home_graph.ex:65
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S2"
 msgstr "Un contrato de alquiler *puede ser cancelado legalmente* por cualquiera de las dos partes antes de su vencimiento.\n\n"
@@ -1070,8 +1071,7 @@ msgstr "Un contrato de alquiler *puede ser cancelado legalmente* por cualquiera 
 "- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
 "- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-
-#: lib/chatbot/graphs/home_graph.ex:55
+#: lib/chatbot/graphs/home_graph.ex:67
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S3"
 msgstr "Si en el edificio en el que vives estás *sufriendo reiteradamente alguna de estas situaciones* causada por otras personas residentes:\n\n"
@@ -1100,8 +1100,7 @@ msgstr "Si en el edificio en el que vives estás *sufriendo reiteradamente algun
 "- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado.\n\n"
 "- Policía Local, Nacional o Guardia Civil."
 
-
-#: lib/chatbot/graphs/home_graph.ex:57
+#: lib/chatbot/graphs/home_graph.ex:69
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S4"
 msgstr "Si has contactado con un anuncio de alquiler de vivienda y en el primer momento te han comunicado unas condiciones determinadas, como el precio, el importe de la fianza o los requisitos para alquilar.\n\n"
@@ -1127,10 +1126,29 @@ msgstr "Si has contactado con un anuncio de alquiler de vivienda y en el primer 
 "- Otras asociaciones que luchan contra la discriminación: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
 "- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado."
 
-#: lib/chatbot/graphs/home_graph.ex:59
+#: lib/chatbot/graphs/home_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S5"
-msgstr ""
+msgstr "Si has contactado con un anuncio de alquiler de vivienda y en algún momento del (conversación telefónica, visita al piso, gestiones previas a la firma del contrato) la persona propietaria o la inmobiliaria *no te quiere alquilar, aunque cumples con los requisitos.*\n\n"
+"Si además te han dicho que *el motivo es que “no alquilamos a extranjeros”*, “el dueño no quiere musulmanas”, “la comunidad no admite a personas como tú”, “abstenerse inmigrantes”, etc"
+"Estás siendo víctima de una *discriminación residencial* por causas xenófobas, racistas o relligiosas.\n\n"
+"En España, este tipo de discriminación no está permitida. Si reclamas, podrías conseguir una compensación y además ayudar a evitar que otras personas como tú pasen por lo mismo.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer?*\n\n"
+"1. Si vas a contactar con un anuncio de alquiler o a visitar un piso y sospechas que podrían rechazarte por tu país de origen, etnia o religión, graba la conversación con el móvil en el bolso o en un bolsillo. Tienes derecho a hacerlo, siempre que tú seas parte de la situación. No edites los audios que tomes.\n\n"
+"2. Si ya se han negado a alquilarte la vivienda aludiendo abiertamente a tu origen, raza o religión, puedes contactar de nuevo solicitando aclaraciones sobre lo sucedido y grabar la conversación.\n\n"
+"3. Conserva cualquier evidencia relativa a la negativa de alquiler: capturas del anuncio en internet, conversaciones a través de WhatsApp o teléfono…\n\n"
+"4. Trata de recordar y apuntar cualquier alusión: expresiones verbales o escritas; comentarios sobre tu origen, aspecto físico o costumbres culturales. Apunta el lugar, la fecha y los detalles: quién, qué, cómo, si hubo testigos…\n\n"
+"----------------------------------------\n"
+"*¿Cómo reclamar?*\n\n"
+"Te recomendamos que siempre acudas a los *organismos especializados en la lucha contra la discriminación*. Se trata de instituciones públicas o privadas que pondrán a tu disposición personal especializado para asesorarte y acompañarte, tanto si decides denunciar como si no.\n\n"
+"Probablemente, te aconsejarán empezar por intentar un acuerdo con la persona propietaria o la inmobiliaria y mediarán en el proceso. Si esto no funciona, puedes plantearte denunciar por discriminación.\n\n"
+"----------------------------------------\n"
+"*Las organizaciones que pueden ayudarte son:*\n\n"
+"- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm)).\n\n"
+"- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
+"- Otras asociaciones que luchan contra la discriminación: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
+"- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado."
 
 #: lib/chatbot/information_collector.ex:181
 #, elixir-autogen, elixir-format
@@ -1150,7 +1168,7 @@ msgstr "Quiero trabajar en la Empresa"
 #: lib/chatbot/graphs/home_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "LANDLORD"
-msgstr ""
+msgstr "PERSONA PROPIETARIA"
 
 #: lib/chatbot/graphs/work_graph.ex:42
 #, elixir-autogen, elixir-format
@@ -1170,7 +1188,7 @@ msgstr "Discriminación en la selección de personal"
 #: lib/chatbot/graphs/home_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "RENT DENIAL"
-msgstr ""
+msgstr "Rechazo"
 
 #: lib/chatbot/graphs/person_school_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
@@ -1237,7 +1255,7 @@ msgstr "Trato injusto, hostil y/o marginación reiterado constante (acoso)"
 #: lib/chatbot/graphs/home_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "TENANT"
-msgstr ""
+msgstr "Soy Inquilino/a"
 
 #: lib/chatbot/graphs/person_work_graph.ex:17
 #, elixir-autogen, elixir-format
@@ -1258,7 +1276,7 @@ msgstr ""
 #: lib/chatbot/graphs/home_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "WANT TO RENT"
-msgstr ""
+msgstr "Quiero Alquilar o comprar"
 
 #: lib/chatbot/graphs/work_graph.ex:32
 #, elixir-autogen, elixir-format, fuzzy
@@ -1662,9 +1680,14 @@ msgstr "Quieres información sobre como poner una hoja de reclamaciones?"
 #: lib/chatbot/graphs/home_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "CHANGE OF CONDITIONS"
-msgstr ""
+msgstr "Cambio de condiciones"
 
 #: lib/chatbot/graphs/home_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "COMMUNITY"
-msgstr ""
+msgstr "COMUNIDAD DE VECINOS"
+
+#: lib/chatbot/graphs/home_graph.ex:52
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOME_Q4"
+msgstr "¿Quieres saber qué recursos hay en tu comunidad autónoma?"

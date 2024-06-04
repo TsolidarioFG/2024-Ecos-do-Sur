@@ -11,6 +11,7 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
+#: lib/chatbot/graphs/home_graph.ex:51
 #: lib/chatbot/graphs/hospital_graph.ex:41
 #: lib/chatbot/graphs/hospital_graph.ex:47
 #: lib/chatbot/graphs/hospital_graph.ex:70
@@ -32,6 +33,7 @@ msgstr ""
 msgid "NO"
 msgstr "NON"
 
+#: lib/chatbot/graphs/home_graph.ex:51
 #: lib/chatbot/graphs/hospital_graph.ex:41
 #: lib/chatbot/graphs/hospital_graph.ex:47
 #: lib/chatbot/graphs/hospital_graph.ex:70
@@ -732,32 +734,32 @@ msgstr ""
 msgid "HOME_Q2"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:66
+#: lib/chatbot/graphs/home_graph.ex:78
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q3"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:51
+#: lib/chatbot/graphs/home_graph.ex:63
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:53
+#: lib/chatbot/graphs/home_graph.ex:65
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:55
+#: lib/chatbot/graphs/home_graph.ex:67
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:57
+#: lib/chatbot/graphs/home_graph.ex:69
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S4"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:59
+#: lib/chatbot/graphs/home_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S5"
 msgstr ""
@@ -1095,4 +1097,9 @@ msgstr ""
 #: lib/chatbot/graphs/home_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "COMMUNITY"
+msgstr ""
+
+#: lib/chatbot/graphs/home_graph.ex:52
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HOME_Q4"
 msgstr ""

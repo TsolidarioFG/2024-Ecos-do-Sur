@@ -14,7 +14,7 @@ defmodule Chatbot.HomeGraph do
   ##################################
   # 1 -----
   def resolve({:start, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("TENANT"), callback_data: "TENANT"}, %{text: gettext("WANT TO RENT"), callback_data: "RENT"}],
+    keyboard = [[%{text: gettext("TENANT"), callback_data: "TENANT"}], [%{text: gettext("WANT TO RENT"), callback_data: "RENT"}],
                 [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:start, :home} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q1"), new_history), user, message_id, key)
@@ -25,7 +25,7 @@ defmodule Chatbot.HomeGraph do
   def resolve({:start_final_resolve, history, _}, user, key, "TENANT", message_id), do: resolve({:Q2, history, nil}, user, key, nil, message_id)
   # 2 -----
   def resolve({:Q2, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("LANDLORD"), callback_data: "LANDLORD"}, %{text: gettext("COMMUNITY"), callback_data: "COMMUNITY"}],
+    keyboard = [[%{text: gettext("LANDLORD"), callback_data: "LANDLORD"}], [%{text: gettext("COMMUNITY"), callback_data: "COMMUNITY"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:Q2, :home} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q2"), new_history), user, message_id, key)
@@ -35,9 +35,9 @@ defmodule Chatbot.HomeGraph do
   def resolve({:Q2_resolve, history, _}, user, key, "LANDLORD" = answer, message_id), do: resolve({:Q3, history, answer}, user, key, nil, message_id)
   # 3 -----
   def resolve({:Q3, history, "LANDLORD" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}, %{text: gettext("EVICTION"), callback_data: "EVICTION"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
+    do_common_q3(history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}], [%{text: gettext("EVICTION"), callback_data: "EVICTION"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
   def resolve({:Q3, history, "RENT" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}, %{text: gettext("RENT DENIAL"), callback_data: "RENT_DENIAL"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
+    do_common_q3(history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}], [%{text: gettext("RENT DENIAL"), callback_data: "RENT_DENIAL"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
 
   def resolve({:Q3_resolve, history, "LANDLORD"}, user, key, "CONDITIONS", message_id), do: resolve({:S1, history, nil}, user, key, nil, message_id)
   def resolve({:Q3_resolve, history, "RENT"}, user, key, "CONDITIONS", message_id), do: resolve({:S4, history, nil}, user, key, nil, message_id)
@@ -49,7 +49,7 @@ defmodule Chatbot.HomeGraph do
   ##################################
   def resolve({:L1, _, _}, user, key, _, _) do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}], [%{text: gettext("NO"), callback_data: "NO"}]]
-    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q3"), nil), user, key)
+    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q4"), nil), user, key)
     {{:L1_resolve, :home}, nil, nil}
   end
 

@@ -12,7 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: lib/chatbot/graphs/hospital_graph.ex:41
-#: lib/chatbot/graphs/hospital_graph.ex:64
+#: lib/chatbot/graphs/hospital_graph.ex:47
+#: lib/chatbot/graphs/hospital_graph.ex:70
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:91
@@ -32,7 +33,8 @@ msgid "NO"
 msgstr "NO"
 
 #: lib/chatbot/graphs/hospital_graph.ex:41
-#: lib/chatbot/graphs/hospital_graph.ex:64
+#: lib/chatbot/graphs/hospital_graph.ex:47
+#: lib/chatbot/graphs/hospital_graph.ex:70
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:91
@@ -110,6 +112,9 @@ msgstr "This information has been saved successfully"
 #: lib/chatbot/graphs/faq_graph.ex:18
 #: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
+#: lib/chatbot/graphs/home_graph.ex:29
+#: lib/chatbot/graphs/home_graph.ex:38
+#: lib/chatbot/graphs/home_graph.ex:40
 #: lib/chatbot/graphs/hospital_graph.ex:19
 #: lib/chatbot/graphs/hospital_graph.ex:31
 #: lib/chatbot/graphs/initial_graph.ex:43
@@ -295,9 +300,6 @@ msgid "PERSONAL"
 msgstr ""
 
 #: lib/chatbot/graphs/commerce_graph.ex:17
-#: lib/chatbot/graphs/home_graph.ex:37
-#: lib/chatbot/graphs/home_graph.ex:39
-#: lib/chatbot/graphs/home_graph.ex:41
 #: lib/chatbot/graphs/leisure_graph.ex:17
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
@@ -391,27 +393,28 @@ msgid "HOSPITAL_Q2"
 msgstr ""
 
 #: lib/chatbot/graphs/hospital_graph.ex:42
+#: lib/chatbot/graphs/hospital_graph.ex:48
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q3"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:78
+#: lib/chatbot/graphs/hospital_graph.ex:84
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:83
+#: lib/chatbot/graphs/hospital_graph.ex:89
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:88
+#: lib/chatbot/graphs/hospital_graph.ex:94
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:92
-#: lib/chatbot/graphs/hospital_graph.ex:96
+#: lib/chatbot/graphs/hospital_graph.ex:98
+#: lib/chatbot/graphs/hospital_graph.ex:102
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr ""
@@ -597,7 +600,6 @@ msgstr ""
 msgid "COMMERCE_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:39
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "DENIAL"
@@ -710,7 +712,7 @@ msgstr ""
 msgid "EMPLOYEE"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:37
+#: lib/chatbot/graphs/home_graph.ex:38
 #, elixir-autogen, elixir-format
 msgid "EVICTION"
 msgstr ""
@@ -725,44 +727,39 @@ msgstr ""
 msgid "HOME_Q1"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:30
+#: lib/chatbot/graphs/home_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q2"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:71
+#: lib/chatbot/graphs/home_graph.ex:66
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q3"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:54
+#: lib/chatbot/graphs/home_graph.ex:51
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:56
+#: lib/chatbot/graphs/home_graph.ex:53
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:58
+#: lib/chatbot/graphs/home_graph.ex:55
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:60
+#: lib/chatbot/graphs/home_graph.ex:57
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S4"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:62
+#: lib/chatbot/graphs/home_graph.ex:59
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S5"
-msgstr ""
-
-#: lib/chatbot/graphs/home_graph.ex:64
-#, elixir-autogen, elixir-format, fuzzy
-msgid "HOME_S6"
 msgstr ""
 
 #: lib/chatbot/information_collector.ex:181
@@ -800,7 +797,7 @@ msgstr ""
 msgid "REJECTION"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:41
+#: lib/chatbot/graphs/home_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "RENT DENIAL"
 msgstr ""
@@ -893,7 +890,6 @@ msgstr ""
 msgid "WANT TO RENT"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:28
 #: lib/chatbot/graphs/work_graph.ex:32
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORKER"
@@ -975,37 +971,37 @@ msgstr ""
 msgid "WORK_S2_1"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "ALTA"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:52
+#: lib/chatbot/graphs/hospital_graph.ex:58
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q4"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:99
+#: lib/chatbot/graphs/hospital_graph.ex:105
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:103
+#: lib/chatbot/graphs/hospital_graph.ex:109
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S6"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:107
+#: lib/chatbot/graphs/hospital_graph.ex:113
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S7"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "NO RESIDENCE"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "TEMPORAL"
 msgstr ""
@@ -1085,7 +1081,18 @@ msgstr ""
 msgid "FAQ_HEALTHCARE_Q5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q5"
+msgstr ""
+
+#: lib/chatbot/graphs/home_graph.ex:38
+#: lib/chatbot/graphs/home_graph.ex:40
+#, elixir-autogen, elixir-format
+msgid "CHANGE OF CONDITIONS"
+msgstr ""
+
+#: lib/chatbot/graphs/home_graph.ex:28
+#, elixir-autogen, elixir-format
+msgid "COMMUNITY"
 msgstr ""

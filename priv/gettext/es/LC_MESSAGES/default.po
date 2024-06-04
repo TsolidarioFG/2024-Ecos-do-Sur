@@ -12,7 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: lib/chatbot/graphs/hospital_graph.ex:41
-#: lib/chatbot/graphs/hospital_graph.ex:64
+#: lib/chatbot/graphs/hospital_graph.ex:47
+#: lib/chatbot/graphs/hospital_graph.ex:70
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:91
@@ -32,7 +33,8 @@ msgid "NO"
 msgstr "NO"
 
 #: lib/chatbot/graphs/hospital_graph.ex:41
-#: lib/chatbot/graphs/hospital_graph.ex:64
+#: lib/chatbot/graphs/hospital_graph.ex:47
+#: lib/chatbot/graphs/hospital_graph.ex:70
 #: lib/chatbot/graphs/initial_graph.ex:43
 #: lib/chatbot/graphs/initial_graph.ex:53
 #: lib/chatbot/graphs/initial_graph.ex:91
@@ -110,6 +112,9 @@ msgstr "La información ha sido guardada correctamente!"
 #: lib/chatbot/graphs/faq_graph.ex:18
 #: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
+#: lib/chatbot/graphs/home_graph.ex:29
+#: lib/chatbot/graphs/home_graph.ex:38
+#: lib/chatbot/graphs/home_graph.ex:40
 #: lib/chatbot/graphs/hospital_graph.ex:19
 #: lib/chatbot/graphs/hospital_graph.ex:31
 #: lib/chatbot/graphs/initial_graph.ex:43
@@ -374,9 +379,6 @@ msgid "PERSONAL"
 msgstr ""
 
 #: lib/chatbot/graphs/commerce_graph.ex:17
-#: lib/chatbot/graphs/home_graph.ex:37
-#: lib/chatbot/graphs/home_graph.ex:39
-#: lib/chatbot/graphs/home_graph.ex:41
 #: lib/chatbot/graphs/leisure_graph.ex:17
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
@@ -470,11 +472,12 @@ msgid "HOSPITAL_Q2"
 msgstr "En qué tipo de centro sanitario te encuentras?"
 
 #: lib/chatbot/graphs/hospital_graph.ex:42
+#: lib/chatbot/graphs/hospital_graph.ex:48
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q3"
 msgstr "Quieres más información sobre tus derechos sanitarios?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:78
+#: lib/chatbot/graphs/hospital_graph.ex:84
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere decir que en *los hospitales tienen la obligación de atenderte* ante una urgencia médica tengas la nacionalidad, el permiso de residencia o no. Por tanto, si te niegan la atención médica en el servicio de urgencias del hospital *llama al 112* y explícales lo que te está pasando.\n\n"
@@ -491,7 +494,7 @@ msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere dec
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:83
+#: lib/chatbot/graphs/hospital_graph.ex:89
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia médica. Por favor, *acude al servicio de urgencias del hospital* para que puedan atenderte. "
@@ -505,15 +508,15 @@ msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia m
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:88
+#: lib/chatbot/graphs/hospital_graph.ex:94
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr "La normativa ([RDL 7/2018](https://www.boe.es/buscar/doc.php?id=BOE-A-2018-10752)) reconoce el *derecho a la atención sanitaria a las personas «no registradas ni autorizadas como residentes en España»* (es decir, a las personas «sin permiso de residencia»).\n\n"
 "Sin embargo, *la administración considera a cualquier persona en «situación de estancia temporal» durante sus primeros 90 días en España*. En esos casos, la ley exige un seguro médico que cubra la asistencia sanitaria o se deberán abonar los costes del servicio.\n\n"
 "⚠️ATENCIÓN⚠️: si has entrado de forma irregular en España, o tu visado ha expirado y era inferior a 90 días, no pasas por la situación de estancia temporal, tu caso es *«sin permiso de residencia»*.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:92
-#: lib/chatbot/graphs/hospital_graph.ex:96
+#: lib/chatbot/graphs/hospital_graph.ex:98
+#: lib/chatbot/graphs/hospital_graph.ex:102
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr "Muy bien, recuerda que *puedes volver a preguntarme cuando lo necesites*.\n\n"
@@ -884,7 +887,6 @@ msgstr "En primer lugar, trata de mantener la calma y evaluar la situación de m
 "Puedes llevar este material a una ONGs especializada como Ecos do Sur.\n\n"
 "También puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica. [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es. Recuerda que siempre puedes contar con las ONG y organizaciones de la zona que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza o religión... Acude para exponer el caso y pedir acompañamiento."
 
-#: lib/chatbot/graphs/home_graph.ex:39
 #: lib/chatbot/graphs/transport_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "DENIAL"
@@ -997,7 +999,7 @@ msgstr "Quieres añadir una reseña?"
 msgid "EMPLOYEE"
 msgstr "Trabajo en la Empresa"
 
-#: lib/chatbot/graphs/home_graph.ex:37
+#: lib/chatbot/graphs/home_graph.ex:38
 #, elixir-autogen, elixir-format
 msgid "EVICTION"
 msgstr ""
@@ -1012,44 +1014,122 @@ msgstr "Explotación"
 msgid "HOME_Q1"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:30
+#: lib/chatbot/graphs/home_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q2"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:71
+#: lib/chatbot/graphs/home_graph.ex:66
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q3"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:54
+#: lib/chatbot/graphs/home_graph.ex:51
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S1"
-msgstr ""
+msgstr "Las rentas del alquiler pueden subir *una vez cada año, y la cantidad depende de lo que se haya establecido en el contrato*. Normalmente, se trata de un porcentaje que corresponde con el incremento del IPC.\n\n"
+"Si la persona o agencia que te alquila la vivienda quiere subirte la renta más de una vez en un año o sin respetar las condiciones del contrato en vigor, *puede tratarse de una práctica irregular*.\n\n"
+"Si además esta subida ha venido acompañada de *comentarios racistas, xenófobos o islamófobos*, es posible que esté viviendo una situación de discriminación.\n\n"
+"Ante una situación así, tienes derechos y hay organizaciones que te ayudarán a defenderte.\n\n"
+"----------------------------------------\n"
+"*El primer paso es reunir pruebas:*\n\n"
+"Si la persona que te alquila la vivienda te pide que firmes algún documento nuevo, no lo hagas. Solicita que te entregue una copia por escrito (papel o digital) para leerla con calma.\n\n"
+"1. Localiza tu contrato de arrendamiento y comprueba las condiciones que figuran en él.\n\n"
+"2. Si te han comunicado de forma oral un incremento irregular de renta, intenta que quede alguna constancia por escrito: abre una conversación al respecto con la persona que te alquila a través de mail o WhatsApp, o pídele que te comunique las nuevas condiciones por escrito. Guarda capturas o fotos de estos textos.\n\n"
+"3. Si durante el tiempo en que llevas residiendo en la vivienda, la persona que te la alquila ha hecho alguna alusión negativa sobre tu país de origen, etnia o religión, trata de recordar los detalles y anótalos: lugar, fecha, posibles testigos… .\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer después?*\n\n"
+"En un primer momento, lo mejor es intentar llegar a un acuerdo con la persona que te alquila la vivienda. Si ya lo has intentado o crees que no servirá para nada, contacta con una organización que pueda respaldarte en el conocimiento y defensa de tus derechos.\n\n"
+"- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
+"- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/home_graph.ex:56
+
+#: lib/chatbot/graphs/home_graph.ex:53
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S2"
-msgstr ""
+msgstr "Un contrato de alquiler *puede ser cancelado legalmente* por cualquiera de las dos partes antes de su vencimiento.\n\n"
+"Si la persona que te alquila la casa en la que vives quiere que abandones la vivienda antes de que termine el contrato, podrá hacerlo *solo en uno de los siguientes casos*, que están recogidos en la Ley de Arrendamientos Urbanos (LAU):\n\n"
+"- Impagos.\n\n"
+"- Subarriendo o cesión de la vivienda sin permiso.\n\n"
+"- Daños intencionales u obras no consentidas.\n\n"
+"- Si realizas actividades molestas, insalubres, peligrosas o ilícitas en la vivienda.\n\n"
+"- Si dejas de utilizar el inmueble como vivienda permanente. \n\n"
+"- Si la persona propietaria o sus familiares en primer grado necesitan recuperar la casa para vivir en ella.\n\n"
+"Si te quieren cancelar el contrato para que abandones la vivienda por cualquier otro motivo, no tienes la obligación de aceptar. Puedes negarte o negociar una compensación.\n\n"
+"Si, además, la persona que te alquila la vivienda ha hecho alguna alusión negativa sobre tu país de origen, etnia o religión, es posible que el intento de rescindir el contrato tenga causas discriminatorias.\n\n"
+"----------------------------------------\n"
+"*Por dónde empezar: protégete y recaba pruebas*\n"
+"Ante una situación así, tienes derechos y hay organizaciones que te ayudarán a defenderte. El primer paso es reunir evidencias:\n\n"
+"1. Si la persona que te alquila la vivienda te pide que firmes algún documento nuevo, no lo hagas. Solicita que te entregue una copia por escrito (papel o digital) para leerla con calma.\n\n"
+"2. Localiza tu contrato de arrendamiento y comprueba las condiciones que figuran en él.\n\n"
+"3. Si te han comunicado de forma oral que tienes que irte, intenta que quede alguna constancia por escrito: abre una conversación al respecto con la persona que te alquila a través de mail o WhatsApp, o pídele que te explique las nuevas condiciones por escrito. Guarda capturas o fotos de estos textos.\n\n"
+"4. Si durante el tiempo en que llevas residiendo en la vivienda, la persona que te la alquila ha hecho alguna alusión negativa sobre tu país de origen, etnia o religión, trata de recordar los detalles y anótalos: lugar, fecha, posibles testigos… .\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer después?*\n\n"
+"En un primer momento, lo mejor es intentar llegar a un acuerdo con la persona que te alquila la vivienda. Si ya lo has intentado o crees que no servirá para nada, *contacta con una organización que pueda respaldarte* en el conocimiento y defensa de tus derechos.\n\n"
+"- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
+"- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/home_graph.ex:58
+
+#: lib/chatbot/graphs/home_graph.ex:55
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S3"
-msgstr ""
+msgstr "Si en el edificio en el que vives estás *sufriendo reiteradamente alguna de estas situaciones* causada por otras personas residentes:\n\n"
+"- Quejas infundadas, excesivas y constantes contra tí.\n\n"
+"- Insultos, faltas de respeto, amenazas.\n\n"
+"- Daños materiales en tu vivienda, buzón o pertenencias.\n\n"
+"Es posible que estés siendo *víctima de blocking inmobiliario*. Es una forma de acoso recurrente con el fin de molestar, asustar o presionar a la persona objetivo. Si además estos comportamientos incluyen comentarios o acciones racistas, xenófobas o islamófobas, es posible que estés viviendo una situación de *acoso discriminatorio en tu vecindario*.\n\n"
+"Se trata de comportamientos que *no están permitidos en España* y que deben abordarse. Así, además de hacer valer tus derechos, estarás ayudando a evitar que otras personas como tú pasen por lo mismo.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer?*\n\n"
+"1. Empieza por la vía amistosa: habla con el resto de residentes, con la persona que ejerce la Presidencia de la comunidad o con la gestoría que la administra para conseguir su apoyo. Si tu vivienda es alquilada, puedes tratar el tema con quien te arrienda el piso, para que te apoye en la interlocución con el vecindario.\n\n"
+"2. Pídeles que realicen una intervención amistosa en nombre de toda la comunidad. Es una forma de presionar colectivamente a quien te está acosando para que cambie su actitud.\n\n"
+"3. Si esto no funciona, o no consigues el apoyo de la comunidad, existen otras vías de mediación y denuncia. El blocking vecinal, como forma de acoso, es un delito y hay leyes y organizaciones que te protegerán.\n\n"
+"*Lo primero es recoger pruebas y testimonios:*\n\n"
+"1. Trata de conservar cualquier prueba que pueda indicar la situación de acoso: fotos, cartas, notas, capturas de WhatsApp, grabaciones de vídeo o audio, etc.\n\n"
+"2. Tienes derecho a registrar evidencias de tu situación, por ejemplo grabando audio y vídeo siempre que tú seas parte de la escena grabada. Conversaciones, llamadas, etc. Si decides hacerlo, asegúrate de no comprometer tu seguridad: procura que no te vean. No edites las imágenes o audios que tomes.\n\n"
+"3. Trata de recordar y apuntar todos los incidentes pasados. Registra cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas; comentarios sobre tu origen, aspecto físico o costumbres culturales. Apunta el lugar, la fecha y los detalles: quién, qué, cómo.\n\n"
+"4. Si hay alguna persona que haya presenciado los hechos, recaba sus datos por si es necesario contar con su testimonio más adelante.\n\n"
+"5. Si sufres daños físicos o psicológicos a consecuencia del acoso, recopila todos los informes médicos que tengas.\n\n"
+"6. Si hay daños materiales, realiza fotografías de los destrozos.\n\n"
+"----------------------------------------\n"
+"*Ya tengo las pruebas, ¿cómo denuncio?*"
+"Te recomendamos que siempre acudas a los *organismos especializados en luchar contra la discriminación*. Se trata de instituciones públicas o privadas que pondrán a tu disposición personal especializado para asesorarte y acompañarte, tanto si decides denunciar como si no.\n\n"
+"- Consejo para la Eliminación de la Discriminación Racial o Étnica: llamada gratuita en el 021 y consultas en WhatsApp (628 860 507), correo electrónico o formulario. Tienen oficinas en todas las comunidades autónomas.\n\n"
+"- Asociaciones especializadas: como Ecos do Sur, ACCEM, Provivienda, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
+"- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado.\n\n"
+"- Policía Local, Nacional o Guardia Civil."
 
-#: lib/chatbot/graphs/home_graph.ex:60
+
+#: lib/chatbot/graphs/home_graph.ex:57
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S4"
-msgstr ""
+msgstr "Si has contactado con un anuncio de alquiler de vivienda y en el primer momento te han comunicado unas condiciones determinadas, como el precio, el importe de la fianza o los requisitos para alquilar.\n\n"
+"Si al encontrarte personalmente con el propietario o agente inmobiliario, al conocer tu origen, etnia o religión, de pronto *te comunican un precio más elevado o requisitos más duros* de los propuestos al principio (nóminas, fianzas, seguros, avales…)\n\n"
+"O si te dicen que *repentinamente el piso ya no está disponible*, que el propietario ya no lo quiere alquilar, etc.\n\n"
+"Existe la posibilidad de que estés siendo víctima de una *discriminación residencial* por causas xenófobas, racistas o relligiosas.\n\n"
+"En España, este tipo de discriminación no está permitida. Si denuncias, la empresa podría ser sancionada, tú podrías conseguir una compensación y además ayudar a evitar que otras personas como tú pasen por lo mismo.\n\n"
+"----------------------------------------\n"
+"*¿Qué hacer?*\n\n"
+"Este tipo de casos suelen ser sutiles, pues no se reconoce abiertamente que no se quiere alquilar la vivienda por motivos xenófobos, racistas o islamófobos.\n\n"
+"Una fórmula que le ha funcionado a algunas personas en tu situación consiste en *evidenciar que hay una intención discriminatoria detrás de las trabas al alquiler*. Lo primero que tendrás que hacer es reunir pruebas de que existe una discriminación hacia ti por esos motivos.\n\n"
+"1. Conserva cualquier evidencia relativa al cambio en las condiciones, por ejemplo mails, capturas del anuncio en internet, conversaciones a través de WhatsApp o teléfono…\n\n"
+"2. Tienes derecho a registrar evidencias de las trabas al alquiler, por ejemplo grabando audio y vídeo siempre que tú seas parte de la conversación. Si decides hacerlo, asegúrate de no comprometer tu seguridad: procura que no te vean. No edites las imágenes o audios que tomes.\n\n"
+"3. Hay personas que han implicado a alguien de confianza para que contacte con la inmobiliaria simulando interesarse por la vivienda y grabe la respuesta para poder confrontarla con la que te han dado a ti. En este momento, tendrás pruebas con las que poder negociar.\n\n"
+"----------------------------------------\n"
+"*¿Cómo reclamar?*\n\n"
+"Te recomendamos que siempre acudas a los *organismos especializados en la lucha contra la discriminación*. Se trata de instituciones públicas o privadas que pondrán a tu disposición personal especializado para asesorarte y acompañarte, tanto si decides denunciar como si no.\n\n"
+"Probablemente, te aconsejarán empezar por intentar un acuerdo con la persona propietaria o la inmobiliaria y mediarán en el proceso. Si esto no funciona, puedes plantearte denunciar por discriminación.\n\n"
+"----------------------------------------\n"
+"*Las organizaciones que pueden ayudarte son:*\n\n"
+"- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm)).\n\n"
+"- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
+"- Otras asociaciones que luchan contra la discriminación: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
+"- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado."
 
-#: lib/chatbot/graphs/home_graph.ex:62
+#: lib/chatbot/graphs/home_graph.ex:59
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S5"
-msgstr ""
-
-#: lib/chatbot/graphs/home_graph.ex:64
-#, elixir-autogen, elixir-format, fuzzy
-msgid "HOME_S6"
 msgstr ""
 
 #: lib/chatbot/information_collector.ex:181
@@ -1087,7 +1167,7 @@ msgstr ""
 msgid "REJECTION"
 msgstr "Discriminación en la selección de personal"
 
-#: lib/chatbot/graphs/home_graph.ex:41
+#: lib/chatbot/graphs/home_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "RENT DENIAL"
 msgstr ""
@@ -1180,7 +1260,6 @@ msgstr ""
 msgid "WANT TO RENT"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:28
 #: lib/chatbot/graphs/work_graph.ex:32
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORKER"
@@ -1375,17 +1454,17 @@ msgstr "----------------------------------------\n"
 "4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "ALTA"
 msgstr "Estoy dado/a de alta"
 
-#: lib/chatbot/graphs/hospital_graph.ex:52
+#: lib/chatbot/graphs/hospital_graph.ex:58
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q4"
 msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:99
+#: lib/chatbot/graphs/hospital_graph.ex:105
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S5"
 msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 días)\n\n"
@@ -1399,7 +1478,7 @@ msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 d
 "4. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos.\n\n"
 "Si un día necesitas atención en un Centro sanitario diferente al tuyo habitual (como las urgencias de un hospital), deberás aportar ese código para demostrar que tienes derecho a la atención y evitar que te pasen los costes. También ayuda a solucionar problemas en el caso de que escriban mal tu nombre.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:103
+#: lib/chatbot/graphs/hospital_graph.ex:109
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S6"
 msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
@@ -1409,7 +1488,7 @@ msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
 "4. *El alta en el Sistema Sanitario debe incluir la prestación farmacéutica*, de modo que sólo tendrás que aportar el 40% del precio de los medicamentos."
 "5. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos."
 
-#: lib/chatbot/graphs/hospital_graph.ex:107
+#: lib/chatbot/graphs/hospital_graph.ex:113
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S7"
 msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
@@ -1423,12 +1502,12 @@ msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
 "6. *Denuncia en los juzgados*. [Consulta aquí los juzgados de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es). En este caso, recomendamos *visitar una ONG de derechos humanos o asesorarse en el* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): "
 "para casos de urgencia en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "NO RESIDENCE"
 msgstr "Sin permiso de Residencia"
 
-#: lib/chatbot/graphs/hospital_graph.ex:50
+#: lib/chatbot/graphs/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "TEMPORAL"
 msgstr "Estancia temporal (< 90 días)"
@@ -1574,7 +1653,18 @@ msgstr "Qué hago si me llega una factura"
 msgid "FAQ_HEALTHCARE_Q5"
 msgstr "Más recursos de ayuda"
 
-#: lib/chatbot/graphs/hospital_graph.ex:65
+#: lib/chatbot/graphs/hospital_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q5"
 msgstr "Quieres información sobre como poner una hoja de reclamaciones?"
+
+#: lib/chatbot/graphs/home_graph.ex:38
+#: lib/chatbot/graphs/home_graph.ex:40
+#, elixir-autogen, elixir-format
+msgid "CHANGE OF CONDITIONS"
+msgstr ""
+
+#: lib/chatbot/graphs/home_graph.ex:28
+#, elixir-autogen, elixir-format
+msgid "COMMUNITY"
+msgstr ""

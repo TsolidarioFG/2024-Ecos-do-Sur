@@ -53,7 +53,7 @@ defmodule Chatbot.HomeGraph do
     {{:L1_resolve, :home}, nil, nil}
   end
 
-  def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:start, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
+  def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:start_link, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
   def resolve({:L1_resolve, _, _}, _, _, "NO", _), do: {:solved, nil, nil}
 
   ##################################

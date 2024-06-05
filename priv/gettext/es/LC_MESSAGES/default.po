@@ -111,7 +111,8 @@ msgid "This information has been saved successfully"
 msgstr "La información ha sido guardada correctamente!"
 
 #: lib/chatbot/graphs/commerce_graph.ex:18
-#: lib/chatbot/graphs/faq_graph.ex:18
+#: lib/chatbot/graphs/faq_ca_resources.ex:37
+#: lib/chatbot/graphs/faq_graph.ex:19
 #: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/home_graph.ex:29
@@ -1014,7 +1015,7 @@ msgstr "Explotación"
 #: lib/chatbot/graphs/home_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q1"
-msgstr "Cuás el tu situación?"
+msgstr "Cuál es tu situación?"
 
 #: lib/chatbot/graphs/home_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
@@ -1535,7 +1536,7 @@ msgstr "Estancia temporal (< 90 días)"
 msgid "COMMERCE PROBLEMS"
 msgstr "Diferentes problemas en la atención"
 
-#: lib/chatbot/graphs/faq_graph.ex:20
+#: lib/chatbot/graphs/faq_graph.ex:21
 #, elixir-autogen, elixir-format
 msgid "FAQ"
 msgstr "Preguntas frecuentes"
@@ -1691,3 +1692,413 @@ msgstr "COMUNIDAD DE VECINOS"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q4"
 msgstr "¿Quieres saber qué recursos hay en tu comunidad autónoma?"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:20
+#, elixir-autogen, elixir-format
+msgid "ANDALUCIA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:21
+#, elixir-autogen, elixir-format
+msgid "ARAGON"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:22
+#, elixir-autogen, elixir-format
+msgid "ASTURIAS"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:32
+#, elixir-autogen, elixir-format
+msgid "BALLEARS"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:24
+#, elixir-autogen, elixir-format
+msgid "CANARIAS"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:23
+#, elixir-autogen, elixir-format
+msgid "CANTABRIA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:35
+#, elixir-autogen, elixir-format
+msgid "CASTILLA LA MANCHA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:36
+#, elixir-autogen, elixir-format
+msgid "CASTILLA LEON"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:19
+#, elixir-autogen, elixir-format
+msgid "CATALUNYA"
+msgstr "CATALUNYA"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:33
+#, elixir-autogen, elixir-format
+msgid "CEUTA Y MELILLA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:25
+#, elixir-autogen, elixir-format
+msgid "COM. VALENCIANA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:30
+#, elixir-autogen, elixir-format
+msgid "EUSKADI"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:34
+#, elixir-autogen, elixir-format
+msgid "EXTREMADURA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:73
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_ANDALUCIA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.juntadeandalucia.es/organismos/justiciaadministracionlocalyfuncionpublica/areas/asistencia-victimas/servicio/paginas/directorio-asistencia-victimas.html)\n\n"
+"- FISCALÍAS PROVINCIALES DELITO ODIO Y DISCRIMINACIÓN:\n\n"
+"\t > Almería: Reina Regente, 4 | Teléfono: 950037245\n\n"
+"\t > Cádiz: Cuesta de las Calesas, s/n | Teléfonos: 956902262 956902253\n\n"
+"\t > Córdoba: Isla Mallorca, s/n - Ciudad de la Justicia | Teléfono: 957745066\n\n"
+"\t > Granada: Gran Vía de Colón, 18 | Teléfono: 958058634\n\n"
+"\t > Huelva: Alameda Sundheim, 28 | Teléfono: 959106872\n\n"
+"\t > Jaen: Arquitecto Berges, 16 | Teléfono: 953964059\n\n"
+"\t > Málaga: Fiscal Luis Portero García, s/n | Teléfonos: 951938390 (CIVIL, CONTENCIOSO Y SOCIAL) 951938375 (PENAL)\n\n"
+"\t > Sevilla: Avda. Carlos V, s/n Prado de San Sebastián | Teléfono: 955545163\n\n"
+"- CEDRE:\n\n"
+"\t > SEVILLA - ACCEM: Correo electrónico: sevilla@accem.es | Dirección: C/ Beatriz de Suabia, 57. 41005 Sevilla. | Teléfono: 954 31 33 33  / 44\n\n"
+"\t > MÁLAGA - CEAR: Correo electrónico: discriminacion@cear.es | Dirección: Avda. Fátima, 3 - bajo. 29009 Málaga | Teléfono: 659 27 37 51\n\n"
+"\t > NÍJAR (ALMERÍA) - CEPAIM: Correo electrónico: nijar@cepaim.org | Dirección: Avda. de la Constitución, 79. CP 04117 (San Isidro) Níjar | Teléfono: 674 83 98 00\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- FEDERACIÓN ANDALUCÍA ACOGE:  Presencia en toda la comunidad. | 954 900 773 | acoge@acoge.org\n\n"
+"- SOS RACISMO ANDALUCÍA: Oficina de información y Denuncia (OID)  C/ Jesús María 6, 6º-4ª - 14003 CÓRDOBA | (+34) 957 485 735 | info@sosracismo.eu\n\n"
+"- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada   C/ del Amor 6 04005 Almería | Tel.: 950 237 342 | almeria@accem.es"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:75
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_ARAGON"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://sedejudicial.aragon.es/justicia-discapacidad/oficina-asistencia-victima/)\n\n"
+"- FISCALÍAS PROVINCIALES:\n\n"
+"\t > Huesca: Irene Izárbez, 2 esquina C/ Calatayud. Palacio de Justicia | Teléfono: 974290166l | Email: fiscaliahuesca@justicia.aragon.es\n\n"
+"\t > Teruel: Plaza de San Juan, 6 | Teléfono: 978647510 | fiscaliateruel@justicia.aragon.es\n\n"
+"\t > Zaragoza:  Edificio Fueros de Aragón, Esc. B, 3ª. Avda. José Atarés 89/97 | Teléfono: 976208317 | fiscalia-juzgadoszaragoza@justicia.aragon.es\n\n"
+"- CEDRE: ZARAGOZA - ACCEM | Correo electrónico: aragon@accem.es | Dirección: Avda. Ranillas 3 A. Planta 3, edificio Dinamiza, oficinas A-B-E. 50015 Zaragoza | Teléfono: 976 976 117\n\n"
+"- OFICINA ARAGONESA CONTRA LA DISCRIMINACIÓN: A través del correo electrónico: nodiscriminacion@aragon.es | A través del teléfono 900 104 672\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- SOS RACISMO ARAGÓN Oficina de Información y Denuncia: Travesía de Funes, 8, 50014, Zaragoza | Tfno.: +34 976 290 214 | denuncias@sosracismoaragon.es\n\n"
+"- CEPAÍM: Avenida de Madrid 7-9, local 7 CP 50004, Zaragoza. | Teléfono: 876 642 998 | zaragoza@cepaim.org"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:77
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_ASTURIAS"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://justicia.asturias.es/detalle/-/categories/33118?_com_liferay_asset_categories_navigation_web_portlet_AssetCategoriesNavigationPortlet_articleId=39082&articleId=39082&title=Asistencia%20a%20las%20v%C3%ADctimas#:~:text=Oviedo%3A%20C%5C%20Cmte.,Tf%3A%20985%2019%2072%2004)\n\n"
+"- FISCALÍA: Oviedo: Carlos López Otín, 3 | Teléfono: 985968920\n\n"
+"- CEDRE: GIJÓN - ACCEM | Correo electrónico: gijon@accem.es | Dirección: C/ Saavedra 4, oficina 1. 33208 Gijón | Teléfono: 985 16 56 77\n\n"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:97
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_BALLEARS"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorPorProvincias&ente=0704093350000&lang=es_es&origen=&tipo=ATV&provincia=07)\n\n"
+"- FISCALÍA: Palma de Mallorca: Plaza Bisbe Berenger de Palou, 10 | Teléfono: 971219200 | fiscalia-tsj.palmademallorca@fiscal.es\n\n"
+"- CEDRE (Palma de Mallorca):\n\n"
+"\t > Cruz Roja Española | Correo electrónico: baleares@cruzroja.es | Dirección: Av. Arquitecte Bennàssar, 73. 07004 Palma de Mallorca. Illes Balears | Teléfono: 971 29 50 00\n\n"
+"\t > C. d’Eusebi Estada, 48, bjs. Palma de Mallorca | 971 764 588\n\n"
+"\t > Centre Flassaders | C. de la Ferreria, 10, 4t pis @ 971 228 756 / 699 029 046"
+
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:81
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_CANARIAS"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.gobiernodecanarias.org/justicia/asistenciavictimasdeldelito/#avisado)\n\n"
+"- FISCALÍA:\n\n"
+"\t > Las Palmas: Málaga, 2 | Teléfono: 928116917 (PENAL) 928116940\n\n"
+"\t > Tenerife: Avda. Tres de Mayo, 3 | Teléfono: 922349046\n\n"
+"- CEDRE:\n\n"
+"\t > LAS PALMAS DE GRAN CANARIA - CEAR | Correo electrónico: discriminacion@cear.es | Dirección: Avda. Escaleritas, 66, 35011 – Las Palmas de Gran Canaria |Teléfono: 680 68 95 90\n\n"
+"\t > TENERIFE - CRUZ ROJA | Correo electrónico: savdlaguna@cruzroja.es | Dirección: C/ Hermanos Marrero, 2 (Trasera Iglesia de la Concepción). 38203 San Cristóbal de La Laguna, Tenerife. | Teléfono: 649 97 03 71"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:79
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_CANTABRIA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?lang=es_es&apartado=buscadorPorProvincias&URL_ORIGEN=&origen=G&tipo=ATV&provincia=39)\n\n"
+"- FISCALÍA: Santander -> Avda. Pedro San Martín, s/n | Teléfono: 942357101\n\n"
+"- CEDRE: SANTANDER - MPDL | Correo electrónico: victimasdiscriminacioncantabria@mpdl.org | Dirección: C/ Tres de noviembre 24, bajo derecha. 39010 Santander. | Teléfono: 942 37 63 05"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:103
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_CASTILLA_LA_MANCHA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.juntadeandalucia.es/organismos/justiciaadministracionlocalyfuncionpublica/areas/asistencia-victimas/servicio/paginas/directorio-asistencia-victimas.html)\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Albacete: Avda. de la Mancha, 1 - esquina Avda. Gregorio Arcos, s/n | Teléfono: 967596518 | fiscalia.albacete@fiscal.es\n\n"
+"\t > Ciudad Real:  Eras del Cerrillo, 3- Pol. Larache | Teléfono: 926278823 | fiscalia.ciudadreal@fiscal.es\n\n"
+"\t > Cuenca: Gerardo Diego, 8. Edificio Nuevo de los Juzgados | Teléfono: 969247171 | fiscalia.cuenca@fiscal.es\n\n"
+"\t > Guadalajara: : Avda. Mirador del Balconcillo, 19. Palacio de Justicia | Teléfono: 949392782 | fiscalia.guadalajara@fiscal.es\n\n"
+"\t > Toledo: Marqués de Mendigorría, 2. Edificio de los Juzgados | Teléfono: 925396135 | fiscalia.toledo@fiscal.es\n\n"
+"- CEDRE: Fundación CEPAIM | Correo electrónico: ciudadreal@cepaim.org | Dirección: C/ Cañas, 34. 13004 Ciudad Real | Teléfono: 674 74 30 86\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- GUADA ACOGE: Avenida Venezuela, Nº 9, 1º 19005 Guadalajara | guada.acoge@redacoge.org | 949 25 30 76 / 949 21 58 35\n\n"
+"- ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia. | C/ Carmen 35. Bajo. 02005 Albacete | Tel.: 967 979 583"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:105
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_CASTILLA_LEON"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://bienestaryproteccioninfantil.es/oficinas-de-asistencia-a-las-victimas-de-delitos-oavd-de-la-comunidad-autonoma-de-castilla-y-leon-atencion-y-asistencia-a-las-necesidades-de-las-victimas-tanto-a-nivel-juridico-psicologico-y-soc/)\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Ávila: Ramón y Cajal, 1. Edificio Nuevo de los Juzgados | Teléfono: 920359036 |fiscalia.avila@fiscal.es\n\n"
+"\t > Burgos: Reyes Católicos, 51 bis Edif. Nuevos Juzgados | Teléfono: 947284213 | fiscaliajuzgados.burgos@fiscal.es\n\n"
+"\t > León:  Cid, 20 | Teléfono: 987239684 | fiscalia.leon@fiscal.es\n\n"
+"\t > Palencia: Plaza de los Juzgados, 1 | Teléfono: 979167719 | fiscalia.palencia@fiscal.es\n\n"
+"\t > Salamanca: Plaza de Colón, 8 | Teléfono: 923284725 | fiscalia.salamanca@fiscal.es\n\n"
+"\t > Segovia: Avda. Gerardo Diego, 3 - Edificio Nuevos Juzgados | Teléfono: 921463240 | fiscalia.segovia@fiscal.es\n\n"
+"\t > Soria: Aguirre, 3 | Teléfono: 975211023 | fiscalia.soria@fiscal.es\n\n"
+"\t > Valladolid: Las Angustias, 21 | Teléfono: 983413230 | fiscalia.valladolid@fiscal.es\n\n"
+"\t > Zamora: Riego, 5 | Teléfono: 980559488 | fiscalia.zamora@fiscal.es\n\n"
+"- CEDRE: VALLADOLID - Red ACOGE | Correo electrónico: castillayleonnodiscriminacion@redacoge.org | Dirección: C/ Fray Luis de León 14. 47002 - Valladolid | Teléfono: 983 30 99 15\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- RED ACOGE:\n\n"
+"\t > Burgos Acoge: C/Padre Aramburu, 2 09006 Burgos | Tel.: +34 947 232303 | Email: burgos.acoge@redacoge.org\n\n"
+"\t > Procomar Valladolid Acoge: c/Fray Luis de León 14 47002 Valladolid | Teléfono: 983 309 915 | email: info@valladolidacoge.org\n\n"
+"\t > Salamanca Acoge: Avenida de los Cedros, 53, bajo 37004 SALAMANCA | Telf: 923 01 90 30 //  923 01 90 31\n\n"
+"- ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia. C/ Anunciata 48. Bajo 24010 Trobajo del Camino (León) | Tel.: 987 94 99 83 | Fax: 987 876 172 | leon@accem.es\n\n"
+"- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Pasaje la Marquesina, 7 47004 Valladolid | Teléfono: 983 507 177 |Correo electrónico: progestioncyl@progestion.org\n\n"
+"- CEPAÍM: Calle San Patricio, 5-7 CP 37002, Salamanca | Teléfono: 923 314 142 | Correo: salamanca@cepaim.org."
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:71
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_CATALUNYA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://web.gencat.cat/ca/adreces-i-telefons/index.html?codi=17174&jq=200001)\n\n"
+"- FISCALÍAS provinciales de delito de odio y discriminación:\n\n"
+"\t > Barcelona: Dirección: Gran Vía de les Corts Catalanes, 111(Edif F) | Teléfono: 935549110 | fiscalia.provincial.bcn@xij.gencat.cat\n\n"
+"\t > Girona: Plaça de Josep Maria Lidón Corbí, 1 | 972942562 |fiscalia.provincial.girona@xij.gencat.cat\n\n"
+"\t > Lleida: Canyeret, 1 | 973705840 | lleida.fiscalia.oficina@xij.gencat.cat\n\n"
+"\t > Tarragona: Avda. del President Lluís Companys, 10 | 977920100 | fiscalia.provincial.tarragona@xij.gencat.cat\n\n"
+"- CEDRE: BARCELONA - MPDLvictimasdiscriminaciocatalunya@mpdl.org | Dirección: Calle Méndez Núñez, 33, local 2. 08911 Badalona (Barcelona) |Teléfono: 936 40 56 00 / 639 31 48 12\n\n"
+"- OFICINA DE IGUALDAD DE TRATO Y NO DISCRIMINACIÓN (GENERALITAT): [Denuncias](https://web.gencat.cat/es/tramits/tramits-temes/22628-Denuncia-per-discriminacio) | 931147700\n\n"
+"- OFICINA POR LA NO DISCRIMINACIÓN DEL AYUNTAMIENTO DE BARCELONA: Carrer Ferran, 32. 08002 | 934 132 003 | ond@bcn.cat\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- [SOS RACISME-CATALUNYA(SAID)](www.sosracisme.org): Rambla Santa Mònica,10, 1o. 08002 | teléfono: 93 301 05 97 | WhatsApp: 652 87 34 06 | denuncia@sosracisme.org\n\n"
+"- IRÍDIA-CENTRE PER A LA DEFENSA DELS DRETS HUMANS Servei d’Atenció i Denúncia davant situa-cions de Violència Institucional (SAIDAVI): Carrer Casp, 43. 08010 | 693 287 323 | www.iridia.cat | saidavi@iridia.cat\n\n"
+"- FUNDACIÓ SECRETARIADOGITANO: Carrer Comtessa Pardo Bazán, 4-6, local 08027| 932 745 582 | anna.espanol@gitanos.org\n\n"
+"- BAYT AL THAQAFA: Calle Princesa, 14, primer cp. 08003, Barcelona | +34 93 319 88 69 | info@bayt-al-thaqafa.org\n\n"
+"- CEPAIM: Carrer de Sant Pau, 80, Barcelona | Teléfono: 93 487 38 16 | barcelona@cepaim.org"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:99
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_CEUTA_Y_MELILLA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO:\n\n"
+"\t > Ceuta: C/ Serrano Orive s/n - Palacio de Justicia. 51001 | 956513295 | victimas.ceuta@justicia.es\n\n"
+"\t > Melilla: Pza. del Mar s/n Edificio V Centenario/Torre Norte 5a planta dcha. 52001 | 952698965 952698956 | victimas.melilla@justicia.es\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Ceuta: : Serrano Orive, s/n. Palacio de Justicia | Teléfono: 956510116\n\n"
+"\t > Melilla: Pza. del Mar, s/n Edif. V Centenario.Torre Norte | Teléfono: 952699025\n\n"
+"- CEDRE:\n\n"
+"\t > CEUTA - Fundación CEPAIM | Correo electrónico: ceuta@cepaim.org | Dirección: C/ González Besada nº 4, entreplanta izquierda. 51001 Ceuta. | Teléfono: 661 28 10 44\n\n"
+"\t > MELILLA - MPDL | Correo electrónico: victimasdiscriminacionmelilla@mpdl.org | Dirección: C/ General García Margallo, 19. 52002 Melilla | Teléfono: 952 68 01 68\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- ANDALUCÍA ACOGE: Delegación Ceuta: C/ Verlarde nº 32, BAJO C.P. 51001 CEUTA | Teléfono: 955697404/ 683138216 | E-mail: ceuta@acoge.org\n\n"
+"- MELILLA ACOGE: C/ Cataluña, 57. 1º 57006 Melilla | Tlfno. 952 670 893 | E-mail: melilla@acoge.org\n\n"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:83
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_COM_VALENCIANA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://oficinavictimas.gva.es/es/)\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Alicante: Los Doscientos, 3 | Teléfono: 966907647 | alrc02_ali@gva.es\n\n"
+"\t > Castellón: Bulevar Blasco Ibañez, 10 | Teléfono: 964621866 | csfi00_cas@gva.es\n\n"
+"\t > Lleida: Canyeret, 1 | 973705840 | lleida.fiscalia.oficina@xij.gencat.cat\n\n"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:93
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_EUSKADI"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.euskadi.eus/web01-a2justic/es/contenidos/informacion/sav/es_sav/index.shtml)\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Vitoria:  Avda. Gasteiz, 18 | Teléfono: 945004831 | FiscaliaProvincialdeAlava@justizia.eus\n\n"
+"\t > Bilbao: Barroeta Aldamar, 10 | Teléfono: 944016657 | FiscaliaProvincialdeBizkaia@justizia.eus\n\n"
+"\t > Donosti: Plaza Teresa de Calcuta, 1 (Atotxa) | Teléfono: 943000717 | FiscaliaProvincialdeGipuzkoa@justizia.eus\n\n"
+"- CEDRE: VITORIA-GASTEIZ - ACCEM | Correo electrónico: euskadi@accem.es | Dirección: C/ Julian de Apraiz nº 10. 01012 Vitoria-Gasteiz | Teléfono: 945 30 69 05\n\n"
+"- RED ERABEREAN DEL GOBIERNO VASCO:\n\n"
+"\t > Álava: Aldarte (945 257 077) aldarte@aldarte.org | CEAR Euskadi (945 266 805) era.berean@cear-euskadi.org | Cruz Roja (945 222 222) paisvasco@cruzroja.es | Gao Lacho Drom (945 225 039) gao@gaolacho.com\n\n"
+"\t > Bizkaia: CITE-CCOO Bizkaia (944 243 424) citebizkaia@euskadi.ccoo.es | Errespetuz (675 459 317) errespetuz@hotmail.com | Kale Dor Kayiko (691 674 414) eraberean@kaledorkayiko.org | Nevipen (946 526 989) nevipen@nevipen.org\n\n"
+"\t > Gipuzkoa: AGIFUGI (943 248 086) asociacion@agifugi.org / eraberean@agifugi.org | Gehitu (943 451 722) infasis@gehitu.org / info@gehitu.org | SOS Racismo (943 321 811) eraberean@mugak.org\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- SOS RACISMO BIZKAIA: Lapurdi hiribidea 7,48012 Bilbao, España | 94 479 03 10 / 688 62 99 96 | bizkaia@sosracismo.eu\n\n"
+"- SOS RACISMO GIPUKKOA: P. Zarategi 100 – Txara 1, sótano - 20015 Donostia (Intxaurrondo) | (+34) 943 24 56 26 (+34) 943 24 56 27 | sos.gipuzkoa@sosracismo.eu\n\n"
+"- ZEHAR: 944 059 566, enviando un mail a info@zehar.eus"
+
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:101
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_EXTREMADURA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO:\n\n"
+"\t > Cáceres: Ronda San Francisco, s/n - 3ª planta. Edificio de los Juzgados | Teléfono: 927620295 | victimas.caceres@justicia.es\n\n"
+"\t > Badajoz: José Caldito Ruiz esq. C/ Esteban Sánchez | Teléfono: 924260783 924205631 (PSICÓLOGO/A) | victimas.badajoz@justicia.es\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Cáceres:  Ronda San Francisco, s/n | Teléfono: 927620273 | fiscalia.caceres@fiscal.es\n\n"
+"\t > Badajoz:  José Caldito Ruiz esq. C/ Esteban Sánchez | Teléfono: 924284252 | fiscalia.badajoz@fiscal.es\n\n"
+"- CEDRE: MÉRIDA - Fundación CEPAIM | Correo electrónico: merida@cepaim.org | Dirección: Avenida Reina Sofía, 1. 06800 Mérida (Badajoz) | Teléfono: 663 87 68 08"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:87
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_GALICIA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.xustiza.gal/datos-oficinas-asistencia-a-vitima)\n\n"
+"- FISCALÍAS:\n\n"
+"\t > A Coruña: Las Cigarreras, 1 - Edif. de Antigua Fabrica de Tabacos | Teléfono: 981185870 |fiscalia.coruna@xustiza.gal\n\n"
+"\t > Lugo: Plaza de Avilés, s/n | Teléfono: 982294846 |fiscalia.lugo@xustiza.gal\n\n"
+"\t > Ourense: Velázquez, s/n | Teléfono: 988687440 988687446 | fiscalia.ourense@xustiza.gal\n\n"
+"\t > Pontevedra: Fco. Tomás y Valiente, s/n | Teléfono: 986805732 | fiscalia.pontevedra@xustiza.gal\n\n"
+"- CEDRE: A CORUÑA - Red ACOGE | Correo electrónico: galicianodiscriminacion@redacoge.org | Dirección: Calle Vista Alegre 2,15005 A Coruña | Teléfono: : 881 912 940\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"ECOS DO SUR: A Coruña: avenida de Finisterre, 109 bajo. | 881965692  | consultas@ecosdosur.org\n\n"
+"SOS RACISMO GALICIA:\n\n" 
+"\t > A Coruña | info@sosracismogalicia.org | 881 963 797 / 698 163 742\n\n"
+"\t > Vigo | vigo@sosracismogalicia.org | 986 917 325 | 678 811 714\n\n"
+"ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia | Av. de las Camelias 70, bajo 36211 Vigo (Pontevedra) | Tel.: 886 906 798 / 886 689 752 | vigo@accem.es"
+
+
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:69
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_GENERAL"
+msgstr "*RACISMO, XENOFOBIA E ISLAMOFOBIA:*\n\n"
+"- [Policía](https://www.policia.es/_es/dependencias_localizador_accesible.php)\n\n"
+"- [Guardia Civil](https://www.guardiacivil.es/es/servicios/denuncias)\n\n"
+"- [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
+"- [Oficina Nacional de Lucha Contra los Delitos de Odio](http://www.interior.gob.es/): asistencia.ondod@interior.es\n\n"
+"- [OBERAXE: CENTRO VIRTUAL RECURSOS ANTIDISCRIMINACIÓN](https://www.inclusion.gob.es/oberaxe/es/creadi/)\n\n"
+"- [FISCALÍA DELITOS DE ODIO Y DISCRIMINACIÓN](https://www.fiscal.es/contacto-delitos-de-odio-y-discriminaci%C3%B3n)\n\n"
+"----------------------------------------\n"
+"*GITANOFOBIA:*\n\n"
+"- Fundación Secretariado Gitano: C/ Ahijones, s/n 28018 Madrid | Tlf. 91 422 09 60 | Fax. 91 422 09 61 | Email: fsg@gitanos.org\n\n"
+"----------------------------------------\n"
+"*ISLAMOFOBIA:*\n\n"
+"- Asociación Marroquí para la integración de inmigrantes: Calle Jinetes, 5, 29012, Málaga | Tlf. 952 21 89 87\n\n"
+"----------------------------------------\n"
+"*VIVIENDA:*\n\n"
+"- [Asociación Provivienda](www.provivienda.org/nodiscriminacion/): Programa de promoción de la No Discriminación Residencial a personas migrantes PNDRESTATAL@provivienda.org | C. de Sancho Dávila, 20, Salamanca, 28028 Madrid  |  [BUZÓN ONLINE](https://provivienda.org/nodiscriminacion/te-han-discriminado/)\n\n"
+"----------------------------------------\n"
+"*ACCESO A LA SALUD:*\n\n"
+"- Médicos del Mundo España: Conde de Vilches, 1528028, Madrid | Teléfono 91 543 60 33 | email: ayuda@medicosdelmundo.org"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:95
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_MADRID"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.comunidad.madrid/servicios/justicia/oficinas-asistencia-victimas-delitos#:~:text=Direcci%C3%B3n%3A%20c%2F%20Ronda%20de%20San,28600%20Madrid.)\n\n"
+"- FISCALÍAS: Madrid: C/ Santiago de Compostela, 96 | Teléfono: 914934506\n\n"
+"- CEDRE: MPDL | Correo electrónico: victimasdiscriminaciónmadrid@mpdl.org | Dirección: C/ Martos, 15. 28053 Madrid | Teléfono: 91 429 76 44 / 91 786 64 97\n\n"
+"- SECRETARIO GITANO: Correo electrónico: fsgvallecas@gitanos.org | Dirección: C/ Ahijones s/n. 28018 Madrid | Teléfono: 91 422 09 60\n\n"
+"- COMISARÍA DE GESTIÓN DE LA DIVERSIDAD DEL AYUNTAMIENTO DE MADRID: CALLE  SACRAMENTO,  2  28005  MADRID Barrio / Distrito PALACIO / CENTRO | Teléfono Work 915 880 824 Work 915 883 845 Work 606 690 970 (se admite whatsapp) | Correo delitosdeodio@madrid.es\n\n"
+"- UNIDAD DE ATENCIÒN A LA DIVERSIDAD AYUNTAMIENTO ALCORCÓN: uad@ayto-alcorcon.es, el teléfono  91 112 70 92 o bien en el propio Centro  Unificado de Seguridad ubicado en la C/Alfredo Nobel, 10.\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- ECOS DO SUR: Avenida de Asturias\n\n"
+"- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada  C/ Magallanes 1, Entreplanta 28015 Madrid | Tel.: 915 327 478 / 915 327 479 | Fax: 915 460 915 | madrid@accem.es\n\n"
+"- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Dirección: c/ Manuel Fernández Caballero, 4 (Local) Madrid 28019 España | Teléfono: 91 471 97 19 | Correo electrónico: info@progestion.org | Equipo Jurídico: 608 773 900"
+
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:85
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_MURCIA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- OFICINA DE ASISTENCIA A VÍCTIMAS\n\n"
+"\t > Murcia: Avda. Ciudad de la Justicia, s/n. Ciudad de la Justicia Fase II | Teléfono: 968229264 |victimas.murcia@justicia.es\n\n"
+"\t > Cartagena: Ángel Bruna, 21 - 2ª planta. Palacio de Justicia | Teléfono: 968326131 |victimas.cartagena@justicia.es\n\n"
+"- FISCALÍAS:\n\n"
+"\t > Murcia: Avda. Ciudad de la Justicia,, s/n 4ª planta | Teléfono: 968229154 | fiscalia.murcia@fiscal.es\n\n"
+"\t > Cartagena: Ángel Bruna, 21 | Teléfono: 968326263 | fiscalia.cartagena@fiscal.es\n\n"
+"- CEDRE: MURCIA - Rumiñahui | Correo electrónico: juridicoddhh.murcia@ruminahui.org | Dirección: C/ Urano, 6, bajo. Colonia San Esteban. 30010 Murcia | Teléfono: 968 22 36 96 / 606 28 22 33\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- MURCIA ACOGE: DELEGACIÓN MURCIA  | Teléfono: 968271652 | Email: murcia.nodiscriminacion@redacoge.org | Dirección: Calle Alberto Sevilla, Local 5, Bloque 1, Esc. 5. C.P. 30011, Murcia.\n\n"
+"- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada | C/ Ricardo Gil 5 30002 Murcia |Tel.: 968 268 427 / 968 977 945 | murcia@accem.es"
+
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:89
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_NAVARRA"
+msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
+"- [OFICINAS DE ASISTENCIA A LAS VÍCTIMAS DE DELITO](http://www.cfnavarra.es/ASISTENCIAVICTIMAS/): San Roque, 4 Palacio de Justicia 31011 PAMPLONA | Tlfno.: 848 427 671 / 848 423 376 | Correo-e: oasistencia.victimas.delito@cfnavarra.es\n\n"
+"- FISCALÍA: Plaza del Juez Elío nº 1 , Pamplona | Teléfono: 848424157 | fiscalna@navarra.es\n\n"
+"- CEDRE: PAMPLONA - Rumiñanui | C/ Ruiz de Alda, local 5 (se corresponde con la C/ Aralar 39) | juridicoddhh.navarra@ruminahui.org | 948 02 03 88 / 663 72 45 48\n\n"
+"- SARX, Servicio de Atención frente al Racismo y la Xenofobia (Gobierno de Navarra):\n\n"
+"\t > sarx@navarra.es | URGENCIAS: 646 33 78 08.\n\n"
+"\t > Pamplona | Avenida Roncesvalles, num. 4, bajo | 848420785 / 686 570 517\n\n"
+"\t > Tudela | Calle estanca S/N | 848433664 / 696 262 644\n\n"
+"----------------------------------------\n"
+"*ASOCIACIONES:*\n\n"
+"- SOS RACISMO NAFARROA: Telefono Fijo : 948211521 | Movil: 646337808 | E-mail: sosarrazakeria.nafarroa@gmail.com | Dirección: Calle de Zapatería, 31, 31001 Pamplona, Navarra"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:40
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_RESOURCES"
+msgstr "*Elige una comunidad autónoma:*"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:91
+#, elixir-autogen, elixir-format
+msgid "FAQ_CA_RIOJA"
+msgstr "- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.larioja.org/atencion-victimas/es/contacta)\n\n"
+"- FISCALÍAS: Logroño | Marqués de Murrieta, 45-47 | Teléfono: 941296414\n\n"
+"- CEDRE: LOGROÑO - Red ACOGE | Correo electrónico: lariojanodiscriminacion@redacoge.org | Dirección: C/ Villamediana, 16, Bajo. 26003 - Logroño (La Rioja) | Teléfono: 94 126 31 15 / 94 105 40 75"
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:27
+#, elixir-autogen, elixir-format
+msgid "GALICIA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:18
+#, elixir-autogen, elixir-format
+msgid "GENERAL"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:31
+#, elixir-autogen, elixir-format
+msgid "MADRID"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:26
+#, elixir-autogen, elixir-format
+msgid "MURCIA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:28
+#, elixir-autogen, elixir-format
+msgid "NAVARRA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_ca_resources.ex:29
+#, elixir-autogen, elixir-format
+msgid "RIOJA"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "RESOURCES"
+msgstr "Recursos por comunidad"

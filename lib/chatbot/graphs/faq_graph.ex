@@ -15,6 +15,7 @@ defmodule Chatbot.FaqGraph do
   # 1 -----
   def resolve({:start, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("HEALTHCARE"), callback_data: "HEALTHCARE"}],
+                [%{text: gettext("RESOURCES"), callback_data: "RESOURCES"}],
                 [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:start, :faq} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("FAQ"), nil), user, message_id, key)
@@ -22,4 +23,5 @@ defmodule Chatbot.FaqGraph do
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "HEALTHCARE", message_id), do:  Manager.resolve({{:start, :faq_healthcare}, history, nil}, user, key, nil, message_id)
+  def resolve({:start_final_resolve, history, _}, user, key, "RESOURCES", message_id), do:  Manager.resolve({{:start, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
 end

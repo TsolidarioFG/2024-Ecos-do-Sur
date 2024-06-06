@@ -1817,7 +1817,6 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > C. d’Eusebi Estada, 48, bjs. Palma de Mallorca | 971 764 588\n\n"
 "\t > Centre Flassaders | C. de la Ferreria, 10, 4t pis @ 971 228 756 / 699 029 046"
 
-
 #: lib/chatbot/graphs/faq_ca_resources.ex:81
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANARIAS"
@@ -1950,7 +1949,6 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO GIPUKKOA: P. Zarategi 100 – Txara 1, sótano - 20015 Donostia (Intxaurrondo) | (+34) 943 24 56 26 (+34) 943 24 56 27 | sos.gipuzkoa@sosracismo.eu\n\n"
 "- ZEHAR: 944 059 566, enviando un mail a info@zehar.eus"
 
-
 #: lib/chatbot/graphs/faq_ca_resources.ex:101
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EXTREMADURA"
@@ -1977,12 +1975,10 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "----------------------------------------\n"
 "*ASOCIACIONES:*\n\n"
 "ECOS DO SUR: A Coruña: avenida de Finisterre, 109 bajo. | 881965692  | consultas@ecosdosur.org\n\n"
-"SOS RACISMO GALICIA:\n\n" 
+"SOS RACISMO GALICIA:\n\n"
 "\t > A Coruña | info@sosracismogalicia.org | 881 963 797 / 698 163 742\n\n"
 "\t > Vigo | vigo@sosracismogalicia.org | 986 917 325 | 678 811 714\n\n"
 "ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia | Av. de las Camelias 70, bajo 36211 Vigo (Pontevedra) | Tel.: 886 906 798 / 886 689 752 | vigo@accem.es"
-
-
 
 #: lib/chatbot/graphs/faq_ca_resources.ex:69
 #, elixir-autogen, elixir-format
@@ -2023,7 +2019,6 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada  C/ Magallanes 1, Entreplanta 28015 Madrid | Tel.: 915 327 478 / 915 327 479 | Fax: 915 460 915 | madrid@accem.es\n\n"
 "- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Dirección: c/ Manuel Fernández Caballero, 4 (Local) Madrid 28019 España | Teléfono: 91 471 97 19 | Correo electrónico: info@progestion.org | Equipo Jurídico: 608 773 900"
 
-
 #: lib/chatbot/graphs/faq_ca_resources.ex:85
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MURCIA"
@@ -2039,7 +2034,6 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "*ASOCIACIONES:*\n\n"
 "- MURCIA ACOGE: DELEGACIÓN MURCIA  | Teléfono: 968271652 | Email: murcia.nodiscriminacion@redacoge.org | Dirección: Calle Alberto Sevilla, Local 5, Bloque 1, Esc. 5. C.P. 30011, Murcia.\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada | C/ Ricardo Gil 5 30002 Murcia |Tel.: 968 268 427 / 968 977 945 | murcia@accem.es"
-
 
 #: lib/chatbot/graphs/faq_ca_resources.ex:89
 #, elixir-autogen, elixir-format
@@ -2102,3 +2096,18 @@ msgstr ""
 #, elixir-autogen, elixir-format, fuzzy
 msgid "RESOURCES"
 msgstr "Recursos por comunidad"
+
+#: lib/chatbot/graphs/person_graph.ex:14
+#, elixir-autogen, elixir-format, fuzzy
+msgid "PERSON_S1"
+msgstr "A veces es complicado!\n\n"
+"Los insultos, amenazas, calumnias, agresiones… Son ilegales, son sancionables y existen formas claras de hacer valer tus derechos.\n\n"
+"Sin embargo, hay comportamientos puntuales de personas desconocidas que, a pesar de estar cargados de prejuicios, están amparados por la libertad de expresión y otras libertades individuales que son pilares de las democracias.\n\n"
+"Nos referimos cosas como “vete a tu país”, “los españoles primero”, etc. Recibir malas miradas, que alguien evite sentarse a tu lado en el bus o … . Son hechos hirientes, pero eso no significa que sean ilegales. \n\n"
+"*Entonces… ¿qué puedes hacer en una situación como esa?*\n\n"
+"- En estos casos, lo mejor es mantener la calma. Ignorar a quién te está ofendiendo es una opción completamente válida. \n\n"
+"\t  Además, eso de no encontrar la respuesta en el momento nos pasa a todas. Seguro que dentro de media hora se te ocurre la frase más ingeniosa para darle un zasca a esa persona intolerante. ¡Guárdala para otra ocasión!\n\n"
+"- Mira a tu alrededor. ¿Ves alguna mirada cómplice contigo? ¿Algún gesto de reproche hacia quien te está ofendiendo? La mayoría de las personas en España desaprueba los comportamientos discriminatorios. Y muchas no se callan cuando los ven. Déjate arropar por la comunidad.\n\n"
+"- Si quieres responder, no entres en discusiones frontales: no vas a convencer a una persona desconocida en un minuto. Simplemente, hazle ver que su comportamiento es grosero e inadecuado.\n\n"
+"- Procura no dejarte llevar por las emociones: los insultos y gritos podrían escalar más situación.  El humor, al contrario, es una buena herramienta en estos casos.\n\n"
+"- Lo primero eres tú. Si este tipo de situaciones te generan un malestar que persiste,  es importante que tengas herramientas para hacerles frente. Contacta con Ecos do Sur y te facilitaremos algunos recursos!"

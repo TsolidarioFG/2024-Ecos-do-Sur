@@ -64,7 +64,7 @@ defmodule Chatbot.InitialGraph do
   ##################################
   def resolve({:U2, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("LEISURE"), callback_data: "LEISURE"}, %{text: gettext("COMMERCE"), callback_data: "COMMERCE"}],
-    [%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}, %{text: gettext("TRANSPORT"), callback_data: "TRANSPORT"}, %{text: gettext("SCHOOL"), callback_data: "SCHOOL"}],
+    [%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}, %{text: gettext("SCHOOL"), callback_data: "SCHOOL"}],
     [%{text: gettext("HOME"), callback_data: "HOME"}, %{text: gettext("STREET"), callback_data: "STREET"}, %{text: gettext("WORK"), callback_data: "WORK"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:U2, :initial} | history]
@@ -103,7 +103,7 @@ defmodule Chatbot.InitialGraph do
   # Home:
   def resolve({:U2_final_resolve, history, "HOME"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :home}, history, nil}, user, key, nil, message_id)
   # Street:
-  def resolve({:U2_final_resolve, history, "STREET"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
+  def resolve({:U2_final_resolve, history, "STREET"}, user, key, "NO", message_id), do: Manager.resolve({{:S1, :person}, history, nil}, user, key, nil, message_id)
   # Leisure:
   def resolve({:U2_final_resolve, history, "LEISURE"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :leisure}, history, nil}, user, key, nil, message_id)
   # Commerce:
@@ -111,11 +111,11 @@ defmodule Chatbot.InitialGraph do
   # Hospital:
   def resolve({:U2_final_resolve, history, "HOSPITAL"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :hospital}, history, nil}, user, key, nil, message_id)
   # Transport:
-  def resolve({:U2_final_resolve, history, "TRANSPORT"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :transport}, history, nil}, user, key, nil, message_id)
+  #def resolve({:U2_final_resolve, history, "TRANSPORT"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :transport}, history, nil}, user, key, nil, message_id)
   # Person:
   def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, "WORKPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work_per}, history, nil}, user, key, nil, message_id)
-  def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
+  def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:S1, :person}, history, nil}, user, key, nil, message_id)
 
   ####################################################################
   ########################### SOLUTIONS ##############################

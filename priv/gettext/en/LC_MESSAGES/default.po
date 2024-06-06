@@ -1304,3 +1304,8 @@ msgstr ""
 #, elixir-autogen, elixir-format, fuzzy
 msgid "RESOURCES"
 msgstr ""
+
+#: lib/chatbot/graphs/person_graph.ex:14
+#, elixir-autogen, elixir-format, fuzzy
+msgid "PERSON_S1"
+msgstr ""

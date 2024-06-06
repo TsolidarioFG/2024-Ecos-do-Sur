@@ -112,8 +112,9 @@ msgstr "La información ha sido guardada correctamente!"
 
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:37
 #: lib/chatbot/graphs/faq/faq_commerce.ex:20
-#: lib/chatbot/graphs/faq/faq_graph.ex:25
+#: lib/chatbot/graphs/faq/faq_graph.ex:26
 #: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:22
+#: lib/chatbot/graphs/faq/faq_work.ex:22
 #: lib/chatbot/graphs/urgent/commerce_graph.ex:18
 #: lib/chatbot/graphs/urgent/home_graph.ex:18
 #: lib/chatbot/graphs/urgent/home_graph.ex:29
@@ -1532,7 +1533,7 @@ msgstr "Estancia temporal (< 90 días)"
 msgid "COMMERCE PROBLEMS"
 msgstr "Diferentes problemas en la atención"
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:27
+#: lib/chatbot/graphs/faq/faq_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "FAQ"
 msgstr "Preguntas frecuentes"
@@ -2108,7 +2109,7 @@ msgstr "A veces es complicado!\n\n"
 "- Procura no dejarte llevar por las emociones: los insultos y gritos podrían escalar más situación.  El humor, al contrario, es una buena herramienta en estos casos.\n\n"
 "- Lo primero eres tú. Si este tipo de situaciones te generan un malestar que persiste,  es importante que tengas herramientas para hacerles frente. Contacta con Ecos do Sur y te facilitaremos algunos recursos!"
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:43
+#: lib/chatbot/graphs/faq/faq_graph.ex:45
 #, elixir-autogen, elixir-format
 msgid "CHATBOT_INFORMATION"
 msgstr "👋🏽 Ecosbot es el chatbot de la Asociación Ecos do Sur, una herramienta digital que te ayuda saber cómo abordar de manera efectiva diferentes situaciones de *discriminación por motivos religiosos, xenófobos o islamofóbicos*.\n\n"
@@ -2119,7 +2120,7 @@ msgstr "👋🏽 Ecosbot es el chatbot de la Asociación Ecos do Sur, una herram
 msgid "CHATBOT_Q"
 msgstr "¿Qué información ofrece este Chatbot?"
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:45
+#: lib/chatbot/graphs/faq/faq_graph.ex:47
 #, elixir-autogen, elixir-format, fuzzy
 msgid "ECOS_INFORMATION"
 msgstr "[Ecos do Sur](https://www.ecosdosur.org/) es la mayor organización gallega dedicada a la defensa de las personas migrantes y refugiadas. Gracias al apoyo de socios, donantes e instituciones trabajamos para crear soluciones innovadoras y audaces para *terminar con las desigualdades* vinculadas al origen, la pobreza y el género, trabajando con honestidad, independencia y coraje.\n\n"
@@ -2133,7 +2134,7 @@ msgstr "[Ecos do Sur](https://www.ecosdosur.org/) es la mayor organización gall
 msgid "ECOS_Q"
 msgstr "¿Qué es Ecos do Sur?"
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:47
+#: lib/chatbot/graphs/faq/faq_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_DEF"
 msgstr "✔️ El *discurso de odio* consiste en fomentar, promover o incitar, directa o indirectamente, al odio, a la discriminación o a la violencia contra un grupo o contra una persona por motivos de odio racial, xenófobo, orientación sexual y otras formas de intolerancia.\n\n"
@@ -2150,7 +2151,7 @@ msgstr "✔️ El *discurso de odio* consiste en fomentar, promover o incitar, d
 msgid "HATE_SPEECH_DEF_Q"
 msgstr "¿Que son discurso/delito odio y discriminación?"
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:49
+#: lib/chatbot/graphs/faq/faq_graph.ex:51
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_RS"
 msgstr "🤬 El discurso de odio no es un elemento nuevo, pero internet y las redes sociales han proporcionado una nueva plataforma, a menudo anónima, para la divulgación de ideologías que promueven el odio basado en la pertenencia, real o ficticia, a una raza, etnia, religión, nacionalidad, etc. Si te atacan en redes sociales por este motivo, aquí te dejamos algunos consejos:\n\n"
@@ -2227,3 +2228,121 @@ msgstr "Si sospechas que no te dejan entrar en un establecimiento como un local 
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_COMMERCE_TITLE"
 msgstr "Preguntas frecuentes Comercio:"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_Q1"
+msgstr "Derechos como trabajador/a en España"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_Q2"
+msgstr "Leyes contra la discriminación laboral"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:19
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_Q3"
+msgstr "Comportamientos que se consideran discriminatorios"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:20
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q4"
+msgstr "Preparación para solicitar un empleo"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:21
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q5"
+msgstr "Denunciar casos de discriminación laboral"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:38
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_S1"
+msgstr "Los derechos laborales en España están respaldados por la Constitución y desarrollados a través de diferentes leyes. Algunos de los *derechos fundamentales* incluyen:\n\n"
+"- Derecho al trabajo: en condiciones que respeten tu salud, seguridad y dignidad.\n\n"
+"- Derecho a la igualdad de trato y no discriminación: incluye razones de género, orientación sexual, religión, origen étnico, discapacidad o cualquier otro motivo.\n\n"
+"- Derecho a la Seguridad Social: que incluye atención médica, prestaciones por desempleo y jubilación.\n\n"
+"- Derecho a la negociación colectiva: para llegar a acuerdos que mejoren tus condiciones laborales.\n\n"
+"----------------------------------------\n"
+"También existen otros derechos más específicos, que regulan las condiciones de trabajo. Algunos de ellos son:\n\n"
+"- Jornada laboral: en general, no puede superar las 40 horas semanales. Tienes derecho a mínimo un día libre a la semana y descansos durante tu jornada.\n\n"
+"- Vacaciones pagadas: por un periodo de 30 días al año, normalmente.\n\n"
+"- Salario mínimo: establecido por el gobierno."
+
+#: lib/chatbot/graphs/faq/faq_work.ex:40
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_S2"
+msgstr "El artículo 14 de la Constitución de 1978 establece el derecho a la igualdad y a la no discriminación por razón de nacimiento, raza, sexo, religión, opinión o cualquier otra circunstancia personal o social.\n\n"
+"Además, el Estatuto de los Trabajadores garantiza el derecho a la no discriminación en las relaciones laborales.\n\n"
+"Puedes encontrar todas las normas que afectan al empleo [aquí](https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=93&modo=2&nota=0&tab=2)\n\n"
+"El marco general que regula las actuaciones frente a la discirminación en España es la Ley de Igualdad de Trato y No Discriminación. [Esta norma](https://www.boe.es/buscar/act.php?id=BOE-A-2022-11589) contempla la igualdad y no discriminación de las personas con independencia de su nacionalidad, situacion administrativa regular o irregular,  lugar de nacimiento, origen racial o étnico, sexo, religión, convicción u opinión, edad, discapacidad, orientación o identidad sexual, expresión de género, enfermedad o condición de salud, lengua, situación socioeconómica o cualquier otra condición o circunstancia personal o social.\n\n"
+"Esto incluye distintas áreas laborales: el acceso al empleo, las condiciones de trabajo (salarios, despidos, ascensos…) y la formación.\n\n"
+"La ley establece que la persona física o jurídica que cause discriminación reparará el daño causado proporcionando una indemnización y restituyendo a la víctima a la situación anterior al incidente discriminatorio.\n\n"
+"Para casos en los que se produzca un delito de odio en un escenario laboral , está el [artículo 510 del Código Penal](https://www.iberley.es/legislacion/articulo-510-codigo-penal)"
+
+#: lib/chatbot/graphs/faq/faq_work.ex:42
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_S3"
+msgstr "La discriminación en el ámbito laboral es una situación en la que una persona (trabajadora o candidata) se ve perjudicada profesional, salarial o moralmente respecto otras por motivos que no tiene que ver con sus capacidades o el desempeño de su puesto. Esto incluye el trato injusto, el hostigamiento y las represalias por haberlo denunciado.\n\n"
+"Por ejemplo:\n\n"
+"- Trato diferenciado por parte de responsables, empleadores, compañeros, clientes o proveedores:\n\n"
+"\t > En el acceso al empleo: procesos de selección de personal, criterios de valoración…\n\n"
+"\t > En el trato personal: control y vigilancia, insultos, humillaciones, exigencia de renunciar a símbolos culturales o religiosos…\n\n"
+"\t > En el desarrollo del trabajo: trato personal, división de tareas, horarios, nóminas, salarios, oportunidades de ascenso y formación, despidos, etc.\n\n"
+"- Cualquier incumplimiento de los derechos laborales motivado por causas discriminatorias, como racismo, xenofobia, islamofobia: negación a hacer un contrato de trabajo, salarios por debajo de lo estipulado, exceso de horas, etc.\n\n"
+"- Agresiones verbales, materiales o físicas en el puesto de trabajo, que tengan una motivación “de odio”, es decir, que la víctima sea seleccionada por su pertenencia real o percibida a colectivos históricamente vulnerados en España."
+
+
+#: lib/chatbot/graphs/faq/faq_work.ex:44
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_S4"
+msgstr "*Antes de la entrevista:*\n\n"
+"Evita incluir en tu CV datos personales que no están relacionados con tus capacidades para el empleo: dirección exacta, fotografía, lugar y fecha de nacimiento, estado civil, etc…\n\n"
+"Esto puede ayudarte a evitar los sesgos de posibles algoritmos de selección y descartes a un primer vistazo por causas arbitrarias.\n\n"
+"----------------------------------------\n"
+"*Durante la entrevista:*\n\n"
+"Si sospechas que durante el proceso de selección podrían discriminarte, por ejemplo por tu país de origen o por vestir algún símbolo de tu religión, te recomendamos que te prepares. En estos casos, el enfoque preventivo es importante para conseguir evidencias.\n\n"
+"Tienes derecho a grabar la conversación. Si decides hacerlo, lleva el móvil en un bolsillo o en el bolso y procura que no se note que estás grabando. No edites los audios que tomes.\n\n"
+"En una entrevista de trabajo es ilegal preguntarte temas personales ajenos al puesto. Cuando se hace, suele haber una intención de discriminar a la persona candidata según su respuesta. No tienes por qué responder a este tipo de cuestiones. Puedes negarte de forma educada, explicando que esos temas son de índole personal y que prefieres que se mantengan en tu esfera privada.\n\n"
+"Si decides responder, hazlo con calma y tratando de volver la situación a tu favor. Por ejemplo, si te preguntan por tu país de origen, puedes destacar que el haber vivido en diferentes lugares te ha dado experiencia y capacidad de adaptación, que manejas diferentes idiomas, etc.\n\n"
+"Algunos ejemplo de preguntas que no pueden hacerte, salvo que sean relevantes para el desempeño del trabajo, son:\n\n"
+"\t > ¿Cuál es tu nacionalidad? ¿De dónde eres? ¿Cuál es tu lengua materna? \n\n"
+"\t > ¿Qué edad tienes?\n\n"
+"\t > ¿Cuál es tu situación civil o familiar? ¿Tienes pareja?\n\n"
+"\t > ¿Estás embarazada? ¿Tienes o piensas en tener hijos?\n\n"
+"\t > ¿Cuál es tu religión?\n\n"
+"\t > ¿Cuál es tu ideología política?\n\n"
+"\t > ¿Cuánto mides/pesas?\n\n"
+"\t > ¿Cómo es tu estado de salud? ¿Fumas o bebes?\n\n"
+
+
+#: lib/chatbot/graphs/faq/faq_work.ex:46
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_S5"
+msgstr "Hay distintas vías para denunciar casos de discriminación racista, xenófoba o islamófoba en el trabajo, dependiendo de la gravedad y del objetivo que tengas con tu reclamación.\n\n"
+"1️⃣ A través de un *organismo de lucha contra la discriminación*. Te recomendamos que comiences por aquí. Se trata de instituciones públicas o privadas que pondrán a tu disposición personal especializado para asesorarte y acompañarte, tanto si decides denunciar como si no.\n\n"
+"\t > Consejo para la Eliminación de la Discriminación Racial o Étnica (CEDRE): llamada gratuita en el *021* y consultas en WhatsApp (628 860 507), correo electrónico o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do). Tienen oficinas en todas las comunidades autónomas.\n\n"
+"\t > Asociaciones especializadas: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
+"\t > \n\n"
+"2️⃣ *Inspección de Trabajo*. Es un organismo público que se encarga de controlar el cumplimiento de las normativas relativas al empleo.\n\n"
+"\t > Este organismo dispone de un [buzón online](https://oeitss.mites.gob.es/buzonitss/) en el que se pueden comunicar las situaciones discriminatorias de forma anónima. Tienes que rellenar todos los campos del formulario para que la solicitud sea correcta.\n\n"
+"\t > Otra vía es la denuncia en la Inspección de la Seguridad Social, que abre un proceso de control a la empresa. Para hacer la denuncia tendrás que aportar tus datos personales, aunque tu identidad será protegida durante la investigación. La diferencia con respecto al buzón es que aquí podrás recibir actualizaciones sobre cómo va la investigación. [Aquí tienes más información sobre este mecanismo de denuncia](https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/empresas/empleados/seguridad-social/inspeccion.html#-ce27cd07198c)\n\n"
+"3️⃣ *Por vía judicial.* Los casos especialmente graves de discriminación laboral (diferencia de salarios, despidos, etc) pueden ser delito.\n\n"
+"Según el  Artículo 314 del C.P.: \"Quienes produzcan una grave discriminación en el empleo, público o privado, contra alguna persona por razón de su ideología, religión o creencias, su situación familiar, su pertenencia a una etnia, raza o nación, su origen nacional, su sexo, edad, orientación o identidad sexual o de género, razones de género, de aporofobia o de exclusión social, la enfermedad que padezca o su discapacidad, por ostentar la representación legal o sindical de los trabajadores, por el parentesco con otros trabajadores de la empresa o por el uso de alguna de las lenguas oficiales dentro del Estado español, y no restablezcan la situación de igualdad ante la ley tras requerimiento o sanción administrativa, reparando los daños económicos que se hayan derivado, serán castigados con la pena de prisión de seis meses a dos años o multa de doce a veinticuatro meses\"."
+"Además, si se produce un delito de odio en el ámbito laboral, la vía de denuncia es la judicial.\n\n"
+"Antes de denunciar por la vía judicial, es recomendable que te asesores con una de las organizaciones mencionadas anteriormente.\n\n"
+"En todas las provincias de España hay un fiscalía especializada en delitos de odio y discriminación y Oficinas de Asistencia a Víctimas de delito, que cuentan con personal jurídico, posioógico social para ayudarte.\n\n"
+"Si quieres localizar recursos en tu zona accede al apartado de recursos de las preguntas frecuentes\n\n"
+"En cualquier caso…\n\n"
+"\t > 1️⃣ Trata de conservar cualquier prueba que pueda indicar la situación de discriminación: fotos, mails, grabaciones de comentarios, capturas de conversaciones por WhatsApp, pantallazos de la oferta… \n\n"
+"\t > 2️⃣ Trata de recordar y apuntar cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas; comentarios sobre tu origen, aspecto físico o costumbres culturales. Apunta el lugar, la fecha y los detalles: quién, qué, cómo, si hubo testigos del trato discriminatorio..."
+
+
+#: lib/chatbot/graphs/faq/faq_work.ex:24
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_WORK_TITLE"
+msgstr "Preguntas frecuentes Comercio:"
+
+#: lib/chatbot/graphs/faq/faq_graph.ex:25
+#, elixir-autogen, elixir-format, fuzzy
+msgid "WORK_FAQ"
+msgstr "Preguntas sobre el entorno laboral"

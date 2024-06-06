@@ -112,8 +112,9 @@ msgstr ""
 
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:37
 #: lib/chatbot/graphs/faq/faq_commerce.ex:20
-#: lib/chatbot/graphs/faq/faq_graph.ex:25
+#: lib/chatbot/graphs/faq/faq_graph.ex:26
 #: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:22
+#: lib/chatbot/graphs/faq/faq_work.ex:22
 #: lib/chatbot/graphs/urgent/commerce_graph.ex:18
 #: lib/chatbot/graphs/urgent/home_graph.ex:18
 #: lib/chatbot/graphs/urgent/home_graph.ex:29
@@ -1010,7 +1011,7 @@ msgstr ""
 msgid "COMMERCE PROBLEMS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:27
+#: lib/chatbot/graphs/faq/faq_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "FAQ"
 msgstr ""
@@ -1306,7 +1307,7 @@ msgstr ""
 msgid "PERSON_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:43
+#: lib/chatbot/graphs/faq/faq_graph.ex:45
 #, elixir-autogen, elixir-format
 msgid "CHATBOT_INFORMATION"
 msgstr ""
@@ -1316,7 +1317,7 @@ msgstr ""
 msgid "CHATBOT_Q"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:45
+#: lib/chatbot/graphs/faq/faq_graph.ex:47
 #, elixir-autogen, elixir-format
 msgid "ECOS_INFORMATION"
 msgstr ""
@@ -1326,7 +1327,7 @@ msgstr ""
 msgid "ECOS_Q"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:47
+#: lib/chatbot/graphs/faq/faq_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_DEF"
 msgstr ""
@@ -1336,7 +1337,7 @@ msgstr ""
 msgid "HATE_SPEECH_DEF_Q"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_graph.ex:49
+#: lib/chatbot/graphs/faq/faq_graph.ex:51
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_RS"
 msgstr ""
@@ -1384,4 +1385,64 @@ msgstr ""
 #: lib/chatbot/graphs/faq/faq_commerce.ex:22
 #, elixir-autogen, elixir-format
 msgid "FAQ_COMMERCE_TITLE"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:17
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q1"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:18
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q2"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:19
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q3"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:20
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q4"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:21
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_Q5"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:38
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:40
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_S2"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:42
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_S3"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:44
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_S4"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:46
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_S5"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_work.ex:24
+#, elixir-autogen, elixir-format
+msgid "FAQ_WORK_TITLE"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_graph.ex:25
+#, elixir-autogen, elixir-format
+msgid "WORK_FAQ"
 msgstr ""

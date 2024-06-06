@@ -1,4 +1,5 @@
 defmodule Chatbot.Manager do
+  alias Chatbot.FaqCommerce
   alias Chatbot.PersonGraph
   alias Chatbot.FaqGraph
   alias Chatbot.FaqHealthcareGraph
@@ -33,5 +34,6 @@ defmodule Chatbot.Manager do
   def resolve({{state, :faq}, history, memory}, user, key, response, message_id), do: FaqGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :faq_healthcare}, history, memory}, user, key, response, message_id), do: FaqHealthcareGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :faq_ca_resources}, history, memory}, user, key, response, message_id), do: FaqCaResources.resolve({state, history, memory}, user, key, response, message_id)
+  def resolve({{state, :faq_commerce}, history, memory}, user, key, response, message_id), do: FaqCommerce.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :person}, history, memory}, user, key, response, message_id), do: PersonGraph.resolve({state, history, memory}, user, key, response, message_id)
 end

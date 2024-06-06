@@ -11,20 +11,20 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/chatbot/graphs/home_graph.ex:51
-#: lib/chatbot/graphs/hospital_graph.ex:41
-#: lib/chatbot/graphs/hospital_graph.ex:47
-#: lib/chatbot/graphs/hospital_graph.ex:70
-#: lib/chatbot/graphs/initial_graph.ex:43
-#: lib/chatbot/graphs/initial_graph.ex:53
-#: lib/chatbot/graphs/initial_graph.ex:91
-#: lib/chatbot/graphs/leisure_graph.ex:32
-#: lib/chatbot/graphs/leisure_graph.ex:42
-#: lib/chatbot/graphs/leisure_graph.ex:52
-#: lib/chatbot/graphs/leisure_graph.ex:59
-#: lib/chatbot/graphs/school_graph.ex:47
-#: lib/chatbot/graphs/school_graph.ex:60
-#: lib/chatbot/graphs/school_graph.ex:73
+#: lib/chatbot/graphs/urgent/home_graph.ex:51
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:41
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:47
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:70
+#: lib/chatbot/graphs/urgent/initial_graph.ex:43
+#: lib/chatbot/graphs/urgent/initial_graph.ex:53
+#: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:32
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:42
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:52
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:59
+#: lib/chatbot/graphs/urgent/school_graph.ex:47
+#: lib/chatbot/graphs/urgent/school_graph.ex:60
+#: lib/chatbot/graphs/urgent/school_graph.ex:73
 #: lib/chatbot/information_collector.ex:76
 #: lib/chatbot/information_collector.ex:247
 #: lib/chatbot/worker.ex:193
@@ -33,19 +33,19 @@ msgstr ""
 msgid "NO"
 msgstr "NO"
 
-#: lib/chatbot/graphs/home_graph.ex:51
-#: lib/chatbot/graphs/hospital_graph.ex:41
-#: lib/chatbot/graphs/hospital_graph.ex:47
-#: lib/chatbot/graphs/hospital_graph.ex:70
-#: lib/chatbot/graphs/initial_graph.ex:43
-#: lib/chatbot/graphs/initial_graph.ex:53
-#: lib/chatbot/graphs/initial_graph.ex:91
-#: lib/chatbot/graphs/leisure_graph.ex:32
-#: lib/chatbot/graphs/leisure_graph.ex:42
-#: lib/chatbot/graphs/leisure_graph.ex:52
-#: lib/chatbot/graphs/leisure_graph.ex:59
-#: lib/chatbot/graphs/school_graph.ex:60
-#: lib/chatbot/graphs/school_graph.ex:73
+#: lib/chatbot/graphs/urgent/home_graph.ex:51
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:41
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:47
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:70
+#: lib/chatbot/graphs/urgent/initial_graph.ex:43
+#: lib/chatbot/graphs/urgent/initial_graph.ex:53
+#: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:32
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:42
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:52
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:59
+#: lib/chatbot/graphs/urgent/school_graph.ex:60
+#: lib/chatbot/graphs/urgent/school_graph.ex:73
 #: lib/chatbot/information_collector.ex:76
 #: lib/chatbot/information_collector.ex:247
 #: lib/chatbot/worker.ex:193
@@ -110,104 +110,105 @@ msgstr "Por favor, selecciona tu género:"
 msgid "This information has been saved successfully"
 msgstr "La información ha sido guardada correctamente!"
 
-#: lib/chatbot/graphs/commerce_graph.ex:18
-#: lib/chatbot/graphs/faq_ca_resources.ex:37
-#: lib/chatbot/graphs/faq_graph.ex:24
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:22
-#: lib/chatbot/graphs/home_graph.ex:18
-#: lib/chatbot/graphs/home_graph.ex:29
-#: lib/chatbot/graphs/home_graph.ex:38
-#: lib/chatbot/graphs/home_graph.ex:40
-#: lib/chatbot/graphs/hospital_graph.ex:19
-#: lib/chatbot/graphs/hospital_graph.ex:31
-#: lib/chatbot/graphs/initial_graph.ex:43
-#: lib/chatbot/graphs/initial_graph.ex:53
-#: lib/chatbot/graphs/initial_graph.ex:69
-#: lib/chatbot/graphs/initial_graph.ex:81
-#: lib/chatbot/graphs/initial_graph.ex:91
-#: lib/chatbot/graphs/leisure_graph.ex:18
-#: lib/chatbot/graphs/leisure_graph.ex:32
-#: lib/chatbot/graphs/leisure_graph.ex:42
-#: lib/chatbot/graphs/leisure_graph.ex:52
-#: lib/chatbot/graphs/leisure_graph.ex:59
-#: lib/chatbot/graphs/person_school_graph.ex:18
-#: lib/chatbot/graphs/person_work_graph.ex:18
-#: lib/chatbot/graphs/school_graph.ex:19
-#: lib/chatbot/graphs/school_graph.ex:36
-#: lib/chatbot/graphs/school_graph.ex:48
-#: lib/chatbot/graphs/school_graph.ex:61
-#: lib/chatbot/graphs/school_graph.ex:74
-#: lib/chatbot/graphs/school_graph.ex:90
-#: lib/chatbot/graphs/transport_graph.ex:20
-#: lib/chatbot/graphs/transport_graph.ex:29
-#: lib/chatbot/graphs/work_graph.ex:18
-#: lib/chatbot/graphs/work_graph.ex:33
-#: lib/chatbot/graphs/work_graph.ex:43
-#: lib/chatbot/graphs/work_graph.ex:58
-#: lib/chatbot/graphs/work_graph.ex:62
-#: lib/chatbot/graphs/work_graph.ex:66
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:37
+#: lib/chatbot/graphs/faq/faq_commerce.ex:20
+#: lib/chatbot/graphs/faq/faq_graph.ex:25
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:22
+#: lib/chatbot/graphs/urgent/commerce_graph.ex:18
+#: lib/chatbot/graphs/urgent/home_graph.ex:18
+#: lib/chatbot/graphs/urgent/home_graph.ex:29
+#: lib/chatbot/graphs/urgent/home_graph.ex:38
+#: lib/chatbot/graphs/urgent/home_graph.ex:40
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:19
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:31
+#: lib/chatbot/graphs/urgent/initial_graph.ex:43
+#: lib/chatbot/graphs/urgent/initial_graph.ex:53
+#: lib/chatbot/graphs/urgent/initial_graph.ex:69
+#: lib/chatbot/graphs/urgent/initial_graph.ex:81
+#: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:18
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:32
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:42
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:52
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:59
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:18
+#: lib/chatbot/graphs/urgent/person_work_graph.ex:18
+#: lib/chatbot/graphs/urgent/school_graph.ex:19
+#: lib/chatbot/graphs/urgent/school_graph.ex:36
+#: lib/chatbot/graphs/urgent/school_graph.ex:48
+#: lib/chatbot/graphs/urgent/school_graph.ex:61
+#: lib/chatbot/graphs/urgent/school_graph.ex:74
+#: lib/chatbot/graphs/urgent/school_graph.ex:90
+#: lib/chatbot/graphs/urgent/transport_graph.ex:20
+#: lib/chatbot/graphs/urgent/transport_graph.ex:29
+#: lib/chatbot/graphs/urgent/work_graph.ex:18
+#: lib/chatbot/graphs/urgent/work_graph.ex:33
+#: lib/chatbot/graphs/urgent/work_graph.ex:43
+#: lib/chatbot/graphs/urgent/work_graph.ex:58
+#: lib/chatbot/graphs/urgent/work_graph.ex:62
+#: lib/chatbot/graphs/urgent/work_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "BACK"
 msgstr "ATRÁS"
 
-#: lib/chatbot/graphs/initial_graph.ex:66
+#: lib/chatbot/graphs/urgent/initial_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "COMMERCE"
 msgstr ""
 
-#: lib/chatbot/graphs/leisure_graph.ex:17
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "ENTRANCE DENIAL"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:68
+#: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "HOME"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:31
-#: lib/chatbot/graphs/initial_graph.ex:67
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:31
+#: lib/chatbot/graphs/urgent/initial_graph.ex:67
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL"
 msgstr "Hospital"
 
-#: lib/chatbot/graphs/initial_graph.ex:20
+#: lib/chatbot/graphs/urgent/initial_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "INFORMATION"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:24
+#: lib/chatbot/graphs/urgent/initial_graph.ex:24
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q1"
 msgstr "Hola! Soy el chatbot xxx, y mi misión es ayudarte en casos de agresión y discriminación por motivos racistas, xenófobos o islamófobos.\n\n"
 "Por favor, indícame si necesitas ayuda urgente o información no urgente."
 
-#: lib/chatbot/graphs/initial_graph.ex:45
+#: lib/chatbot/graphs/urgent/initial_graph.ex:45
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q2"
 msgstr "¿La persona que está agrediendo es una autoridad? ( Policía, Guardia Civil, ... )"
 
-#: lib/chatbot/graphs/initial_graph.ex:55
+#: lib/chatbot/graphs/urgent/initial_graph.ex:55
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q3"
 msgstr "¿Estás en peligro?"
 
-#: lib/chatbot/graphs/initial_graph.ex:71
+#: lib/chatbot/graphs/urgent/initial_graph.ex:71
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q5"
 msgstr "¿Dónde?"
 
-#: lib/chatbot/graphs/initial_graph.ex:83
+#: lib/chatbot/graphs/urgent/initial_graph.ex:83
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q6"
 msgstr "¿El problema es con personal del centro/servicio o con otra persona?"
 
-#: lib/chatbot/graphs/initial_graph.ex:93
+#: lib/chatbot/graphs/urgent/initial_graph.ex:93
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q7"
 msgstr "¿Esa persona te ha agredido física o verbalmente, o ha atacado tus propiedades o pertenencias?"
 
-#: lib/chatbot/graphs/initial_graph.ex:124
+#: lib/chatbot/graphs/urgent/initial_graph.ex:124
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S1"
 msgstr "*Si tú te encuentras en riesgo:* \n\n"
@@ -230,12 +231,12 @@ msgstr "*Si tú te encuentras en riesgo:* \n\n"
 "Aguarda con ella a que lleguen las autoridades y explícales lo ocurrido de la forma más pormenorizada posible. Si te parece que la amenaza estaba relacionada con motivos de odio racista, xenófobo o islamófobo, es muy importante que lo comuniques en este momento.\n\n"
 "Ofrece a la víctima tu contacto por si necesita volver a hablar contigo más adelante."
 
-#: lib/chatbot/graphs/initial_graph.ex:126
+#: lib/chatbot/graphs/urgent/initial_graph.ex:126
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:128
+#: lib/chatbot/graphs/urgent/initial_graph.ex:128
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S3"
 msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
@@ -266,7 +267,7 @@ msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
 "Puedes presentar tu denuncia en la policía o en las Fiscalías especializadas en delitos de odio y discriminación que hay que cada provincia de España.\n\n"
 "¿Quieres información sobre los *recursos de denuncia y asistencia a víctimas* que hay en tu zona?"
 
-#: lib/chatbot/graphs/initial_graph.ex:130
+#: lib/chatbot/graphs/urgent/initial_graph.ex:130
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S4"
 msgstr "*Si tú has sido agredido/a verbal o físicamente por una autoridad y te encuentras en riesgo:*\n\n"
@@ -285,33 +286,33 @@ msgstr "*Si tú has sido agredido/a verbal o físicamente por una autoridad y te
 "- Si está lesionada, llama inmediatamente al 112 (Emergencias) o acompáñala a un centro de salud. Ayuda a la víctima a explicar con detalle lo que ha sucedido.\n\n"
 "- Ofrece a la víctima tu contacto por si necesita volver a hablar contigo más adelante."
 
-#: lib/chatbot/graphs/initial_graph.ex:66
+#: lib/chatbot/graphs/urgent/initial_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "LEISURE"
 msgstr ""
 
-#: lib/chatbot/graphs/leisure_graph.ex:20
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q1"
 msgstr "¿Qué está sucediendo?"
 
-#: lib/chatbot/graphs/leisure_graph.ex:34
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:34
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q2"
 msgstr "¿Te han entregado la hoja de reclamaciones?"
 
-#: lib/chatbot/graphs/leisure_graph.ex:44
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:44
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q3"
 msgstr "¿Necesitas ayuda para cubrirla?"
 
-#: lib/chatbot/graphs/leisure_graph.ex:54
-#: lib/chatbot/graphs/leisure_graph.ex:61
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:54
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:61
 #, elixir-autogen, elixir-format
 msgid "LEISURE_Q4"
 msgstr "¿Quieres más información?"
 
-#: lib/chatbot/graphs/leisure_graph.ex:73
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:73
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S1"
 msgstr "Si sospechas que no te dejan entrar en un establecimiento como un local de ocio, bar o restaurante, por motivos racistas, xenófobos de religión, intenta hablar con el personal del local para *resolver la situación de manera coordial*.\n\n"
@@ -320,7 +321,7 @@ msgstr "Si sospechas que no te dejan entrar en un establecimiento como un local 
 "*La hoja de reclamaciones constituye una prueba en el caso de llegar a reclamar mediante arbitraje de consumo o demanda judicial*, por eso es muy importante que lo solicites, cuanto antes de forma educada y respetuosa.\n\n"
 "Si sientes que has sido discriminado/a y, necesitas más información, puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507, al correo: consejo-sei@igualdad.gob.es o dejar tu queja en el siguiente [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do)."
 
-#: lib/chatbot/graphs/leisure_graph.ex:78
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:78
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S2"
 msgstr "*Si crees que te han subido el precio de un producto en un bar, restaurante, o local de ocio, te aconsejamos que sigas estos consejos.*\n\n"
@@ -330,12 +331,12 @@ msgstr "*Si crees que te han subido el precio de un producto en un bar, restaura
 " Si no estás satisfecho con la respuesta o explicación que recibes del personal, podrías considerar *hablar con el gerente o dueño del establecimiento*. Explica tu preocupación de manera clara y respetuosa. No obstante, si crees que tus derechos están siendo violados, podrías soliciar *la hoja de reclamaciones.*\n\n"
 "Si sientes que has sido discriminado/a y, necesitas más información, puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507, al correo: consejo-sei@igualdad.gob.es o dejar tu queja en el siguiente [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do)."
 
-#: lib/chatbot/graphs/leisure_graph.ex:80
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:80
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S3"
 msgstr "Si se niegan a dártelo, *llama a la Policía Local (092)* que será la encargada de tramitar la denuncia por la negativa a entregarlo o no disponer de este."
 
-#: lib/chatbot/graphs/leisure_graph.ex:83
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:83
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S4"
 msgstr "Todos los establecimientos abiertos al público deben disponer de *hojas de reclamación compuestas de tres copias* (una para ellos, otra para ti y otra para la administración).\n\n"
@@ -348,7 +349,7 @@ msgstr "Todos los establecimientos abiertos al público deben disponer de *hojas
 "*5. Si lo ves necesario, adjunta otros documentos.* Si has sacado fotos, estas servirán de base a la reclamación. Puedes imprimirlas e incluírlas cuando la presentes.\n\n"
 "*6. Lleva la hoja a la Oficina de Consumo.* Desde aquí puedes encontrar la Oficina municipal de información al consumidor más cercana."
 
-#: lib/chatbot/graphs/leisure_graph.ex:87
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:87
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S5"
 msgstr "*¿Sabías qué?*\n\n"
@@ -356,126 +357,126 @@ msgstr "*¿Sabías qué?*\n\n"
 "Los carteles que indican \"Reservado el Derecho de Admisión\" no justifican políticas de admisión que discriminan a las personas por su raza, color de piel, religión, género u otras características protegidas por la ley. La discriminación en el acceso a establecimientos públicos está prohibida en muchos países y puede acarrear consecuencias legales para los propietarios que la practiquen.\n\n"
 "Es importante que los establecimientos respeten los derechos de todas las personas y no incurran en prácticas discriminatorias."
 
-#: lib/chatbot/graphs/leisure_graph.ex:90
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:90
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S6"
 msgstr ""
 
-#: lib/chatbot/graphs/leisure_graph.ex:94
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:94
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S7"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:18
+#: lib/chatbot/graphs/urgent/school_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "OTHER"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:81
+#: lib/chatbot/graphs/urgent/initial_graph.ex:81
 #, elixir-autogen, elixir-format
 msgid "OTHER PERSON"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:81
+#: lib/chatbot/graphs/urgent/initial_graph.ex:81
 #, elixir-autogen, elixir-format
 msgid "PERSONAL"
 msgstr ""
 
-#: lib/chatbot/graphs/commerce_graph.ex:17
-#: lib/chatbot/graphs/leisure_graph.ex:17
-#: lib/chatbot/graphs/transport_graph.ex:29
+#: lib/chatbot/graphs/urgent/commerce_graph.ex:17
+#: lib/chatbot/graphs/urgent/leisure_graph.ex:17
+#: lib/chatbot/graphs/urgent/transport_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "PRICE MANIPULATION"
 msgstr "Alteración del precio"
 
-#: lib/chatbot/graphs/initial_graph.ex:67
+#: lib/chatbot/graphs/urgent/initial_graph.ex:67
 #, elixir-autogen, elixir-format
 msgid "SCHOOL"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:68
+#: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "STREET"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:20
+#: lib/chatbot/graphs/urgent/initial_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "URGENT"
 msgstr ""
 
-#: lib/chatbot/graphs/initial_graph.ex:68
+#: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "WORK"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:18
+#: lib/chatbot/graphs/urgent/school_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "ACTIVITIES"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:89
+#: lib/chatbot/graphs/urgent/school_graph.ex:89
 #, elixir-autogen, elixir-format
 msgid "AMPA"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:47
+#: lib/chatbot/graphs/urgent/school_graph.ex:47
 #, elixir-autogen, elixir-format
 msgid "BOTH"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:89
+#: lib/chatbot/graphs/urgent/school_graph.ex:89
 #, elixir-autogen, elixir-format
 msgid "CANTEEN"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:31
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:31
 #, elixir-autogen, elixir-format
 msgid "CLINIC"
 msgstr "Centro de Salud"
 
-#: lib/chatbot/graphs/school_graph.ex:17
+#: lib/chatbot/graphs/urgent/school_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "CONTENT"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:111
-#: lib/chatbot/graphs/school_graph.ex:119
+#: lib/chatbot/graphs/urgent/school_graph.ex:111
+#: lib/chatbot/graphs/urgent/school_graph.ex:119
 #, elixir-autogen, elixir-format
 msgid "DENIAL OF SERVICE"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:118
+#: lib/chatbot/graphs/urgent/school_graph.ex:118
 #, elixir-autogen, elixir-format
 msgid "DIET"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:88
+#: lib/chatbot/graphs/urgent/school_graph.ex:88
 #, elixir-autogen, elixir-format
 msgid "EXTRACURRICULAR"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:46
+#: lib/chatbot/graphs/urgent/school_graph.ex:46
 #, elixir-autogen, elixir-format
 msgid "FAMILY"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:21
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:21
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q1"
 msgstr "Cuál es el problema?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:33
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:33
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q2"
 msgstr "En qué tipo de centro sanitario te encuentras?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:42
-#: lib/chatbot/graphs/hospital_graph.ex:48
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:42
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:48
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q3"
 msgstr "Quieres más información sobre tus derechos sanitarios?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:84
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:84
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S1"
 msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere decir que en *los hospitales tienen la obligación de atenderte* ante una urgencia médica tengas la nacionalidad, el permiso de residencia o no. Por tanto, si te niegan la atención médica en el servicio de urgencias del hospital *llama al 112* y explícales lo que te está pasando.\n\n"
@@ -492,7 +493,7 @@ msgstr "En España, la salud es un *derecho gratuito universal*. Esto quiere dec
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:89
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:89
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S2"
 msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia médica. Por favor, *acude al servicio de urgencias del hospital* para que puedan atenderte. "
@@ -506,70 +507,70 @@ msgstr "Siento mucho que estés en esta situación cuando necesitas asistencia m
 "⚠️*MUY IMPORTANTE*⚠️ *Si NO estás en el Sistema Sanitario de tu Comunidad Autónoma:*\n\n"
 "Una vez te atiendan y te encuentres mejor, *consulta esta información extendida* (enlace a FAQs Salud) para saber *qué debes hacer para que no te reclamen los costes del servicio y cómo ejercer tu derecho a la asistencia sanitaria gratuita tengas o no el permiso de residencia.*"
 
-#: lib/chatbot/graphs/hospital_graph.ex:94
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:94
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S3"
 msgstr "La normativa ([RDL 7/2018](https://www.boe.es/buscar/doc.php?id=BOE-A-2018-10752)) reconoce el *derecho a la atención sanitaria a las personas «no registradas ni autorizadas como residentes en España»* (es decir, a las personas «sin permiso de residencia»).\n\n"
 "Sin embargo, *la administración considera a cualquier persona en «situación de estancia temporal» durante sus primeros 90 días en España*. En esos casos, la ley exige un seguro médico que cubra la asistencia sanitaria o se deberán abonar los costes del servicio.\n\n"
 "⚠️ATENCIÓN⚠️: si has entrado de forma irregular en España, o tu visado ha expirado y era inferior a 90 días, no pasas por la situación de estancia temporal, tu caso es *«sin permiso de residencia»*.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:98
-#: lib/chatbot/graphs/hospital_graph.ex:102
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:98
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:102
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S4"
 msgstr "Muy bien, recuerda que *puedes volver a preguntarme cuando lo necesites*.\n\n"
 "Si necesitas asistencia o *asesoría presencial sobre racismo, islamofobia, xenofobia* u otro caso de odio, puedes consultar aquí la *lista de recursos de tu Comunidad Autónoma*."
 
-#: lib/chatbot/graphs/school_graph.ex:133
+#: lib/chatbot/graphs/urgent/school_graph.ex:133
 #, elixir-autogen, elixir-format
 msgid "MEDICAL NEED"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:110
-#: lib/chatbot/graphs/school_graph.ex:118
+#: lib/chatbot/graphs/urgent/school_graph.ex:110
+#: lib/chatbot/graphs/urgent/school_graph.ex:118
 #, elixir-autogen, elixir-format
 msgid "PRICE MODIFICATION"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:133
+#: lib/chatbot/graphs/urgent/school_graph.ex:133
 #, elixir-autogen, elixir-format
 msgid "RELIGION OR PHILOSOPHY"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:21
+#: lib/chatbot/graphs/urgent/school_graph.ex:21
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q1"
 msgstr "Cómo definirías el problema? Un problema con..."
 
-#: lib/chatbot/graphs/school_graph.ex:50
+#: lib/chatbot/graphs/urgent/school_graph.ex:50
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q2"
 msgstr "Has comentado tu situación con algún adulto que pueda ayudarte? Con ... "
 
-#: lib/chatbot/graphs/school_graph.ex:63
-#: lib/chatbot/graphs/school_graph.ex:76
+#: lib/chatbot/graphs/urgent/school_graph.ex:63
+#: lib/chatbot/graphs/urgent/school_graph.ex:76
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q3"
 msgstr "Esta persona ha tomado algún tipo de medida o acción al respecto?"
 
-#: lib/chatbot/graphs/school_graph.ex:92
+#: lib/chatbot/graphs/urgent/school_graph.ex:92
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q4"
 msgstr "De qué servicio o actividad se trata?"
 
-#: lib/chatbot/graphs/school_graph.ex:105
-#: lib/chatbot/graphs/school_graph.ex:113
-#: lib/chatbot/graphs/school_graph.ex:121
+#: lib/chatbot/graphs/urgent/school_graph.ex:105
+#: lib/chatbot/graphs/urgent/school_graph.ex:113
+#: lib/chatbot/graphs/urgent/school_graph.ex:121
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q5"
 msgstr "Qué problema hay?"
 
-#: lib/chatbot/graphs/school_graph.ex:135
+#: lib/chatbot/graphs/urgent/school_graph.ex:135
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q6"
 msgstr "Cuales son los motivos de la dieta?"
 
-#: lib/chatbot/graphs/school_graph.ex:146
+#: lib/chatbot/graphs/urgent/school_graph.ex:146
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S1"
 msgstr "*Si ya se ha comentado el problema a un familiar y este ha intentado ayudar, pero no ha conseguido aportar una solución, o sigue trabajando en ello:*\n\n"
@@ -581,7 +582,7 @@ msgstr "*Si ya se ha comentado el problema a un familiar y este ha intentado ayu
 "Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Siempre contar con las *ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir para exponer el caso y pedir acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:167
+#: lib/chatbot/graphs/urgent/school_graph.ex:167
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S10"
 msgstr "Si es un *problema con menores de edad* que acuden al mismo centro es importante hablar con una persona adulta de confianza, contarle el problema y acudir al profesorado junto a esta persona para exponer el problema y que se inicie una *mediación*.\n\n"
@@ -594,7 +595,7 @@ msgstr "Si es un *problema con menores de edad* que acuden al mismo centro es im
 "5. *Presencialmente* en la oficina que sea más cercana ([consultar oficinas aquí](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm)).\n\n"
 "*Si el problema es con una persona adulta, reinicia el chat y marca la opción \"Actividades o Servicios\"* para indicar qué departamento está implicado en el problema."
 
-#: lib/chatbot/graphs/school_graph.ex:169
+#: lib/chatbot/graphs/urgent/school_graph.ex:169
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S11"
 msgstr "El trato desigual por motivos no justificados como son la raza, la etnia, la religión, el sexo, la orientación sexual, la discapacidad y, en general, condiciones personales relacionadas con la pertenencia a un colectivo vulnerable son *discriminación*. La discriminación es un delito y *el acceso a derechos está garantizado por la* [Constitución](http://www.derechoshumanos.net/normativa/normas/spain/LO/1995-LO-10-1995-CodigoPenal-Discriminacion.htm).\n\n"
@@ -606,7 +607,7 @@ msgstr "El trato desigual por motivos no justificados como son la raza, la etnia
 "Tienen oficinas regionales, un *teléfono gratuito de contacto urgente (021)*, un WhatsApp (628 860 507) y correo electrónico consejo-sei@igualdad.gob.es. También se puede enviar el caso por [formulario aquí](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a la oficina más cercana ([consultar aquí](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm)).\n\n"
 "Además, contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:171
+#: lib/chatbot/graphs/urgent/school_graph.ex:171
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S12"
 msgstr "El derecho a matrícula o los costes de la misma son diferentes en función del tipo de centro educativo y si son centros privados, concertados o públicos. En cualquier caso, *la negación de matrícula o los cambios en el precio siempre tienen que estar debidamente justificados*.\n\n"
@@ -619,7 +620,7 @@ msgstr "El derecho a matrícula o los costes de la misma son diferentes en funci
 "5. Acudir al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [oficinas](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), urgencias *(021)*, WhatsApp *(628 860 507)*, correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:173
+#: lib/chatbot/graphs/urgent/school_graph.ex:173
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S13"
 msgstr "El centro tiene la *obligación de respetar las prácticas de las confesiones religiosas*, lo que incluye aquellas relacionadas con el ejercicio religioso y los usos y costumbres. Desde la Constitución, hasta las Ley de Libertad Religiosa y la Ley de Igualdad de Trato son normas que identifican este *derecho a una dieta que respete los usos y costumbres religiosos*.\n\n"
@@ -631,12 +632,12 @@ msgstr "El centro tiene la *obligación de respetar las prácticas de las confes
 "Puedes acudir a una *ONG de Derechos Humanos con servicio jurídico* o también a la [oficina del CEDRE de tu Comunidad Autónoma](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm) para que te ayuden a reclamar el caso.\n\n"
 "3. *Intentar conocer si hay más personas afectadas* por la negativa a una dieta alternativa, ya sea por religión (aunque no sea la misma) o por ideas personales como ser vegano/vegetariano. *La suma de casos ayuda a presionar a la administración de educación y al centro de estudios* para resolver antes la demanda."
 
-#: lib/chatbot/graphs/school_graph.ex:175
+#: lib/chatbot/graphs/urgent/school_graph.ex:175
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S14"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:177
+#: lib/chatbot/graphs/urgent/school_graph.ex:177
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S15"
 msgstr "*La negación de un servicio sin razones debidamente justificadas, en este caso, el acceso al servicio de comedor, podría ser un delito de discriminación.*\n\n"
@@ -651,7 +652,7 @@ msgstr "*La negación de un servicio sin razones debidamente justificadas, en es
 "7. Acudir al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [oficinas](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), urgencias *(021)*, WhatsApp *(628 860 507)*, correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "8. Contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:179
+#: lib/chatbot/graphs/urgent/school_graph.ex:179
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S16"
 msgstr "*El cambio de coste de un servicio sin razones debidamente justificadas, en este caso, una actividad o excursión escolar, podría ser un delito de discriminación.*\n\n"
@@ -666,7 +667,7 @@ msgstr "*El cambio de coste de un servicio sin razones debidamente justificadas,
 "7. Acudir al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [oficinas](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), urgencias *(021)*, WhatsApp *(628 860 507)*, correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "8. Contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:181
+#: lib/chatbot/graphs/urgent/school_graph.ex:181
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S17"
 msgstr "*La negación de un servicio sin razones debidamente justificadas, en este caso, excursiones o clases extraescolares, podría ser un delito de discriminación.*\n\n"
@@ -681,7 +682,7 @@ msgstr "*La negación de un servicio sin razones debidamente justificadas, en es
 "7. Acudir al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [oficinas](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), urgencias *(021)*, WhatsApp *(628 860 507)*, correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "8. Contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:183
+#: lib/chatbot/graphs/urgent/school_graph.ex:183
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S18"
 msgstr "En primer lugar, informar de que la cuota del AMPA solo es obligatoria si queremos formar parte de la Asociación de Madres y Padres de Alumnos (AMPA), esta *cuota debe ser igual para todas las personas* que formen parte de la asociación y *no se puede denegar el acceso a ninguna persona siempre que sea la persona legalmente responsable de un alumno o alumna del centro escolar*.\n\n"
@@ -705,7 +706,7 @@ msgstr "En primer lugar, informar de que la cuota del AMPA solo es obligatoria s
 "4. Al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [oficinas](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), urgencias *(021)*, WhatsApp *(628 860 507)*, correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "5. Contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:148
+#: lib/chatbot/graphs/urgent/school_graph.ex:148
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S2"
 msgstr "*Si esta persona ha restado importancia al problema y no ha actuado:*\n\n"
@@ -722,7 +723,7 @@ msgstr "*Si esta persona ha restado importancia al problema y no ha actuado:*\n\
 "Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Siempre contar con las *ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir para exponer el caso y pedir acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:150
+#: lib/chatbot/graphs/urgent/school_graph.ex:150
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S3"
 msgstr "*Si se ha comentado la situación con el personal o con la dirección del centro y han intentado ayudar, pero no ha funcionado o no ha sido suficiente, seguir los siguientes pasos:*\n\n"
@@ -734,7 +735,7 @@ msgstr "*Si se ha comentado la situación con el personal o con la dirección de
 "Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Contar siempre con *las ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:152
+#: lib/chatbot/graphs/urgent/school_graph.ex:152
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S4"
 msgstr "Si se ha comentado la situación con el personal o con la dirección del centro y se ha ignorado la petición de ayuda, contacta con una persona de confianza que te pueda ayudar. *El personal del centro debe actuar cuando un alumno o alumna pide ayuda*.\n\n"
@@ -747,7 +748,7 @@ msgstr "Si se ha comentado la situación con el personal o con la dirección del
 "Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Contar siempre con *las ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:155
+#: lib/chatbot/graphs/urgent/school_graph.ex:155
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S5"
 msgstr "*Información sobre la discriminación:*\n\n"
@@ -762,7 +763,7 @@ msgstr "*Información sobre la discriminación:*\n\n"
 "Tienen oficinas regionales, un *teléfono gratuito de contacto urgente (021)*, un WhatsApp (628 860 507) y correo electrónico consejo-sei@igualdad.gob.es.\n\n"
 "Además, contar siempre con las *ONG y organizaciones de la zona que trabajan en defensa de los Derechos Humanos* y luchan contra el odio y la discriminación. Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:159
+#: lib/chatbot/graphs/urgent/school_graph.ex:159
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S6"
 msgstr "*Si ya se ha informado a una persona adulta de confianza y a los responsables de tu centro de estudios y no se toman acciones en consecuencia, seguir los siguientes pasos:*\n\n"
@@ -774,7 +775,7 @@ msgstr "*Si ya se ha informado a una persona adulta de confianza y a los respons
 "Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Contar siempre con *las ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:161
+#: lib/chatbot/graphs/urgent/school_graph.ex:161
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S7"
 msgstr "*Si se ha contactado tanto con un familiar o persona de confianza como con los responsables del centro de estudios y se han tomado acciones, pero no son suficientes o el problema continúa desarrollándose, puedes apoyarte en otros recursos que existen a tu disposición.*\n\n"
@@ -786,7 +787,7 @@ msgstr "*Si se ha contactado tanto con un familiar o persona de confianza como c
 "Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "5. Contar siempre con *las ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir allí para exponer el caso y pedirles acompañamiento."
 
-#: lib/chatbot/graphs/school_graph.ex:163
+#: lib/chatbot/graphs/urgent/school_graph.ex:163
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S8"
 msgstr "*Si aún no se ha hablado con un adulto, otro profesor o responsable del centro, lo primero que debes hacer es:*\n\n"
@@ -795,7 +796,7 @@ msgstr "*Si aún no se ha hablado con un adulto, otro profesor o responsable del
 "3. *Acudir a otra persona del centro de estudios* del profesorado o de la dirección.\n\n"
 "4. Explicar a esa persona de confianza que hay sitios que pueden ayudar: las personas del [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm) que atienden *gratis en el 021*, en el *WhatsApp 628 860 507* o en el correo consejo-sei@igualdad.gob.es; también *ONGs de derechos humanos* que pueden acompañar en la solución del problema."
 
-#: lib/chatbot/graphs/school_graph.ex:165
+#: lib/chatbot/graphs/urgent/school_graph.ex:165
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S9"
 msgstr "*Evaluar el contenido con relación al discurso de odio es un tema complejo y delicado.*\n\n"
@@ -804,39 +805,39 @@ msgstr "*Evaluar el contenido con relación al discurso de odio es un tema compl
 "Acude con esta prueba al [formulario de denuncias del CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) para que pueda evaluar si, efectivamente, este contenido puede ser considerado como delito de odio.\n\n"
 "*Incluye todos los detalles que puedas* sobre el centro educativo, el material que tiene el contenido, la formación o asignatura, la edad del alumnado y cuál consideras que es el motivo de la discriminación (raza, religión, sexo, etc.)."
 
-#: lib/chatbot/graphs/school_graph.ex:88
+#: lib/chatbot/graphs/urgent/school_graph.ex:88
 #, elixir-autogen, elixir-format
 msgid "SECRETARY"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:17
-#: lib/chatbot/graphs/school_graph.ex:46
+#: lib/chatbot/graphs/urgent/school_graph.ex:17
+#: lib/chatbot/graphs/urgent/school_graph.ex:46
 #, elixir-autogen, elixir-format
 msgid "TEACHER"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:103
+#: lib/chatbot/graphs/urgent/school_graph.ex:103
 #, elixir-autogen, elixir-format
 msgid "TUITION"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:103
-#: lib/chatbot/graphs/school_graph.ex:110
+#: lib/chatbot/graphs/urgent/school_graph.ex:103
+#: lib/chatbot/graphs/urgent/school_graph.ex:110
 #, elixir-autogen, elixir-format
 msgid "UNEQUAL TREATMENT"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:19
+#: lib/chatbot/graphs/urgent/transport_graph.ex:19
 #, elixir-autogen, elixir-format
 msgid "AMBULANCE"
 msgstr ""
 
-#: lib/chatbot/graphs/commerce_graph.ex:20
+#: lib/chatbot/graphs/urgent/commerce_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE_Q1"
 msgstr ""
 
-#: lib/chatbot/graphs/commerce_graph.ex:31
+#: lib/chatbot/graphs/urgent/commerce_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE_S1"
 msgstr "En una tienda o comercio puedes experimentar diferentes situaciones de discriminación que repercuten en la atención que estás recibiendo por parte del personal. *Aquí te mostramos algunas de ellas:*\n\n"
@@ -862,7 +863,7 @@ msgstr "En una tienda o comercio puedes experimentar diferentes situaciones de d
 "Si quieres realizar otro tipo de acción contra la discriminación sufrida, puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es o en el [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "Recuerda que siempre puedes contar con las ONG y organizaciones de la zona que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión... Acude para exponer el caso y pedir acompañamiento."
 
-#: lib/chatbot/graphs/commerce_graph.ex:33
+#: lib/chatbot/graphs/urgent/commerce_graph.ex:33
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE_S2"
 msgstr "En primer lugar, trata de mantener la calma y evaluar la situación de manera objetiva. A veces, puede haber malentendidos o razones legítimas para diferencias en precios, por ello, es fundamental que verifiques si el precio del producto es el anunciado.\n\n"
@@ -885,67 +886,67 @@ msgstr "En primer lugar, trata de mantener la calma y evaluar la situación de m
 "Puedes llevar este material a una ONGs especializada como Ecos do Sur.\n\n"
 "También puedes llamar al Consejo para la Eliminación de la Discriminación Racial o Étnica. [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es. Recuerda que siempre puedes contar con las ONG y organizaciones de la zona que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza o religión... Acude para exponer el caso y pedir acompañamiento."
 
-#: lib/chatbot/graphs/transport_graph.ex:29
+#: lib/chatbot/graphs/urgent/transport_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "DENIAL"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:18
+#: lib/chatbot/graphs/urgent/transport_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "PRIVATE"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:18
+#: lib/chatbot/graphs/urgent/transport_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "PUBLIC"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:19
+#: lib/chatbot/graphs/urgent/transport_graph.ex:19
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL BUS"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:22
+#: lib/chatbot/graphs/urgent/transport_graph.ex:22
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_Q1"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:31
+#: lib/chatbot/graphs/urgent/transport_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_Q2"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:47
+#: lib/chatbot/graphs/urgent/transport_graph.ex:47
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:49
+#: lib/chatbot/graphs/urgent/transport_graph.ex:49
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:51
+#: lib/chatbot/graphs/urgent/transport_graph.ex:51
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:53
+#: lib/chatbot/graphs/urgent/transport_graph.ex:53
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_S4"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:55
+#: lib/chatbot/graphs/urgent/transport_graph.ex:55
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/transport_graph.ex:57
+#: lib/chatbot/graphs/urgent/transport_graph.ex:57
 #, elixir-autogen, elixir-format, fuzzy
 msgid "TRANSPORT_S6"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:17
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "ADULT"
 msgstr ""
@@ -955,17 +956,17 @@ msgstr ""
 msgid "Any suggestions or comments that you would like to write?"
 msgstr ""
 
-#: lib/chatbot/graphs/person_work_graph.ex:17
+#: lib/chatbot/graphs/urgent/person_work_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "BAD BEHAVIOR"
 msgstr "Mal Comportamiento"
 
-#: lib/chatbot/graphs/work_graph.ex:32
+#: lib/chatbot/graphs/urgent/work_graph.ex:32
 #, elixir-autogen, elixir-format
 msgid "BOSS"
 msgstr "Jefe / Jefa"
 
-#: lib/chatbot/graphs/person_school_graph.ex:27
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:27
 #, elixir-autogen, elixir-format
 msgid "BULLYING"
 msgstr ""
@@ -975,8 +976,8 @@ msgstr ""
 msgid "Birth Location? (COUNTRY)"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:61
-#: lib/chatbot/graphs/work_graph.ex:65
+#: lib/chatbot/graphs/urgent/work_graph.ex:61
+#: lib/chatbot/graphs/urgent/work_graph.ex:65
 #, elixir-autogen, elixir-format
 msgid "DISTINCTIVE TREATMENT"
 msgstr "Trato Distintivo"
@@ -992,37 +993,37 @@ msgstr "Por favor, describe que ha pasado en un único mensaje."
 msgid "Do you want to add a review?"
 msgstr "Quieres añadir una reseña?"
 
-#: lib/chatbot/graphs/work_graph.ex:17
+#: lib/chatbot/graphs/urgent/work_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "EMPLOYEE"
 msgstr "Trabajo en la Empresa"
 
-#: lib/chatbot/graphs/home_graph.ex:38
+#: lib/chatbot/graphs/urgent/home_graph.ex:38
 #, elixir-autogen, elixir-format
 msgid "EVICTION"
 msgstr "Desahucio"
 
-#: lib/chatbot/graphs/work_graph.ex:65
+#: lib/chatbot/graphs/urgent/work_graph.ex:65
 #, elixir-autogen, elixir-format
 msgid "EXPLOITATION"
 msgstr "Explotación"
 
-#: lib/chatbot/graphs/home_graph.ex:20
+#: lib/chatbot/graphs/urgent/home_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q1"
 msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/home_graph.ex:31
+#: lib/chatbot/graphs/urgent/home_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q2"
 msgstr "Con quién es el problema?"
 
-#: lib/chatbot/graphs/home_graph.ex:78
+#: lib/chatbot/graphs/urgent/home_graph.ex:78
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q3"
 msgstr "Cuál es el problema?"
 
-#: lib/chatbot/graphs/home_graph.ex:63
+#: lib/chatbot/graphs/urgent/home_graph.ex:63
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S1"
 msgstr "Las rentas del alquiler pueden subir *una vez cada año, y la cantidad depende de lo que se haya establecido en el contrato*. Normalmente, se trata de un porcentaje que corresponde con el incremento del IPC.\n\n"
@@ -1041,7 +1042,7 @@ msgstr "Las rentas del alquiler pueden subir *una vez cada año, y la cantidad d
 "- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
 "- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/home_graph.ex:65
+#: lib/chatbot/graphs/urgent/home_graph.ex:65
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S2"
 msgstr "Un contrato de alquiler *puede ser cancelado legalmente* por cualquiera de las dos partes antes de su vencimiento.\n\n"
@@ -1067,7 +1068,7 @@ msgstr "Un contrato de alquiler *puede ser cancelado legalmente* por cualquiera 
 "- La asociación *Provivienda* está especializada en atender casos de discriminación residencial en toda España. Puedes contactar a través del mail PNDRESTATAL@provivienda.org y de su [buzón contra la Discriminación](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
 "- El Consejo para la Eliminación de la Discriminación Racial y Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) es un organismo de Gobierno gestionado por ONGs, especializado en asesoría y mediación. Puedes contactar a través de una llamada gratuita en el 021 o WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/home_graph.ex:67
+#: lib/chatbot/graphs/urgent/home_graph.ex:67
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S3"
 msgstr "Si en el edificio en el que vives estás *sufriendo reiteradamente alguna de estas situaciones* causada por otras personas residentes:\n\n"
@@ -1096,7 +1097,7 @@ msgstr "Si en el edificio en el que vives estás *sufriendo reiteradamente algun
 "- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado.\n\n"
 "- Policía Local, Nacional o Guardia Civil."
 
-#: lib/chatbot/graphs/home_graph.ex:69
+#: lib/chatbot/graphs/urgent/home_graph.ex:69
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S4"
 msgstr "Si has contactado con un anuncio de alquiler de vivienda y en el primer momento te han comunicado unas condiciones determinadas, como el precio, el importe de la fianza o los requisitos para alquilar.\n\n"
@@ -1122,7 +1123,7 @@ msgstr "Si has contactado con un anuncio de alquiler de vivienda y en el primer 
 "- Otras asociaciones que luchan contra la discriminación: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
 "- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado."
 
-#: lib/chatbot/graphs/home_graph.ex:71
+#: lib/chatbot/graphs/urgent/home_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S5"
 msgstr "Si has contactado con un anuncio de alquiler de vivienda y en algún momento del (conversación telefónica, visita al piso, gestiones previas a la firma del contrato) la persona propietaria o la inmobiliaria *no te quiere alquilar, aunque cumples con los requisitos.*\n\n"
@@ -1156,110 +1157,110 @@ msgstr ""
 msgid "In which CA did it happen?"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:17
+#: lib/chatbot/graphs/urgent/work_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "JOB CANDIDATE"
 msgstr "Quiero trabajar en la Empresa"
 
-#: lib/chatbot/graphs/home_graph.ex:28
+#: lib/chatbot/graphs/urgent/home_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "LANDLORD"
 msgstr "PERSONA PROPIETARIA"
 
-#: lib/chatbot/graphs/work_graph.ex:42
+#: lib/chatbot/graphs/urgent/work_graph.ex:42
 #, elixir-autogen, elixir-format
 msgid "MARGINALIZATION"
 msgstr "Trato hostil, discriminación y marginación no constante (discriminación)"
 
-#: lib/chatbot/graphs/school_graph.ex:35
+#: lib/chatbot/graphs/urgent/school_graph.ex:35
 #, elixir-autogen, elixir-format
 msgid "PARENT"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:57
+#: lib/chatbot/graphs/urgent/work_graph.ex:57
 #, elixir-autogen, elixir-format
 msgid "REJECTION"
 msgstr "Discriminación en la selección de personal"
 
-#: lib/chatbot/graphs/home_graph.ex:40
+#: lib/chatbot/graphs/urgent/home_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "RENT DENIAL"
 msgstr "Rechazo"
 
-#: lib/chatbot/graphs/person_school_graph.ex:20
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_Q1"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:57
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:57
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_Q2"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:42
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:42
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:44
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:44
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:46
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:46
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:48
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:48
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_S4"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:50
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:50
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_PER_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/school_graph.ex:38
+#: lib/chatbot/graphs/urgent/school_graph.ex:38
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_Q7"
 msgstr "Eres un estudiante o un familiar?"
 
-#: lib/chatbot/graphs/school_graph.ex:185
+#: lib/chatbot/graphs/urgent/school_graph.ex:185
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S19"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:27
-#: lib/chatbot/graphs/person_school_graph.ex:29
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:27
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "SEXUAL_HARASSMENT"
 msgstr ""
 
-#: lib/chatbot/graphs/person_school_graph.ex:17
-#: lib/chatbot/graphs/school_graph.ex:35
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:17
+#: lib/chatbot/graphs/urgent/school_graph.ex:35
 #, elixir-autogen, elixir-format
 msgid "STUDENT"
 msgstr ""
 
-#: lib/chatbot/graphs/work_graph.ex:42
+#: lib/chatbot/graphs/urgent/work_graph.ex:42
 #, elixir-autogen, elixir-format
 msgid "TASK DISTRIBUTION"
 msgstr "Trato injusto, hostil y/o marginación reiterado constante (acoso)"
 
-#: lib/chatbot/graphs/home_graph.ex:17
+#: lib/chatbot/graphs/urgent/home_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "TENANT"
 msgstr "Soy Inquilino/a"
 
-#: lib/chatbot/graphs/person_work_graph.ex:17
+#: lib/chatbot/graphs/urgent/person_work_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "THEFT"
 msgstr "Robo o ataque contra la propiedad"
 
-#: lib/chatbot/graphs/person_school_graph.ex:27
-#: lib/chatbot/graphs/person_school_graph.ex:29
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:27
+#: lib/chatbot/graphs/urgent/person_school_graph.ex:29
 #, elixir-autogen, elixir-format
 msgid "VIOLENCE"
 msgstr ""
@@ -1269,22 +1270,22 @@ msgstr ""
 msgid "Value the bot with the following stars:"
 msgstr ""
 
-#: lib/chatbot/graphs/home_graph.ex:17
+#: lib/chatbot/graphs/urgent/home_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "WANT TO RENT"
 msgstr "Quiero Alquilar o comprar"
 
-#: lib/chatbot/graphs/work_graph.ex:32
+#: lib/chatbot/graphs/urgent/work_graph.ex:32
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORKER"
 msgstr "Otro Trabajador/a"
 
-#: lib/chatbot/graphs/person_work_graph.ex:20
+#: lib/chatbot/graphs/urgent/person_work_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "WORK_PER_Q1"
 msgstr "Qué está sucediendo?"
 
-#: lib/chatbot/graphs/person_work_graph.ex:31
+#: lib/chatbot/graphs/urgent/person_work_graph.ex:31
 #, elixir-autogen, elixir-format
 msgid "WORK_PER_S1"
 msgstr "*Si estás en tu puesto de trabajo y un cliente u otra persona sin relación laboral contigo te ha agredido verbalmente:* insultos, amenazas, acoso, acusación de delitos que no has cometido, etc.\n\n"
@@ -1311,7 +1312,7 @@ msgstr "*Si estás en tu puesto de trabajo y un cliente u otra persona sin relac
 "⚠️*Atención*⚠️ La libertad de expresión ampara algunos tipos de expresiones desagradables, racistas, xenófobas e islamófobas.\n\n"
 "Los casos pueden variar mucho. Si quieres asegurarte de que tu caso concreto se considera delito o discriminación, y por lo tanto es sancionable, puedes acudir al centro de asistencia del Consejo para la Eliminación de la Discriminación Racial y Étnica ([aquí](https://igualdadynodiscriminacion.igualdad.gob.es/home.do))(https://igualdadynodiscriminacion.igualdad.gob.es/home.do) y a las ongs de tu zona para que te asesoren."
 
-#: lib/chatbot/graphs/person_work_graph.ex:33
+#: lib/chatbot/graphs/urgent/person_work_graph.ex:33
 #, elixir-autogen, elixir-format
 msgid "WORK_PER_S2"
 msgstr "*Si estás en tu puesto de trabajo y un cliente u otra persona sin relación laboral contigo ha atacado tus pertenencias: robos, vandalismo, destrozos…*\n\n"
@@ -1336,27 +1337,27 @@ msgstr "*Si estás en tu puesto de trabajo y un cliente u otra persona sin relac
 "Puedes recibir atención jurídica, social y psicológica en las *Oficinas de Asistencia a Víctimas* que hay en los juzgados de tu provincia.\n\n"
 "Puedes presentar tu denuncia en la policía o en las Fiscalías especializadas en delitos de odio y discriminación que hay que cada provincia de España.\n\n"
 
-#: lib/chatbot/graphs/work_graph.ex:20
+#: lib/chatbot/graphs/urgent/work_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q1"
 msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/work_graph.ex:35
+#: lib/chatbot/graphs/urgent/work_graph.ex:35
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q2"
 msgstr "Con quién es el problema?"
 
-#: lib/chatbot/graphs/work_graph.ex:93
+#: lib/chatbot/graphs/urgent/work_graph.ex:93
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q3"
 msgstr "Cuál es el problema?"
 
-#: lib/chatbot/graphs/work_graph.ex:45
+#: lib/chatbot/graphs/urgent/work_graph.ex:45
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_Q4"
 msgstr "En qué se basa el trato distintivo que identificas?"
 
-#: lib/chatbot/graphs/work_graph.ex:78
+#: lib/chatbot/graphs/urgent/work_graph.ex:78
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S1"
 msgstr "Situaciones como estas, cuando se producen en el desarrollo de un trabajo de forma reiterada o continuada, *pueden considerarse explotación laboral*.\n\n"
@@ -1383,7 +1384,7 @@ msgstr "Situaciones como estas, cuando se producen en el desarrollo de un trabaj
 "-También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide. Aquí puedes encontrar los recursos disponibles cerca de ti para ayudarte antes, durante y después de todo el proceso."
 
-#: lib/chatbot/graphs/work_graph.ex:80
+#: lib/chatbot/graphs/urgent/work_graph.ex:80
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S2"
 msgstr "Si en tu lugar de trabajo cualquier persona del equipo, *con intención de dañarte y de forma reiterada y constante*, realiza algunos de los siguientes actos contra ti:\n\n"
@@ -1403,7 +1404,7 @@ msgstr "Si en tu lugar de trabajo cualquier persona del equipo, *con intención 
 "4. Trata de recordar y apuntar cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas, comentarios sobre tu origen, aspecto físico, costumbres culturales. Apunta el lugar, la fecha y los detalles.\n\n"
 "5. Si hay alguien que pueda atestiguar tu situación, por ejemplo miembros del equipo de trabajo que hayan presenciado actos de acoso o comentarios discriminatorios, recaba sus datos por si es necesario contar con su testimonio más adelante.\n\n"
 
-#: lib/chatbot/graphs/work_graph.ex:82
+#: lib/chatbot/graphs/urgent/work_graph.ex:82
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S3"
 msgstr "Si en algún momento, desarrollando tu puesto de trabajo, otras personas del equipo te han sometido a *tratos diferenciados y hostiles por causa de tu país de origen, etnia o religión*, como por ejemplo:\n\n"
@@ -1427,7 +1428,7 @@ msgstr "Si en algún momento, desarrollando tu puesto de trabajo, otras personas
 "- Asociaciones expertas: como Ecos do Sur, ACCEM, SOS Racismo o Fundación Secretariado Gitano, entre otras. Están distribuidas por todo el territorio nacional.\n\n"
 "- Oficinas de Asistencia a Víctimas en todas las fiscalías provinciales del Estado."
 
-#: lib/chatbot/graphs/work_graph.ex:84
+#: lib/chatbot/graphs/urgent/work_graph.ex:84
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S4"
 msgstr "*Creo que estoy siendo víctima de trabajo forzado*\n\n"
@@ -1440,23 +1441,23 @@ msgstr "*Creo que estoy siendo víctima de trabajo forzado*\n\n"
 "Lo primero: es muy importante que te pongas a salvo. Si te encuentras en peligro ahora mismo (enlaza con initial, riesgo)\n\n"
 "Si no te encuentras en riesgo inminente y estás pensando en denunciar la situación de trabajo forzado, acude lo antes posible a la oficina de una organización de tu zona que ofrezca asesoría legal en temas laborales o de discriminación. Te ayudarán a decidir la mejor forma para denunciar según tu caso concreto."
 
-#: lib/chatbot/graphs/work_graph.ex:86
+#: lib/chatbot/graphs/urgent/work_graph.ex:86
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/hospital_graph.ex:18
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "HOSPITAL SERVICE DENIAL"
 msgstr " Niegan Atención Médica"
 
-#: lib/chatbot/graphs/work_graph.ex:61
-#: lib/chatbot/graphs/work_graph.ex:65
+#: lib/chatbot/graphs/urgent/work_graph.ex:61
+#: lib/chatbot/graphs/urgent/work_graph.ex:65
 #, elixir-autogen, elixir-format
 msgid "FORCED WORK"
 msgstr "Trabajo Forzado"
 
-#: lib/chatbot/graphs/work_graph.ex:80
+#: lib/chatbot/graphs/urgent/work_graph.ex:80
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_S2_1"
 msgstr "----------------------------------------\n"
@@ -1468,17 +1469,17 @@ msgstr "----------------------------------------\n"
 "4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."
 
-#: lib/chatbot/graphs/hospital_graph.ex:56
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "ALTA"
 msgstr "Estoy dado/a de alta"
 
-#: lib/chatbot/graphs/hospital_graph.ex:58
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:58
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q4"
 msgstr "Cuál es tu situación?"
 
-#: lib/chatbot/graphs/hospital_graph.ex:105
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:105
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S5"
 msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 días)\n\n"
@@ -1492,7 +1493,7 @@ msgstr "*QUÉ HACER SI ESTÁS EN SITUACIÓN DE ESTANCIA TEMPORAL* (menos de 90 d
 "4. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos.\n\n"
 "Si un día necesitas atención en un Centro sanitario diferente al tuyo habitual (como las urgencias de un hospital), deberás aportar ese código para demostrar que tienes derecho a la atención y evitar que te pasen los costes. También ayuda a solucionar problemas en el caso de que escriban mal tu nombre.\n\n"
 
-#: lib/chatbot/graphs/hospital_graph.ex:109
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:109
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S6"
 msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
@@ -1502,7 +1503,7 @@ msgstr "*QUÉ HACER SI ESTÁS SIN PERMISO DE RESIDENCIA (más de 90 días)*\n\n"
 "4. *El alta en el Sistema Sanitario debe incluir la prestación farmacéutica*, de modo que sólo tendrás que aportar el 40% del precio de los medicamentos."
 "5. *Si consigues que te den de alta* en el Sistema Sanitario de tu comunidad *pide un documento que lo demuestre o  tu Código de Identificación Autonómico (código CIPA)*. Es el número que te identifica dentro del Sistema Sanitario, y al que se asocian tus datos médicos."
 
-#: lib/chatbot/graphs/hospital_graph.ex:113
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:113
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_S7"
 msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
@@ -1516,32 +1517,32 @@ msgstr "*QUÉ HACER SI YA ESTABA DE ALTA Y ME NIEGAN LA ATENCIÓN*\n\n"
 "6. *Denuncia en los juzgados*. [Consulta aquí los juzgados de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es). En este caso, recomendamos *visitar una ONG de derechos humanos o asesorarse en el* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): "
 "para casos de urgencia en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-#: lib/chatbot/graphs/hospital_graph.ex:56
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "NO RESIDENCE"
 msgstr "Sin permiso de Residencia"
 
-#: lib/chatbot/graphs/hospital_graph.ex:56
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:56
 #, elixir-autogen, elixir-format
 msgid "TEMPORAL"
 msgstr "Estancia temporal (< 90 días)"
 
-#: lib/chatbot/graphs/commerce_graph.ex:17
+#: lib/chatbot/graphs/urgent/commerce_graph.ex:17
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE PROBLEMS"
 msgstr "Diferentes problemas en la atención"
 
-#: lib/chatbot/graphs/faq_graph.ex:26
+#: lib/chatbot/graphs/faq/faq_graph.ex:27
 #, elixir-autogen, elixir-format
 msgid "FAQ"
 msgstr "Preguntas frecuentes"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:24
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:24
 #, elixir-autogen, elixir-format
 msgid "FAQ_HEALTHCARE"
 msgstr "Preguntas frecuentes de Sanidad"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:38
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:38
 #, elixir-autogen, elixir-format
 msgid "FAQ_HEALTHCARE_S1"
 msgstr "*Los derechos básicos:*\n\n"
@@ -1563,7 +1564,7 @@ msgstr "*Los derechos básicos:*\n\n"
 "[Si tengo permiso por razones humanitarias de sanidad](https://yosisanidaduniversal.net/conseguir-asistencia/si-tengo-permiso-por-razones-humanitarias-de-enfermedad)\n\n"
 "[Si he emigrado fuera de España](https://mareagranate.org/2015/04/guia-sanitaria-para-personas-emigrantes-2/)"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:40
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "FAQ_HEALTHCARE_S2"
 msgstr "Puedes reclamar *cualquier mala atención* en el servicio de Atención al Paciente.\n\n"
@@ -1575,7 +1576,7 @@ msgstr "Puedes reclamar *cualquier mala atención* en el servicio de Atención a
 "También puedes reclamar a través del [Defensor del Pueblo](https://www.defensordelpueblo.es/).\n\n"
 "Los *casos más graves que causen problemas de salud o incluso mortalidad*, debes denunciarlos en los juzgados. [Consulta aquí los de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&lang=es_es)."
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:43
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:43
 #, elixir-autogen, elixir-format
 msgid "FAQ_HEALTHCARE_S3"
 msgstr "*Atención al Paciente es un servicio gratuito* que hay en los centros de salud y en los hospitales para atender a las personas que son pacientes.\n\n"
@@ -1592,7 +1593,7 @@ msgstr "*Atención al Paciente es un servicio gratuito* que hay en los centros d
 "- Otros detalles y documentación necesaria que sirva para facilitar la gestión del asunto. Por ejemplo: diagnóstico, pruebas médicas, etc. que ayuden a entender tu caso.\n\n"
 "*Debes quedarte con una copia* de la hoja que esté sellada por la persona que la recibe."
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:49
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "FAQ_HEALTHCARE_S4"
 msgstr "*Mantén la calma.* Existen formas de evitar que llegue una factura y también de reclamar si llega para no tener que pagarla.\n\n"
@@ -1600,7 +1601,7 @@ msgstr "*Mantén la calma.* Existen formas de evitar que llegue una factura y ta
 "*Si desde el mostrador se pide que se firme un compromiso de pago*, puedes intentar negarte o firmar como “no conforme”, para contar así con un documento para la futura reclamación por la factura que llegará.\n\n"
 "Para consultar los modelos de reclamación de facturas según diferentes situaciones de exclusión, puedes consultar el apartado *“1. Tus derechos como paciente”* Ahí tienes información para que te den de alta en el servicio sanitario universal y evitar que te cobren la asistencia sanitaria."
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:51
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:51
 #, elixir-autogen, elixir-format
 msgid "FAQ_HEALTHCARE_S5"
 msgstr "[Información sobre trámites para solicitar la asistencia sanitaria en cada Comunidad Autónoma](https://yosisanidaduniversal.net/procedimientos-comunidades-autonomas)\n\n"
@@ -1613,12 +1614,12 @@ msgstr "[Información sobre trámites para solicitar la asistencia sanitaria en 
 "----------------------------------------\n"
 "Reclamaciones judiciales: [listado de fiscalías por localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&tipo=FIS&lang=es_es)"
 
-#: lib/chatbot/graphs/faq_graph.ex:22
+#: lib/chatbot/graphs/faq/faq_graph.ex:22
 #, elixir-autogen, elixir-format
 msgid "HEALTHCARE"
 msgstr "Sanidad"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:43
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:43
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_S3_1"
 msgstr "Cada *Comunidad Autónoma* de España tiene su propia hoja de reclamación en sanidad. Consulta la que te interese para más información sobre salud y trámites en tu región:\n\n"
@@ -1642,118 +1643,118 @@ msgstr "Cada *Comunidad Autónoma* de España tiene su propia hoja de reclamaci�
 "- *La Rioja –* [Consejería de Salud y Servicios Sociales](http://www.riojasalud.es/)\n\n"
 "- *Valencia –* [Consejería de Sanidad](http://www.san.gva.es/)"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:17
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:17
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_Q1"
 msgstr "Tus derechos como paciente"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:18
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:18
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_Q2"
 msgstr "Qué reclamar y dónde"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:19
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:19
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_Q3"
 msgstr "Cómo poner una reclamación"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:20
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_Q4"
 msgstr "Qué hago si me llega una factura"
 
-#: lib/chatbot/graphs/faq_healthcare_graph.ex:21
+#: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:21
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_Q5"
 msgstr "Más recursos de ayuda"
 
-#: lib/chatbot/graphs/hospital_graph.ex:71
+#: lib/chatbot/graphs/urgent/hospital_graph.ex:71
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOSPITAL_Q5"
 msgstr "Quieres información sobre como poner una hoja de reclamaciones?"
 
-#: lib/chatbot/graphs/home_graph.ex:38
-#: lib/chatbot/graphs/home_graph.ex:40
+#: lib/chatbot/graphs/urgent/home_graph.ex:38
+#: lib/chatbot/graphs/urgent/home_graph.ex:40
 #, elixir-autogen, elixir-format
 msgid "CHANGE OF CONDITIONS"
 msgstr "Cambio de condiciones"
 
-#: lib/chatbot/graphs/home_graph.ex:28
+#: lib/chatbot/graphs/urgent/home_graph.ex:28
 #, elixir-autogen, elixir-format
 msgid "COMMUNITY"
 msgstr "COMUNIDAD DE VECINOS"
 
-#: lib/chatbot/graphs/home_graph.ex:52
+#: lib/chatbot/graphs/urgent/home_graph.ex:52
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_Q4"
 msgstr "¿Quieres saber qué recursos hay en tu comunidad autónoma?"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:20
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:20
 #, elixir-autogen, elixir-format
 msgid "ANDALUCIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:21
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:21
 #, elixir-autogen, elixir-format
 msgid "ARAGON"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:22
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:22
 #, elixir-autogen, elixir-format
 msgid "ASTURIAS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:32
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:32
 #, elixir-autogen, elixir-format
 msgid "BALLEARS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:24
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:24
 #, elixir-autogen, elixir-format
 msgid "CANARIAS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:23
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:23
 #, elixir-autogen, elixir-format
 msgid "CANTABRIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:35
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:35
 #, elixir-autogen, elixir-format
 msgid "CASTILLA LA MANCHA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:36
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:36
 #, elixir-autogen, elixir-format
 msgid "CASTILLA LEON"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:19
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:19
 #, elixir-autogen, elixir-format
 msgid "CATALUNYA"
 msgstr "CATALUNYA"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:33
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:33
 #, elixir-autogen, elixir-format
 msgid "CEUTA Y MELILLA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:25
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:25
 #, elixir-autogen, elixir-format
 msgid "COM. VALENCIANA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:30
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:30
 #, elixir-autogen, elixir-format
 msgid "EUSKADI"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:34
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:34
 #, elixir-autogen, elixir-format
 msgid "EXTREMADURA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:73
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:73
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ANDALUCIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1777,7 +1778,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO ANDALUCÍA: Oficina de información y Denuncia (OID)  C/ Jesús María 6, 6º-4ª - 14003 CÓRDOBA | (+34) 957 485 735 | info@sosracismo.eu\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada   C/ del Amor 6 04005 Almería | Tel.: 950 237 342 | almeria@accem.es"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:75
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:75
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ARAGON"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1793,7 +1794,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO ARAGÓN Oficina de Información y Denuncia: Travesía de Funes, 8, 50014, Zaragoza | Tfno.: +34 976 290 214 | denuncias@sosracismoaragon.es\n\n"
 "- CEPAÍM: Avenida de Madrid 7-9, local 7 CP 50004, Zaragoza. | Teléfono: 876 642 998 | zaragoza@cepaim.org"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:77
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:77
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ASTURIAS"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1801,7 +1802,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- FISCALÍA: Oviedo: Carlos López Otín, 3 | Teléfono: 985968920\n\n"
 "- CEDRE: GIJÓN - ACCEM | Correo electrónico: gijon@accem.es | Dirección: C/ Saavedra 4, oficina 1. 33208 Gijón | Teléfono: 985 16 56 77\n\n"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:97
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:97
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_BALLEARS"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1812,7 +1813,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > C. d’Eusebi Estada, 48, bjs. Palma de Mallorca | 971 764 588\n\n"
 "\t > Centre Flassaders | C. de la Ferreria, 10, 4t pis @ 971 228 756 / 699 029 046"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:81
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:81
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANARIAS"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1824,7 +1825,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > LAS PALMAS DE GRAN CANARIA - CEAR | Correo electrónico: discriminacion@cear.es | Dirección: Avda. Escaleritas, 66, 35011 – Las Palmas de Gran Canaria |Teléfono: 680 68 95 90\n\n"
 "\t > TENERIFE - CRUZ ROJA | Correo electrónico: savdlaguna@cruzroja.es | Dirección: C/ Hermanos Marrero, 2 (Trasera Iglesia de la Concepción). 38203 San Cristóbal de La Laguna, Tenerife. | Teléfono: 649 97 03 71"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:79
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:79
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANTABRIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1832,7 +1833,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- FISCALÍA: Santander -> Avda. Pedro San Martín, s/n | Teléfono: 942357101\n\n"
 "- CEDRE: SANTANDER - MPDL | Correo electrónico: victimasdiscriminacioncantabria@mpdl.org | Dirección: C/ Tres de noviembre 24, bajo derecha. 39010 Santander. | Teléfono: 942 37 63 05"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:103
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:103
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CASTILLA_LA_MANCHA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1849,7 +1850,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- GUADA ACOGE: Avenida Venezuela, Nº 9, 1º 19005 Guadalajara | guada.acoge@redacoge.org | 949 25 30 76 / 949 21 58 35\n\n"
 "- ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia. | C/ Carmen 35. Bajo. 02005 Albacete | Tel.: 967 979 583"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:105
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:105
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CASTILLA_LEON"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1875,7 +1876,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Pasaje la Marquesina, 7 47004 Valladolid | Teléfono: 983 507 177 |Correo electrónico: progestioncyl@progestion.org\n\n"
 "- CEPAÍM: Calle San Patricio, 5-7 CP 37002, Salamanca | Teléfono: 923 314 142 | Correo: salamanca@cepaim.org."
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:71
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:71
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CATALUNYA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1896,7 +1897,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- BAYT AL THAQAFA: Calle Princesa, 14, primer cp. 08003, Barcelona | +34 93 319 88 69 | info@bayt-al-thaqafa.org\n\n"
 "- CEPAIM: Carrer de Sant Pau, 80, Barcelona | Teléfono: 93 487 38 16 | barcelona@cepaim.org"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:99
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:99
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CEUTA_Y_MELILLA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1914,7 +1915,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- ANDALUCÍA ACOGE: Delegación Ceuta: C/ Verlarde nº 32, BAJO C.P. 51001 CEUTA | Teléfono: 955697404/ 683138216 | E-mail: ceuta@acoge.org\n\n"
 "- MELILLA ACOGE: C/ Cataluña, 57. 1º 57006 Melilla | Tlfno. 952 670 893 | E-mail: melilla@acoge.org\n\n"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:83
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:83
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_COM_VALENCIANA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1924,7 +1925,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > Castellón: Bulevar Blasco Ibañez, 10 | Teléfono: 964621866 | csfi00_cas@gva.es\n\n"
 "\t > Lleida: Canyeret, 1 | 973705840 | lleida.fiscalia.oficina@xij.gencat.cat\n\n"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:93
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:93
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EUSKADI"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1944,7 +1945,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO GIPUKKOA: P. Zarategi 100 – Txara 1, sótano - 20015 Donostia (Intxaurrondo) | (+34) 943 24 56 26 (+34) 943 24 56 27 | sos.gipuzkoa@sosracismo.eu\n\n"
 "- ZEHAR: 944 059 566, enviando un mail a info@zehar.eus"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:101
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:101
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EXTREMADURA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1956,7 +1957,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > Badajoz:  José Caldito Ruiz esq. C/ Esteban Sánchez | Teléfono: 924284252 | fiscalia.badajoz@fiscal.es\n\n"
 "- CEDRE: MÉRIDA - Fundación CEPAIM | Correo electrónico: merida@cepaim.org | Dirección: Avenida Reina Sofía, 1. 06800 Mérida (Badajoz) | Teléfono: 663 87 68 08"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:87
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:87
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_GALICIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1975,7 +1976,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > Vigo | vigo@sosracismogalicia.org | 986 917 325 | 678 811 714\n\n"
 "ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia | Av. de las Camelias 70, bajo 36211 Vigo (Pontevedra) | Tel.: 886 906 798 / 886 689 752 | vigo@accem.es"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:69
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:69
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_GENERAL"
 msgstr "*RACISMO, XENOFOBIA E ISLAMOFOBIA:*\n\n"
@@ -1998,7 +1999,7 @@ msgstr "*RACISMO, XENOFOBIA E ISLAMOFOBIA:*\n\n"
 "*ACCESO A LA SALUD:*\n\n"
 "- Médicos del Mundo España: Conde de Vilches, 1528028, Madrid | Teléfono 91 543 60 33 | email: ayuda@medicosdelmundo.org"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:95
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:95
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MADRID"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -2014,7 +2015,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada  C/ Magallanes 1, Entreplanta 28015 Madrid | Tel.: 915 327 478 / 915 327 479 | Fax: 915 460 915 | madrid@accem.es\n\n"
 "- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Dirección: c/ Manuel Fernández Caballero, 4 (Local) Madrid 28019 España | Teléfono: 91 471 97 19 | Correo electrónico: info@progestion.org | Equipo Jurídico: 608 773 900"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:85
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:85
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MURCIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -2030,7 +2031,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- MURCIA ACOGE: DELEGACIÓN MURCIA  | Teléfono: 968271652 | Email: murcia.nodiscriminacion@redacoge.org | Dirección: Calle Alberto Sevilla, Local 5, Bloque 1, Esc. 5. C.P. 30011, Murcia.\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada | C/ Ricardo Gil 5 30002 Murcia |Tel.: 968 268 427 / 968 977 945 | murcia@accem.es"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:89
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:89
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_NAVARRA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -2045,54 +2046,54 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "*ASOCIACIONES:*\n\n"
 "- SOS RACISMO NAFARROA: Telefono Fijo : 948211521 | Movil: 646337808 | E-mail: sosarrazakeria.nafarroa@gmail.com | Dirección: Calle de Zapatería, 31, 31001 Pamplona, Navarra"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:40
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:40
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RESOURCES"
 msgstr "*Elige una comunidad autónoma:*"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:91
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:91
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RIOJA"
 msgstr "- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.larioja.org/atencion-victimas/es/contacta)\n\n"
 "- FISCALÍAS: Logroño | Marqués de Murrieta, 45-47 | Teléfono: 941296414\n\n"
 "- CEDRE: LOGROÑO - Red ACOGE | Correo electrónico: lariojanodiscriminacion@redacoge.org | Dirección: C/ Villamediana, 16, Bajo. 26003 - Logroño (La Rioja) | Teléfono: 94 126 31 15 / 94 105 40 75"
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:27
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:27
 #, elixir-autogen, elixir-format
 msgid "GALICIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:18
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:18
 #, elixir-autogen, elixir-format
 msgid "GENERAL"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:31
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:31
 #, elixir-autogen, elixir-format
 msgid "MADRID"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:26
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:26
 #, elixir-autogen, elixir-format
 msgid "MURCIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:28
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:28
 #, elixir-autogen, elixir-format
 msgid "NAVARRA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_ca_resources.ex:29
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:29
 #, elixir-autogen, elixir-format
 msgid "RIOJA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_graph.ex:23
+#: lib/chatbot/graphs/faq/faq_graph.ex:23
 #, elixir-autogen, elixir-format, fuzzy
 msgid "RESOURCES"
 msgstr "Recursos por comunidad"
 
-#: lib/chatbot/graphs/person_graph.ex:14
+#: lib/chatbot/graphs/urgent/person_graph.ex:14
 #, elixir-autogen, elixir-format, fuzzy
 msgid "PERSON_S1"
 msgstr "A veces es complicado!\n\n"
@@ -2107,18 +2108,18 @@ msgstr "A veces es complicado!\n\n"
 "- Procura no dejarte llevar por las emociones: los insultos y gritos podrían escalar más situación.  El humor, al contrario, es una buena herramienta en estos casos.\n\n"
 "- Lo primero eres tú. Si este tipo de situaciones te generan un malestar que persiste,  es importante que tengas herramientas para hacerles frente. Contacta con Ecos do Sur y te facilitaremos algunos recursos!"
 
-#: lib/chatbot/graphs/faq_graph.ex:41
+#: lib/chatbot/graphs/faq/faq_graph.ex:43
 #, elixir-autogen, elixir-format
 msgid "CHATBOT_INFORMATION"
 msgstr "👋🏽 Ecosbot es el chatbot de la Asociación Ecos do Sur, una herramienta digital que te ayuda saber cómo abordar de manera efectiva diferentes situaciones de *discriminación por motivos religiosos, xenófobos o islamofóbicos*.\n\n"
 "Este chatbot es un espacio seguro y de apoyo donde las personas pueden recibir asesoramiento y recursos para abordar y combatir la discriminación en todas sus formas."
 
-#: lib/chatbot/graphs/faq_graph.ex:18
+#: lib/chatbot/graphs/faq/faq_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "CHATBOT_Q"
 msgstr "¿Qué información ofrece este Chatbot?"
 
-#: lib/chatbot/graphs/faq_graph.ex:43
+#: lib/chatbot/graphs/faq/faq_graph.ex:45
 #, elixir-autogen, elixir-format, fuzzy
 msgid "ECOS_INFORMATION"
 msgstr "[Ecos do Sur](https://www.ecosdosur.org/) es la mayor organización gallega dedicada a la defensa de las personas migrantes y refugiadas. Gracias al apoyo de socios, donantes e instituciones trabajamos para crear soluciones innovadoras y audaces para *terminar con las desigualdades* vinculadas al origen, la pobreza y el género, trabajando con honestidad, independencia y coraje.\n\n"
@@ -2127,12 +2128,12 @@ msgstr "[Ecos do Sur](https://www.ecosdosur.org/) es la mayor organización gall
 "La historia de Ecos do Sur es la de *más de 17.000 personas* a las que hemos respaldado en sus esfuerzos por mejorar sus vidas, las de sus familias y las de sus barrios y comunidades.\n\n"
 "Si quieres saber más, síguenos en nuestras redes sociales: [Facebook](https://www.facebook.com/ecosdosur/?locale=es_ES), [Linkedin](https://www.linkedin.com/company/ecos-do-sur/), [X](https://x.com/ecosdosur), [Instagram](https://www.instagram.com/ecosdosur/?hl=es), y, si te gusta lo que hacemos, [suscríbete a nuestro boletín](https://ecosdosur.us16.list-manage.com/subscribe?u=ae85a914e85fc95a3fdd3d172&id=9d0d48a5b1). "
 
-#: lib/chatbot/graphs/faq_graph.ex:19
+#: lib/chatbot/graphs/faq/faq_graph.ex:19
 #, elixir-autogen, elixir-format
 msgid "ECOS_Q"
 msgstr "¿Qué es Ecos do Sur?"
 
-#: lib/chatbot/graphs/faq_graph.ex:45
+#: lib/chatbot/graphs/faq/faq_graph.ex:47
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_DEF"
 msgstr "✔️ El *discurso de odio* consiste en fomentar, promover o incitar, directa o indirectamente, al odio, a la discriminación o a la violencia contra un grupo o contra una persona por motivos de odio racial, xenófobo, orientación sexual y otras formas de intolerancia.\n\n"
@@ -2144,12 +2145,12 @@ msgstr "✔️ El *discurso de odio* consiste en fomentar, promover o incitar, d
 "ℹ️ Ejemplo: Una agresión física motivada por islamofobia contra una mujer que lleva hiyab.\n\n"
 "Como ves, en estas definiciones *la clave es la motivación*. El rechazo a un colectivo tradicionalmente discriminado hace que las expresiones y delitos de odio sean especialmente peligrosos para la convivencia y los derechos."
 
-#: lib/chatbot/graphs/faq_graph.ex:20
+#: lib/chatbot/graphs/faq/faq_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_DEF_Q"
 msgstr "¿Que son discurso/delito odio y discriminación?"
 
-#: lib/chatbot/graphs/faq_graph.ex:47
+#: lib/chatbot/graphs/faq/faq_graph.ex:49
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_RS"
 msgstr "🤬 El discurso de odio no es un elemento nuevo, pero internet y las redes sociales han proporcionado una nueva plataforma, a menudo anónima, para la divulgación de ideologías que promueven el odio basado en la pertenencia, real o ficticia, a una raza, etnia, religión, nacionalidad, etc. Si te atacan en redes sociales por este motivo, aquí te dejamos algunos consejos:\n\n"
@@ -2160,7 +2161,69 @@ msgstr "🤬 El discurso de odio no es un elemento nuevo, pero internet y las re
 "5️⃣ *Apoya a las víctimas o busca apoyo:* Si el discurso de odio está dirigido hacia un individuo o grupo específico, muestra tu apoyo y solidaridad para ayudar a lidiar con esta situación. Si está dirigido hacia ti, busca apoyo. *Hay entidades, como Ecos do Sur en las que podemos ayudarte con ello.* Es importante que sepas que en los casos graves de discurso de odio (que involucren amenazas o incitación a la violencia), es clave que informes de lo que ocurre a las autoridades locales pertinentes. También puedes contactar con el Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es.\n\n"
 "➕ Si quieres saber más sobre cómo luchar contra el discurso del odio, puedes descargarte nuestra [Guía práctica de intervención en línea para ciberactivistas, Ciberespect](https://www.idhc.org/es/publicaciones/ciberespect-guia-practica-de-intervencion-en-linea-para-ciberactivistas.php), realizada desde Ecos do Sur."
 
-#: lib/chatbot/graphs/faq_graph.ex:21
+#: lib/chatbot/graphs/faq/faq_graph.ex:21
 #, elixir-autogen, elixir-format
 msgid "HATE_SPEECH_RS_Q"
 msgstr "Discurso de odio en las redes sociales"
+
+#: lib/chatbot/graphs/faq/faq_graph.ex:24
+#, elixir-autogen, elixir-format, fuzzy
+msgid "COMMERCE_FAQ"
+msgstr "Preguntas sobre Comercios"
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:17
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_Q1"
+msgstr "Trato diferenciado que puede ser discriminación"
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:18
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_Q2"
+msgstr "Cubrir una hoja de reclamaciones"
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:19
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_Q3"
+msgstr "Niegan la entrada a un local de ocio"
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:34
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_S1"
+msgstr "🧏🏽‍♀️ Si sospechas que en un bar o restaurante no te han atendido bien por tu raza, etnia o religión, ya que, por ejemplo, han tardado en servirte más que al resto de los clientes, te han dado lugares peores que a otros, y/o has sufrido un servicio de peor calidad, así como actitudes groseras por parte del personal… hay varias acciones que puedes llevar a cabo:\n\n"
+"1️⃣ *Expón de manera tranquila la situación que estás viviendo* y exige un cambio de comportamiento por parte de la persona que sientes que te está discriminando, por ejemplo, ofreciendo un tratamiento peor que a otros clientes.\n\n"
+"2️⃣ Si no hay un cambio de actitud, *exige hablar con la persona responsable* del lugar. Explica claramente lo que ocurrió y cómo te hizo sentir. Es posible que el gerente no esté al tanto de la conducta del personal y esté dispuesto a tomar medidas.\n\n"
+"3️⃣ *Documenta la situación:* A la hora de reclamar, es fundamental que *tomes notas detalladas de lo que ocurrió, incluyendo la fecha, la hora, la ubicación y los nombres de los empleados involucrados.* Si es posible, haz fotos o vídeos de cómo se evidencia de la discriminación.\n\n"
+"4️⃣ *Busca testigos:* Si otras personas presenciaron el incidente, pide sus nombres y números de contacto. Sus testimonios pueden ser útiles si decides tomar medidas legales.\n\n"
+"5️⃣ *Presenta una queja formal:* Muchas cadenas de bares y restaurantes tienen un departamento de atención al cliente al que puedes presentar una queja formal.\n\n"
+"6️⃣ *Difunde tu experiencia:* Compartir tu experiencia en redes sociales o en sitios de reseñas como [Google](https://www.google.com/?hl=es) o [TripAdvisor](https://www.tripadvisor.es/) puede ayudar a crear conciencia sobre la conducta del establecimiento y presionar para que realicen cambios.\n\n"
+"Recuerda que tienes derecho a ser tratado con respeto y dignidad en todos los espacios públicos. Es importante que sepas que, en casos graves de discriminación, puedes contactar con el Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es."
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:36
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_S2"
+msgstr "Las hojas de reclamaciones son impresos oficiales emitidos para que los establecimientos pongan a disposición de las personas consumidoras y estas puedan hacer constar su reclamación o conflicto ocurrido en la adquisición de un bien o contratación de un servicio. Recuerda que si has intentado entrar en un local y no has podido, también puedes exigir una hoja de reclamaciones.\n\n"
+"Los *campos* que hay que rellenar para que la hoja de reclamaciones esté completa son:\n\n"
+"1️⃣ *Tus datos:* Nombre, apellidos, DNI, domicilio y teléfono de contacto.\n\n"
+"2️⃣ *Los datos de la empresa o profesional a quien se reclama:* Nombre comercial, denominación social, domicilio y teléfono. Lo ideal es que esta parte la tengan rellenada antes de darte la hoja de reclamaciones (o de que te la proporcionen de alguna manera).\n\n"
+"3️⃣ *La descripción completa del hecho*, incluyendo fecha y lugar: Es importante explicar de manera concisa qué sucedió y escribir en mayúsculas. Puedes añadir un escrito aparte si no tienes suficiente espacio. Explica por qué consideras que hubo discriminación y cuál fue el motivo.\n\n"
+"4️⃣ *Lo que se solicita:* compensación, disculpa, etc.\n\n"
+"5️⃣ Si lo ves necesario, *adjunta otros documentos*. Si has sacado fotos, estas servirán de base a la reclamación. Puedes imprimirlas e incluirlas cuando la presentes.\n\n"
+"6️⃣ Lleva la hoja a la Oficina de Consumo. Desde aquí puedes encontrar l[a Oficina municipal de información al consumidor más cercana](https://cidoc.consumo.gob.es/directorio-mapas/oficinas-municipales-informacion-consumidor).\n\n"
+"Una vez rellenada, tienes que devolver la copia correspondiente al establecimiento y quedarte con otras dos copias. Una de ella la tienes que enviar a la Administración competente. Esto suele ser la Oficina Municipal de Información al Consumidor (OMIC) o el organismo de consumo autonómico.\n\n"
+"La Administración de Consumo estudiará tu caso y tomará cartas en el asunto. Se pondrá en contacto con la empresa para facilitar un acuerdo. Si no lo consigue, comprobará si la empresa ha incumplido alguna normativa de consumo y si es el caso, abrirá expediente iniciando un procedimiento sancionador que suele acabar en una multa.\n\n"
+"Recuerda que tienes derecho a ser tratado con respeto y dignidad en todos los espacios públicos. Es importante que sepas que, en casos graves de discriminación, puedes contactar con el Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es."
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:38
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_S3"
+msgstr "Si sospechas que no te dejan entrar en un establecimiento como un local de ocio, bar o restaurante, por motivos racistas, xenófobos o de religión, intenta, en primer lugar, hablar con el personal del local para resolver la situación de manera cordial.\n\n"
+"1️⃣ Explica claramente tus preocupaciones, así como tus derechos: *en España, la discriminación está prohibida por ley*.\n\n"
+"2️⃣ *Si ellos mencionan el derecho de admisión*, que es el derecho que tienen los propietarios de establecimientos para decidir quién puede entrar y quién no, tienes que saber que este *no puede ser aplicado de manera arbitraria ni discriminatoria*. Los carteles que indican \"Reservado el Derecho de Admisión\" no justifican políticas de admisión que discriminan a las personas por su raza, color de piel, religión, género u otras características protegidas por la ley. *La discriminación en el acceso a establecimientos públicos está prohibida en muchos países y puede acarrear consecuencias legales para los propietarios que la practiquen.* Es importante que los establecimientos respeten los derechos de todas las personas y no incurran en prácticas discriminatorias, por lo que las normas de admisión tienen que estar en un lugar visible.\n\n"
+"3️⃣ Si, después de esto, te siguen impidiendo la entrada, es clave que solicites la *HOJA DE RECLAMACIONES* a la persona que esté en el local (portero, camarero, etc.), aunque no hayas llegado a entrar ni ser cliente. Es tu derecho. La hoja de reclamaciones constituye una prueba en el caso de llegar a reclamar mediante arbitraje de consumo o demanda judicial, por eso es muy importante que lo solicites, cuanto antes de forma educada y respetuosa. Cuando la rellenes, explica el motivo que dio el portero o la persona encargada para no dejarte entrar. Intenta poner la hora y lugar, así como los máximos detalles posibles de lo que ocurrió. *IR A PREGUNTA FRECUENTE SOBRE HOJA DE RECLAMACIONES*.\n\n"
+"4️⃣ Si se niegan a dártela, *llama a la Policía Local (092)* que será la encargada de tramitar la denuncia por la negativa a entregarlo o no disponer de este.\n\n"
+"Recuerda que tienes derecho a ser tratado con respeto y dignidad en todos los espacios públicos. Es importante que sepas que, en casos graves de discriminación, puedes contactar con el Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es."
+
+#: lib/chatbot/graphs/faq/faq_commerce.ex:22
+#, elixir-autogen, elixir-format, fuzzy
+msgid "FAQ_COMMERCE_TITLE"
+msgstr "Preguntas frecuentes Comercio:"

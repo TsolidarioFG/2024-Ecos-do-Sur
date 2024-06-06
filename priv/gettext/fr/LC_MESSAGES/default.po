@@ -112,7 +112,7 @@ msgstr "Ces informations ont été enregistrées avec succès"
 
 #: lib/chatbot/graphs/commerce_graph.ex:18
 #: lib/chatbot/graphs/faq_ca_resources.ex:37
-#: lib/chatbot/graphs/faq_graph.ex:19
+#: lib/chatbot/graphs/faq_graph.ex:24
 #: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/home_graph.ex:29
@@ -317,11 +317,6 @@ msgstr ""
 #: lib/chatbot/graphs/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "STREET"
-msgstr ""
-
-#: lib/chatbot/graphs/initial_graph.ex:67
-#, elixir-autogen, elixir-format
-msgid "TRANSPORT"
 msgstr ""
 
 #: lib/chatbot/graphs/initial_graph.ex:20
@@ -1014,7 +1009,7 @@ msgstr ""
 msgid "COMMERCE PROBLEMS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_graph.ex:21
+#: lib/chatbot/graphs/faq_graph.ex:26
 #, elixir-autogen, elixir-format
 msgid "FAQ"
 msgstr ""
@@ -1049,7 +1044,7 @@ msgstr ""
 msgid "FAQ_HEALTHCARE_S5"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_graph.ex:17
+#: lib/chatbot/graphs/faq_graph.ex:22
 #, elixir-autogen, elixir-format
 msgid "HEALTHCARE"
 msgstr ""
@@ -1300,7 +1295,7 @@ msgstr ""
 msgid "RIOJA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_graph.ex:18
+#: lib/chatbot/graphs/faq_graph.ex:23
 #, elixir-autogen, elixir-format, fuzzy
 msgid "RESOURCES"
 msgstr ""
@@ -1308,4 +1303,44 @@ msgstr ""
 #: lib/chatbot/graphs/person_graph.ex:14
 #, elixir-autogen, elixir-format, fuzzy
 msgid "PERSON_S1"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:41
+#, elixir-autogen, elixir-format
+msgid "CHATBOT_INFORMATION"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:18
+#, elixir-autogen, elixir-format
+msgid "CHATBOT_Q"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:43
+#, elixir-autogen, elixir-format, fuzzy
+msgid "ECOS_INFORMATION"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "ECOS_Q"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:45
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_DEF"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_DEF_Q"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:47
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_RS"
+msgstr ""
+
+#: lib/chatbot/graphs/faq_graph.ex:21
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_RS_Q"
 msgstr ""

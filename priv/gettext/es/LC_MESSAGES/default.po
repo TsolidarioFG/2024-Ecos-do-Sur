@@ -112,7 +112,7 @@ msgstr "La información ha sido guardada correctamente!"
 
 #: lib/chatbot/graphs/commerce_graph.ex:18
 #: lib/chatbot/graphs/faq_ca_resources.ex:37
-#: lib/chatbot/graphs/faq_graph.ex:19
+#: lib/chatbot/graphs/faq_graph.ex:24
 #: lib/chatbot/graphs/faq_healthcare_graph.ex:22
 #: lib/chatbot/graphs/home_graph.ex:18
 #: lib/chatbot/graphs/home_graph.ex:29
@@ -396,11 +396,6 @@ msgstr ""
 #: lib/chatbot/graphs/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "STREET"
-msgstr ""
-
-#: lib/chatbot/graphs/initial_graph.ex:67
-#, elixir-autogen, elixir-format
-msgid "TRANSPORT"
 msgstr ""
 
 #: lib/chatbot/graphs/initial_graph.ex:20
@@ -1536,7 +1531,7 @@ msgstr "Estancia temporal (< 90 días)"
 msgid "COMMERCE PROBLEMS"
 msgstr "Diferentes problemas en la atención"
 
-#: lib/chatbot/graphs/faq_graph.ex:21
+#: lib/chatbot/graphs/faq_graph.ex:26
 #, elixir-autogen, elixir-format
 msgid "FAQ"
 msgstr "Preguntas frecuentes"
@@ -1618,7 +1613,7 @@ msgstr "[Información sobre trámites para solicitar la asistencia sanitaria en 
 "----------------------------------------\n"
 "Reclamaciones judiciales: [listado de fiscalías por localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&tipo=FIS&lang=es_es)"
 
-#: lib/chatbot/graphs/faq_graph.ex:17
+#: lib/chatbot/graphs/faq_graph.ex:22
 #, elixir-autogen, elixir-format
 msgid "HEALTHCARE"
 msgstr "Sanidad"
@@ -2092,7 +2087,7 @@ msgstr ""
 msgid "RIOJA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq_graph.ex:18
+#: lib/chatbot/graphs/faq_graph.ex:23
 #, elixir-autogen, elixir-format, fuzzy
 msgid "RESOURCES"
 msgstr "Recursos por comunidad"
@@ -2111,3 +2106,61 @@ msgstr "A veces es complicado!\n\n"
 "- Si quieres responder, no entres en discusiones frontales: no vas a convencer a una persona desconocida en un minuto. Simplemente, hazle ver que su comportamiento es grosero e inadecuado.\n\n"
 "- Procura no dejarte llevar por las emociones: los insultos y gritos podrían escalar más situación.  El humor, al contrario, es una buena herramienta en estos casos.\n\n"
 "- Lo primero eres tú. Si este tipo de situaciones te generan un malestar que persiste,  es importante que tengas herramientas para hacerles frente. Contacta con Ecos do Sur y te facilitaremos algunos recursos!"
+
+#: lib/chatbot/graphs/faq_graph.ex:41
+#, elixir-autogen, elixir-format
+msgid "CHATBOT_INFORMATION"
+msgstr "👋🏽 Ecosbot es el chatbot de la Asociación Ecos do Sur, una herramienta digital que te ayuda saber cómo abordar de manera efectiva diferentes situaciones de *discriminación por motivos religiosos, xenófobos o islamofóbicos*.\n\n"
+"Este chatbot es un espacio seguro y de apoyo donde las personas pueden recibir asesoramiento y recursos para abordar y combatir la discriminación en todas sus formas."
+
+#: lib/chatbot/graphs/faq_graph.ex:18
+#, elixir-autogen, elixir-format
+msgid "CHATBOT_Q"
+msgstr "¿Qué información ofrece este Chatbot?"
+
+#: lib/chatbot/graphs/faq_graph.ex:43
+#, elixir-autogen, elixir-format, fuzzy
+msgid "ECOS_INFORMATION"
+msgstr "[Ecos do Sur](https://www.ecosdosur.org/) es la mayor organización gallega dedicada a la defensa de las personas migrantes y refugiadas. Gracias al apoyo de socios, donantes e instituciones trabajamos para crear soluciones innovadoras y audaces para *terminar con las desigualdades* vinculadas al origen, la pobreza y el género, trabajando con honestidad, independencia y coraje.\n\n"
+"Nuestro propósito es que todas las personas puedan aportar sus talentos en *un país más próspero, justo y orgulloso de su diversidad*. Defendemos los derechos de las personas migrantes, en riesgo de exclusión y de mujeres en especial vulnerabilidad.\n\n"
+"Desde 1991 diseñamos y ejecutamos proyectos interdisciplinares de transformación social en Galicia y Madrid. Nuestro objetivo es *promover la participación, la igualdad de oportunidades y la integración social y laboral*.\n\n"
+"La historia de Ecos do Sur es la de *más de 17.000 personas* a las que hemos respaldado en sus esfuerzos por mejorar sus vidas, las de sus familias y las de sus barrios y comunidades.\n\n"
+"Si quieres saber más, síguenos en nuestras redes sociales: [Facebook](https://www.facebook.com/ecosdosur/?locale=es_ES), [Linkedin](https://www.linkedin.com/company/ecos-do-sur/), [X](https://x.com/ecosdosur), [Instagram](https://www.instagram.com/ecosdosur/?hl=es), y, si te gusta lo que hacemos, [suscríbete a nuestro boletín](https://ecosdosur.us16.list-manage.com/subscribe?u=ae85a914e85fc95a3fdd3d172&id=9d0d48a5b1). "
+
+#: lib/chatbot/graphs/faq_graph.ex:19
+#, elixir-autogen, elixir-format
+msgid "ECOS_Q"
+msgstr "¿Qué es Ecos do Sur?"
+
+#: lib/chatbot/graphs/faq_graph.ex:45
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_DEF"
+msgstr "✔️ El *discurso de odio* consiste en fomentar, promover o incitar, directa o indirectamente, al odio, a la discriminación o a la violencia contra un grupo o contra una persona por motivos de odio racial, xenófobo, orientación sexual y otras formas de intolerancia.\n\n"
+"ℹ️ Un ejemplo de discurso de odio es la *difusión de estereotipos negativos* hacia un grupo de personas racializadas en la red. A menudo, *la desinformación* puede propiciar el odio y la discriminación. Un ejemplo de esto fueron los rumores que afirman que las personas chinas no pagan impuestos (totalmente mentira).\n\n"
+"El discurso de odio, muchas veces repetido, *puede calar en la sociedad* tanto que vaya más allá de las palabras y haga que, por ejemplo, se actúe distinto, con unas u otras personas. Es lo que se conoce como *discriminación*.\n\n"
+"✔️ La *discriminación* consiste en diferenciar o dar un trato menos favorable cuando no existen diferencias relevantes entre las personas o las situaciones, así como dar un trato idéntico a personas en situaciones que, en realidad, son diferentes. La discriminación atenta contra los derechos fundamentales de la persona.\n\n"
+"ℹ️  Un ejemplo de discriminación sería preguntar, en una entrevista de trabajo, a una persona cuál es su religión para valorarla como candidata (o no) a un puesto de trabajo. Esta sería una pregunta ilegal que no deberíamos responder, y que indica que no van a calificarnos para ese puesto de trabajo por nuestra idoneidad, sino por características personales que nada tienen que ver con el desempeño del puesto.\n\n"
+"✔️ Más allá de estos comportamientos está el *delito de odio*, que es una acción que tiene lugar cuando una persona o grupo de ellas ataca a otra motivada exclusivamente por su pertenencia a un determinado grupo social (real o percibido). Es una acción tipificada como delito en el Código Penal Español (una agresión, un robo, una injuria…) y que está motivada por los prejuicios de quien agrede hacia determinadas características que percibe en la víctima: el color de la piel, la religión, la orientación sexual, el origen nacional, etc.\n\n"
+"ℹ️ Ejemplo: Una agresión física motivada por islamofobia contra una mujer que lleva hiyab.\n\n"
+"Como ves, en estas definiciones *la clave es la motivación*. El rechazo a un colectivo tradicionalmente discriminado hace que las expresiones y delitos de odio sean especialmente peligrosos para la convivencia y los derechos."
+
+#: lib/chatbot/graphs/faq_graph.ex:20
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_DEF_Q"
+msgstr "¿Que son discurso/delito odio y discriminación?"
+
+#: lib/chatbot/graphs/faq_graph.ex:47
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_RS"
+msgstr "🤬 El discurso de odio no es un elemento nuevo, pero internet y las redes sociales han proporcionado una nueva plataforma, a menudo anónima, para la divulgación de ideologías que promueven el odio basado en la pertenencia, real o ficticia, a una raza, etnia, religión, nacionalidad, etc. Si te atacan en redes sociales por este motivo, aquí te dejamos algunos consejos:\n\n"
+"1️⃣ *Valora si quieres responder:* En la mayoría de los casos, la mejor opción es evitar responder directamente al discurso de odio. Esto puede exacerbar la situación y llevar a confrontaciones innecesarias. Recuerda siempre priorizar tu seguridad y tu bienestar emocional al hacer frente al discurso de odio. Si quieres dar una respuesta acertada tómate tu tiempo y echa un vistazo a nuestra [Guía práctica de intervención en línea para ciberactivistas, Ciberespect](https://www.idhc.org/es/publicaciones/ciberespect-guia-practica-de-intervencion-en-linea-para-ciberactivistas.php), realizada desde Ecos do Sur.\n\n"
+"2️⃣ *Denuncia el contenido:* La mayoría de las plataformas de redes sociales tienen opciones para reportar contenido inapropiado. Utiliza estas herramientas para informar sobre el discurso de odio a los administradores. Generalmente, encontrarás un botón de \"Denunciar\" cerca del contenido que deseas informar.\n\n"
+"3️⃣ *Bloquea a la persona usuaria en tu perfil:* Si el discurso de odio proviene de una persona usuaria en particular, considera bloquearla. Esto evitará que veas su contenido en el futuro y reducirá la posibilidad de enfrentamientos.\n\n"
+"4️⃣ *Si quieres tomar medidas legales, guarda la evidencia:* Si valoras tomar otro tipo de medidas legales, puedes realizar capturas de pantalla al contenido ofensivo. Estas serán muy útiles a la hora de informar a las autoridades pertinentes.\n\n"
+"5️⃣ *Apoya a las víctimas o busca apoyo:* Si el discurso de odio está dirigido hacia un individuo o grupo específico, muestra tu apoyo y solidaridad para ayudar a lidiar con esta situación. Si está dirigido hacia ti, busca apoyo. *Hay entidades, como Ecos do Sur en las que podemos ayudarte con ello.* Es importante que sepas que en los casos graves de discurso de odio (que involucren amenazas o incitación a la violencia), es clave que informes de lo que ocurre a las autoridades locales pertinentes. También puedes contactar con el Consejo para la Eliminación de la Discriminación Racial o Étnica ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/)) en el 021, escribirles al WhatsApp: 628 860 507 o al correo: consejo-sei@igualdad.gob.es.\n\n"
+"➕ Si quieres saber más sobre cómo luchar contra el discurso del odio, puedes descargarte nuestra [Guía práctica de intervención en línea para ciberactivistas, Ciberespect](https://www.idhc.org/es/publicaciones/ciberespect-guia-practica-de-intervencion-en-linea-para-ciberactivistas.php), realizada desde Ecos do Sur."
+
+#: lib/chatbot/graphs/faq_graph.ex:21
+#, elixir-autogen, elixir-format
+msgid "HATE_SPEECH_RS_Q"
+msgstr "Discurso de odio en las redes sociales"

@@ -32,7 +32,7 @@ msgstr ""
 #: lib/chatbot/worker.ex:209
 #, elixir-autogen, elixir-format
 msgid "NO"
-msgstr "NO"
+msgstr "No"
 
 #: lib/chatbot/graphs/urgent/home_graph.ex:51
 #: lib/chatbot/graphs/urgent/hospital_graph.ex:41
@@ -152,22 +152,22 @@ msgstr "La información ha sido guardada correctamente!"
 #: lib/chatbot/graphs/urgent/work_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "BACK"
-msgstr "ATRÁS"
+msgstr "Atrás"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "COMMERCE"
-msgstr ""
+msgstr "Comercio"
 
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "ENTRANCE DENIAL"
-msgstr ""
+msgstr "Negación de Entrada"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "HOME"
-msgstr ""
+msgstr "Casa"
 
 #: lib/chatbot/graphs/urgent/hospital_graph.ex:31
 #: lib/chatbot/graphs/urgent/initial_graph.ex:67
@@ -183,7 +183,7 @@ msgstr "Información"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:24
 #, elixir-autogen, elixir-format
 msgid "INITIAL_Q1"
-msgstr "Hola! Soy el chatbot xxx, y mi misión es ayudarte en casos de agresión y discriminación por motivos racistas, xenófobos o islamófobos.\n\n"
+msgstr "Hola! Soy el chatbot *Ecosbot*, y mi misión es ayudarte en casos de agresión y discriminación por motivos racistas, xenófobos o islamófobos.\n\n"
 "Por favor, indícame si necesitas ayuda urgente o información no urgente."
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:45
@@ -291,7 +291,7 @@ msgstr "*Si tú has sido agredido/a verbal o físicamente por una autoridad y te
 #: lib/chatbot/graphs/urgent/initial_graph.ex:66
 #, elixir-autogen, elixir-format
 msgid "LEISURE"
-msgstr ""
+msgstr "Ocio"
 
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:20
 #, elixir-autogen, elixir-format
@@ -372,7 +372,7 @@ msgstr ""
 #: lib/chatbot/graphs/urgent/school_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "OTHER"
-msgstr ""
+msgstr "Otro"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:81
 #, elixir-autogen, elixir-format
@@ -394,12 +394,12 @@ msgstr "Alteración del precio"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:67
 #, elixir-autogen, elixir-format
 msgid "SCHOOL"
-msgstr ""
+msgstr "Escuela"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "STREET"
-msgstr ""
+msgstr "Calle"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:20
 #, elixir-autogen, elixir-format
@@ -409,27 +409,27 @@ msgstr "Urgente"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
 msgid "WORK"
-msgstr ""
+msgstr "Trabajo"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:18
 #, elixir-autogen, elixir-format
 msgid "ACTIVITIES"
-msgstr ""
+msgstr "Actividades"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:89
 #, elixir-autogen, elixir-format
 msgid "AMPA"
-msgstr ""
+msgstr "AMPA"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:47
 #, elixir-autogen, elixir-format
 msgid "BOTH"
-msgstr ""
+msgstr "Ambos"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:89
 #, elixir-autogen, elixir-format
 msgid "CANTEEN"
-msgstr ""
+msgstr "Comedor"
 
 #: lib/chatbot/graphs/urgent/hospital_graph.ex:31
 #, elixir-autogen, elixir-format
@@ -439,28 +439,28 @@ msgstr "Centro de Salud"
 #: lib/chatbot/graphs/urgent/school_graph.ex:17
 #, elixir-autogen, elixir-format
 msgid "CONTENT"
-msgstr ""
+msgstr "Contenido"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:111
 #: lib/chatbot/graphs/urgent/school_graph.ex:119
 #, elixir-autogen, elixir-format
 msgid "DENIAL OF SERVICE"
-msgstr ""
+msgstr "Negación del Servicio"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:118
 #, elixir-autogen, elixir-format
 msgid "DIET"
-msgstr ""
+msgstr "Dieta"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:88
 #, elixir-autogen, elixir-format
 msgid "EXTRACURRICULAR"
-msgstr ""
+msgstr "Extraescolares"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:46
 #, elixir-autogen, elixir-format
 msgid "FAMILY"
-msgstr ""
+msgstr "Familia"
 
 #: lib/chatbot/graphs/urgent/hospital_graph.ex:21
 #, elixir-autogen, elixir-format, fuzzy
@@ -810,34 +810,34 @@ msgstr "*Evaluar el contenido con relación al discurso de odio es un tema compl
 #: lib/chatbot/graphs/urgent/school_graph.ex:88
 #, elixir-autogen, elixir-format
 msgid "SECRETARY"
-msgstr ""
+msgstr "Secretaría"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:17
 #: lib/chatbot/graphs/urgent/school_graph.ex:46
 #, elixir-autogen, elixir-format
 msgid "TEACHER"
-msgstr ""
+msgstr "Profesor"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:103
 #, elixir-autogen, elixir-format
 msgid "TUITION"
-msgstr ""
+msgstr "Matrícula"
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:103
 #: lib/chatbot/graphs/urgent/school_graph.ex:110
 #, elixir-autogen, elixir-format
 msgid "UNEQUAL TREATMENT"
-msgstr ""
+msgstr "Trato Diferenciado"
 
 #: lib/chatbot/graphs/urgent/transport_graph.ex:19
 #, elixir-autogen, elixir-format
 msgid "AMBULANCE"
-msgstr ""
+msgstr "Ambulancia"
 
 #: lib/chatbot/graphs/urgent/commerce_graph.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE_Q1"
-msgstr ""
+msgstr "¿Cuál es el problema?"
 
 #: lib/chatbot/graphs/urgent/commerce_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
@@ -1177,7 +1177,7 @@ msgstr "Trato hostil, discriminación y marginación no constante (discriminaci�
 #: lib/chatbot/graphs/urgent/school_graph.ex:35
 #, elixir-autogen, elixir-format
 msgid "PARENT"
-msgstr ""
+msgstr "Padre / Madre"
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:57
 #, elixir-autogen, elixir-format
@@ -1232,7 +1232,13 @@ msgstr "Eres un estudiante o un familiar?"
 #: lib/chatbot/graphs/urgent/school_graph.ex:185
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S19"
-msgstr ""
+msgstr "1. *Detallar el caso:* qué sucedió, cómo, en qué momento y lugar, buscar personas que quieran ser testigo, tener pruebas como documentos, fotos o grabaciones, identificar posibles palabras de odio por la raza, la etnia, la religión, el género...\n\n"
+"2. Pedir una *reunión con la dirección del centro* para exponer el problema.\n\n"
+"3. *Consultar el problema con las personas expertas del* [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm) (ver datos en el punto 5).\n\n"
+"4. También se puede acudir a la [Inspección de Educación](https://www.educacionfpydeportes.gob.es/servicios-al-ciudadano/catalogo/general/99/998258/ficha/998258.html) si el centro no colabora para solucionar el problema.\n\n"
+"5. En los casos más graves se debe poner una *denuncia, llamar al 091* o acudir a la [fiscalía de tu localidad](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&tipo=FIS&lang=es_es). "
+"Para tener ayuda en el proceso de denuncia, contactar con el [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [oficinas regionales](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), un teléfono gratuito de *contacto urgente (021)*, un *WhatsApp (628 860 507)* y correo electrónico consejo-sei@igualdad.gob.es o [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
+"6. Siempre contar con las *ONG y organizaciones de la zona* que trabajan con personas que, por desgracia, suelen recibir odio y discriminación por razones de raza, religión, género, orientación sexual... Acudir para exponer el caso y pedir acompañamiento."
 
 #: lib/chatbot/graphs/urgent/person_school_graph.ex:27
 #: lib/chatbot/graphs/urgent/person_school_graph.ex:29
@@ -1244,7 +1250,7 @@ msgstr ""
 #: lib/chatbot/graphs/urgent/school_graph.ex:35
 #, elixir-autogen, elixir-format
 msgid "STUDENT"
-msgstr ""
+msgstr "Estudiante"
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:42
 #, elixir-autogen, elixir-format
@@ -1619,7 +1625,7 @@ msgstr "[Información sobre trámites para solicitar la asistencia sanitaria en 
 #: lib/chatbot/graphs/faq/faq_graph.ex:22
 #, elixir-autogen, elixir-format
 msgid "HEALTHCARE"
-msgstr "Sanidad"
+msgstr "Sanidad ⤵️"
 
 #: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:43
 #, elixir-autogen, elixir-format, fuzzy
@@ -2051,7 +2057,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:47
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RESOURCES"
-msgstr "*Elige una comunidad autónoma:*"
+msgstr "Elige una comunidad autónoma:"
 
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:99
 #, elixir-autogen, elixir-format
@@ -2093,7 +2099,7 @@ msgstr ""
 #: lib/chatbot/graphs/faq/faq_graph.ex:23
 #, elixir-autogen, elixir-format, fuzzy
 msgid "RESOURCES"
-msgstr "Recursos por comunidad"
+msgstr "Recursos por comunidad ⤵️"
 
 #: lib/chatbot/graphs/urgent/person_graph.ex:14
 #, elixir-autogen, elixir-format, fuzzy
@@ -2171,7 +2177,7 @@ msgstr "Discurso de odio en las redes sociales"
 #: lib/chatbot/graphs/faq/faq_graph.ex:24
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE_FAQ"
-msgstr "Preguntas sobre Comercios"
+msgstr "Preguntas sobre Comercios ⤵️"
 
 #: lib/chatbot/graphs/faq/faq_commerce.ex:17
 #, elixir-autogen, elixir-format, fuzzy
@@ -2338,12 +2344,12 @@ msgstr "Hay distintas vías para denunciar casos de discriminación racista, xen
 #: lib/chatbot/graphs/faq/faq_work.ex:24
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_WORK_TITLE"
-msgstr "Preguntas frecuentes Comercio:"
+msgstr "Preguntas frecuentes Empleo:"
 
 #: lib/chatbot/graphs/faq/faq_graph.ex:25
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_FAQ"
-msgstr "Preguntas sobre el entorno laboral"
+msgstr "Preguntas sobre el entorno laboral ⤵️"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:125
 #, elixir-autogen, elixir-format, fuzzy

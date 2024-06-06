@@ -113,7 +113,7 @@ defmodule Chatbot.InitialGraph do
   # Transport:
   #def resolve({:U2_final_resolve, history, "TRANSPORT"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :transport}, history, nil}, user, key, nil, message_id)
   # Person:
-  def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
+  #def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, "WORKPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:S1, :person}, history, nil}, user, key, nil, message_id)
 

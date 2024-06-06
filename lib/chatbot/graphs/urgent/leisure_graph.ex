@@ -14,7 +14,7 @@ defmodule Chatbot.LeisureGraph do
   ##################################
   # 1 -----
   def resolve({:start, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("ENTRANCE DENIAL"), callback_data: "ENTRANCE"}, %{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}],
+    keyboard = [[%{text: gettext("ENTRANCE DENIAL"), callback_data: "ENTRANCE"}], [%{text: gettext("PRICE MANIPULATION"), callback_data: "PRICE"}],
                 [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:start, :leisure} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q1"), new_history), user, message_id, key)

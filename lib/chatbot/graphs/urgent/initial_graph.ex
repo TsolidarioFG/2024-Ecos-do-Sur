@@ -117,6 +117,18 @@ defmodule Chatbot.InitialGraph do
   def resolve({:U2_final_resolve, history, "WORKPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:S1, :person}, history, nil}, user, key, nil, message_id)
 
+  ##################################
+  # FAQ LINKING
+  ##################################
+  def resolve({:L1, _, _}, user, key, _, _) do
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}], [%{text: gettext("NO"), callback_data: "NO"}]]
+    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q8"), nil), user, key)
+    {{:L1_resolve, :initial}, nil, nil}
+  end
+
+  def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:start_link, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
+  def resolve({:L1_resolve, _, _}, _, _, "NO", _), do: {:solved, nil, nil}
+
   ####################################################################
   ########################### SOLUTIONS ##############################
   ####################################################################
@@ -125,7 +137,10 @@ defmodule Chatbot.InitialGraph do
   # S2 ----
   def resolve({:S2, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S2"), user, message_id, key)
   # S3 ----
-  def resolve({:S3, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S3"), user, message_id, key)
+  def resolve({:S3, _, _}, user, key, _, message_id) do
+    TelegramWrapper.update_menu(gettext("INITIAL_S3"), user, message_id, key)
+    resolve({:L1, nil, nil}, user, key, nil, message_id)
+  end
   # S4 ----
   def resolve({:S4, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S4"), user, message_id, key)
   # IGNORE

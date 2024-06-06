@@ -18,6 +18,7 @@ msgstr ""
 #: lib/chatbot/graphs/urgent/initial_graph.ex:43
 #: lib/chatbot/graphs/urgent/initial_graph.ex:53
 #: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/initial_graph.ex:124
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:32
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:42
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:52
@@ -40,6 +41,7 @@ msgstr "NON"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:43
 #: lib/chatbot/graphs/urgent/initial_graph.ex:53
 #: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/initial_graph.ex:124
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:32
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:42
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:52
@@ -110,7 +112,7 @@ msgstr "S'il vous plait selectionnez votre genre:"
 msgid "This information has been saved successfully"
 msgstr "Ces informations ont été enregistrées avec succès"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:37
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:41
 #: lib/chatbot/graphs/faq/faq_commerce.ex:20
 #: lib/chatbot/graphs/faq/faq_graph.ex:26
 #: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:22
@@ -208,22 +210,22 @@ msgstr ""
 msgid "INITIAL_Q7"
 msgstr ""
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:124
+#: lib/chatbot/graphs/urgent/initial_graph.ex:136
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S1"
 msgstr ""
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:126
+#: lib/chatbot/graphs/urgent/initial_graph.ex:138
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:128
+#: lib/chatbot/graphs/urgent/initial_graph.ex:141
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S3"
 msgstr ""
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:130
+#: lib/chatbot/graphs/urgent/initial_graph.ex:145
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S4"
 msgstr ""
@@ -1167,102 +1169,102 @@ msgstr ""
 msgid "EXTREMADURA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:73
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:81
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ANDALUCIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:75
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:83
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ARAGON"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:77
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:85
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ASTURIAS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:97
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:105
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_BALLEARS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:81
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:89
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANARIAS"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:79
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:87
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANTABRIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:103
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:111
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CASTILLA_LA_MANCHA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:105
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:113
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CASTILLA_LEON"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:71
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:79
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CATALUNYA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:99
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:107
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CEUTA_Y_MELILLA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:83
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:91
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_COM_VALENCIANA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:93
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:101
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EUSKADI"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:101
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:109
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EXTREMADURA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:87
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:95
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_GALICIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:69
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:77
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_GENERAL"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:95
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:103
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MADRID"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:85
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:93
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MURCIA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:89
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:97
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_NAVARRA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:40
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:47
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RESOURCES"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:91
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:99
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RIOJA"
 msgstr ""
@@ -1445,4 +1447,14 @@ msgstr ""
 #: lib/chatbot/graphs/faq/faq_graph.ex:25
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_FAQ"
+msgstr ""
+
+#: lib/chatbot/graphs/urgent/initial_graph.ex:125
+#, elixir-autogen, elixir-format, fuzzy
+msgid "INITIAL_Q8"
+msgstr ""
+
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:43
+#, elixir-autogen, elixir-format
+msgid "EXIT"
 msgstr ""

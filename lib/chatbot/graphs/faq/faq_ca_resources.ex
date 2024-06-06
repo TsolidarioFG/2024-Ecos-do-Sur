@@ -33,13 +33,21 @@ defmodule Chatbot.FaqCaResources do
       [%{text: gettext("CEUTA Y MELILLA"), callback_data: "Q16"}],
       [%{text: gettext("EXTREMADURA"), callback_data: "Q17"}],
       [%{text: gettext("CASTILLA LA MANCHA"), callback_data: "Q18"}],
-      [%{text: gettext("CASTILLA LEON"), callback_data: "Q19"}],
-      [%{text: gettext("BACK"), callback_data: "BACK"}]
+      [%{text: gettext("CASTILLA LEON"), callback_data: "Q19"}]
     ]
+
+    # Add "BACK" button if state is :start
+    keyboard = if state == :start do
+      keyboard ++ [[%{text: gettext("BACK"), callback_data: "BACK"}]]
+    else
+      keyboard ++ [[%{text: gettext("EXIT"), callback_data: "EXIT"}]]
+    end
+
     new_history = [{:start, :faq_ca_resources} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("FAQ_CA_RESOURCES"), nil), user, message_id, key)
     {{:start_final_resolve, :faq_ca_resources}, new_history, nil}
   end
+
 
   def resolve({:start_final_resolve, history, _}, user, key, "Q1", message_id), do: resolve({:GENERAL, history, nil}, user, key, nil, message_id)
   def resolve({:start_final_resolve, history, _}, user, key, "Q2", message_id), do: resolve({:CATALUNYA, history, nil}, user, key, nil, message_id)

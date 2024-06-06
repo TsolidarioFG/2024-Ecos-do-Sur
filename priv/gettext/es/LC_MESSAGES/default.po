@@ -18,6 +18,7 @@ msgstr ""
 #: lib/chatbot/graphs/urgent/initial_graph.ex:43
 #: lib/chatbot/graphs/urgent/initial_graph.ex:53
 #: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/initial_graph.ex:124
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:32
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:42
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:52
@@ -40,6 +41,7 @@ msgstr "NO"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:43
 #: lib/chatbot/graphs/urgent/initial_graph.ex:53
 #: lib/chatbot/graphs/urgent/initial_graph.ex:91
+#: lib/chatbot/graphs/urgent/initial_graph.ex:124
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:32
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:42
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:52
@@ -110,7 +112,7 @@ msgstr "Por favor, selecciona tu género:"
 msgid "This information has been saved successfully"
 msgstr "La información ha sido guardada correctamente!"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:37
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:41
 #: lib/chatbot/graphs/faq/faq_commerce.ex:20
 #: lib/chatbot/graphs/faq/faq_graph.ex:26
 #: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:22
@@ -176,7 +178,7 @@ msgstr "Hospital"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "INFORMATION"
-msgstr ""
+msgstr "Información"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:24
 #, elixir-autogen, elixir-format
@@ -209,7 +211,7 @@ msgstr "¿El problema es con personal del centro/servicio o con otra persona?"
 msgid "INITIAL_Q7"
 msgstr "¿Esa persona te ha agredido física o verbalmente, o ha atacado tus propiedades o pertenencias?"
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:124
+#: lib/chatbot/graphs/urgent/initial_graph.ex:136
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S1"
 msgstr "*Si tú te encuentras en riesgo:* \n\n"
@@ -232,12 +234,12 @@ msgstr "*Si tú te encuentras en riesgo:* \n\n"
 "Aguarda con ella a que lleguen las autoridades y explícales lo ocurrido de la forma más pormenorizada posible. Si te parece que la amenaza estaba relacionada con motivos de odio racista, xenófobo o islamófobo, es muy importante que lo comuniques en este momento.\n\n"
 "Ofrece a la víctima tu contacto por si necesita volver a hablar contigo más adelante."
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:126
+#: lib/chatbot/graphs/urgent/initial_graph.ex:138
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S2"
 msgstr ""
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:128
+#: lib/chatbot/graphs/urgent/initial_graph.ex:141
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S3"
 msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
@@ -265,10 +267,9 @@ msgstr "*Si has sufrido una de estas formas de violencia:\n\n*"
 "Reúne toda la documentación, datos y testimonios que tengas sobre lo que te ha sucedido.\n\n"
 "Acude a una ONG de tu zona que pueda asesorarte previamente y acompañarte durante todo el proceso.\n\n"
 "Puedes recibir atención jurídica, social y psicológica en las Oficinas de Asistencia a Víctimas que hay en los juzgados de tu provincia.\n\n"
-"Puedes presentar tu denuncia en la policía o en las Fiscalías especializadas en delitos de odio y discriminación que hay que cada provincia de España.\n\n"
-"¿Quieres información sobre los *recursos de denuncia y asistencia a víctimas* que hay en tu zona?"
+"Puedes presentar tu denuncia en la policía o en las Fiscalías especializadas en delitos de odio y discriminación que hay que cada provincia de España."
 
-#: lib/chatbot/graphs/urgent/initial_graph.ex:130
+#: lib/chatbot/graphs/urgent/initial_graph.ex:145
 #, elixir-autogen, elixir-format
 msgid "INITIAL_S4"
 msgstr "*Si tú has sido agredido/a verbal o físicamente por una autoridad y te encuentras en riesgo:*\n\n"
@@ -403,7 +404,7 @@ msgstr ""
 #: lib/chatbot/graphs/urgent/initial_graph.ex:20
 #, elixir-autogen, elixir-format
 msgid "URGENT"
-msgstr ""
+msgstr "Urgente"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:68
 #, elixir-autogen, elixir-format
@@ -1755,7 +1756,7 @@ msgstr ""
 msgid "EXTREMADURA"
 msgstr ""
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:73
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:81
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ANDALUCIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1779,7 +1780,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO ANDALUCÍA: Oficina de información y Denuncia (OID)  C/ Jesús María 6, 6º-4ª - 14003 CÓRDOBA | (+34) 957 485 735 | info@sosracismo.eu\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada   C/ del Amor 6 04005 Almería | Tel.: 950 237 342 | almeria@accem.es"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:75
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:83
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ARAGON"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1795,7 +1796,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO ARAGÓN Oficina de Información y Denuncia: Travesía de Funes, 8, 50014, Zaragoza | Tfno.: +34 976 290 214 | denuncias@sosracismoaragon.es\n\n"
 "- CEPAÍM: Avenida de Madrid 7-9, local 7 CP 50004, Zaragoza. | Teléfono: 876 642 998 | zaragoza@cepaim.org"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:77
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:85
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_ASTURIAS"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1803,7 +1804,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- FISCALÍA: Oviedo: Carlos López Otín, 3 | Teléfono: 985968920\n\n"
 "- CEDRE: GIJÓN - ACCEM | Correo electrónico: gijon@accem.es | Dirección: C/ Saavedra 4, oficina 1. 33208 Gijón | Teléfono: 985 16 56 77\n\n"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:97
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:105
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_BALLEARS"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1814,7 +1815,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > C. d’Eusebi Estada, 48, bjs. Palma de Mallorca | 971 764 588\n\n"
 "\t > Centre Flassaders | C. de la Ferreria, 10, 4t pis @ 971 228 756 / 699 029 046"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:81
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:89
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANARIAS"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1826,7 +1827,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > LAS PALMAS DE GRAN CANARIA - CEAR | Correo electrónico: discriminacion@cear.es | Dirección: Avda. Escaleritas, 66, 35011 – Las Palmas de Gran Canaria |Teléfono: 680 68 95 90\n\n"
 "\t > TENERIFE - CRUZ ROJA | Correo electrónico: savdlaguna@cruzroja.es | Dirección: C/ Hermanos Marrero, 2 (Trasera Iglesia de la Concepción). 38203 San Cristóbal de La Laguna, Tenerife. | Teléfono: 649 97 03 71"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:79
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:87
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANTABRIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1834,7 +1835,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- FISCALÍA: Santander -> Avda. Pedro San Martín, s/n | Teléfono: 942357101\n\n"
 "- CEDRE: SANTANDER - MPDL | Correo electrónico: victimasdiscriminacioncantabria@mpdl.org | Dirección: C/ Tres de noviembre 24, bajo derecha. 39010 Santander. | Teléfono: 942 37 63 05"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:103
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:111
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CASTILLA_LA_MANCHA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1851,7 +1852,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- GUADA ACOGE: Avenida Venezuela, Nº 9, 1º 19005 Guadalajara | guada.acoge@redacoge.org | 949 25 30 76 / 949 21 58 35\n\n"
 "- ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia. | C/ Carmen 35. Bajo. 02005 Albacete | Tel.: 967 979 583"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:105
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:113
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CASTILLA_LEON"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1877,7 +1878,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Pasaje la Marquesina, 7 47004 Valladolid | Teléfono: 983 507 177 |Correo electrónico: progestioncyl@progestion.org\n\n"
 "- CEPAÍM: Calle San Patricio, 5-7 CP 37002, Salamanca | Teléfono: 923 314 142 | Correo: salamanca@cepaim.org."
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:71
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:79
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CATALUNYA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1898,7 +1899,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- BAYT AL THAQAFA: Calle Princesa, 14, primer cp. 08003, Barcelona | +34 93 319 88 69 | info@bayt-al-thaqafa.org\n\n"
 "- CEPAIM: Carrer de Sant Pau, 80, Barcelona | Teléfono: 93 487 38 16 | barcelona@cepaim.org"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:99
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:107
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CEUTA_Y_MELILLA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1916,7 +1917,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- ANDALUCÍA ACOGE: Delegación Ceuta: C/ Verlarde nº 32, BAJO C.P. 51001 CEUTA | Teléfono: 955697404/ 683138216 | E-mail: ceuta@acoge.org\n\n"
 "- MELILLA ACOGE: C/ Cataluña, 57. 1º 57006 Melilla | Tlfno. 952 670 893 | E-mail: melilla@acoge.org\n\n"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:83
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:91
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_COM_VALENCIANA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1926,7 +1927,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > Castellón: Bulevar Blasco Ibañez, 10 | Teléfono: 964621866 | csfi00_cas@gva.es\n\n"
 "\t > Lleida: Canyeret, 1 | 973705840 | lleida.fiscalia.oficina@xij.gencat.cat\n\n"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:93
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:101
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EUSKADI"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1946,7 +1947,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- SOS RACISMO GIPUKKOA: P. Zarategi 100 – Txara 1, sótano - 20015 Donostia (Intxaurrondo) | (+34) 943 24 56 26 (+34) 943 24 56 27 | sos.gipuzkoa@sosracismo.eu\n\n"
 "- ZEHAR: 944 059 566, enviando un mail a info@zehar.eus"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:101
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:109
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_EXTREMADURA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1958,7 +1959,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > Badajoz:  José Caldito Ruiz esq. C/ Esteban Sánchez | Teléfono: 924284252 | fiscalia.badajoz@fiscal.es\n\n"
 "- CEDRE: MÉRIDA - Fundación CEPAIM | Correo electrónico: merida@cepaim.org | Dirección: Avenida Reina Sofía, 1. 06800 Mérida (Badajoz) | Teléfono: 663 87 68 08"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:87
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:95
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_GALICIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -1977,7 +1978,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "\t > Vigo | vigo@sosracismogalicia.org | 986 917 325 | 678 811 714\n\n"
 "ACCEM: Detección, prevención y empoderamiento en la lucha contra la discriminación y delitos de odio por motivos de raza o etnia | Av. de las Camelias 70, bajo 36211 Vigo (Pontevedra) | Tel.: 886 906 798 / 886 689 752 | vigo@accem.es"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:69
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:77
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_GENERAL"
 msgstr "*RACISMO, XENOFOBIA E ISLAMOFOBIA:*\n\n"
@@ -2000,7 +2001,7 @@ msgstr "*RACISMO, XENOFOBIA E ISLAMOFOBIA:*\n\n"
 "*ACCESO A LA SALUD:*\n\n"
 "- Médicos del Mundo España: Conde de Vilches, 1528028, Madrid | Teléfono 91 543 60 33 | email: ayuda@medicosdelmundo.org"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:95
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:103
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MADRID"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -2016,7 +2017,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada  C/ Magallanes 1, Entreplanta 28015 Madrid | Tel.: 915 327 478 / 915 327 479 | Fax: 915 460 915 | madrid@accem.es\n\n"
 "- PROGESTIÓN: OIDO — Oficina de Intervención ante Delitos de Odio. Dirección: c/ Manuel Fernández Caballero, 4 (Local) Madrid 28019 España | Teléfono: 91 471 97 19 | Correo electrónico: info@progestion.org | Equipo Jurídico: 608 773 900"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:85
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:93
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_MURCIA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -2032,7 +2033,7 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "- MURCIA ACOGE: DELEGACIÓN MURCIA  | Teléfono: 968271652 | Email: murcia.nodiscriminacion@redacoge.org | Dirección: Calle Alberto Sevilla, Local 5, Bloque 1, Esc. 5. C.P. 30011, Murcia.\n\n"
 "- ACCEM: Detección y asistencia a víctimas de incidentes y/o delitos de odio por motivación racista, xenófoba o intolerancia asociada | C/ Ricardo Gil 5 30002 Murcia |Tel.: 968 268 427 / 968 977 945 | murcia@accem.es"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:89
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:97
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_NAVARRA"
 msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
@@ -2047,12 +2048,12 @@ msgstr "*RECURSOS DE LA ADMINISTRACIÓN:*\n\n"
 "*ASOCIACIONES:*\n\n"
 "- SOS RACISMO NAFARROA: Telefono Fijo : 948211521 | Movil: 646337808 | E-mail: sosarrazakeria.nafarroa@gmail.com | Dirección: Calle de Zapatería, 31, 31001 Pamplona, Navarra"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:40
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:47
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RESOURCES"
 msgstr "*Elige una comunidad autónoma:*"
 
-#: lib/chatbot/graphs/faq/faq_ca_resources.ex:91
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:99
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RIOJA"
 msgstr "- [OFICINAS DE ATENCIÓN A LAS VÍCTIMAS DE DELITO](https://www.larioja.org/atencion-victimas/es/contacta)\n\n"
@@ -2291,7 +2292,6 @@ msgstr "La discriminación en el ámbito laboral es una situación en la que una
 "- Cualquier incumplimiento de los derechos laborales motivado por causas discriminatorias, como racismo, xenofobia, islamofobia: negación a hacer un contrato de trabajo, salarios por debajo de lo estipulado, exceso de horas, etc.\n\n"
 "- Agresiones verbales, materiales o físicas en el puesto de trabajo, que tengan una motivación “de odio”, es decir, que la víctima sea seleccionada por su pertenencia real o percibida a colectivos históricamente vulnerados en España."
 
-
 #: lib/chatbot/graphs/faq/faq_work.ex:44
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_WORK_S4"
@@ -2314,7 +2314,6 @@ msgstr "*Antes de la entrevista:*\n\n"
 "\t > ¿Cuánto mides/pesas?\n\n"
 "\t > ¿Cómo es tu estado de salud? ¿Fumas o bebes?\n\n"
 
-
 #: lib/chatbot/graphs/faq/faq_work.ex:46
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_WORK_S5"
@@ -2336,7 +2335,6 @@ msgstr "Hay distintas vías para denunciar casos de discriminación racista, xen
 "\t > 1️⃣ Trata de conservar cualquier prueba que pueda indicar la situación de discriminación: fotos, mails, grabaciones de comentarios, capturas de conversaciones por WhatsApp, pantallazos de la oferta… \n\n"
 "\t > 2️⃣ Trata de recordar y apuntar cualquier momento en el que haya indicios de que la situación puede estar relacionada con motivos discriminatorios: expresiones verbales o escritas; comentarios sobre tu origen, aspecto físico o costumbres culturales. Apunta el lugar, la fecha y los detalles: quién, qué, cómo, si hubo testigos del trato discriminatorio..."
 
-
 #: lib/chatbot/graphs/faq/faq_work.ex:24
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_WORK_TITLE"
@@ -2346,3 +2344,13 @@ msgstr "Preguntas frecuentes Comercio:"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "WORK_FAQ"
 msgstr "Preguntas sobre el entorno laboral"
+
+#: lib/chatbot/graphs/urgent/initial_graph.ex:125
+#, elixir-autogen, elixir-format, fuzzy
+msgid "INITIAL_Q8"
+msgstr "¿Quieres información sobre los recursos de denuncia y asistencia a víctimas que hay en tu zona?"
+
+#: lib/chatbot/graphs/faq/faq_ca_resources.ex:43
+#, elixir-autogen, elixir-format
+msgid "EXIT"
+msgstr "Salir"

@@ -45,7 +45,7 @@ defmodule UrlsTest do
         Logger.warning("Timeout for URL #{url}")
         false
       {:error, %HTTPoison.Error{reason: reason}} ->
-        Logger.error("Error with URL #{url}: Failed to fetch URL: #{reason}")
+        Logger.error("Error with URL #{url}: Failed to fetch URL: #{inspect(reason)}")
         false
     end
   end

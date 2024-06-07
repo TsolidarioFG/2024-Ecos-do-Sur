@@ -57,6 +57,13 @@ defmodule Chatbot.InformationCollector do
     :poolboy.checkin(:collector, self())
   end
 
+  @impl GenServer
+  def terminate(_, state) do
+    stop_timeout_timer(state)
+    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("error_message")})
+    :poolboy.checkin(:collector, self())
+  end
+
   @impl true
   def handle_call({:initialize, ws}, _from, state) do
     Gettext.put_locale(ws.lang)
@@ -241,8 +248,8 @@ defmodule Chatbot.InformationCollector do
   @impl true
   def handle_cast(
         {:answer, %{"message" => msg, "update_id" => _}},
-        %{data: %{description: nil} = data} = state
-      ) do
+        %{data: %{gender: gen, ca: c,description: nil} = data} = state
+      ) when gen != nil and c != nil do
     keyboard = [
       [%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]
     ]
@@ -256,6 +263,10 @@ defmodule Chatbot.InformationCollector do
 
     {:noreply, reset_timer(%{state | data: %{data | description: msg["text"]}})}
   end
+
+  # Ignore error prone messages
+  @impl true
+  def handle_cast({:answer, _}, state), do: {:noreply, state}
 
   ####################################################################
   ####################### PRIVATE FUNCTIONS ##########################

@@ -57,7 +57,4 @@ defmodule Chatbot.TransportGraph do
   def resolve({:S6, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("TRANSPORT_S6"), user, message_id, key)
   # IGNORE
   def resolve({state, history, memory}, _, _, _, _), do:  {{state, :transport}, history, memory}
-
-
-
 end

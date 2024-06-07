@@ -93,7 +93,9 @@ defmodule Chatbot.InformationCollector do
         %{data: %{review: nil}} = state
       ) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
-    save_data(state)
+    if state.data.birth_location != nil do
+      save_data(state)
+    end
     {:stop, :normal, reset_timer(state)}
   end
 

@@ -78,17 +78,10 @@ defmodule Chatbot.Worker do
     do_handle_update(update, reset_timer(state))
   end
 
+
   @impl GenServer
   def handle_cast({:last_message, message_id}, state) do
     {:noreply, %{state | last_message: message_id}}
-  end
-
-  # Terminates the process when an error occured
-  @impl GenServer
-  def terminate(:shutdown, state) do
-    stop_timeout_timer(state)
-    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("error_message")})
-    :poolboy.checkin(:worker, self())
   end
 
   # Terminates the process when no error occured
@@ -113,6 +106,13 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def terminate(:silence, state) do
     stop_timeout_timer(state)
+    :poolboy.checkin(:worker, self())
+  end
+
+  @impl GenServer
+  def terminate(_, state) do
+    stop_timeout_timer(state)
+    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("error_message")})
     :poolboy.checkin(:worker, self())
   end
 

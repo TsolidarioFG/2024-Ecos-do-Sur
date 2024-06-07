@@ -128,6 +128,7 @@ defmodule Chatbot.Worker do
       "NO" ->
         new_state = Manager.resolve(state.graph_state, state.user, state.key, "CONTINUE", query["message"]["message_id"])
         {:noreply, %{state | graph_state: new_state, stop_pause: false}}
+      "EXIT" -> {:stop, :normal, %{state | graph_state: {:solved, nil, nil}}}
       _ -> {:noreply, state}
     end
   end
@@ -158,11 +159,11 @@ defmodule Chatbot.Worker do
   end
 
   # The bot receives a text message so it asks whether to restart or continue the conversation
-  defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved do
-    keyboard = [[%{text: "SI", callback_data: "YES"}, %{text: "NO", callback_data: "NO"}]]
+  defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved and state.lang != nil do
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}], [%{text: gettext("EXIT"), callback_data: "EXIT"}]]
         TelegramWrapper.send_menu(
           keyboard,
-          "Quieres reiniciar la conversación?",
+          "Quieres reiniciar la conversación o salir?",
           state.user,
           state.key
         )

@@ -30,7 +30,7 @@ defmodule Chatbot.InitialGraph do
   end
 
   def resolve({:start_final_resolve, history, _}, user, key, "U1", message_id), do: resolve({:U1_new, history, nil}, user, key, nil, message_id)
-  def resolve({:start_final_resolve, history, _}, user, key, "I1", message_id), do: resolve({:I1, history, nil}, user, key, nil, message_id)
+  def resolve({:start_final_resolve, history, _}, user, key, "I1", message_id), do: Manager.resolve({{:start, :faq}, history, nil}, user, key, nil, message_id)
 
   ####################################################################
   ############################ URGENT ################################
@@ -47,7 +47,7 @@ defmodule Chatbot.InitialGraph do
   end
 
   def resolve({:U1_new_resolve, history, _}, user, key, "NO", message_id), do: resolve({:U1_1_new, history, nil}, user, key, nil, message_id)
-  def resolve({:U1_new_resolve, history, _}, user, key, "YES", message_id), do: resolve({:U1_2_new, history, nil}, user, key, nil, message_id)
+  def resolve({:U1_new_resolve, history, _}, user, key, "YES", message_id), do: resolve({:S4, history, nil}, user, key, nil, message_id)
 
   def resolve({:U1_1_new, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
@@ -59,32 +59,12 @@ defmodule Chatbot.InitialGraph do
   def resolve({:U1_1_new_resolve, history, _}, user, key, "YES", message_id), do: resolve({:S1, history, nil}, user, key, nil, message_id)
   def resolve({:U1_1_new_resolve, history, _}, user, key, "NO", message_id), do: resolve({:U2, history, nil}, user, key, nil, message_id)
 
-  def resolve({:U1_2_new, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
-    new_history = [{:U1_2_new, :initial} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q3"), new_history), user, message_id, key)
-    {{:U1_2_new_resolve, :initial}, new_history, nil}
-  end
-
-  def resolve({:U1_2_new_resolve, history, _}, user, key, "YES", message_id), do: resolve({:S4, history, nil}, user, key, nil, message_id)
-  def resolve({:U1_2_new_resolve, history, _}, user, key, "NO", message_id), do: resolve({:U1_3, history, nil}, user, key, nil, message_id)
-
-  def resolve({:U1_3, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
-    new_history = [{:U1_3_new, :initial} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q3"), new_history), user, message_id, key)
-    {{:U1_3_resolve, :initial}, new_history, nil}
-  end
-
-  def resolve({:U1_3_resolve, history, _}, user, key, "YES", message_id), do: resolve({:S5, history, nil}, user, key, nil, message_id)
-  def resolve({:U1_3_resolve, history, _}, user, key, "NO", message_id), do: resolve({:S6, history, nil}, user, key, nil, message_id)
-
   ##################################
   # U2
   ##################################
   def resolve({:U2, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("LEISURE"), callback_data: "LEISURE"}, %{text: gettext("COMMERCE"), callback_data: "COMMERCE"}],
-    [%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}, %{text: gettext("TRANSPORT"), callback_data: "TRANSPORT"}, %{text: gettext("SCHOOL"), callback_data: "SCHOOL"}],
+    [%{text: gettext("HOSPITAL"), callback_data: "HOSPITAL"}, %{text: gettext("SCHOOL"), callback_data: "SCHOOL"}],
     [%{text: gettext("HOME"), callback_data: "HOME"}, %{text: gettext("STREET"), callback_data: "STREET"}, %{text: gettext("WORK"), callback_data: "WORK"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:U2, :initial} | history]
@@ -123,7 +103,7 @@ defmodule Chatbot.InitialGraph do
   # Home:
   def resolve({:U2_final_resolve, history, "HOME"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :home}, history, nil}, user, key, nil, message_id)
   # Street:
-  def resolve({:U2_final_resolve, history, "STREET"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
+  def resolve({:U2_final_resolve, history, "STREET"}, user, key, "NO", message_id), do: Manager.resolve({{:S1, :person}, history, nil}, user, key, nil, message_id)
   # Leisure:
   def resolve({:U2_final_resolve, history, "LEISURE"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :leisure}, history, nil}, user, key, nil, message_id)
   # Commerce:
@@ -131,31 +111,23 @@ defmodule Chatbot.InitialGraph do
   # Hospital:
   def resolve({:U2_final_resolve, history, "HOSPITAL"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :hospital}, history, nil}, user, key, nil, message_id)
   # Transport:
-  def resolve({:U2_final_resolve, history, "TRANSPORT"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :transport}, history, nil}, user, key, nil, message_id)
+  #def resolve({:U2_final_resolve, history, "TRANSPORT"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :transport}, history, nil}, user, key, nil, message_id)
   # Person:
-  def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
+  #def resolve({:U2_final_resolve, history, "SCHOOLPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :school_per}, history, nil}, user, key, nil, message_id)
   def resolve({:U2_final_resolve, history, "WORKPER"}, user, key, "NO", message_id), do: Manager.resolve({{:start, :work_per}, history, nil}, user, key, nil, message_id)
-  def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:start, :person}, history, nil}, user, key, nil, message_id)
-
-  ####################################################################
-  ########################## INFORMATION #############################
-  ####################################################################
+  def resolve({:U2_final_resolve, history, _}, user, key, "NO", message_id), do: Manager.resolve({{:S1, :person}, history, nil}, user, key, nil, message_id)
 
   ##################################
-  # I1
+  # FAQ LINKING
   ##################################
-
-  def resolve({:I1, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: "Escuela", callback_data: "I8"}, %{text: "Casa", callback_data: "I9"}]]
-    TelegramWrapper.update_menu(
-      keyboard,
-      "Dónde ocurre el problema?",
-      user,
-      message_id,
-      key
-    )
-    {:I1_resolve, history, nil}
+  def resolve({:L1, _, _}, user, key, _, _) do
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}], [%{text: gettext("NO"), callback_data: "NO"}]]
+    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("INITIAL_Q8"), nil), user, key)
+    {{:L1_resolve, :initial}, nil, nil}
   end
+
+  def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:start_link, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
+  def resolve({:L1_resolve, _, _}, _, _, "NO", _), do: {:solved, nil, nil}
 
   ####################################################################
   ########################### SOLUTIONS ##############################
@@ -165,13 +137,12 @@ defmodule Chatbot.InitialGraph do
   # S2 ----
   def resolve({:S2, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S2"), user, message_id, key)
   # S3 ----
-  def resolve({:S3, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S3"), user, message_id, key)
+  def resolve({:S3, _, _}, user, key, _, message_id) do
+    TelegramWrapper.update_menu(gettext("INITIAL_S3"), user, message_id, key)
+    resolve({:L1, nil, nil}, user, key, nil, message_id)
+  end
   # S4 ----
   def resolve({:S4, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S4"), user, message_id, key)
-  # S5 ----
-  def resolve({:S5, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S5"), user, message_id, key)
-  # S6 ----
-  def resolve({:S6, _, _}, user, key, _, message_id), do:  CommonFunctions.do_finalize_simple(gettext("INITIAL_S6"), user, message_id, key)
   # IGNORE
   def resolve({state, history, memory}, _, _, _, _), do:  {{state, :initial}, history, memory}
 end

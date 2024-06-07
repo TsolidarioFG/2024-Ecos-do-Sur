@@ -976,7 +976,7 @@ msgstr ""
 #: lib/chatbot/information_collector.ex:69
 #, elixir-autogen, elixir-format
 msgid "Birth Location? (COUNTRY)"
-msgstr ""
+msgstr "¿Cuál es tu lugar de nacimiento?"
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:61
 #: lib/chatbot/graphs/urgent/work_graph.ex:65
@@ -1152,7 +1152,7 @@ msgstr "Si has contactado con un anuncio de alquiler de vivienda y en algún mom
 #: lib/chatbot/information_collector.ex:181
 #, elixir-autogen, elixir-format
 msgid "How old are you?"
-msgstr ""
+msgstr "¿Cuantos años tienes?"
 
 #: lib/chatbot/information_collector.ex:302
 #, elixir-autogen, elixir-format
@@ -1473,7 +1473,7 @@ msgstr "----------------------------------------\n"
 "Hay diferentes vías para denunciar el acoso discriminatorio, por lo que *siempre te recomendamos que comiences por localizar una organización en tu zona que te pueda asesorar* sobre cuál es la mejor opción en tu caso concreto (enlaza recursos regionales).\n\n"
 "1. Si las denuncias internas no han funcionado, o si no confías en ellas, puedes denunciar ante la Inspección de Trabajo. Es un organismo público que se encarga de controlar el cumplimiento de las normativas relativas al empleo. Este organismo dispone de un [buzón online](https://oeitss.mites.gob.es/buzonitss) en el que se pueden comunicar las situaciones de acoso de forma anónima.\n\n"
 "2. Otra vía es la denuncia propiamente dicha en la Inspección de la Seguridad Social, que abre un proceso de control a la empresa. Para hacerla tendrás que aportar tus datos personales. Tu identidad estará protegida durante la investigación, pero podrás recibir información sobre cómo va el proceso. [Aquí](https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/empresas/empleados/seguridad-social/inspeccion.html#-ce27cd07198c) tienes más información sobre los mecanismos de denuncia.\n\n"
-"3. Las situaciones de acosos en las que hay indicios de discriminación xenófoba, racista o islamófoba pueden notificarse al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): llamada gratuita en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.html)).\n\n"
+"3. Las situaciones de acosos en las que hay indicios de discriminación xenófoba, racista o islamófoba pueden notificarse al [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): llamada gratuita en el *021* y otras consultas en WhatsApp (628 860 507), [correo electrónico](mailto:consejo-sei@igualdad.gob.es), [formulario](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) o acudir a una oficina ([consulta aquí la de tu Comunidad](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm)).\n\n"
 "4. También, en algunos casos, se puede realizar una denuncia judicial.\n\n"
 "Insistimos: hay varias vías de denuncia, y en una situación tan grave es importante que alguien te acompañe y te cuide."
 

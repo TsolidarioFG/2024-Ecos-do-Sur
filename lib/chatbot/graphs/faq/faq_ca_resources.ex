@@ -36,12 +36,8 @@ defmodule Chatbot.FaqCaResources do
       [%{text: gettext("CASTILLA LEON"), callback_data: "Q19"}]
     ]
 
-    # Add "BACK" button if state is :start
-    keyboard = if state == :start do
-      keyboard ++ [[%{text: gettext("BACK"), callback_data: "BACK"}]]
-    else
-      keyboard ++ [[%{text: gettext("EXIT"), callback_data: "EXIT"}]]
-    end
+    statesuffix = if state == :start, do: "BACK", else: "EXIT"
+    keyboard = keyboard ++ [[%{text: Gettext.gettext(ChatBot.Gettext, statesuffix), callback_data: statesuffix}]]
 
     new_history = [{:start, :faq_ca_resources} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("FAQ_CA_RESOURCES"), nil), user, message_id, key)

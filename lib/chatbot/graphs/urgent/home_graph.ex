@@ -54,7 +54,10 @@ defmodule Chatbot.HomeGraph do
   end
 
   def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:start_link, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
-  def resolve({:L1_resolve, _, _}, _, _, "NO", _), do: {:solved, nil, nil}
+  def resolve({:L1_resolve, _, _}, user, key, "NO", message_id) do
+    TelegramWrapper.delete_message(key, user, message_id)
+    {:solved, nil, nil}
+  end
 
   ##################################
   # SOLUTIONS

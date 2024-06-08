@@ -75,7 +75,7 @@ msgstr "Hasta pronto! : )"
 #: lib/chatbot/worker.ex:101
 #, elixir-autogen, elixir-format
 msgid "Due to inactivity the conversation will be ended"
-msgstr "La conversación va a terminar por inactividad."
+msgstr "La conversación se ha cerrado por inactividad."
 
 #: lib/chatbot/worker.ex:43
 #, elixir-autogen, elixir-format
@@ -100,7 +100,7 @@ msgstr "Debido a un error en nuestro sistema la información no se ha podido gua
 #: lib/chatbot/information_collector.ex:54
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Due to inactivity the conversation will be ended. It wont be saved."
-msgstr "La conversación va a terminar por inactividad.\n\n La información que has aportado no se va a guardar."
+msgstr "La conversación se ha cerrado por inactividad.\n\n La información que has aportado no se va a guardar."
 
 #: lib/chatbot/information_collector.ex:198
 #, elixir-autogen, elixir-format

@@ -25,13 +25,14 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def init(_) do
     Logger.info("Worker Initialized")
-    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false}
+    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false, last_message: nil}
     {:ok, state}
   end
 
   # When the Worker does not reveive any messages from the user for a given time it will die.
   @impl GenServer
   def handle_info(:timeout, state) do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
     {:stop, :timeout,  state}
   end
 
@@ -75,6 +76,12 @@ defmodule Chatbot.Worker do
   def handle_cast({:answer, update}, state) do
     Logger.info("Cast")
     do_handle_update(update, reset_timer(state))
+  end
+
+
+  @impl GenServer
+  def handle_cast({:last_message, message_id}, state) do
+    {:noreply, %{state | last_message: message_id}}
   end
 
   # Terminates the process when no error occured
@@ -127,7 +134,9 @@ defmodule Chatbot.Worker do
       "NO" ->
         new_state = Manager.resolve(state.graph_state, state.user, state.key, "CONTINUE", query["message"]["message_id"])
         {:noreply, %{state | graph_state: new_state, stop_pause: false}}
-      "EXIT" -> {:stop, :normal, %{state | graph_state: {:solved, nil, nil}}}
+      "EXIT" ->
+        TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
+        {:stop, :normal, %{state | graph_state: {:solved, nil, nil}}}
       _ -> {:noreply, state}
     end
   end
@@ -137,9 +146,11 @@ defmodule Chatbot.Worker do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "yes" ->
+        TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
         do_delegate(state, :with_information)
         {:stop, :silence, state}
       "no" ->
+        TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
         do_delegate(state, :without_information)
         {:stop, :silence, state}
       _ -> {:noreply, state}
@@ -159,6 +170,7 @@ defmodule Chatbot.Worker do
 
   # The bot receives a text message so it asks whether to restart or continue the conversation
   defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved and state.lang != nil do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}], [%{text: gettext("EXIT"), callback_data: "EXIT"}]]
         TelegramWrapper.send_menu(
           keyboard,

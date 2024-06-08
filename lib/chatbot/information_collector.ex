@@ -28,12 +28,14 @@ defmodule Chatbot.InformationCollector do
        user: nil,
        lang: nil,
        timer_ref: nil,
+       last_message: nil,
        data: %{birth_location: nil, age: nil, gender: nil, ca: nil, description: nil, review: nil}
      }}
   end
 
   @impl GenServer
   def handle_info(:timeout, state) do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
     {:stop, :timeout, state}
   end
 
@@ -93,6 +95,11 @@ defmodule Chatbot.InformationCollector do
     {:noreply, reset_timer(state)}
   end
 
+  @impl GenServer
+  def handle_cast({:last_message, message_id}, state) do
+    {:noreply, %{state | last_message: message_id}}
+  end
+
   # The user does not want to leave a review:
   @impl true
   def handle_cast(
@@ -100,6 +107,7 @@ defmodule Chatbot.InformationCollector do
         %{data: %{review: nil}} = state
       ) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
+    TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
     if state.data.birth_location != nil do
       save_data(state)
     end
@@ -185,6 +193,8 @@ defmodule Chatbot.InformationCollector do
         {:answer, %{"message" => msg, "update_id" => _}},
         %{data: %{birth_location: nil} = data} = state
       ) do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
+    TelegramWrapper.delete_message(state.key, state.user, msg["message_id"])
     TelegramWrapper.send_message(state.key, state.user, gettext("How old are you?"))
     {:noreply, reset_timer(%{state | data: %{data | birth_location: msg["text"]}})}
   end
@@ -195,6 +205,8 @@ defmodule Chatbot.InformationCollector do
         {:answer, %{"message" => msg, "update_id" => _}},
         %{data: %{age: nil} = data} = state
       ) do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
+    TelegramWrapper.delete_message(state.key, state.user, msg["message_id"])
     keyboard = [
       [%{text: "♂️", callback_data: "male"}, %{text: "♀️", callback_data: "female"}],
       [%{text: "⚧️", callback_data: "other"}]
@@ -248,8 +260,12 @@ defmodule Chatbot.InformationCollector do
   @impl true
   def handle_cast(
         {:answer, %{"message" => msg, "update_id" => _}},
+
         %{data: %{gender: gen, ca: c,description: nil} = data} = state
       ) when gen != nil and c != nil do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
+    TelegramWrapper.delete_message(state.key, state.user, msg["message_id"])
+
     keyboard = [
       [%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]
     ]

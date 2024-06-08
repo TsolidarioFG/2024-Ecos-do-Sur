@@ -377,7 +377,7 @@ msgstr "Otro"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:81
 #, elixir-autogen, elixir-format
 msgid "OTHER PERSON"
-msgstr ""
+msgstr "Otra persona"
 
 #: lib/chatbot/graphs/urgent/initial_graph.ex:81
 #, elixir-autogen, elixir-format

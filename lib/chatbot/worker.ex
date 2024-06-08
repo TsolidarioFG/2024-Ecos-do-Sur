@@ -31,10 +31,13 @@ defmodule Chatbot.Worker do
 
   # When the Worker does not reveive any messages from the user for a given time it will die.
   @impl GenServer
-  def handle_info(:timeout, state) do
+  def handle_info(:timeout, state) when state.graph_state != {:solved, nil, nil} do
     TelegramWrapper.delete_message(state.key, state.user, state.last_message)
     {:stop, :timeout,  state}
   end
+  @impl GenServer
+  def handle_info(:timeout, state), do: {:stop, :timeout,  state}
+
 
   # The worker is called by the leader cause a new message was received
   @impl GenServer
@@ -62,9 +65,11 @@ defmodule Chatbot.Worker do
       fn value ->
         case query["data"] do
           "yes" ->
+            TelegramWrapper.delete_message(key, user, query["message"]["message_id"])
             do_delegate(value, :with_information)
             {:stop, :silence, :worker_dead, value}
           "no" ->
+            TelegramWrapper.delete_message(key, user, query["message"]["message_id"])
             do_delegate(value, :without_information)
             {:stop, :silence, :worker_dead, value}
         end

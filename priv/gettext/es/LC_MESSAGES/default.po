@@ -75,7 +75,7 @@ msgstr "Podemos guardar esta conversación? Puedes responder a este mensaje hast
 #: lib/chatbot/worker.ex:96
 #, elixir-autogen, elixir-format
 msgid "Bye"
-msgstr "Hasta pronto! : )"
+msgstr "Hasta pronto! 😊"
 
 #: lib/chatbot/worker.ex:105
 #, elixir-autogen, elixir-format

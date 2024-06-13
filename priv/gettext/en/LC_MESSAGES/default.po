@@ -990,7 +990,7 @@ msgstr "Bullying"
 #: lib/chatbot/information_collector.ex:78
 #, elixir-autogen, elixir-format
 msgid "Birth Location? (COUNTRY)"
-msgstr "¿Cuál es tu lugar de nacimiento?"
+msgstr "What is yout place of birth?"
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:61
 #: lib/chatbot/graphs/urgent/work_graph.ex:65
@@ -1001,13 +1001,13 @@ msgstr "Distinctive Treatment"
 #: lib/chatbot/information_collector.ex:250
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Describe what happened in detail."
-msgstr "Por favor, describe que ha pasado en un único mensaje."
+msgstr "Describe what happened in detail. Only one message."
 
 #: lib/chatbot/information_collector.ex:90
 #: lib/chatbot/information_collector.ex:275
 #, elixir-autogen, elixir-format
 msgid "Do you want to add a review?"
-msgstr "Quieres añadir una reseña?"
+msgstr "Do you want to add a review?"
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:17
 #: lib/chatbot/graphs/util/history_formatting.ex:43
@@ -1167,7 +1167,7 @@ msgstr "If you have contacted a rental housing advertisement and at any point du
 #: lib/chatbot/information_collector.ex:198
 #, elixir-autogen, elixir-format
 msgid "How old are you?"
-msgstr "¿Cuantos años tienes?"
+msgstr "How old are you?"
 
 #: lib/chatbot/information_collector.ex:329
 #, elixir-autogen, elixir-format
@@ -1295,7 +1295,8 @@ msgstr "Violence"
 #: lib/chatbot/information_collector.ex:137
 #, elixir-autogen, elixir-format
 msgid "Value the bot with the following stars:"
-msgstr ""
+msgstr "Value the bot with the following stars:\n\n"
+"Left (lower value), right (higher value)."
 
 #: lib/chatbot/graphs/urgent/home_graph.ex:17
 #: lib/chatbot/graphs/util/history_formatting.ex:28
@@ -2529,7 +2530,7 @@ msgstr "Person at Work"
 #: lib/chatbot/graphs/faq/faq_graph.ex:26
 #, elixir-autogen, elixir-format
 msgid "RENT_FAQ"
-msgstr "Rent FAQs ⤵️"
+msgstr "Frequently asked questions about Rent ⤵️"
 
 #: lib/chatbot/graphs/faq/faq_rent.ex:40
 #, elixir-autogen, elixir-format, fuzzy

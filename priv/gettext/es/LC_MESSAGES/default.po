@@ -1298,7 +1298,8 @@ msgstr ""
 #: lib/chatbot/information_collector.ex:137
 #, elixir-autogen, elixir-format
 msgid "Value the bot with the following stars:"
-msgstr ""
+msgstr "Valora el servicio con las siguientes estrellas.\n\n"
+"Izquierda (menor valor), derecha (mayor valor)."
 
 #: lib/chatbot/graphs/urgent/home_graph.ex:17
 #: lib/chatbot/graphs/util/history_formatting.ex:28

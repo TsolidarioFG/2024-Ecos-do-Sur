@@ -1558,3 +1558,8 @@ msgstr ""
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_RENT_Q6"
 msgstr ""
+
+#: lib/chatbot/worker.ex:182
+#, elixir-autogen, elixir-format
+msgid "RESTART"
+msgstr ""

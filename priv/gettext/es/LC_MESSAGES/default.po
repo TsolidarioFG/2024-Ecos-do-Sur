@@ -2538,3 +2538,8 @@ msgstr "Preguntas sobre los alquileres ⤵️"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_RENT_Q6"
 msgstr "¿Quieres localizar estos recursos en tu zona?"
+
+#: lib/chatbot/worker.ex:182
+#, elixir-autogen, elixir-format
+msgid "RESTART"
+msgstr "Quieres reiniciar la conversación o salir?"

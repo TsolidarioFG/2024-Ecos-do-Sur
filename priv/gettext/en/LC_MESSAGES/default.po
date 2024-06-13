@@ -367,7 +367,6 @@ msgstr "*Did you know?*\n\n"
 "The signs indicating \"Right of Admission Reserved\" do not justify admission policies that discriminate against people based on their race, skin color, religion, gender, or other characteristics protected by law. Discrimination in access to public establishments is prohibited in many countries and can have legal consequences for owners who practice it.\n\n"
 "It is important that establishments respect the rights of all people and do not engage in discriminatory practices."
 
-
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:93
 #, elixir-autogen, elixir-format
 msgid "LEISURE_S6"
@@ -667,7 +666,6 @@ msgstr "*The denial of a service without duly justified reasons, in this case, a
 "7. Go to [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [offices](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), emergencies *(021)*, WhatsApp *(628 860 507)*, email consejo-sei@igualdad.gob.es or [form](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "8. Always rely on *NGOs and local organizations that work in defense of Human Rights* and fight against hate and discrimination. Reach out to present the case and ask for support."
 
-
 #: lib/chatbot/graphs/urgent/school_graph.ex:182
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S16"
@@ -697,7 +695,6 @@ msgstr "*The denial of a service without duly justified reasons, in this case, s
 "6. If the school does not cooperate or solve the problem, *report the case to the* [Education Inspectorate](https://www.educacionfpydeportes.gob.es/servicios-al-ciudadano/catalogo/general/99/998258/ficha/998258.html).\n\n"
 "7. Go to [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do): [offices](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), emergencies *(021)*, WhatsApp *(628 860 507)*, email consejo-sei@igualdad.gob.es or [form](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "8. Always rely on *NGOs and local organizations that work in defense of Human Rights* and fight against hate and discrimination. Reach out to present the case and ask for support."
-
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:186
 #, elixir-autogen, elixir-format, fuzzy
@@ -764,7 +761,6 @@ msgstr "If you have discussed the situation with staff or school management and 
 "For assistance with the complaint process, contact [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [regional offices](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), a free *emergency contact (021)*, *WhatsApp (628 860 507)*, email consejo-sei@igualdad.gob.es, or [form](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Always involve *local NGOs and organizations* that work with individuals who unfortunately experience hate and discrimination based on race, religion, gender, sexual orientation... Reach out to them to present the case and request support."
 
-
 #: lib/chatbot/graphs/urgent/school_graph.ex:158
 #, elixir-autogen, elixir-format, fuzzy
 msgid "SCHOOL_S5"
@@ -791,7 +787,6 @@ msgstr "*If you have already informed a trusted adult and school authorities, an
 "5. In more severe cases, file a *complaint, call 091* (emergency line in Spain), or go to the [local prosecutor's office](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&tipo=FIS&lang=es_es). "
 "For assistance with the complaint process, contact [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm): [regional offices](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm), a free *emergency contact (021)*, *WhatsApp (628 860 507)*, email consejo-sei@igualdad.gob.es, or [form](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do).\n\n"
 "6. Always involve *local NGOs and organizations* that work with individuals who unfortunately experience hate and discrimination based on race, religion, gender, sexual orientation... Reach out to them to present the case and request support."
-
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:164
 #, elixir-autogen, elixir-format, fuzzy
@@ -822,7 +817,6 @@ msgstr "*Evaluating content in relation to hate speech is a complex and sensitiv
 "If it is content that can be accessed, such as a book or a webpage, *save that content*.\n\n"
 "Bring this evidence to the [CEDRE complaint form](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do) so they can assess whether this content may indeed be considered a hate crime.\n\n"
 "*Include all the details you can* about the educational institution, the material containing the content, the course or subject, the age of the students, and what you believe is the basis of discrimination (race, religion, sex, etc.)."
-
 
 #: lib/chatbot/graphs/urgent/school_graph.ex:88
 #: lib/chatbot/graphs/util/history_formatting.ex:36
@@ -857,7 +851,6 @@ msgstr "Ambulance"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "COMMERCE_Q1"
 msgstr "What is the issue?"
-
 
 #: lib/chatbot/graphs/urgent/commerce_graph.ex:31
 #, elixir-autogen, elixir-format, fuzzy
@@ -907,7 +900,6 @@ msgstr "First of all, try to remain calm and evaluate the situation objectively.
 "----------------------------------------\n"
 "You can take this material to a specialized NGO like Ecos do Sur.\n\n"
 "You can also call the Council for the Elimination of Racial or Ethnic Discrimination [CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do) at 021, message them on WhatsApp: +34 628 860 507, or email: consejo-sei@igualdad.gob.es. Remember that you can always rely on local NGOs and organizations that work with people who unfortunately often experience hate and discrimination due to race or religion. Seek their support to address your case."
-
 
 #: lib/chatbot/graphs/urgent/transport_graph.ex:29
 #, elixir-autogen, elixir-format
@@ -1093,7 +1085,6 @@ msgstr "A rental contract *can be legally terminated* by either party before its
 "- The association *Provivienda* specializes in addressing cases of residential discrimination throughout Spain. You can contact them via email at PNDRESTATAL@provivienda.org and through their [Discrimination Mailbox](https://provivienda.org/nodiscriminacion/te-han-discriminado/).\n\n"
 "- The Council for the Elimination of Racial and Ethnic Discrimination ([CEDRE](https://igualdadynodiscriminacion.igualdad.gob.es/home.do)) is a government body managed by NGOs, specializing in counseling and mediation. You can contact them via toll-free call at 021 or WhatsApp (628 860 507), [email](mailto:consejo-sei@igualdad.gob.es), [form](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/presentarQuejaConsulta.do), or visit an office ([check here for your Community's office](https://igualdadynodiscriminacion.igualdad.gob.es/redOficinas/portada/home.htm))."
 
-
 #: lib/chatbot/graphs/urgent/home_graph.ex:70
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S3"
@@ -1149,7 +1140,6 @@ msgstr "If you have contacted an advertisement for renting a home and at first, 
 "- Other associations fighting discrimination: such as Ecos do Sur, ACCEM, SOS Racism, or Fundación Secretariado Gitano, among others. They are distributed throughout the national territory.\n\n"
 "- Victim Support Offices in all provincial prosecutor's offices in the State."
 
-
 #: lib/chatbot/graphs/urgent/home_graph.ex:74
 #, elixir-autogen, elixir-format, fuzzy
 msgid "HOME_S5"
@@ -1183,7 +1173,6 @@ msgstr "¿Cuantos años tienes?"
 #, elixir-autogen, elixir-format
 msgid "In which CA did it happen?"
 msgstr "In which Comunidad Autónoma did it happen?"
-
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:17
 #: lib/chatbot/graphs/util/history_formatting.ex:44
@@ -1423,7 +1412,6 @@ msgstr "Situations like these, when they occur in the course of work in a repeat
 "-Another option is to report to the Social Security Inspection, which opens a control process on the company. To do so, you will need to provide your personal data. Your identity will be protected during the investigation, but you can receive information on the progress of the process. [Here you have more information on reporting mechanisms](https://administracion.gob.es/pag_Home/Tu-espacio-europeo/derechos-obligaciones/empresas/empleados/seguridad-social/inspeccion.html#-ce27cd07198c).\n"
 "-Also, in some cases, a judicial report can be filed.\n\n"
 "We insist: there are several reporting channels, and in such a serious situation, it is important that someone accompanies and supports you. Here you can find available resources near you to assist you before, during, and after the entire process."
-
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:80
 #, elixir-autogen, elixir-format, fuzzy
@@ -1678,6 +1666,11 @@ msgstr "[Information on procedures to request healthcare in each Autonomous Comm
 "----------------------------------------\n"
 "Judicial claims: [list of prosecutor's offices by location](https://www.mjusticia.gob.es/BUSCADIR/ServletControlador?apartado=buscadorGeneral&tipo=FIS&lang=es_es)"
 
+#: lib/chatbot/graphs/faq/faq_graph.ex:22
+#, elixir-autogen, elixir-format, fuzzy
+msgid "HEALTHCARE"
+msgstr "Frequently Asked Questions about Healthcare"
+
 #: lib/chatbot/graphs/faq/faq_healthcare_graph.ex:43
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_HEALTHCARE_S3_1"
@@ -1884,7 +1877,6 @@ msgstr "*ADMINISTRATION RESOURCES:*\n\n"
 "\t > LAS PALMAS DE GRAN CANARIA - CEAR | Email: discriminacion@cear.es | Address: Avda. Escaleritas, 66, 35011 – Las Palmas de Gran Canaria | Phone: 680 68 95 90\n\n"
 "\t > TENERIFE - RED CROSS | Email: savdlaguna@cruzroja.es | Address: C/ Hermanos Marrero, 2 (Behind the Church of La Concepción). 38203 San Cristóbal de La Laguna, Tenerife. | Phone: 649 97 03 71"
 
-
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:83
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_CANTABRIA"
@@ -1974,7 +1966,6 @@ msgstr "*ADMINISTRATION RESOURCES:*\n\n"
 "*ASSOCIATIONS:*\n\n"
 "- ANDALUCÍA ACOGE: Delegation Ceuta: C/ Verlarde nº 32, GROUND FLOOR C.P. 51001 CEUTA | Phone: 955697404/ 683138216 | Email: ceuta@acoge.org\n\n"
 "- MELILLA ACOGE: C/ Cataluña, 57. 1st floor 57006 Melilla | Phone: 952 670 893 | Email: melilla@acoge.org\n\n"
-
 
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:87
 #, elixir-autogen, elixir-format
@@ -2111,7 +2102,6 @@ msgstr "*ADMINISTRATION RESOURCES:*\n\n"
 #, elixir-autogen, elixir-format
 msgid "FAQ_CA_RESOURCES"
 msgstr "Choose an autonomous community:"
-
 
 #: lib/chatbot/graphs/faq/faq_ca_resources.ex:95
 #, elixir-autogen, elixir-format
@@ -2440,7 +2430,6 @@ msgstr "What should I do if I've experienced housing discrimination?"
 msgid "FAQ_RENT_Q5"
 msgstr "Where can I get information and file complaints about housing discrimination?"
 
-
 #: lib/chatbot/graphs/faq/faq_rent.ex:54
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_RENT_S1"
@@ -2521,6 +2510,7 @@ msgstr "We recommend that you always start by contacting *organizations speciali
 "\t > Tenant Associations and Unions in most major cities.\n\n"
 "\t > Victim Support Offices in all provincial prosecutor's offices.\n\n"
 "\t > As a complement to formal complaints, you can also report to the Municipal Consumer Information Office (OMIC) and the Ombudsman to help quantify and raise awareness of the problem.\n\n"
+
 #: lib/chatbot/graphs/faq/faq_rent.ex:25
 #, elixir-autogen, elixir-format
 msgid "FAQ_RENT_TITLE"
@@ -2545,3 +2535,8 @@ msgstr "Rent FAQs ⤵️"
 #, elixir-autogen, elixir-format, fuzzy
 msgid "FAQ_RENT_Q6"
 msgstr "Do you want to locate these resources in your area?"
+
+#: lib/chatbot/worker.ex:182
+#, elixir-autogen, elixir-format
+msgid "RESTART"
+msgstr "Do you want to either close or restart the conversation?"

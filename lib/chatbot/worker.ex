@@ -179,7 +179,7 @@ defmodule Chatbot.Worker do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}], [%{text: gettext("EXIT"), callback_data: "EXIT"}]]
         TelegramWrapper.send_menu(
           keyboard,
-          "Quieres reiniciar la conversación o salir?",
+          gettext("RESTART"),
           state.user,
           state.key
         )

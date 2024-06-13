@@ -390,7 +390,7 @@ msgstr "Other person"
 #: lib/chatbot/graphs/urgent/initial_graph.ex:81
 #, elixir-autogen, elixir-format
 msgid "PERSONAL"
-msgstr ""
+msgstr "Staff"
 
 #: lib/chatbot/graphs/urgent/commerce_graph.ex:17
 #: lib/chatbot/graphs/urgent/leisure_graph.ex:17

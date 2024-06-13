@@ -191,9 +191,7 @@ defmodule Chatbot.Worker do
 
   defp do_ask_for_language_preferences(leader_pid, key, user, message, state) do
     keyboard = [
-      [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}],
-      [%{text: "🇫🇷", callback_data: "fr"}]
-    ]
+      [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}]]
     TelegramWrapper.send_menu(
       keyboard,
       message,

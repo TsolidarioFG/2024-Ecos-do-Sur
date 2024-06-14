@@ -100,7 +100,8 @@ defmodule Chatbot.SchoolGraph do
   # 5 -----
   # U2 --
   def resolve({:AC_SEC, history, "SEC"}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("UNEQUAL TREATMENT"), callback_data: "UNEQUAL"}, %{text: gettext("TUITION"), callback_data: "TUITION"}]]
+    keyboard = [[%{text: gettext("UNEQUAL TREATMENT"), callback_data: "UNEQUAL"}, %{text: gettext("TUITION"), callback_data: "TUITION"}],
+    [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:AC_SEC, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q5"), new_history), user, message_id, key)
     {{:AC_final_resolve, :school}, new_history, "SEC"}
@@ -108,7 +109,8 @@ defmodule Chatbot.SchoolGraph do
   # U3 --
   def resolve({:AC_EX, history, "EX"}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("UNEQUAL TREATMENT"), callback_data: "UNEQUAL"}, %{text: gettext("PRICE MODIFICATION"), callback_data: "PRICE"}],
-                [%{text: gettext("DENIAL OF SERVICE"), callback_data: "DENIAL"}]]
+                [%{text: gettext("DENIAL OF SERVICE"), callback_data: "DENIAL"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:AC_EX, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q5"), new_history), user, message_id, key)
     {{:AC_final_resolve, :school}, new_history, "EX"}
@@ -116,7 +118,8 @@ defmodule Chatbot.SchoolGraph do
   # U4 --
   def resolve({:AC_CA, history, "CA"}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("DIET"), callback_data: "DIET"}, %{text: gettext("PRICE MODIFICATION"), callback_data: "PRICE"}],
-                [%{text: gettext("DENIAL OF SERVICE"), callback_data: "DENIAL"}]]
+                [%{text: gettext("DENIAL OF SERVICE"), callback_data: "DENIAL"}],
+                [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:AC_CA, :school} | history]
     TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("SCHOOL_Q5"), new_history), user, message_id, key)
     {{:AC_final_resolve, :school}, new_history, "CA"}
@@ -125,10 +128,10 @@ defmodule Chatbot.SchoolGraph do
   def resolve({:AC_final_resolve, history, _}, user, key, "UNEQUAL", message_id), do: resolve({:S11, history, nil}, user, key, nil, message_id)
   def resolve({:AC_final_resolve, history, _}, user, key, "TUITION", message_id), do: resolve({:S12, history, nil}, user, key, nil, message_id)
   def resolve({:AC_final_resolve, history, _}, user, key, "PRICE", message_id), do: resolve({:S16, history, nil}, user, key, nil, message_id)
-  def resolve({:AC_final_resolve, history, _}, user, key, "DIET", message_id), do: resolve({:DI, history, nil}, user, key, nil, message_id)
+  def resolve({:AC_final_resolve, history, _}, user, key, "DIET", message_id), do: resolve({:S13, history, nil}, user, key, nil, message_id)
   def resolve({:AC_final_resolve, history, "CA"}, user, key, "DENIAL", message_id), do: resolve({:S15, history, nil}, user, key, nil, message_id)
   def resolve({:AC_final_resolve, history, "EX"}, user, key, "DENIAL", message_id), do: resolve({:S17, history, nil}, user, key, nil, message_id)
-  # 5 -----
+  # 5 ----- UNUSED FOR NOW
   def resolve({:DI, history, _}, user, key, _, message_id) do
     keyboard = [[%{text: gettext("RELIGION OR PHILOSOPHY"), callback_data: "BELIEFS"}, %{text: gettext("MEDICAL NEED"), callback_data: "MEDICAL"}]]
     new_history = [{:DI, :school} | history]

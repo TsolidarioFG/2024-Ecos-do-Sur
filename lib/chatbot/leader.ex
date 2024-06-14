@@ -81,6 +81,12 @@ defmodule Chatbot.Leader do
     do_handle_worker_dead(worker, state)
   end
 
+  # Ignore last messages updates
+  @impl GenServer
+  def handle_cast({:last_message, _}, state) do
+    {:noreply, state}
+  end
+
   defp do_handle_worker_dead(nil, state), do: {:noreply, state}
 
   defp do_handle_worker_dead(worker, state) do

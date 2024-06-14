@@ -1,4 +1,6 @@
 defmodule Chatbot.Manager do
+  alias Chatbot.FaqRent
+  alias Chatbot.TelegramWrapper
   alias Chatbot.FaqWork
   alias Chatbot.FaqCommerce
   alias Chatbot.PersonGraph
@@ -22,7 +24,10 @@ defmodule Chatbot.Manager do
   def resolve({_,  [{:start, _ } | [_ | [ _ | [_ | history]]]], memory}, user, key, "BACK", message_id), do: resolve({{:U2, :initial}, history, memory}, user, key, nil, message_id)
   def resolve({_,  [_ | [{state, module} | history]], memory}, user, key, "BACK", message_id), do: resolve({{state, module}, history, memory}, user, key, nil, message_id)
   def resolve({_, [{state, module} | history], memory}, user, key, "CONTINUE", message_id), do: resolve({{state, module}, history, memory}, user, key, nil, message_id)
-  def resolve({_, _, _}, _, _, "EXIT", _), do: {:solved, nil, nil}
+  def resolve({_, _, _}, user, key, "EXIT", message_id) do
+    TelegramWrapper.delete_message(key, user, message_id)
+    {:solved, nil, nil}
+  end
   def resolve({{state, :initial}, history, memory}, user, key, response, message_id), do: InitialGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :leisure}, history, memory}, user, key, response, message_id), do: LeisureGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :school}, history, memory}, user, key, response, message_id), do: SchoolGraph.resolve({state, history, memory}, user, key, response, message_id)
@@ -38,6 +43,7 @@ defmodule Chatbot.Manager do
   def resolve({{state, :faq_ca_resources}, history, memory}, user, key, response, message_id), do: FaqCaResources.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :faq_commerce}, history, memory}, user, key, response, message_id), do: FaqCommerce.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :faq_work}, history, memory}, user, key, response, message_id), do: FaqWork.resolve({state, history, memory}, user, key, response, message_id)
+  def resolve({{state, :faq_rent}, history, memory}, user, key, response, message_id), do: FaqRent.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :person}, history, memory}, user, key, response, message_id), do: PersonGraph.resolve({state, history, memory}, user, key, response, message_id)
 
 end

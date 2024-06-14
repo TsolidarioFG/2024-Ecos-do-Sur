@@ -32,7 +32,7 @@ defmodule Chatbot.WorkGraph do
     keyboard = [[%{text: gettext("BOSS"), callback_data: "BOSS"}, %{text: gettext("WORKER"), callback_data: "WORKER"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:EM, :work} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q2"), history), user, message_id, key)
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q2"), new_history), user, message_id, key)
     {{:EM_resolve, :work}, new_history, nil}
   end
 
@@ -42,7 +42,7 @@ defmodule Chatbot.WorkGraph do
     keyboard = [[%{text: gettext("TASK DISTRIBUTION"), callback_data: "TASK"}], [%{text: gettext("MARGINALIZATION"), callback_data: "MARGINALIZATION"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]]
     new_history = [{:EM_1, :work} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q4"), history), user, message_id, key)
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q4"), new_history), user, message_id, key)
     {{:EM_1_resolve, :work}, new_history, memory}
   end
 
@@ -54,15 +54,15 @@ defmodule Chatbot.WorkGraph do
   ##################################
   # 3 -----
   def resolve({:Q3, history, "CANDIDATE" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[ %{text: gettext("REJECTION"), callback_data: "REJECTION"}],
+    do_common_q3(:Q3, history, [[ %{text: gettext("REJECTION"), callback_data: "REJECTION"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
 
   def resolve({:Q3, history, "WORKER" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[%{text: gettext("DISTINCTIVE TREATMENT"), callback_data: "TREATMENT"}],[%{text: gettext("FORCED WORK"), callback_data: "FORCED"}],
+    do_common_q3(:Q3_1, history, [[%{text: gettext("DISTINCTIVE TREATMENT"), callback_data: "TREATMENT"}],[%{text: gettext("FORCED WORK"), callback_data: "FORCED"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
 
   def resolve({:Q3, history, "BOSS" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[%{text: gettext("EXPLOITATION"), callback_data: "EXPLOITATION"}], [%{text: gettext("DISTINCTIVE TREATMENT"), callback_data: "TREATMENT"}],[%{text: gettext("FORCED WORK"), callback_data: "FORCED"}],
+    do_common_q3(:Q3_2, history, [[%{text: gettext("EXPLOITATION"), callback_data: "EXPLOITATION"}], [%{text: gettext("DISTINCTIVE TREATMENT"), callback_data: "TREATMENT"}],[%{text: gettext("FORCED WORK"), callback_data: "FORCED"}],
     [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
 
 
@@ -88,9 +88,9 @@ defmodule Chatbot.WorkGraph do
   ##################################
   # PRIVATE FUNCTIONS
   ##################################
-  defp do_common_q3(history, keyboard, memory, user, key, message_id) do
-    new_history = [{:Q3, :work} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q3"), history), user, message_id, key)
+  defp do_common_q3(state, history, keyboard, memory, user, key, message_id) do
+    new_history = [{state, :work} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("WORK_Q3"), new_history), user, message_id, key)
     {{:Q3_resolve, :work}, new_history, memory}
   end
 end

@@ -35,9 +35,9 @@ defmodule Chatbot.HomeGraph do
   def resolve({:Q2_resolve, history, _}, user, key, "LANDLORD" = answer, message_id), do: resolve({:Q3, history, answer}, user, key, nil, message_id)
   # 3 -----
   def resolve({:Q3, history, "LANDLORD" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}], [%{text: gettext("EVICTION"), callback_data: "EVICTION"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
+    do_common_q3(:Q3, history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}], [%{text: gettext("EVICTION"), callback_data: "EVICTION"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
   def resolve({:Q3, history, "RENT" = memory}, user, key, _, message_id), do:
-    do_common_q3(history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}], [%{text: gettext("RENT DENIAL"), callback_data: "RENT_DENIAL"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
+    do_common_q3(:Q3_1, history, [[%{text: gettext("CHANGE OF CONDITIONS"), callback_data: "CONDITIONS"}], [%{text: gettext("RENT DENIAL"), callback_data: "RENT_DENIAL"}], [%{text: gettext("BACK"), callback_data: "BACK"}]], memory, user, key, message_id)
 
   def resolve({:Q3_resolve, history, "LANDLORD"}, user, key, "CONDITIONS", message_id), do: resolve({:S1, history, nil}, user, key, nil, message_id)
   def resolve({:Q3_resolve, history, "RENT"}, user, key, "CONDITIONS", message_id), do: resolve({:S4, history, nil}, user, key, nil, message_id)
@@ -54,7 +54,10 @@ defmodule Chatbot.HomeGraph do
   end
 
   def resolve({:L1_resolve, history, _}, user, key, "YES", message_id), do: Manager.resolve({{:start_link, :faq_ca_resources}, history, nil}, user, key, nil, message_id)
-  def resolve({:L1_resolve, _, _}, _, _, "NO", _), do: {:solved, nil, nil}
+  def resolve({:L1_resolve, _, _}, user, key, "NO", message_id) do
+    TelegramWrapper.delete_message(key, user, message_id)
+    {:solved, nil, nil}
+  end
 
   ##################################
   # SOLUTIONS
@@ -73,9 +76,9 @@ defmodule Chatbot.HomeGraph do
   ##################################
   # PRIVATE FUNCTIONS
   ##################################
-  defp do_common_q3(history, keyboard, memory, user, key, message_id) do
-    new_history = [{:Q3, :home} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q3"), history), user, message_id, key)
+  defp do_common_q3(state, history, keyboard, memory, user, key, message_id) do
+    new_history = [{state, :home} | history]
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("HOME_Q3"), new_history), user, message_id, key)
     {{:Q3_resolve, :home}, new_history, memory}
   end
 

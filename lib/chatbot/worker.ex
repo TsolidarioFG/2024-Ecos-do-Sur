@@ -25,15 +25,19 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def init(_) do
     Logger.info("Worker Initialized")
-    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false}
+    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false, last_message: nil}
     {:ok, state}
   end
 
   # When the Worker does not reveive any messages from the user for a given time it will die.
   @impl GenServer
-  def handle_info(:timeout, state) do
+  def handle_info(:timeout, state) when state.graph_state != {:solved, nil, nil} do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
     {:stop, :timeout,  state}
   end
+  @impl GenServer
+  def handle_info(:timeout, state), do: {:stop, :timeout,  state}
+
 
   # The worker is called by the leader cause a new message was received
   @impl GenServer
@@ -61,9 +65,11 @@ defmodule Chatbot.Worker do
       fn value ->
         case query["data"] do
           "yes" ->
+            TelegramWrapper.delete_message(key, user, query["message"]["message_id"])
             do_delegate(value, :with_information)
             {:stop, :silence, :worker_dead, value}
           "no" ->
+            TelegramWrapper.delete_message(key, user, query["message"]["message_id"])
             do_delegate(value, :without_information)
             {:stop, :silence, :worker_dead, value}
         end
@@ -77,12 +83,10 @@ defmodule Chatbot.Worker do
     do_handle_update(update, reset_timer(state))
   end
 
-  # Terminates the process when an error occured
+
   @impl GenServer
-  def terminate(:shutdown, state) do
-    stop_timeout_timer(state)
-    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("error_message")})
-    :poolboy.checkin(:worker, self())
+  def handle_cast({:last_message, message_id}, state) do
+    {:noreply, %{state | last_message: message_id}}
   end
 
   # Terminates the process when no error occured
@@ -110,6 +114,13 @@ defmodule Chatbot.Worker do
     :poolboy.checkin(:worker, self())
   end
 
+  @impl GenServer
+  def terminate(_, state) do
+    stop_timeout_timer(state)
+    GenServer.cast(state.leader, {:worker_dead, self(), state.user, gettext("error_message")})
+    :poolboy.checkin(:worker, self())
+  end
+
   # Handles an update when it has a callback query, the conversation was not resolved and also the language was not set.
   defp do_handle_update(%{"callback_query" => query, "update_id" => _}, %{lang: nil} = state) do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
@@ -128,6 +139,9 @@ defmodule Chatbot.Worker do
       "NO" ->
         new_state = Manager.resolve(state.graph_state, state.user, state.key, "CONTINUE", query["message"]["message_id"])
         {:noreply, %{state | graph_state: new_state, stop_pause: false}}
+      "EXIT" ->
+        TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
+        {:stop, :normal, %{state | graph_state: {:solved, nil, nil}}}
       _ -> {:noreply, state}
     end
   end
@@ -137,9 +151,11 @@ defmodule Chatbot.Worker do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
     case query["data"] do
       "yes" ->
+        TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
         do_delegate(state, :with_information)
         {:stop, :silence, state}
       "no" ->
+        TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
         do_delegate(state, :without_information)
         {:stop, :silence, state}
       _ -> {:noreply, state}
@@ -158,11 +174,12 @@ defmodule Chatbot.Worker do
   end
 
   # The bot receives a text message so it asks whether to restart or continue the conversation
-  defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved do
-    keyboard = [[%{text: "SI", callback_data: "YES"}, %{text: "NO", callback_data: "NO"}]]
+  defp do_handle_update(%{"message" => _, "update_id" => _}, %{graph_state: {status, _, _}} = state) when status != :solved and state.lang != nil do
+    TelegramWrapper.delete_message(state.key, state.user, state.last_message)
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}], [%{text: gettext("EXIT"), callback_data: "EXIT"}]]
         TelegramWrapper.send_menu(
           keyboard,
-          "Quieres reiniciar la conversación?",
+          gettext("RESTART"),
           state.user,
           state.key
         )
@@ -174,9 +191,7 @@ defmodule Chatbot.Worker do
 
   defp do_ask_for_language_preferences(leader_pid, key, user, message, state) do
     keyboard = [
-      [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}],
-      [%{text: "🇫🇷", callback_data: "fr"}]
-    ]
+      [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}]]
     TelegramWrapper.send_menu(
       keyboard,
       message,

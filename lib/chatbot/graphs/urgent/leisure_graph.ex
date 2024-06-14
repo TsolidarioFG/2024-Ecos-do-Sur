@@ -29,9 +29,9 @@ defmodule Chatbot.LeisureGraph do
   ##################################
   # 2 -----
   def resolve({:EN, history, _}, user, key, _, _) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
     new_history = [{:EN, :leisure} | history]
-    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q2"), new_history), user, key)
+    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q2"), nil), user, key)
     {{:EN_resolve, :leisure}, new_history, nil}
   end
 
@@ -39,9 +39,9 @@ defmodule Chatbot.LeisureGraph do
   def resolve({:EN_resolve, history, _}, user, key, "NO", message_id), do: resolve({:S3, history, nil}, user, key, nil, message_id)
   # 3 -----
   def resolve({:EN_1, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
     new_history = [{:EN_1, :leisure} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q3"), new_history), user, message_id, key)
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q3"), nil), user, message_id, key)
     {{:EN_1_resolve, :leisure}, new_history, nil}
   end
 
@@ -49,21 +49,24 @@ defmodule Chatbot.LeisureGraph do
   def resolve({:EN_1_resolve, history, _}, user, key, "NO", message_id), do: resolve({:EN_2_1, history, nil}, user, key, nil, message_id)
   # 4 -----
   def resolve({:EN_2, history, _}, user, key, _, _) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
     new_history = [{:EN_2, :leisure} | history]
-    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q4"), new_history), user, key)
+    TelegramWrapper.send_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q4"), nil), user, key)
     {{:EN_2_resolve, :leisure}, new_history, nil}
   end
 
   def resolve({:EN_2_1, history, _}, user, key, _, message_id) do
-    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}, %{text: gettext("BACK"), callback_data: "BACK"}]]
+    keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}]]
     new_history = [{:EN_2, :leisure} | history]
-    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q4"), new_history), user, message_id, key)
+    TelegramWrapper.update_menu(keyboard, HistoryFormatting.buildMessage(gettext("LEISURE_Q4"), nil), user, message_id, key)
     {{:EN_2_resolve, :leisure}, new_history, nil}
   end
 
   def resolve({:EN_2_resolve, history, _}, user, key, "YES", message_id), do: resolve({:S5, history, nil}, user, key, nil, message_id)
-  def resolve({:EN_2_resolve, history, _}, user, key, "NO", message_id), do: resolve({:S7, history, nil}, user, key, nil, message_id)
+  def resolve({:EN_2_resolve, _, _}, user, key, "NO", message_id) do
+    TelegramWrapper.delete_message(key, user, message_id)
+    {:solved, nil, nil}
+  end
 
   ##################################
   # SOLUTIONS

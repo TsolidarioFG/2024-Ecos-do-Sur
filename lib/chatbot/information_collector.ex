@@ -171,6 +171,7 @@ defmodule Chatbot.InformationCollector do
       )
       when rev != nil do
     TelegramWrapper.answer_callback_query(state.key, query["id"])
+    TelegramWrapper.delete_message(state.key, state.user, query["message"]["message_id"])
     save_data(state)
     {:stop, :normal, reset_timer(state)}
   end
@@ -182,6 +183,8 @@ defmodule Chatbot.InformationCollector do
         %{data: %{review: rev} = data} = state
       )
       when rev != nil do
+        TelegramWrapper.delete_message(state.key, state.user, state.last_message)
+        TelegramWrapper.delete_message(state.key, state.user, msg["message_id"])
     new_state = %{state | data: %{data | review: %{stars: rev.stars, comment: msg["text"]}}}
     save_data(new_state)
     {:stop, :normal, reset_timer(new_state)}

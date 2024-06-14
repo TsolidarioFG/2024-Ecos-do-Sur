@@ -179,7 +179,7 @@ defmodule Chatbot.Worker do
     keyboard = [[%{text: gettext("YES"), callback_data: "YES"}, %{text: gettext("NO"), callback_data: "NO"}], [%{text: gettext("EXIT"), callback_data: "EXIT"}]]
         TelegramWrapper.send_menu(
           keyboard,
-          "Quieres reiniciar la conversación o salir?",
+          gettext("RESTART"),
           state.user,
           state.key
         )
@@ -191,9 +191,7 @@ defmodule Chatbot.Worker do
 
   defp do_ask_for_language_preferences(leader_pid, key, user, message, state) do
     keyboard = [
-      [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}],
-      [%{text: "🇫🇷", callback_data: "fr"}]
-    ]
+      [%{text: "🇪🇸", callback_data: "es"}, %{text: "🇬🇧", callback_data: "en"}]]
     TelegramWrapper.send_menu(
       keyboard,
       message,

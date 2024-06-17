@@ -8,7 +8,6 @@ defmodule Chatbot.Manager do
   alias Chatbot.FaqHealthcareGraph
   alias Chatbot.FaqCaResources
   alias Chatbot.PersonWorkGraph
-  alias Chatbot.PersonSchoolGraph
   alias Chatbot.HomeGraph
   alias Chatbot.CommerceGraph
   alias Chatbot.LeisureGraph
@@ -36,7 +35,7 @@ defmodule Chatbot.Manager do
   def resolve({{state, :commerce}, history, memory}, user, key, response, message_id), do: CommerceGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :work}, history, memory}, user, key, response, message_id), do: WorkGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :home}, history, memory}, user, key, response, message_id), do: HomeGraph.resolve({state, history, memory}, user, key, response, message_id)
-  def resolve({{state, :school_per}, history, memory}, user, key, response, message_id), do: PersonSchoolGraph.resolve({state, history, memory}, user, key, response, message_id)
+  # def resolve({{state, :school_per}, history, memory}, user, key, response, message_id), do: PersonSchoolGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :work_per}, history, memory}, user, key, response, message_id), do: PersonWorkGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :faq}, history, memory}, user, key, response, message_id), do: FaqGraph.resolve({state, history, memory}, user, key, response, message_id)
   def resolve({{state, :faq_healthcare}, history, memory}, user, key, response, message_id), do: FaqHealthcareGraph.resolve({state, history, memory}, user, key, response, message_id)

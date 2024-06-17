@@ -8,7 +8,6 @@ defmodule Chatbot.Persistence do
   @database "chatbot_db"
 
   def start_link(_) do
-    # TODO: Always uses the default module
     http_client = Application.get_env(:chatbot, :http_client, Http.HttpClientProd)
     GenServer.start_link(__MODULE__, http_client, name: :Persistence)
   end

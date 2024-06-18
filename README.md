@@ -36,3 +36,7 @@ To run the program it has to be given the token of the bot to be used:
 #### InformationCollectors Module
 
 ![](doc/ComponentInformationCollector.png)
+
+### Delegate Behaviour Sequence Diagram
+
+![](doc/SequenceDiagramDelegate.png)

@@ -1,0 +1,26 @@
+@startuml SequenceDiagramDelegate
+
+actor User
+
+participant "Worker" as W
+participant "Collector Pool" as CP
+participant "Information Collector" as IC
+participant "Leader" as L
+participant "Cache" as C
+
+User -> W: Some Action
+W -> CP: :poolboy.checkout(:collector)
+CP -> W: information_collector_pid
+W -> IC: GenServer.call(information_collector_pid, {:initialize, state})
+W -> L: GenServer.cast(state.leader, {:worker_substitute, self(), information_collector_pid, state.user})
+W -> C: GenServer.cast(:Cache, {:delete, state.user})
+
+L -> L: handle_cast({:worker_substitute, worker_pid, new_pid, user_id})
+L -> IC: GenServer.cast(new_pid, :stablished)
+
+IC -> IC: handle_call({:initialize, ws}, _from, state)
+IC -> IC: handle_cast(:stablished)
+
+IC -> User: TelegramWrapper.send_message(state.key, state.user, gettext("Birth Location? (COUNTRY)"))
+
+@enduml

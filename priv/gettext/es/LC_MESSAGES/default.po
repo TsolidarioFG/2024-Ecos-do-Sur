@@ -972,7 +972,7 @@ msgstr ""
 #: lib/chatbot/information_collector.ex:157
 #, elixir-autogen, elixir-format
 msgid "Any suggestions or comments that you would like to write?"
-msgstr ""
+msgstr "Alguna sugerencia o comentario que quisieras compartir?"
 
 #: lib/chatbot/graphs/urgent/person_work_graph.ex:17
 #, elixir-autogen, elixir-format
@@ -1175,7 +1175,7 @@ msgstr "¿Cuantos años tienes?"
 #: lib/chatbot/information_collector.ex:329
 #, elixir-autogen, elixir-format
 msgid "In which CA did it happen?"
-msgstr ""
+msgstr "En qué Comunidad Autónoma ha sucedido?"
 
 #: lib/chatbot/graphs/urgent/work_graph.ex:17
 #: lib/chatbot/graphs/util/history_formatting.ex:44

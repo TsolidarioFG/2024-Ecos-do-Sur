@@ -29,7 +29,8 @@ defmodule Chatbot.InformationCollector do
        lang: nil,
        timer_ref: nil,
        last_message: nil,
-       data: %{birth_location: nil, age: nil, gender: nil, ca: nil, description: nil, review: nil}
+       data: %{birth_location: nil, age: nil, gender: nil, ca: nil, description: nil, review: nil},
+       is_active: false
      }}
   end
 
@@ -69,7 +70,12 @@ defmodule Chatbot.InformationCollector do
   @impl true
   def handle_call({:initialize, ws}, _from, state) do
     Gettext.put_locale(ws.lang)
-    {:reply, :ok, %{state | leader: ws.leader, key: ws.key, user: ws.user, lang: ws.lang}}
+    {:reply, :ok, %{state | leader: ws.leader, key: ws.key, user: ws.user, lang: ws.lang, is_active: true}}
+  end
+
+  @impl true
+  def handle_call({:get_active, _}, _from, state) do
+    {:reply, state.is_active, state}
   end
 
   # Iniciate conversation, ask for birth place:

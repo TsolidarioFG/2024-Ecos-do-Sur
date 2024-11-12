@@ -25,7 +25,7 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def init(_) do
     Logger.info("Worker Initialized")
-    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false, last_message: nil}
+    state = %{leader: nil, key: nil, user: nil, lang: nil, timer_ref: nil, graph_state: {{:start, :initial}, [], nil}, stop_pause: false, last_message: nil, is_active: false}
     {:ok, state}
   end
 
@@ -38,15 +38,19 @@ defmodule Chatbot.Worker do
   @impl GenServer
   def handle_info(:timeout, state), do: {:stop, :timeout,  state}
 
+  @impl true
+  def handle_call({:get_active, _}, _from, state) do
+    {:reply, state.is_active, state}
+  end
 
   # The worker is called by the leader cause a new message was received
   @impl GenServer
   def handle_call({:answer, key, user, lang}, {leader_pid, _}, state) do
     Gettext.put_locale(lang)
     find_conversation_and_start(user,
-      fn -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?"), state) end,
+      fn -> do_ask_for_language_preferences(leader_pid, key, user, gettext("En qué idioma quieres que te responda?"), %{state | is_active: true}) end,
       fn value ->
-        new_state = reset_timer(do_ask_for_permission_late(value))
+        new_state = reset_timer(do_ask_for_permission_late(%{value | is_active: true}))
         {:reply, user, new_state}
       end
     )
@@ -60,18 +64,18 @@ defmodule Chatbot.Worker do
     TelegramWrapper.answer_callback_query(key, query["id"])
     find_conversation_and_start(user,
       fn ->
-        do_ask_for_language_preferences(leader_pid, key, user, gettext("La conversación anterior ya ha sido borrada"), state)
+        do_ask_for_language_preferences(leader_pid, key, user, gettext("La conversación anterior ya ha sido borrada"), %{state | is_active: true})
       end,
       fn value ->
         case query["data"] do
           "yes" ->
             TelegramWrapper.delete_message(key, user, query["message"]["message_id"])
             do_delegate(value, :with_information)
-            {:stop, :silence, :worker_dead, value}
+            {:stop, :silence, :worker_dead, %{value | is_active: true}}
           "no" ->
             TelegramWrapper.delete_message(key, user, query["message"]["message_id"])
             do_delegate(value, :without_information)
-            {:stop, :silence, :worker_dead, value}
+            {:stop, :silence, :worker_dead, %{value | is_active: true}}
         end
       end
     )
@@ -241,17 +245,26 @@ defmodule Chatbot.Worker do
   end
 
   defp do_delegate(state, :with_information) do
-    information_collector_pid = :poolboy.checkout(:collector)
+    information_collector_pid = do_get_free_collector()
+    IO.inspect(information_collector_pid, label: "Status5")
     GenServer.call(information_collector_pid, {:initialize, state})
     GenServer.cast(state.leader, {:worker_substitute, self(), information_collector_pid, state.user})
     GenServer.cast(:Cache, {:delete, state.user})
   end
 
   defp do_delegate(state, :without_information) do
-    information_collector_pid = :poolboy.checkout(:collector)
+    information_collector_pid = do_get_free_collector()
     GenServer.call(information_collector_pid, {:initialize, state})
     GenServer.cast(state.leader, {:worker_substitute_skip, self(), information_collector_pid, state.user})
     GenServer.cast(:Cache, {:delete, state.user})
+  end
+
+  defp do_get_free_collector() do
+    pid = :poolboy.checkout(:collector)
+    case GenServer.call(pid, {:get_active, nil}) do
+      false -> pid
+      true -> do_get_free_collector()
+    end
   end
 
   # A new timer is created, cancelling the previous one, if it exists.

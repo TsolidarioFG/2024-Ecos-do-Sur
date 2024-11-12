@@ -147,13 +147,13 @@ defmodule Chatbot.Leader do
 
   # Resolves one update
   defp do_resolve_update(nil, %{"message" => msg, "update_id" => _}, key, workers_data) do
-    worker_pid = :poolboy.checkout(:worker)
+    worker_pid = do_get_free_worker()
     reply = GenServer.call(worker_pid, {:answer, key, msg["chat"]["id"], msg["from"]["language_code"]})
     [%{pid: worker_pid, user_id: reply} | workers_data]
   end
 
   defp do_resolve_update(nil, %{"callback_query" => query, "update_id" => _}, key, workers_data) do
-    worker_pid = :poolboy.checkout(:worker)
+    worker_pid = do_get_free_worker()
       case GenServer.call(worker_pid, {:answer, key, query["from"]["id"], query, query["from"]["language_code"]}) do
         :worker_dead ->
           workers_data
@@ -170,5 +170,13 @@ defmodule Chatbot.Leader do
   # Schedules the next check for updates after a certain delay
   defp next_loop do
     Process.send_after(self(), :check, 1000)
+  end
+
+  defp do_get_free_worker() do
+    pid = :poolboy.checkout(:worker)
+    case GenServer.call(pid, {:get_active, nil}) do
+      false -> pid
+      true -> do_get_free_worker()
+    end
   end
 end
